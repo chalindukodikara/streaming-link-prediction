@@ -6,9 +6,9 @@ import datetime
 # pd.to_datetime(int(data.iloc[2, 3]), unit='s')
 
 def main():
-    dataset_name = 'epinion'
-    number_of_timestamps = 11
-    sliding_window_size = 5
+    dataset_name = 'tg'
+    number_of_timestamps = 121
+    sliding_window_size = 20
 
 
     folder_path = "data/" + dataset_name
@@ -51,7 +51,8 @@ def main():
         # del nodes_not_in
         # del nodes_not_in_indexes
         gc.collect()
-        data_edges_temp = data_edges_temp.iloc[:, : 2]
+        data_edges_temp = data_edges_temp.drop(columns=["timestamp"])
+        data_edges_temp = data_edges_temp.iloc[:, :]
         nodes_list = data_nodes_temp[data_nodes_temp.columns[0]].to_list()
         # for j in range(2):
         #     for k in range(data_edges_temp.shape[0]):

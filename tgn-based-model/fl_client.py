@@ -112,7 +112,18 @@ parser.add_argument('--use_source_embedding_in_message', action='store_true',
                     help='Whether to use the embedding of the source node as part of the message')
 parser.add_argument('--dyrep', action='store_true',
                     help='Whether to run the dyrep model')
-
+######## Our parameters ################
+parser.add_argument('--path_weights', type=str, default='./weights/', help='Weights path')
+parser.add_argument('--path_nodes', type=str, default='./data/', help='Data nodes path')
+parser.add_argument('--path_edges', type=str, default='./data/', help='Data edges path')
+parser.add_argument('--graph_id', type=int, default=4, help='Graph id')
+parser.add_argument('--partition_id', type=int, default=0, help='Partition id of the graph')
+parser.add_argument('--ip', type=str, default='localhost', help='IP')
+parser.add_argument('--port', type=str, default='5000', help='PORT')
+parser.add_argument('--initial_epochs', type=int, default=10, help='Initial number of epochs')
+parser.add_argument('--normal_epochs', type=int, default=8, help='Normal number of epochs')
+parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
+######## Our parameters ################
 
 try:
   args = parser.parse_args()
@@ -518,7 +529,8 @@ class Client:
                 logging.info('(Iteration id %s) Sent local model to the server', self.iteration_id)
                 self.send_model()
 
-            while not self.ITERATION_FLAG:
+        while not self.ITERATION_FLAG:
+
 
 
 

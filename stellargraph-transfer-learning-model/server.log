@@ -851,3 +851,31 @@
 2023-03-10 16:46:06,255 : [INFO]  Sent global model to client-0 at 127.0.0.1:58732
 2023-03-10 16:46:06,255 : [INFO]  ___________________________________________________Iteration id 3, Training round 2 done ______________________________________________________
 2023-03-10 17:24:02,625 : [ERROR]  Client-0 closed connection at 127.0.0.1:58732
+2023-03-10 19:34:46,643 : [INFO]  Folder path "weights" exists
+2023-03-10 19:34:46,644 : [INFO]  Folder path "global_weights" exists
+2023-03-10 19:34:46,644 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-10 19:34:46,644 : [INFO]  Server started , graph ID 4, number of clients 1, number of rounds 3, transfer learning True, number of timestamps 6
+2023-03-10 19:37:42,731 : [INFO]  Folder path "weights" exists
+2023-03-10 19:37:42,731 : [INFO]  Folder path "global_weights" exists
+2023-03-10 19:37:42,731 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-10 19:37:42,731 : [INFO]  Server started , graph ID 4, number of clients 1, number of rounds 3, transfer learning True, number of timestamps 6
+2023-03-10 19:38:42,603 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-10 19:38:43,020 : [INFO]  Model initialized
+2023-03-10 19:38:43,129 : [INFO]  Federated training started!
+2023-03-10 19:39:38,902 : [INFO]  Accepted new connection at 127.0.0.1:32780
+2023-03-10 19:39:38,906 : [INFO]  Sent global model to client-new at 127.0.0.1:32780
+2023-03-10 19:44:01,844 : [ERROR]  Client-new closed connection at 127.0.0.1:32780
+2023-03-10 19:49:52,093 : [INFO]  Folder path "weights" exists
+2023-03-10 19:49:52,094 : [INFO]  Folder path "global_weights" exists
+2023-03-10 19:49:52,094 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-10 19:49:52,094 : [INFO]  Server started , graph ID 4, number of clients 1, number of rounds 3, transfer learning True, number of timestamps 6
+2023-03-10 19:53:03,623 : [INFO]  Folder path "weights" exists
+2023-03-10 19:53:03,623 : [INFO]  Folder path "global_weights" exists
+2023-03-10 19:53:03,623 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-10 19:53:03,623 : [INFO]  Server started , graph ID 4, number of clients 1, number of rounds 3, transfer learning True, number of timestamps 6
+2023-03-10 19:54:07,823 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-10 19:54:08,241 : [INFO]  Model initialized
+2023-03-10 19:54:08,414 : [INFO]  Federated training started!
+2023-03-10 19:54:10,207 : [INFO]  Accepted new connection at 127.0.0.1:36024
+2023-03-10 19:54:10,207 : [INFO]  Sent global model to client-new at 127.0.0.1:36024
+2023-03-10 19:56:09,876 : [ERROR]  Client-new closed connection at 127.0.0.1:36024

@@ -16635,3 +16635,27 @@
 2023-03-10 16:46:17,379 : [INFO]  (Iteration id 4) Global model v0 - Training set evaluation : loss - 0.6071320176124573, accuracy - 0.6855053305625916, recall - 0.8989361524581909, AUC - 0.7977989315986633, F1 - 0.7408218937289537, precision - 0.6300092935562134
 2023-03-10 16:46:17,379 : [INFO]  (Iteration id 4) Global model v0 - Testing set evaluation : loss - 0.6053594350814819, accuracy - 0.6800239086151123, recall - 0.9066985845565796, AUC - 0.8043535947799683, F1 - 0.7391516216311382, precision - 0.6238682866096497
 2023-03-10 16:46:17,379 : [INFO]  (Iteration id 4) Training started
+2023-03-10 19:38:42,073 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-10 19:38:42,074 : [INFO]  Client started, graph ID 4, partition ID 0, epochs 6
+2023-03-10 19:38:42,163 : [INFO]  (Iteration id 1) Model initialized 
+2023-03-10 19:39:38,435 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-10 19:39:38,900 : [INFO]  (Iteration id 1) Number of training examples - 79616, Number of testing examples 88462
+2023-03-10 19:39:38,902 : [INFO]  (Iteration id 1) Connected to the server
+2023-03-10 19:39:38,998 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-10 19:39:39,007 : [INFO]  (Iteration id 1) Global model v0 fetched
+2023-03-10 19:43:27,905 : [INFO]  (Iteration id 1) Global model v0 - Training set evaluation : loss - 0.693161129951477, accuracy - 0.5, recall - 0.0, AUC - 0.5, F1 - undefined, precision - 0.0
+2023-03-10 19:43:27,905 : [INFO]  (Iteration id 1) Global model v0 - Testing set evaluation : loss - 0.6931614279747009, accuracy - 0.5, recall - 0.0, AUC - 0.5, F1 - undefined, precision - 0.0
+2023-03-10 19:43:27,905 : [INFO]  (Iteration id 1) Training started
+2023-03-10 19:47:06,618 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-10 19:47:06,619 : [INFO]  Client started, graph ID 4, partition ID 0, epochs 6
+2023-03-10 19:49:54,283 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-10 19:49:54,284 : [INFO]  Client started, graph ID 4, partition ID 0, epochs 6
+2023-03-10 19:49:54,356 : [INFO]  (Iteration id 1) Model initialized 
+2023-03-10 19:53:05,503 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-10 19:53:05,503 : [INFO]  Client started, graph ID 4, partition ID 0, epochs 6
+2023-03-10 19:53:05,592 : [INFO]  (Iteration id 1) Model initialized 
+2023-03-10 19:54:09,669 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-10 19:54:10,205 : [INFO]  (Iteration id 1) Number of training examples - 79616, Number of testing examples 88462
+2023-03-10 19:54:10,207 : [INFO]  (Iteration id 1) Connected to the server
+2023-03-10 19:54:10,326 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-10 19:54:10,337 : [INFO]  (Iteration id 1) Global model v0 fetched

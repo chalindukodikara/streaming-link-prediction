@@ -87,8 +87,21 @@ parser.add_argument('--use_source_embedding_in_message', action='store_true',
                     help='Whether to use the embedding of the source node as part of the message')
 parser.add_argument('--dyrep', action='store_true',
                     help='Whether to run the dyrep model')
-
-
+######## Our parameters ################
+parser.add_argument('--path_weights', type=str, default='./weights/', help='Weights path')
+parser.add_argument('--path_nodes', type=str, default='./data/', help='Data nodes path')
+parser.add_argument('--path_edges', type=str, default='./data/', help='Data edges path')
+parser.add_argument('--graph_id', type=int, default=4, help='Graph id')
+parser.add_argument('--partition_id', type=int, default=0, help='Partition id of the graph')
+parser.add_argument('--num_clients', type=int, default=1, help='Number of clients')
+parser.add_argument('--ip', type=str, default='localhost', help='IP')
+parser.add_argument('--port', type=str, default='5000', help='PORT')
+parser.add_argument('--transfer_learning', type=bool, default=True, help='Whether transfer learning is on')
+parser.add_argument('--test_batch_size', type=int, default=10, help='Test batch size')
+parser.add_argument('--initial_num_rounds', type=int, default=6, help='Initial number of rounds')
+parser.add_argument('--normal_num_rounds', type=int, default=2, help='Normal number of rounds')
+parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
+######## Our parameters ################
 try:
   args = parser.parse_args()
 except:
@@ -110,7 +123,22 @@ TIME_DIM = args.time_dim
 USE_MEMORY = args.use_memory
 MESSAGE_DIM = args.message_dim
 MEMORY_DIM = args.memory_dim
-############
+######## Our parameters ################
+PATH_WEIGHTS = args.path_weights
+PATH_NODES = args.path_nodes
+PATH_WEIGHTS = args.path_weights
+PATH_EDGES = args.path_edges
+GRAPH_ID = args.graph_id
+PARTITION_ID = args.partition_id
+NUM_CLIENTS = args.num_clients
+IP = args.ip
+PORT = args.port
+TRANSFER_LEARNING = args.transfer_learning
+TEST_BATCH_SIZE = args.test_batch_size
+INITIAL_NUM_ROUNDS = args.initial_num_rounds
+NORMAL_NUM_ROUNDS = args.normal_num_rounds
+DATASET_NAME = args.dataset_name
+######## Our parameters ################
 # arg_names = [
 #     'path_weights',
 #     'path_nodes',
@@ -140,10 +168,10 @@ args['IP'] = 'localhost'
 args['PORT'] = '5000'
 args['name'] = 'elliptic'
 args['transfer_learning'] = True
-args['num_timestamps'] = '6'
+args['TEST_BATCH_SIZE'] = '6'
 class Server:
 
-    def __init__(self, MODEL, INITIAL_ROUNDS, NORMAL_ROUNDS, weights_path, graph_id, MAX_CONN = 2, IP= socket.gethostname(), PORT = 5000, HEADER_LENGTH = 10,iteration_id=0, transfer_learning=False, NUM_TIMESTAMPS=0):
+    def __init__(self, MODEL, INITIAL_ROUNDS, NORMAL_ROUNDS, weights_path, graph_id, MAX_CONN = 2, IP= socket.gethostname(), PORT = 5000, HEADER_LENGTH = 10,iteration_id=0, transfer_learning=False, NUM_BATCHES=0):
 
         # Parameters
         self.HEADER_LENGTH =  HEADER_LENGTH
@@ -180,7 +208,7 @@ class Server:
         # Variables for dynamic graphs training
         self.iteration_id = iteration_id
         self.transfer_learning = transfer_learning
-        self.NUM_TIMESTAMPS = NUM_TIMESTAMPS
+        self.NUM_BATCHES = NUM_BATCHES
         self.all_timestamps_finished = False
 
         # Global model
@@ -226,7 +254,7 @@ class Server:
         if self.ROUNDS == self.training_cycles:
             self.stop_flag = True
 
-        if self.NUM_TIMESTAMPS == self.iteration_id:
+        if self.NUM_BATCHES == self.iteration_id:
             self.all_timestamps_finished = True
 
 
@@ -355,15 +383,10 @@ if __name__ == "__main__":
 
 
     logging.warning('####################################### New Training Session #######################################')
-    logging.info('Server started , graph ID %s, number of clients %s, number of rounds %s, transfer learning %s, number of timestamps %s',args['graph_id'],args['num_clients'], args['initial_num_rounds'], args['transfer_learning'], args['num_timestamps'])
+    logging.info('Server started , graph ID %s, number of clients %s, number of rounds %s, number of batches %s',GRAPH_ID,NUM_CLIENTS, INITIAL_NUM_ROUNDS, TEST_BATCH_SIZE)
 
-    if 'IP' not in args.keys() or args['IP'] == 'localhost':
-        args['IP'] = socket.gethostname()
-
-    if 'PORT' not in args.keys():
-        args['PORT'] = 5000
-    # for timestamp_id in range(1, 25):
-    #     logging.warning('###################### New Interation (%s) started #############################', str(timestamp_id))
+    if IP == 'localhost':
+        IP = socket.gethostname()
 
     # Model initialization to send weights
     #####################################################################################
@@ -416,13 +439,16 @@ if __name__ == "__main__":
               use_destination_embedding_in_message=args.use_destination_embedding_in_message,
               use_source_embedding_in_message=args.use_source_embedding_in_message,
               dyrep=args.dyrep)
+
+    num_test_instance = len(test_data.sources)
+    num_test_batch = math.ceil(num_test_instance / TEST_BATCH_SIZE)
     #####################################################################################
 
 
 
     logging.info('Model initialized')
 
-    server = Server(model, INITIAL_ROUNDS=int(args['initial_num_rounds']), NORMAL_ROUNDS=int(args['normal_num_rounds']), weights_path=args['path_weights'],graph_id=args['graph_id'],MAX_CONN=int(args['num_clients']),IP=args['IP'],PORT=int(args['PORT']),iteration_id=1,transfer_learning=args['transfer_learning'], NUM_TIMESTAMPS=int(args['num_timestamps']))
+    server = Server(model, INITIAL_ROUNDS=int(INITIAL_NUM_ROUNDS), NORMAL_ROUNDS=int(NORMAL_NUM_ROUNDS), weights_path=PATH_WEIGHTS,graph_id=GRAPH_ID,MAX_CONN=int(NUM_CLIENTS),IP=IP,PORT=int(PORT),iteration_id=1,transfer_learning=TRANSFER_LEARNING, NUM_BATCHES=int(TEST_BATCH_SIZE))
 
     del model
     del node_features, edge_features, full_data, train_data, val_data, test_data, new_node_val_data, new_node_test_data

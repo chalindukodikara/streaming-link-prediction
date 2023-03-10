@@ -32,7 +32,7 @@ args['initial_epochs'] = '6'
 args['normal_epochs'] = '5'
 args['IP'] = 'localhost'
 args['PORT'] = '5000'
-args['name'] = 'epinion'
+args['name'] = 'tg'
 
 partition_id = args['partition_id']
 

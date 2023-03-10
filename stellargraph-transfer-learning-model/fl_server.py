@@ -258,7 +258,7 @@ if __name__ == "__main__":
     args['normal_num_rounds'] = '2'
     args['IP'] = 'localhost'
     args['PORT'] = '5000'
-    args['name'] = 'epinion'
+    args['name'] = 'tg'
     args['transfer_learning'] = True
     args['num_timestamps'] = '6'
 
@@ -275,7 +275,6 @@ if __name__ == "__main__":
 
     edges = pd.read_csv('data/' + args['name'] + '/' + str(1) + '_edges.csv')
     nodes = pd.read_csv('data/' + args['name'] + '/' + str(1) + '_nodes.csv',index_col=0)
-
 
     model = Model(nodes,edges)
     model.initialize()
