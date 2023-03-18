@@ -16391,3 +16391,1401 @@
 2023-03-09 17:19:09,149 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
 2023-03-09 17:19:09,280 : [INFO]  Distributed training done!
 2023-03-09 17:19:09,280 : [INFO]  Training report : Elapsed time 406.7546452910001 seconds, graph ID 4, partition ID 0, epochs 5
+2023-03-17 19:57:32,178 : [INFO]  num of training instances: 81029
+2023-03-17 19:57:32,181 : [INFO]  num of batches per epoch: 406
+2023-03-17 19:57:38,029 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-17 19:58:01,988 : [INFO]  num of training instances: 81029
+2023-03-17 19:58:01,989 : [INFO]  num of batches per epoch: 406
+2023-03-17 19:58:06,267 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-17 19:59:03,978 : [INFO]  num of training instances: 81029
+2023-03-17 19:59:03,979 : [INFO]  num of batches per epoch: 406
+2023-03-17 19:59:08,202 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-17 19:59:08,202 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-17 19:59:08,329 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-17 20:00:03,010 : [INFO]  num of training instances: 81029
+2023-03-17 20:00:03,010 : [INFO]  num of batches per epoch: 406
+2023-03-17 20:00:07,926 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-17 20:00:07,927 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-17 20:00:08,053 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-17 20:01:55,370 : [INFO]  num of training instances: 81029
+2023-03-17 20:01:55,370 : [INFO]  num of batches per epoch: 406
+2023-03-17 20:01:59,949 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-17 20:01:59,949 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-17 20:02:00,117 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-17 20:02:30,327 : [INFO]  num of training instances: 81029
+2023-03-17 20:02:30,327 : [INFO]  num of batches per epoch: 406
+2023-03-17 20:02:34,737 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-17 20:02:34,737 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-17 20:02:34,857 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-17 20:03:52,921 : [INFO]  num of training instances: 81029
+2023-03-17 20:03:52,921 : [INFO]  num of batches per epoch: 406
+2023-03-17 20:03:57,532 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-17 20:03:57,532 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-17 20:03:57,630 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-17 20:06:25,676 : [INFO]  num of training instances: 81029
+2023-03-17 20:06:25,676 : [INFO]  num of batches per epoch: 406
+2023-03-17 20:06:29,881 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-17 20:06:29,881 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-17 20:06:30,011 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-17 20:07:34,453 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 13:45:42,193 : [INFO]  num of training instances: 81029
+2023-03-18 13:45:42,193 : [INFO]  num of batches per epoch: 406
+2023-03-18 13:45:48,830 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 13:45:48,830 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 13:45:48,993 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 13:46:46,709 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 13:50:04,973 : [INFO]  num of training instances: 81029
+2023-03-18 13:50:04,974 : [INFO]  num of batches per epoch: 406
+2023-03-18 13:50:09,176 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 13:50:09,177 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 13:50:09,272 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 13:50:22,977 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 13:55:44,037 : [INFO]  num of training instances: 81029
+2023-03-18 13:55:44,037 : [INFO]  num of batches per epoch: 406
+2023-03-18 13:55:48,299 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 13:55:48,299 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 13:55:48,395 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 13:55:59,413 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 13:57:02,206 : [INFO]  num of training instances: 81029
+2023-03-18 13:57:02,206 : [INFO]  num of batches per epoch: 406
+2023-03-18 13:57:06,536 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 13:57:06,536 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 13:57:06,632 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 13:57:24,039 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 14:02:53,399 : [INFO]  num of training instances: 81029
+2023-03-18 14:02:53,399 : [INFO]  num of batches per epoch: 406
+2023-03-18 14:02:57,630 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 14:02:57,631 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 14:02:57,726 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 14:03:12,422 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 14:16:40,399 : [INFO]  num of training instances: 81029
+2023-03-18 14:16:40,400 : [INFO]  num of batches per epoch: 406
+2023-03-18 14:16:46,989 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 14:17:00,485 : [INFO]  num of training instances: 81029
+2023-03-18 14:17:00,485 : [INFO]  num of batches per epoch: 406
+2023-03-18 14:17:05,830 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 14:17:05,831 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 14:17:05,960 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 14:17:17,148 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 14:17:17,148 : [INFO]  (Iteration id 0) Training started
+2023-03-18 14:17:17,148 : [INFO]  start 0 epoch
+2023-03-18 14:18:32,677 : [INFO]  epoch: 0 took 75.53s
+2023-03-18 14:18:32,678 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 14:18:32,678 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 14:18:32,678 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 14:18:32,700 : [INFO]  start 1 epoch
+2023-03-18 14:19:10,454 : [INFO]  num of training instances: 81029
+2023-03-18 14:19:10,455 : [INFO]  num of batches per epoch: 406
+2023-03-18 14:19:14,778 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 14:19:14,778 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 14:19:14,874 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 14:19:27,831 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 14:19:29,877 : [INFO]  (Iteration id 0) Training started
+2023-03-18 14:19:30,319 : [INFO]  start 0 epoch
+2023-03-18 14:21:02,687 : [INFO]  epoch: 0 took 92.37s
+2023-03-18 14:21:02,687 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 14:21:02,688 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 14:21:02,688 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 14:21:02,700 : [INFO]  start 1 epoch
+2023-03-18 14:22:56,255 : [INFO]  epoch: 1 took 113.55s
+2023-03-18 14:22:56,256 : [INFO]  Epoch mean loss: 0.6632382302301858
+2023-03-18 14:22:56,256 : [INFO]  val auc: 0.9366851247641915, new node val auc: 0.9488590163934427
+2023-03-18 14:22:56,257 : [INFO]  val ap: 0.9437533409280888, new node val ap: 0.9537298980989279
+2023-03-18 14:22:56,270 : [INFO]  Total Epoch mean loss: 0.6913074961510197
+2023-03-18 14:22:56,271 : [INFO]  Total val auc: 0.932972194711218, new node val auc: 0.9462093237704918
+2023-03-18 14:22:56,272 : [INFO]  Total val ap: 0.9397474126252636, new node val ap: 0.9508213472525926
+2023-03-18 14:25:12,734 : [INFO]  (Iteration id 0) Training done
+2023-03-18 14:25:14,018 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 14:25:51,201 : [INFO]  num of training instances: 81029
+2023-03-18 14:25:51,201 : [INFO]  num of batches per epoch: 406
+2023-03-18 14:25:55,534 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 14:25:55,534 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 14:25:55,633 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 14:26:08,372 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 14:26:09,880 : [INFO]  (Iteration id 0) Training started
+2023-03-18 14:26:10,299 : [INFO]  start 0 epoch
+2023-03-18 14:27:29,603 : [INFO]  epoch: 0 took 79.30s
+2023-03-18 14:27:29,604 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 14:27:29,604 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 14:27:29,605 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 14:27:29,618 : [INFO]  start 1 epoch
+2023-03-18 14:28:37,266 : [INFO]  epoch: 1 took 67.65s
+2023-03-18 14:28:37,266 : [INFO]  Epoch mean loss: 0.6632382302301858
+2023-03-18 14:28:37,266 : [INFO]  val auc: 0.9366851247641915, new node val auc: 0.9488590163934427
+2023-03-18 14:28:37,267 : [INFO]  val ap: 0.9437533409280888, new node val ap: 0.9537298980989279
+2023-03-18 14:28:37,277 : [INFO]  Total Epoch mean loss: 0.6913074961510197
+2023-03-18 14:28:37,277 : [INFO]  Total val auc: 0.932972194711218, new node val auc: 0.9462093237704918
+2023-03-18 14:28:37,278 : [INFO]  Total val ap: 0.9397474126252636, new node val ap: 0.9508213472525926
+2023-03-18 14:28:58,223 : [INFO]  (Iteration id 0) Training done
+2023-03-18 14:28:59,182 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 14:30:22,714 : [INFO]  num of training instances: 81029
+2023-03-18 14:30:22,714 : [INFO]  num of batches per epoch: 406
+2023-03-18 14:30:24,714 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 14:30:24,715 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 14:30:24,843 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 14:30:28,949 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 14:30:28,950 : [INFO]  (Iteration id 0) Training started
+2023-03-18 14:30:28,950 : [INFO]  start 0 epoch
+2023-03-18 14:31:26,862 : [INFO]  epoch: 0 took 57.91s
+2023-03-18 14:31:26,862 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 14:31:26,862 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 14:31:26,862 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 14:31:26,868 : [INFO]  start 1 epoch
+2023-03-18 14:32:23,594 : [INFO]  epoch: 1 took 56.73s
+2023-03-18 14:32:23,594 : [INFO]  Epoch mean loss: 0.6632382302301858
+2023-03-18 14:32:23,594 : [INFO]  val auc: 0.9366851247641915, new node val auc: 0.9488590163934427
+2023-03-18 14:32:23,594 : [INFO]  val ap: 0.9437533409280888, new node val ap: 0.9537298980989279
+2023-03-18 14:32:23,605 : [INFO]  Total Epoch mean loss: 0.6913074961510197
+2023-03-18 14:32:23,605 : [INFO]  Total val auc: 0.932972194711218, new node val auc: 0.9462093237704918
+2023-03-18 14:32:23,605 : [INFO]  Total val ap: 0.9397474126252636, new node val ap: 0.9508213472525926
+2023-03-18 14:32:23,605 : [INFO]  (Iteration id 0) Training done
+2023-03-18 14:32:23,606 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 14:34:19,185 : [INFO]  num of training instances: 81029
+2023-03-18 14:34:19,185 : [INFO]  num of batches per epoch: 406
+2023-03-18 14:34:20,960 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 14:34:20,960 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 14:34:21,060 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 14:34:21,072 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 14:34:21,072 : [INFO]  (Iteration id 0) Training started
+2023-03-18 14:34:21,072 : [INFO]  start 0 epoch
+2023-03-18 14:35:24,086 : [INFO]  epoch: 0 took 63.01s
+2023-03-18 14:35:24,086 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 14:35:24,087 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 14:35:24,087 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 14:35:24,094 : [INFO]  start 1 epoch
+2023-03-18 14:36:20,913 : [INFO]  epoch: 1 took 56.82s
+2023-03-18 14:36:20,913 : [INFO]  Epoch mean loss: 0.6632382302301858
+2023-03-18 14:36:20,913 : [INFO]  val auc: 0.9366851247641915, new node val auc: 0.9488590163934427
+2023-03-18 14:36:20,913 : [INFO]  val ap: 0.9437533409280888, new node val ap: 0.9537298980989279
+2023-03-18 14:36:20,924 : [INFO]  Total Epoch mean loss: 0.6913074961510197
+2023-03-18 14:36:20,924 : [INFO]  Total val auc: 0.932972194711218, new node val auc: 0.9462093237704918
+2023-03-18 14:36:20,924 : [INFO]  Total val ap: 0.9397474126252636, new node val ap: 0.9508213472525926
+2023-03-18 14:36:20,924 : [INFO]  (Iteration id 0) Training done
+2023-03-18 14:36:20,924 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 14:36:20,937 : [INFO]  (Iteration id 0) Global model v1 fetched
+2023-03-18 14:36:29,634 : [INFO]  Evaluation--> val auc: 0.9366851247641915, new node val auc: 0.9488590163934427
+2023-03-18 14:36:29,634 : [INFO]  Evaluation--> val ap: 0.9437533409280888, new node val ap: 0.9537298980989279
+2023-03-18 14:36:29,634 : [INFO]  (Iteration id 0) Training started
+2023-03-18 14:36:29,634 : [INFO]  start 0 epoch
+2023-03-18 14:37:26,197 : [INFO]  epoch: 0 took 56.56s
+2023-03-18 14:37:26,197 : [INFO]  Epoch mean loss: 0.6143633061148263
+2023-03-18 14:37:26,197 : [INFO]  val auc: 0.9360592325025248, new node val auc: 0.9484269467213116
+2023-03-18 14:37:26,197 : [INFO]  val ap: 0.9448330423016184, new node val ap: 0.9548541847232912
+2023-03-18 14:37:26,202 : [INFO]  start 1 epoch
+2023-03-18 14:38:23,024 : [INFO]  epoch: 1 took 56.82s
+2023-03-18 14:38:23,024 : [INFO]  Epoch mean loss: 0.6000920944466379
+2023-03-18 14:38:23,024 : [INFO]  val auc: 0.940790915651975, new node val auc: 0.9526808401639344
+2023-03-18 14:38:23,024 : [INFO]  val ap: 0.9490178831394023, new node val ap: 0.9585920801008647
+2023-03-18 14:38:23,029 : [INFO]  Total Epoch mean loss: 0.607227700280732
+2023-03-18 14:38:23,029 : [INFO]  Total val auc: 0.93842507407725, new node val auc: 0.950553893442623
+2023-03-18 14:38:23,029 : [INFO]  Total val ap: 0.9469254627205104, new node val ap: 0.956723132412078
+2023-03-18 14:38:23,030 : [INFO]  (Iteration id 0) Training done
+2023-03-18 14:38:23,030 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 14:38:23,044 : [INFO]  (Iteration id 0) Global model v2 fetched
+2023-03-18 14:38:31,674 : [INFO]  Evaluation--> val auc: 0.940790915651975, new node val auc: 0.9526808401639344
+2023-03-18 14:38:31,674 : [INFO]  Evaluation--> val ap: 0.9490178831394023, new node val ap: 0.9585920801008647
+2023-03-18 14:38:31,674 : [INFO]  (Iteration id 0) Training started
+2023-03-18 14:38:31,674 : [INFO]  start 0 epoch
+2023-03-18 14:39:28,693 : [INFO]  epoch: 0 took 57.02s
+2023-03-18 14:39:28,693 : [INFO]  Epoch mean loss: 0.5737183729709663
+2023-03-18 14:39:28,693 : [INFO]  val auc: 0.9423799746088911, new node val auc: 0.9536984631147541
+2023-03-18 14:39:28,693 : [INFO]  val ap: 0.9507094970439356, new node val ap: 0.9597391617890115
+2023-03-18 14:39:28,704 : [INFO]  start 1 epoch
+2023-03-18 14:40:41,378 : [INFO]  epoch: 1 took 72.67s
+2023-03-18 14:40:41,378 : [INFO]  Epoch mean loss: 0.5701131849306558
+2023-03-18 14:40:41,378 : [INFO]  val auc: 0.9410089037996151, new node val auc: 0.9515786885245903
+2023-03-18 14:40:41,378 : [INFO]  val ap: 0.949967224846761, new node val ap: 0.9582485000088595
+2023-03-18 14:40:41,384 : [INFO]  Total Epoch mean loss: 0.571915778950811
+2023-03-18 14:40:41,384 : [INFO]  Total val auc: 0.9416944392042531, new node val auc: 0.9526385758196723
+2023-03-18 14:40:41,384 : [INFO]  Total val ap: 0.9503383609453483, new node val ap: 0.9589938308989355
+2023-03-18 14:40:41,384 : [INFO]  (Iteration id 0) Training done
+2023-03-18 14:40:41,384 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 14:40:41,401 : [INFO]  (Iteration id 0) Global model v3 fetched
+2023-03-18 14:40:50,464 : [INFO]  Evaluation--> val auc: 0.9410089037996151, new node val auc: 0.9515786885245903
+2023-03-18 14:40:50,464 : [INFO]  Evaluation--> val ap: 0.949967224846761, new node val ap: 0.9582485000088595
+2023-03-18 14:40:50,464 : [INFO]  (Iteration id 0) Training started
+2023-03-18 14:40:50,464 : [INFO]  start 0 epoch
+2023-03-18 14:41:46,568 : [INFO]  epoch: 0 took 56.10s
+2023-03-18 14:41:46,569 : [INFO]  Epoch mean loss: 0.5677097222120892
+2023-03-18 14:41:46,569 : [INFO]  val auc: 0.9422560478953488, new node val auc: 0.9524796106557377
+2023-03-18 14:41:46,569 : [INFO]  val ap: 0.9509474703428391, new node val ap: 0.9591258774490794
+2023-03-18 14:41:46,574 : [INFO]  start 1 epoch
+2023-03-18 14:42:42,472 : [INFO]  epoch: 1 took 55.90s
+2023-03-18 14:42:42,472 : [INFO]  Epoch mean loss: 0.5546279757334094
+2023-03-18 14:42:42,472 : [INFO]  val auc: 0.9435687548829054, new node val auc: 0.9542113729508196
+2023-03-18 14:42:42,472 : [INFO]  val ap: 0.9523795020831312, new node val ap: 0.9609518680313827
+2023-03-18 14:42:42,477 : [INFO]  Total Epoch mean loss: 0.5611688489727493
+2023-03-18 14:42:42,477 : [INFO]  Total val auc: 0.942912401389127, new node val auc: 0.9533454918032787
+2023-03-18 14:42:42,478 : [INFO]  Total val ap: 0.9516634862129851, new node val ap: 0.960038872740231
+2023-03-18 14:42:42,478 : [INFO]  (Iteration id 0) Training done
+2023-03-18 14:42:42,478 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 14:42:42,492 : [INFO]  (Iteration id 0) Global model v4 fetched
+2023-03-18 14:42:51,053 : [INFO]  Evaluation--> val auc: 0.9435687548829054, new node val auc: 0.9542113729508196
+2023-03-18 14:42:51,053 : [INFO]  Evaluation--> val ap: 0.9523795020831312, new node val ap: 0.9609518680313827
+2023-03-18 14:42:51,053 : [INFO]  (Iteration id 0) Training started
+2023-03-18 14:42:51,053 : [INFO]  start 0 epoch
+2023-03-18 14:43:53,043 : [INFO]  epoch: 0 took 61.99s
+2023-03-18 14:43:53,043 : [INFO]  Epoch mean loss: 0.5472640500133261
+2023-03-18 14:43:53,043 : [INFO]  val auc: 0.9443688234817738, new node val auc: 0.9544656762295082
+2023-03-18 14:43:53,043 : [INFO]  val ap: 0.9531322060477487, new node val ap: 0.961378645236325
+2023-03-18 14:43:53,054 : [INFO]  start 1 epoch
+2023-03-18 14:44:50,185 : [INFO]  epoch: 1 took 57.13s
+2023-03-18 14:44:50,186 : [INFO]  Epoch mean loss: 0.5472373929370213
+2023-03-18 14:44:50,186 : [INFO]  val auc: 0.947160334848225, new node val auc: 0.9569359631147542
+2023-03-18 14:44:50,186 : [INFO]  val ap: 0.9553507926623548, new node val ap: 0.963622606009747
+2023-03-18 14:44:50,191 : [INFO]  Total Epoch mean loss: 0.5472507214751737
+2023-03-18 14:44:50,191 : [INFO]  Total val auc: 0.9457645791649993, new node val auc: 0.9557008196721312
+2023-03-18 14:44:50,191 : [INFO]  Total val ap: 0.9542414993550518, new node val ap: 0.962500625623036
+2023-03-18 14:44:50,191 : [INFO]  (Iteration id 0) Training done
+2023-03-18 14:44:50,191 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 14:44:50,205 : [INFO]  (Iteration id 0) Global model v5 fetched
+2023-03-18 14:44:58,646 : [INFO]  Evaluation--> val auc: 0.947160334848225, new node val auc: 0.9569359631147542
+2023-03-18 14:44:58,647 : [INFO]  Evaluation--> val ap: 0.9553507926623548, new node val ap: 0.963622606009747
+2023-03-18 14:44:58,647 : [INFO]  (Iteration id 0) Training started
+2023-03-18 14:44:58,647 : [INFO]  start 0 epoch
+2023-03-18 14:45:54,428 : [INFO]  epoch: 0 took 55.78s
+2023-03-18 14:45:54,428 : [INFO]  Epoch mean loss: 0.5428726405932985
+2023-03-18 14:45:54,428 : [INFO]  val auc: 0.9465480708950247, new node val auc: 0.9557792008196723
+2023-03-18 14:45:54,428 : [INFO]  val ap: 0.954714208087308, new node val ap: 0.9624551631284607
+2023-03-18 14:45:54,439 : [INFO]  start 1 epoch
+2023-03-18 14:46:55,231 : [INFO]  epoch: 1 took 60.79s
+2023-03-18 14:46:55,232 : [INFO]  Epoch mean loss: 0.5332136271622381
+2023-03-18 14:46:55,232 : [INFO]  val auc: 0.9445155702757293, new node val auc: 0.9541742827868852
+2023-03-18 14:46:55,232 : [INFO]  val ap: 0.9527438414418862, new node val ap: 0.9612475490302648
+2023-03-18 14:46:55,236 : [INFO]  Total Epoch mean loss: 0.5380431338777683
+2023-03-18 14:46:55,236 : [INFO]  Total val auc: 0.945531820585377, new node val auc: 0.9549767418032787
+2023-03-18 14:46:55,236 : [INFO]  Total val ap: 0.9537290247645971, new node val ap: 0.9618513560793627
+2023-03-18 14:46:55,236 : [INFO]  (Iteration id 0) Training done
+2023-03-18 14:46:55,236 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 14:46:55,249 : [INFO]  _____________________________________________________ (Iteration id 0) Final model evalution ____________________________________________________________
+2023-03-18 14:46:55,249 : [INFO]  (Iteration id 0) Final model (v6) fetched
+2023-03-18 14:47:04,130 : [INFO]  Evaluation--> val auc: 0.9445155702757293, new node val auc: 0.9541742827868852
+2023-03-18 14:47:04,130 : [INFO]  Evaluation--> val ap: 0.9527438414418862, new node val ap: 0.9612475490302648
+2023-03-18 19:04:39,018 : [INFO]  num of training instances: 81029
+2023-03-18 19:04:39,018 : [INFO]  num of batches per epoch: 406
+2023-03-18 19:04:42,344 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 19:04:42,344 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 19:04:42,429 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 19:04:42,441 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 19:04:42,441 : [INFO]  (Iteration id 0) Training started
+2023-03-18 19:04:42,441 : [INFO]  start 0 epoch
+2023-03-18 19:05:38,044 : [INFO]  epoch: 0 took 55.60s
+2023-03-18 19:05:38,045 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 19:05:38,045 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 19:05:38,045 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 19:05:38,065 : [INFO]  start 1 epoch
+2023-03-18 19:06:33,948 : [INFO]  epoch: 1 took 55.88s
+2023-03-18 19:06:33,948 : [INFO]  Epoch mean loss: 0.6632382302301858
+2023-03-18 19:06:33,948 : [INFO]  val auc: 0.9366851247641915, new node val auc: 0.9488590163934427
+2023-03-18 19:06:33,949 : [INFO]  val ap: 0.9437533409280888, new node val ap: 0.9537298980989279
+2023-03-18 19:06:33,958 : [INFO]  Total Epoch mean loss: 0.6913074961510197
+2023-03-18 19:06:33,958 : [INFO]  Total val auc: 0.932972194711218, new node val auc: 0.9462093237704918
+2023-03-18 19:06:33,958 : [INFO]  Total val ap: 0.9397474126252636, new node val ap: 0.9508213472525926
+2023-03-18 19:06:33,959 : [INFO]  (Iteration id 0) Training done
+2023-03-18 19:06:33,959 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 19:06:33,972 : [INFO]  (Iteration id 0) Global model v1 fetched
+2023-03-18 19:06:42,465 : [INFO]  Evaluation--> val auc: 0.9366851247641915, new node val auc: 0.9488590163934427
+2023-03-18 19:06:42,465 : [INFO]  Evaluation--> val ap: 0.9437533409280888, new node val ap: 0.9537298980989279
+2023-03-18 19:06:42,465 : [INFO]  (Iteration id 0) Training started
+2023-03-18 19:06:42,465 : [INFO]  start 0 epoch
+2023-03-18 19:07:47,007 : [INFO]  epoch: 0 took 64.54s
+2023-03-18 19:07:47,007 : [INFO]  Epoch mean loss: 0.6143633061148263
+2023-03-18 19:07:47,007 : [INFO]  val auc: 0.9360592325025248, new node val auc: 0.9484269467213116
+2023-03-18 19:07:47,007 : [INFO]  val ap: 0.9448330423016184, new node val ap: 0.9548541847232912
+2023-03-18 19:07:47,013 : [INFO]  start 1 epoch
+2023-03-18 19:08:50,312 : [INFO]  epoch: 1 took 63.30s
+2023-03-18 19:08:50,312 : [INFO]  Epoch mean loss: 0.6000920944466379
+2023-03-18 19:08:50,312 : [INFO]  val auc: 0.940790915651975, new node val auc: 0.9526808401639344
+2023-03-18 19:08:50,312 : [INFO]  val ap: 0.9490178831394023, new node val ap: 0.9585920801008647
+2023-03-18 19:08:50,322 : [INFO]  Total Epoch mean loss: 0.607227700280732
+2023-03-18 19:08:50,322 : [INFO]  Total val auc: 0.93842507407725, new node val auc: 0.950553893442623
+2023-03-18 19:08:50,322 : [INFO]  Total val ap: 0.9469254627205104, new node val ap: 0.956723132412078
+2023-03-18 19:08:50,323 : [INFO]  (Iteration id 0) Training done
+2023-03-18 19:08:50,323 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 19:08:50,335 : [INFO]  _____________________________________________________ (Iteration id 0) Final model evalution ____________________________________________________________
+2023-03-18 19:08:50,335 : [INFO]  (Iteration id 0) Final model (v2) fetched
+2023-03-18 19:09:00,475 : [INFO]  Evaluation--> val auc: 0.940790915651975, new node val auc: 0.9526808401639344
+2023-03-18 19:09:00,475 : [INFO]  Evaluation--> val ap: 0.9490178831394023, new node val ap: 0.9585920801008647
+2023-03-18 19:10:44,103 : [INFO]  num of training instances: 81029
+2023-03-18 19:10:44,103 : [INFO]  num of batches per epoch: 406
+2023-03-18 19:10:45,981 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 19:10:45,982 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 19:10:46,073 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 19:10:46,083 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 19:10:46,083 : [INFO]  (Iteration id 0) Training started
+2023-03-18 19:10:46,083 : [INFO]  start 0 epoch
+2023-03-18 19:11:53,508 : [INFO]  epoch: 0 took 67.42s
+2023-03-18 19:11:53,508 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 19:11:53,508 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 19:11:53,508 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 19:11:53,519 : [INFO]  start 1 epoch
+2023-03-18 19:12:53,733 : [INFO]  epoch: 1 took 60.21s
+2023-03-18 19:12:53,733 : [INFO]  Epoch mean loss: 0.6632382302301858
+2023-03-18 19:12:53,734 : [INFO]  val auc: 0.9366851247641915, new node val auc: 0.9488590163934427
+2023-03-18 19:12:53,734 : [INFO]  val ap: 0.9437533409280888, new node val ap: 0.9537298980989279
+2023-03-18 19:12:53,740 : [INFO]  Total Epoch mean loss: 0.6913074961510197
+2023-03-18 19:12:53,740 : [INFO]  Total val auc: 0.932972194711218, new node val auc: 0.9462093237704918
+2023-03-18 19:12:53,740 : [INFO]  Total val ap: 0.9397474126252636, new node val ap: 0.9508213472525926
+2023-03-18 19:12:53,741 : [INFO]  (Iteration id 0) Training done
+2023-03-18 19:12:53,741 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 19:12:53,756 : [INFO]  (Iteration id 0) Global model v1 fetched
+2023-03-18 19:13:02,826 : [INFO]  Evaluation--> val auc: 0.9366851247641915, new node val auc: 0.9488590163934427
+2023-03-18 19:13:02,826 : [INFO]  Evaluation--> val ap: 0.9437533409280888, new node val ap: 0.9537298980989279
+2023-03-18 19:13:02,826 : [INFO]  (Iteration id 0) Training started
+2023-03-18 19:13:02,827 : [INFO]  start 0 epoch
+2023-03-18 19:14:08,097 : [INFO]  epoch: 0 took 65.27s
+2023-03-18 19:14:08,098 : [INFO]  Epoch mean loss: 0.6143633061148263
+2023-03-18 19:14:08,098 : [INFO]  val auc: 0.9360592325025248, new node val auc: 0.9484269467213116
+2023-03-18 19:14:08,098 : [INFO]  val ap: 0.9448330423016184, new node val ap: 0.9548541847232912
+2023-03-18 19:14:08,103 : [INFO]  start 1 epoch
+2023-03-18 19:15:15,131 : [INFO]  epoch: 1 took 67.03s
+2023-03-18 19:15:15,132 : [INFO]  Epoch mean loss: 0.6000920944466379
+2023-03-18 19:15:15,132 : [INFO]  val auc: 0.940790915651975, new node val auc: 0.9526808401639344
+2023-03-18 19:15:15,132 : [INFO]  val ap: 0.9490178831394023, new node val ap: 0.9585920801008647
+2023-03-18 19:15:15,138 : [INFO]  Total Epoch mean loss: 0.607227700280732
+2023-03-18 19:15:15,138 : [INFO]  Total val auc: 0.93842507407725, new node val auc: 0.950553893442623
+2023-03-18 19:15:15,138 : [INFO]  Total val ap: 0.9469254627205104, new node val ap: 0.956723132412078
+2023-03-18 19:15:15,139 : [INFO]  (Iteration id 0) Training done
+2023-03-18 19:15:15,139 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 19:15:15,180 : [INFO]  _____________________________________________________ (Iteration id 0) Final model evalution ____________________________________________________________
+2023-03-18 19:15:15,180 : [INFO]  (Iteration id 0) Final model (v2) fetched
+2023-03-18 19:15:24,645 : [INFO]  Evaluation--> val auc: 0.940790915651975, new node val auc: 0.9526808401639344
+2023-03-18 19:15:24,645 : [INFO]  Evaluation--> val ap: 0.9490178831394023, new node val ap: 0.9585920801008647
+2023-03-18 19:30:00,765 : [INFO]  num of training instances: 81029
+2023-03-18 19:30:00,765 : [INFO]  num of batches per epoch: 406
+2023-03-18 19:30:02,529 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 19:30:02,530 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 19:30:02,617 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 19:30:02,628 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 19:30:02,629 : [INFO]  (Iteration id 0) Training started
+2023-03-18 19:30:02,629 : [INFO]  start 0 epoch
+2023-03-18 19:31:01,076 : [INFO]  epoch: 0 took 58.45s
+2023-03-18 19:31:01,076 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 19:31:01,077 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 19:31:01,077 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 19:31:01,086 : [INFO]  Total Epoch mean loss: 0.7193767620718537
+2023-03-18 19:31:01,087 : [INFO]  Total val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 19:31:01,087 : [INFO]  Total val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 19:31:01,087 : [INFO]  (Iteration id 0) Training done
+2023-03-18 19:31:01,087 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 19:31:01,119 : [INFO]  _____________________________________________________ (Iteration id 0) Final model evalution ____________________________________________________________
+2023-03-18 19:31:01,120 : [INFO]  (Iteration id 0) Final model (v1) fetched
+2023-03-18 19:31:12,148 : [INFO]  Evaluation--> val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 19:31:12,148 : [INFO]  Evaluation--> val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 19:31:12,148 : [INFO]  _____________________________________________________ Training Finished ____________________________________________________________
+2023-03-18 19:31:12,148 : [INFO]  Batch testing started
+2023-03-18 19:33:29,821 : [INFO]  num of training instances: 81029
+2023-03-18 19:33:29,821 : [INFO]  num of batches per epoch: 406
+2023-03-18 19:33:31,674 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 19:33:31,675 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 19:33:31,762 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 19:33:31,774 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 19:33:31,774 : [INFO]  (Iteration id 0) Training started
+2023-03-18 19:33:31,774 : [INFO]  start 0 epoch
+2023-03-18 19:34:28,260 : [INFO]  epoch: 0 took 56.49s
+2023-03-18 19:34:28,260 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 19:34:28,260 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 19:34:28,260 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 19:34:28,271 : [INFO]  Total Epoch mean loss: 0.7193767620718537
+2023-03-18 19:34:28,271 : [INFO]  Total val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 19:34:28,271 : [INFO]  Total val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 19:34:28,271 : [INFO]  (Iteration id 0) Training done
+2023-03-18 19:34:28,271 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 19:34:28,287 : [INFO]  _____________________________________________________ (Iteration id 0) Final model evalution ____________________________________________________________
+2023-03-18 19:34:28,287 : [INFO]  (Iteration id 0) Final model (v1) fetched
+2023-03-18 19:34:36,814 : [INFO]  Evaluation--> val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 19:34:36,815 : [INFO]  Evaluation--> val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 19:34:36,815 : [INFO]  _____________________________________________________ Training Finished ____________________________________________________________
+2023-03-18 19:34:36,815 : [INFO]  Batch testing started
+2023-03-18 19:34:36,927 : [INFO]  Test statistics: Old nodes -- auc: 0.953425, ap: 0.9559461717702358
+2023-03-18 19:34:36,928 : [INFO]  Test statistics: New nodes -- auc: 0.9469749999999999, ap: 0.937804547670456
+2023-03-18 19:34:37,060 : [INFO]  Test statistics: Old nodes -- auc: 0.9176000000000001, ap: 0.9240886097789631
+2023-03-18 19:34:37,060 : [INFO]  Test statistics: New nodes -- auc: 0.927125, ap: 0.9179811347100779
+2023-03-18 19:34:37,236 : [INFO]  Test statistics: Old nodes -- auc: 0.9416249999999999, ap: 0.9512112378298312
+2023-03-18 19:34:37,236 : [INFO]  Test statistics: New nodes -- auc: 0.90245, ap: 0.9117049237912692
+2023-03-18 19:34:37,415 : [INFO]  Test statistics: Old nodes -- auc: 0.9047999999999999, ap: 0.9112270883278972
+2023-03-18 19:34:37,416 : [INFO]  Test statistics: New nodes -- auc: 0.9607874999999999, ap: 0.9659249526415812
+2023-03-18 19:34:37,563 : [INFO]  Test statistics: Old nodes -- auc: 0.913575, ap: 0.9208759993213518
+2023-03-18 19:34:37,563 : [INFO]  Test statistics: New nodes -- auc: 0.90875, ap: 0.9182358852991259
+2023-03-18 19:34:37,709 : [INFO]  Test statistics: Old nodes -- auc: 0.9474625, ap: 0.9518271396406865
+2023-03-18 19:34:37,709 : [INFO]  Test statistics: New nodes -- auc: 0.89195, ap: 0.8985222233089067
+2023-03-18 19:34:37,840 : [INFO]  Test statistics: Old nodes -- auc: 0.932325, ap: 0.9450933209944118
+2023-03-18 19:34:37,841 : [INFO]  Test statistics: New nodes -- auc: 0.917275, ap: 0.9176243047802
+2023-03-18 19:34:37,985 : [INFO]  Test statistics: Old nodes -- auc: 0.9249749999999999, ap: 0.9371014321930293
+2023-03-18 19:34:37,985 : [INFO]  Test statistics: New nodes -- auc: 0.927225, ap: 0.9293939880223314
+2023-03-18 19:34:38,118 : [INFO]  Test statistics: Old nodes -- auc: 0.9287, ap: 0.9385777804434345
+2023-03-18 19:34:38,118 : [INFO]  Test statistics: New nodes -- auc: 0.9323, ap: 0.9300263272031082
+2023-03-18 19:34:38,235 : [INFO]  Test statistics: Old nodes -- auc: 0.989725, ap: 0.9903691834958224
+2023-03-18 19:34:38,235 : [INFO]  Test statistics: New nodes -- auc: 0.93635, ap: 0.9400840677802463
+2023-03-18 19:34:38,362 : [INFO]  Test statistics: Old nodes -- auc: 0.9375, ap: 0.9431657279288441
+2023-03-18 19:34:38,362 : [INFO]  Test statistics: New nodes -- auc: 0.93135, ap: 0.931410786277852
+2023-03-18 19:34:38,487 : [INFO]  Test statistics: Old nodes -- auc: 0.9041250000000001, ap: 0.9140377253358775
+2023-03-18 19:34:38,487 : [INFO]  Test statistics: New nodes -- auc: 0.92015, ap: 0.9274765627503453
+2023-03-18 19:34:38,611 : [INFO]  Test statistics: Old nodes -- auc: 0.9037000000000001, ap: 0.9167242541088814
+2023-03-18 19:34:38,611 : [INFO]  Test statistics: New nodes -- auc: 0.905525, ap: 0.9052119363929629
+2023-03-18 19:34:38,736 : [INFO]  Test statistics: Old nodes -- auc: 0.943925, ap: 0.9485340397507438
+2023-03-18 19:34:38,736 : [INFO]  Test statistics: New nodes -- auc: 0.9320250000000001, ap: 0.9355961704239103
+2023-03-18 19:34:38,869 : [INFO]  Test statistics: Old nodes -- auc: 0.9255125, ap: 0.9273387469624618
+2023-03-18 19:34:38,869 : [INFO]  Test statistics: New nodes -- auc: 0.91675, ap: 0.9251813109721234
+2023-03-18 19:34:39,013 : [INFO]  Test statistics: Old nodes -- auc: 0.9383, ap: 0.9453972058069581
+2023-03-18 19:34:39,013 : [INFO]  Test statistics: New nodes -- auc: 0.9016249999999999, ap: 0.9136675091434894
+2023-03-18 19:34:39,154 : [INFO]  Test statistics: Old nodes -- auc: 0.9377624999999999, ap: 0.9439339284721903
+2023-03-18 19:34:39,154 : [INFO]  Test statistics: New nodes -- auc: 0.9252874999999999, ap: 0.9226294503549417
+2023-03-18 19:34:39,286 : [INFO]  Test statistics: Old nodes -- auc: 0.916475, ap: 0.9249868769470041
+2023-03-18 19:34:39,286 : [INFO]  Test statistics: New nodes -- auc: 0.8834374999999999, ap: 0.8824920575455146
+2023-03-18 19:34:39,404 : [INFO]  Test statistics: Old nodes -- auc: 0.9341499999999999, ap: 0.9424964051631166
+2023-03-18 19:34:39,404 : [INFO]  Test statistics: New nodes -- auc: 0.893575, ap: 0.895597286983
+2023-03-18 19:34:39,531 : [INFO]  Test statistics: Old nodes -- auc: 0.9191, ap: 0.9221820199515666
+2023-03-18 19:34:39,531 : [INFO]  Test statistics: New nodes -- auc: 0.89535, ap: 0.9048338588454019
+2023-03-18 19:34:39,651 : [INFO]  Test statistics: Old nodes -- auc: 0.9264, ap: 0.929653129054703
+2023-03-18 19:34:39,651 : [INFO]  Test statistics: New nodes -- auc: 0.9143249999999999, ap: 0.9224959446630274
+2023-03-18 19:34:39,773 : [INFO]  Test statistics: Old nodes -- auc: 0.8798, ap: 0.9013178525079043
+2023-03-18 19:34:39,773 : [INFO]  Test statistics: New nodes -- auc: 0.9228, ap: 0.9332030141304417
+2023-03-18 19:34:39,889 : [INFO]  Test statistics: Old nodes -- auc: 0.9136875, ap: 0.926162891299108
+2023-03-18 19:34:39,889 : [INFO]  Test statistics: New nodes -- auc: 0.903825, ap: 0.9128777355145736
+2023-03-18 19:34:40,015 : [INFO]  Test statistics: Old nodes -- auc: 0.953125, ap: 0.960072584184757
+2023-03-18 19:34:40,015 : [INFO]  Test statistics: New nodes -- auc: 0.9624375000000001, ap: 0.9622497344175335
+2023-03-18 19:34:40,141 : [INFO]  Test statistics: Old nodes -- auc: 0.9217000000000001, ap: 0.9246011621746155
+2023-03-18 19:34:40,141 : [INFO]  Test statistics: New nodes -- auc: 0.9358875, ap: 0.9385201951730353
+2023-03-18 19:34:40,264 : [INFO]  Test statistics: Old nodes -- auc: 0.93815, ap: 0.9420560367712454
+2023-03-18 19:34:40,264 : [INFO]  Test statistics: New nodes -- auc: 0.876425, ap: 0.8863200408668823
+2023-03-18 19:34:40,384 : [INFO]  Test statistics: Old nodes -- auc: 0.912275, ap: 0.9101876060475622
+2023-03-18 19:34:40,384 : [INFO]  Test statistics: New nodes -- auc: 0.9604750000000001, ap: 0.9650270105392613
+2023-03-18 19:34:40,509 : [INFO]  Test statistics: Old nodes -- auc: 0.893325, ap: 0.8975684627864788
+2023-03-18 19:34:40,509 : [INFO]  Test statistics: New nodes -- auc: 0.88615, ap: 0.8986654735030157
+2023-03-18 19:34:40,628 : [INFO]  Test statistics: Old nodes -- auc: 0.9400499999999999, ap: 0.9464750605362737
+2023-03-18 19:34:40,628 : [INFO]  Test statistics: New nodes -- auc: 0.9450624999999999, ap: 0.9484266841852305
+2023-03-18 19:34:40,734 : [INFO]  Test statistics: Old nodes -- auc: 0.9191374999999999, ap: 0.922395301895584
+2023-03-18 19:34:40,734 : [INFO]  Test statistics: New nodes -- auc: 0.8796219281663517, ap: 0.8921908686214691
+2023-03-18 19:37:42,370 : [INFO]  num of training instances: 81029
+2023-03-18 19:37:42,371 : [INFO]  num of batches per epoch: 406
+2023-03-18 19:37:46,597 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 19:37:46,598 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 19:37:46,700 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 19:37:46,717 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 19:37:46,717 : [INFO]  (Iteration id 0) Training started
+2023-03-18 19:37:46,717 : [INFO]  start 0 epoch
+2023-03-18 19:38:47,932 : [INFO]  epoch: 0 took 61.21s
+2023-03-18 19:38:47,932 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 19:38:47,933 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 19:38:47,933 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 19:38:47,945 : [INFO]  Total Epoch mean loss: 0.7193767620718537
+2023-03-18 19:38:47,945 : [INFO]  Total val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 19:38:47,945 : [INFO]  Total val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 19:38:47,945 : [INFO]  (Iteration id 0) Training done
+2023-03-18 19:38:47,946 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 19:38:47,961 : [INFO]  _____________________________________________________ (Iteration id 0) Final model evalution ____________________________________________________________
+2023-03-18 19:38:47,961 : [INFO]  (Iteration id 0) Final model (v1) fetched
+2023-03-18 19:38:57,727 : [INFO]  Evaluation--> val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 19:38:57,727 : [INFO]  Evaluation--> val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 19:38:57,727 : [INFO]  _____________________________________________________ Training Finished ____________________________________________________________
+2023-03-18 19:38:57,728 : [INFO]  Batch testing started
+2023-03-18 19:38:57,836 : [INFO]  Test statistics: Old nodes -- auc: 0.953425, ap: 0.9559461717702358
+2023-03-18 19:38:57,836 : [INFO]  Test statistics: New nodes -- auc: 0.9469749999999999, ap: 0.937804547670456
+2023-03-18 19:38:57,971 : [INFO]  Test statistics: Old nodes -- auc: 0.9176000000000001, ap: 0.9240886097789631
+2023-03-18 19:38:57,971 : [INFO]  Test statistics: New nodes -- auc: 0.927125, ap: 0.9179811347100779
+2023-03-18 19:38:58,115 : [INFO]  Test statistics: Old nodes -- auc: 0.9416249999999999, ap: 0.9512112378298312
+2023-03-18 19:38:58,115 : [INFO]  Test statistics: New nodes -- auc: 0.90245, ap: 0.9117049237912692
+2023-03-18 19:38:58,249 : [INFO]  Test statistics: Old nodes -- auc: 0.9047999999999999, ap: 0.9112270883278972
+2023-03-18 19:38:58,249 : [INFO]  Test statistics: New nodes -- auc: 0.9607874999999999, ap: 0.9659249526415812
+2023-03-18 19:38:58,390 : [INFO]  Test statistics: Old nodes -- auc: 0.913575, ap: 0.9208759993213518
+2023-03-18 19:38:58,390 : [INFO]  Test statistics: New nodes -- auc: 0.90875, ap: 0.9182358852991259
+2023-03-18 19:38:58,525 : [INFO]  Test statistics: Old nodes -- auc: 0.9474625, ap: 0.9518271396406865
+2023-03-18 19:38:58,526 : [INFO]  Test statistics: New nodes -- auc: 0.89195, ap: 0.8985222233089067
+2023-03-18 19:38:58,665 : [INFO]  Test statistics: Old nodes -- auc: 0.932325, ap: 0.9450933209944118
+2023-03-18 19:38:58,666 : [INFO]  Test statistics: New nodes -- auc: 0.917275, ap: 0.9176243047802
+2023-03-18 19:38:58,797 : [INFO]  Test statistics: Old nodes -- auc: 0.9249749999999999, ap: 0.9371014321930293
+2023-03-18 19:38:58,797 : [INFO]  Test statistics: New nodes -- auc: 0.927225, ap: 0.9293939880223314
+2023-03-18 19:38:58,939 : [INFO]  Test statistics: Old nodes -- auc: 0.9287, ap: 0.9385777804434345
+2023-03-18 19:38:58,939 : [INFO]  Test statistics: New nodes -- auc: 0.9323, ap: 0.9300263272031082
+2023-03-18 19:38:59,072 : [INFO]  Test statistics: Old nodes -- auc: 0.989725, ap: 0.9903691834958224
+2023-03-18 19:38:59,073 : [INFO]  Test statistics: New nodes -- auc: 0.93635, ap: 0.9400840677802463
+2023-03-18 19:38:59,214 : [INFO]  Test statistics: Old nodes -- auc: 0.9375, ap: 0.9431657279288441
+2023-03-18 19:38:59,214 : [INFO]  Test statistics: New nodes -- auc: 0.93135, ap: 0.931410786277852
+2023-03-18 19:38:59,351 : [INFO]  Test statistics: Old nodes -- auc: 0.9041250000000001, ap: 0.9140377253358775
+2023-03-18 19:38:59,351 : [INFO]  Test statistics: New nodes -- auc: 0.92015, ap: 0.9274765627503453
+2023-03-18 19:38:59,492 : [INFO]  Test statistics: Old nodes -- auc: 0.9037000000000001, ap: 0.9167242541088814
+2023-03-18 19:38:59,492 : [INFO]  Test statistics: New nodes -- auc: 0.905525, ap: 0.9052119363929629
+2023-03-18 19:38:59,626 : [INFO]  Test statistics: Old nodes -- auc: 0.943925, ap: 0.9485340397507438
+2023-03-18 19:38:59,627 : [INFO]  Test statistics: New nodes -- auc: 0.9320250000000001, ap: 0.9355961704239103
+2023-03-18 19:38:59,772 : [INFO]  Test statistics: Old nodes -- auc: 0.9255125, ap: 0.9273387469624618
+2023-03-18 19:38:59,773 : [INFO]  Test statistics: New nodes -- auc: 0.91675, ap: 0.9251813109721234
+2023-03-18 19:38:59,907 : [INFO]  Test statistics: Old nodes -- auc: 0.9383, ap: 0.9453972058069581
+2023-03-18 19:38:59,907 : [INFO]  Test statistics: New nodes -- auc: 0.9016249999999999, ap: 0.9136675091434894
+2023-03-18 19:39:00,047 : [INFO]  Test statistics: Old nodes -- auc: 0.9377624999999999, ap: 0.9439339284721903
+2023-03-18 19:39:00,047 : [INFO]  Test statistics: New nodes -- auc: 0.9252874999999999, ap: 0.9226294503549417
+2023-03-18 19:39:00,180 : [INFO]  Test statistics: Old nodes -- auc: 0.916475, ap: 0.9249868769470041
+2023-03-18 19:39:00,181 : [INFO]  Test statistics: New nodes -- auc: 0.8834374999999999, ap: 0.8824920575455146
+2023-03-18 19:39:00,320 : [INFO]  Test statistics: Old nodes -- auc: 0.9341499999999999, ap: 0.9424964051631166
+2023-03-18 19:39:00,321 : [INFO]  Test statistics: New nodes -- auc: 0.893575, ap: 0.895597286983
+2023-03-18 19:39:00,458 : [INFO]  Test statistics: Old nodes -- auc: 0.9191, ap: 0.9221820199515666
+2023-03-18 19:39:00,459 : [INFO]  Test statistics: New nodes -- auc: 0.89535, ap: 0.9048338588454019
+2023-03-18 19:39:00,603 : [INFO]  Test statistics: Old nodes -- auc: 0.9264, ap: 0.929653129054703
+2023-03-18 19:39:00,603 : [INFO]  Test statistics: New nodes -- auc: 0.9143249999999999, ap: 0.9224959446630274
+2023-03-18 19:39:00,743 : [INFO]  Test statistics: Old nodes -- auc: 0.8798, ap: 0.9013178525079043
+2023-03-18 19:39:00,743 : [INFO]  Test statistics: New nodes -- auc: 0.9228, ap: 0.9332030141304417
+2023-03-18 19:39:00,888 : [INFO]  Test statistics: Old nodes -- auc: 0.9136875, ap: 0.926162891299108
+2023-03-18 19:39:00,888 : [INFO]  Test statistics: New nodes -- auc: 0.903825, ap: 0.9128777355145736
+2023-03-18 19:39:01,022 : [INFO]  Test statistics: Old nodes -- auc: 0.953125, ap: 0.960072584184757
+2023-03-18 19:39:01,023 : [INFO]  Test statistics: New nodes -- auc: 0.9624375000000001, ap: 0.9622497344175335
+2023-03-18 19:39:01,163 : [INFO]  Test statistics: Old nodes -- auc: 0.9217000000000001, ap: 0.9246011621746155
+2023-03-18 19:39:01,164 : [INFO]  Test statistics: New nodes -- auc: 0.9358875, ap: 0.9385201951730353
+2023-03-18 19:39:01,299 : [INFO]  Test statistics: Old nodes -- auc: 0.93815, ap: 0.9420560367712454
+2023-03-18 19:39:01,299 : [INFO]  Test statistics: New nodes -- auc: 0.876425, ap: 0.8863200408668823
+2023-03-18 19:39:01,442 : [INFO]  Test statistics: Old nodes -- auc: 0.912275, ap: 0.9101876060475622
+2023-03-18 19:39:01,442 : [INFO]  Test statistics: New nodes -- auc: 0.9604750000000001, ap: 0.9650270105392613
+2023-03-18 19:39:01,578 : [INFO]  Test statistics: Old nodes -- auc: 0.893325, ap: 0.8975684627864788
+2023-03-18 19:39:01,579 : [INFO]  Test statistics: New nodes -- auc: 0.88615, ap: 0.8986654735030157
+2023-03-18 19:39:01,722 : [INFO]  Test statistics: Old nodes -- auc: 0.9400499999999999, ap: 0.9464750605362737
+2023-03-18 19:39:01,722 : [INFO]  Test statistics: New nodes -- auc: 0.9450624999999999, ap: 0.9484266841852305
+2023-03-18 19:39:01,834 : [INFO]  Test statistics: Old nodes -- auc: 0.9191374999999999, ap: 0.922395301895584
+2023-03-18 19:39:01,834 : [INFO]  Test statistics: New nodes -- auc: 0.8796219281663517, ap: 0.8921908686214691
+2023-03-18 19:41:18,692 : [INFO]  num of training instances: 81029
+2023-03-18 19:41:18,692 : [INFO]  num of batches per epoch: 406
+2023-03-18 19:41:22,874 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 19:41:22,874 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 19:41:22,974 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 19:41:22,991 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 19:41:22,991 : [INFO]  (Iteration id 0) Training started
+2023-03-18 19:41:22,991 : [INFO]  start 0 epoch
+2023-03-18 19:42:22,385 : [INFO]  epoch: 0 took 59.39s
+2023-03-18 19:42:22,385 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 19:42:22,386 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 19:42:22,386 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 19:42:22,392 : [INFO]  Total Epoch mean loss: 0.7193767620718537
+2023-03-18 19:42:22,392 : [INFO]  Total val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 19:42:22,393 : [INFO]  Total val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 19:42:22,393 : [INFO]  (Iteration id 0) Training done
+2023-03-18 19:42:22,393 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 19:42:22,408 : [INFO]  _____________________________________________________ (Iteration id 0) Final model evalution ____________________________________________________________
+2023-03-18 19:42:22,408 : [INFO]  (Iteration id 0) Final model (v1) fetched
+2023-03-18 19:42:32,203 : [INFO]  Evaluation--> val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 19:42:32,203 : [INFO]  Evaluation--> val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 19:42:32,203 : [INFO]  _____________________________________________________ Training Finished ____________________________________________________________
+2023-03-18 19:42:32,204 : [INFO]  Batch testing started
+2023-03-18 19:42:32,313 : [INFO]  Test statistics: Old nodes -- auc: 0.953425, ap: 0.9559461717702358, id: 0
+2023-03-18 19:42:32,313 : [INFO]  Test statistics: New nodes -- auc: 0.9469749999999999, ap: 0.937804547670456
+2023-03-18 19:42:32,449 : [INFO]  Test statistics: Old nodes -- auc: 0.9176000000000001, ap: 0.9240886097789631, id: 2
+2023-03-18 19:42:32,450 : [INFO]  Test statistics: New nodes -- auc: 0.927125, ap: 0.9179811347100779
+2023-03-18 19:42:32,609 : [INFO]  Test statistics: Old nodes -- auc: 0.9416249999999999, ap: 0.9512112378298312, id: 4
+2023-03-18 19:42:32,609 : [INFO]  Test statistics: New nodes -- auc: 0.90245, ap: 0.9117049237912692
+2023-03-18 19:42:32,747 : [INFO]  Test statistics: Old nodes -- auc: 0.9047999999999999, ap: 0.9112270883278972, id: 6
+2023-03-18 19:42:32,747 : [INFO]  Test statistics: New nodes -- auc: 0.9607874999999999, ap: 0.9659249526415812
+2023-03-18 19:42:32,889 : [INFO]  Test statistics: Old nodes -- auc: 0.913575, ap: 0.9208759993213518, id: 8
+2023-03-18 19:42:32,890 : [INFO]  Test statistics: New nodes -- auc: 0.90875, ap: 0.9182358852991259
+2023-03-18 19:42:33,024 : [INFO]  Test statistics: Old nodes -- auc: 0.9474625, ap: 0.9518271396406865, id: 10
+2023-03-18 19:42:33,024 : [INFO]  Test statistics: New nodes -- auc: 0.89195, ap: 0.8985222233089067
+2023-03-18 19:42:33,164 : [INFO]  Test statistics: Old nodes -- auc: 0.932325, ap: 0.9450933209944118, id: 12
+2023-03-18 19:42:33,165 : [INFO]  Test statistics: New nodes -- auc: 0.917275, ap: 0.9176243047802
+2023-03-18 19:42:33,302 : [INFO]  Test statistics: Old nodes -- auc: 0.9249749999999999, ap: 0.9371014321930293, id: 14
+2023-03-18 19:42:33,302 : [INFO]  Test statistics: New nodes -- auc: 0.927225, ap: 0.9293939880223314
+2023-03-18 19:42:33,444 : [INFO]  Test statistics: Old nodes -- auc: 0.9287, ap: 0.9385777804434345, id: 16
+2023-03-18 19:42:33,445 : [INFO]  Test statistics: New nodes -- auc: 0.9323, ap: 0.9300263272031082
+2023-03-18 19:42:33,580 : [INFO]  Test statistics: Old nodes -- auc: 0.989725, ap: 0.9903691834958224, id: 18
+2023-03-18 19:42:33,580 : [INFO]  Test statistics: New nodes -- auc: 0.93635, ap: 0.9400840677802463
+2023-03-18 19:42:33,717 : [INFO]  Test statistics: Old nodes -- auc: 0.9375, ap: 0.9431657279288441, id: 20
+2023-03-18 19:42:33,717 : [INFO]  Test statistics: New nodes -- auc: 0.93135, ap: 0.931410786277852
+2023-03-18 19:42:33,853 : [INFO]  Test statistics: Old nodes -- auc: 0.9041250000000001, ap: 0.9140377253358775, id: 22
+2023-03-18 19:42:33,854 : [INFO]  Test statistics: New nodes -- auc: 0.92015, ap: 0.9274765627503453
+2023-03-18 19:42:33,989 : [INFO]  Test statistics: Old nodes -- auc: 0.9037000000000001, ap: 0.9167242541088814, id: 24
+2023-03-18 19:42:33,989 : [INFO]  Test statistics: New nodes -- auc: 0.905525, ap: 0.9052119363929629
+2023-03-18 19:42:34,128 : [INFO]  Test statistics: Old nodes -- auc: 0.943925, ap: 0.9485340397507438, id: 26
+2023-03-18 19:42:34,128 : [INFO]  Test statistics: New nodes -- auc: 0.9320250000000001, ap: 0.9355961704239103
+2023-03-18 19:42:34,266 : [INFO]  Test statistics: Old nodes -- auc: 0.9255125, ap: 0.9273387469624618, id: 28
+2023-03-18 19:42:34,266 : [INFO]  Test statistics: New nodes -- auc: 0.91675, ap: 0.9251813109721234
+2023-03-18 19:42:34,405 : [INFO]  Test statistics: Old nodes -- auc: 0.9383, ap: 0.9453972058069581, id: 30
+2023-03-18 19:42:34,405 : [INFO]  Test statistics: New nodes -- auc: 0.9016249999999999, ap: 0.9136675091434894
+2023-03-18 19:42:34,543 : [INFO]  Test statistics: Old nodes -- auc: 0.9377624999999999, ap: 0.9439339284721903, id: 32
+2023-03-18 19:42:34,543 : [INFO]  Test statistics: New nodes -- auc: 0.9252874999999999, ap: 0.9226294503549417
+2023-03-18 19:42:34,683 : [INFO]  Test statistics: Old nodes -- auc: 0.916475, ap: 0.9249868769470041, id: 34
+2023-03-18 19:42:34,683 : [INFO]  Test statistics: New nodes -- auc: 0.8834374999999999, ap: 0.8824920575455146
+2023-03-18 19:42:34,820 : [INFO]  Test statistics: Old nodes -- auc: 0.9341499999999999, ap: 0.9424964051631166, id: 36
+2023-03-18 19:42:34,820 : [INFO]  Test statistics: New nodes -- auc: 0.893575, ap: 0.895597286983
+2023-03-18 19:42:34,954 : [INFO]  Test statistics: Old nodes -- auc: 0.9191, ap: 0.9221820199515666, id: 38
+2023-03-18 19:42:34,955 : [INFO]  Test statistics: New nodes -- auc: 0.89535, ap: 0.9048338588454019
+2023-03-18 19:42:35,095 : [INFO]  Test statistics: Old nodes -- auc: 0.9264, ap: 0.929653129054703, id: 40
+2023-03-18 19:42:35,095 : [INFO]  Test statistics: New nodes -- auc: 0.9143249999999999, ap: 0.9224959446630274
+2023-03-18 19:42:35,235 : [INFO]  Test statistics: Old nodes -- auc: 0.8798, ap: 0.9013178525079043, id: 42
+2023-03-18 19:42:35,235 : [INFO]  Test statistics: New nodes -- auc: 0.9228, ap: 0.9332030141304417
+2023-03-18 19:42:35,370 : [INFO]  Test statistics: Old nodes -- auc: 0.9136875, ap: 0.926162891299108, id: 44
+2023-03-18 19:42:35,370 : [INFO]  Test statistics: New nodes -- auc: 0.903825, ap: 0.9128777355145736
+2023-03-18 19:42:35,505 : [INFO]  Test statistics: Old nodes -- auc: 0.953125, ap: 0.960072584184757, id: 46
+2023-03-18 19:42:35,505 : [INFO]  Test statistics: New nodes -- auc: 0.9624375000000001, ap: 0.9622497344175335
+2023-03-18 19:42:35,645 : [INFO]  Test statistics: Old nodes -- auc: 0.9217000000000001, ap: 0.9246011621746155, id: 48
+2023-03-18 19:42:35,645 : [INFO]  Test statistics: New nodes -- auc: 0.9358875, ap: 0.9385201951730353
+2023-03-18 19:42:35,784 : [INFO]  Test statistics: Old nodes -- auc: 0.93815, ap: 0.9420560367712454, id: 50
+2023-03-18 19:42:35,784 : [INFO]  Test statistics: New nodes -- auc: 0.876425, ap: 0.8863200408668823
+2023-03-18 19:42:35,926 : [INFO]  Test statistics: Old nodes -- auc: 0.912275, ap: 0.9101876060475622, id: 52
+2023-03-18 19:42:35,927 : [INFO]  Test statistics: New nodes -- auc: 0.9604750000000001, ap: 0.9650270105392613
+2023-03-18 19:42:36,071 : [INFO]  Test statistics: Old nodes -- auc: 0.893325, ap: 0.8975684627864788, id: 54
+2023-03-18 19:42:36,071 : [INFO]  Test statistics: New nodes -- auc: 0.88615, ap: 0.8986654735030157
+2023-03-18 19:42:36,211 : [INFO]  Test statistics: Old nodes -- auc: 0.9400499999999999, ap: 0.9464750605362737, id: 56
+2023-03-18 19:42:36,211 : [INFO]  Test statistics: New nodes -- auc: 0.9450624999999999, ap: 0.9484266841852305
+2023-03-18 19:42:36,333 : [INFO]  Test statistics: Old nodes -- auc: 0.9191374999999999, ap: 0.922395301895584, id: 58
+2023-03-18 19:42:36,333 : [INFO]  Test statistics: New nodes -- auc: 0.8796219281663517, ap: 0.8921908686214691
+2023-03-18 19:56:29,822 : [INFO]  num of training instances: 81029
+2023-03-18 19:56:29,822 : [INFO]  num of batches per epoch: 406
+2023-03-18 19:56:31,523 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 19:56:31,524 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 19:56:31,608 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 19:56:31,619 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 19:56:31,619 : [INFO]  (Iteration id 0) Training started
+2023-03-18 19:56:31,619 : [INFO]  start 0 epoch
+2023-03-18 19:57:29,611 : [INFO]  epoch: 0 took 57.99s
+2023-03-18 19:57:29,611 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 19:57:29,611 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 19:57:29,611 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 19:57:29,622 : [INFO]  Total Epoch mean loss: 0.7193767620718537
+2023-03-18 19:57:29,622 : [INFO]  Total val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 19:57:29,622 : [INFO]  Total val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 19:57:29,622 : [INFO]  (Iteration id 0) Training done
+2023-03-18 19:57:29,622 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 19:57:29,636 : [INFO]  _____________________________________________________ (Iteration id 0) Final model evalution ____________________________________________________________
+2023-03-18 19:57:29,636 : [INFO]  (Iteration id 0) Final model (v1) fetched
+2023-03-18 19:57:40,235 : [INFO]  Evaluation--> val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 19:57:40,235 : [INFO]  Evaluation--> val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 19:57:40,235 : [INFO]  _____________________________________________________ Training Finished ____________________________________________________________
+2023-03-18 19:57:40,235 : [INFO]  Batch testing started
+2023-03-18 19:57:40,372 : [INFO]  Test statistics: Old nodes -- auc: 0.953425, ap: 0.9559461717702358, id: 0
+2023-03-18 19:57:40,373 : [INFO]  Test statistics: New nodes -- auc: 0.9469749999999999, ap: 0.937804547670456
+2023-03-18 19:57:40,512 : [INFO]  Test statistics: Old nodes -- auc: 0.9374250000000001, ap: 0.9437596223913217, id: 1
+2023-03-18 19:57:40,513 : [INFO]  Test statistics: New nodes -- auc: 0.8962125000000001, ap: 0.9027053915089673
+2023-03-18 19:57:40,672 : [INFO]  Test statistics: Old nodes -- auc: 0.9176000000000001, ap: 0.9240886097789631, id: 2
+2023-03-18 19:57:40,672 : [INFO]  Test statistics: New nodes -- auc: 0.927125, ap: 0.9179811347100779
+2023-03-18 19:57:40,853 : [INFO]  Test statistics: Old nodes -- auc: 0.9067, ap: 0.9172612157606479, id: 3
+2023-03-18 19:57:40,853 : [INFO]  Test statistics: New nodes -- auc: 0.9091500000000001, ap: 0.9131240920788339
+2023-03-18 19:57:41,000 : [INFO]  Test statistics: Old nodes -- auc: 0.9416249999999999, ap: 0.9512112378298312, id: 4
+2023-03-18 19:57:41,000 : [INFO]  Test statistics: New nodes -- auc: 0.90245, ap: 0.9117049237912692
+2023-03-18 19:57:41,142 : [INFO]  Test statistics: Old nodes -- auc: 0.9421875, ap: 0.9465521674109418, id: 5
+2023-03-18 19:57:41,143 : [INFO]  Test statistics: New nodes -- auc: 0.9552624999999999, ap: 0.9534698424473375
+2023-03-18 19:57:41,301 : [INFO]  Test statistics: Old nodes -- auc: 0.9047999999999999, ap: 0.9112270883278972, id: 6
+2023-03-18 19:57:41,301 : [INFO]  Test statistics: New nodes -- auc: 0.9607874999999999, ap: 0.9659249526415812
+2023-03-18 19:57:41,423 : [INFO]  Test statistics: Old nodes -- auc: 0.919825, ap: 0.9263464968070436, id: 7
+2023-03-18 19:57:41,423 : [INFO]  Test statistics: New nodes -- auc: 0.882325, ap: 0.8921603924471032
+2023-03-18 19:57:41,541 : [INFO]  Test statistics: Old nodes -- auc: 0.913575, ap: 0.9208759993213518, id: 8
+2023-03-18 19:57:41,542 : [INFO]  Test statistics: New nodes -- auc: 0.90875, ap: 0.9182358852991259
+2023-03-18 19:57:41,722 : [INFO]  Test statistics: Old nodes -- auc: 0.88585, ap: 0.89694444521689, id: 9
+2023-03-18 19:57:41,723 : [INFO]  Test statistics: New nodes -- auc: 0.9359125, ap: 0.9416170910800624
+2023-03-18 19:57:41,847 : [INFO]  Test statistics: Old nodes -- auc: 0.9474625, ap: 0.9518271396406865, id: 10
+2023-03-18 19:57:41,847 : [INFO]  Test statistics: New nodes -- auc: 0.89195, ap: 0.8985222233089067
+2023-03-18 19:57:41,967 : [INFO]  Test statistics: Old nodes -- auc: 0.9623875, ap: 0.9672322263044912, id: 11
+2023-03-18 19:57:41,967 : [INFO]  Test statistics: New nodes -- auc: 0.8959374999999999, ap: 0.9017732625454625
+2023-03-18 19:57:42,095 : [INFO]  Test statistics: Old nodes -- auc: 0.932325, ap: 0.9450933209944118, id: 12
+2023-03-18 19:57:42,095 : [INFO]  Test statistics: New nodes -- auc: 0.917275, ap: 0.9176243047802
+2023-03-18 19:57:42,227 : [INFO]  Test statistics: Old nodes -- auc: 0.951125, ap: 0.9573807502990832, id: 13
+2023-03-18 19:57:42,227 : [INFO]  Test statistics: New nodes -- auc: 0.931775, ap: 0.9361934723373785
+2023-03-18 19:57:42,362 : [INFO]  Test statistics: Old nodes -- auc: 0.9249749999999999, ap: 0.9371014321930293, id: 14
+2023-03-18 19:57:42,363 : [INFO]  Test statistics: New nodes -- auc: 0.927225, ap: 0.9293939880223314
+2023-03-18 19:57:42,484 : [INFO]  Test statistics: Old nodes -- auc: 0.927275, ap: 0.9177645570646044, id: 15
+2023-03-18 19:57:42,485 : [INFO]  Test statistics: New nodes -- auc: 0.9444750000000001, ap: 0.9495631022843011
+2023-03-18 19:57:42,617 : [INFO]  Test statistics: Old nodes -- auc: 0.9287, ap: 0.9385777804434345, id: 16
+2023-03-18 19:57:42,617 : [INFO]  Test statistics: New nodes -- auc: 0.9323, ap: 0.9300263272031082
+2023-03-18 19:57:42,770 : [INFO]  Test statistics: Old nodes -- auc: 0.88875, ap: 0.9084825752030797, id: 17
+2023-03-18 19:57:42,770 : [INFO]  Test statistics: New nodes -- auc: 0.9327, ap: 0.9323105488613798
+2023-03-18 19:57:42,899 : [INFO]  Test statistics: Old nodes -- auc: 0.989725, ap: 0.9903691834958224, id: 18
+2023-03-18 19:57:42,899 : [INFO]  Test statistics: New nodes -- auc: 0.93635, ap: 0.9400840677802463
+2023-03-18 19:57:43,018 : [INFO]  Test statistics: Old nodes -- auc: 0.9538500000000001, ap: 0.9561923143595443, id: 19
+2023-03-18 19:57:43,018 : [INFO]  Test statistics: New nodes -- auc: 0.953675, ap: 0.9601801658681304
+2023-03-18 19:57:43,140 : [INFO]  Test statistics: Old nodes -- auc: 0.9375, ap: 0.9431657279288441, id: 20
+2023-03-18 19:57:43,140 : [INFO]  Test statistics: New nodes -- auc: 0.93135, ap: 0.931410786277852
+2023-03-18 19:57:43,272 : [INFO]  Test statistics: Old nodes -- auc: 0.9317124999999999, ap: 0.9412416120767816, id: 21
+2023-03-18 19:57:43,272 : [INFO]  Test statistics: New nodes -- auc: 0.9004625, ap: 0.9115636936132743
+2023-03-18 19:57:43,393 : [INFO]  Test statistics: Old nodes -- auc: 0.9041250000000001, ap: 0.9140377253358775, id: 22
+2023-03-18 19:57:43,393 : [INFO]  Test statistics: New nodes -- auc: 0.92015, ap: 0.9274765627503453
+2023-03-18 19:57:43,515 : [INFO]  Test statistics: Old nodes -- auc: 0.8875875000000001, ap: 0.9043711417666331, id: 23
+2023-03-18 19:57:43,515 : [INFO]  Test statistics: New nodes -- auc: 0.9268, ap: 0.9371442379980348
+2023-03-18 19:57:43,633 : [INFO]  Test statistics: Old nodes -- auc: 0.9037000000000001, ap: 0.9167242541088814, id: 24
+2023-03-18 19:57:43,633 : [INFO]  Test statistics: New nodes -- auc: 0.905525, ap: 0.9052119363929629
+2023-03-18 19:57:43,794 : [INFO]  Test statistics: Old nodes -- auc: 0.9392499999999999, ap: 0.9459286711904271, id: 25
+2023-03-18 19:57:43,794 : [INFO]  Test statistics: New nodes -- auc: 0.9363, ap: 0.9430395565369467
+2023-03-18 19:57:43,929 : [INFO]  Test statistics: Old nodes -- auc: 0.943925, ap: 0.9485340397507438, id: 26
+2023-03-18 19:57:43,929 : [INFO]  Test statistics: New nodes -- auc: 0.9320250000000001, ap: 0.9355961704239103
+2023-03-18 19:57:44,057 : [INFO]  Test statistics: Old nodes -- auc: 0.9356249999999999, ap: 0.9400748283288201, id: 27
+2023-03-18 19:57:44,057 : [INFO]  Test statistics: New nodes -- auc: 0.9177875, ap: 0.9241006085829908
+2023-03-18 19:57:44,210 : [INFO]  Test statistics: Old nodes -- auc: 0.9255125, ap: 0.9273387469624618, id: 28
+2023-03-18 19:57:44,210 : [INFO]  Test statistics: New nodes -- auc: 0.91675, ap: 0.9251813109721234
+2023-03-18 19:57:44,344 : [INFO]  Test statistics: Old nodes -- auc: 0.9189500000000002, ap: 0.9291874314648287, id: 29
+2023-03-18 19:57:44,344 : [INFO]  Test statistics: New nodes -- auc: 0.91915, ap: 0.9249052925857536
+2023-03-18 19:57:44,500 : [INFO]  Test statistics: Old nodes -- auc: 0.9383, ap: 0.9453972058069581, id: 30
+2023-03-18 19:57:44,500 : [INFO]  Test statistics: New nodes -- auc: 0.9016249999999999, ap: 0.9136675091434894
+2023-03-18 19:57:44,619 : [INFO]  Test statistics: Old nodes -- auc: 0.9281250000000001, ap: 0.9309629963901362, id: 31
+2023-03-18 19:57:44,619 : [INFO]  Test statistics: New nodes -- auc: 0.9469750000000001, ap: 0.9530102826649238
+2023-03-18 19:57:44,735 : [INFO]  Test statistics: Old nodes -- auc: 0.9377624999999999, ap: 0.9439339284721903, id: 32
+2023-03-18 19:57:44,735 : [INFO]  Test statistics: New nodes -- auc: 0.9252874999999999, ap: 0.9226294503549417
+2023-03-18 19:57:44,923 : [INFO]  Test statistics: Old nodes -- auc: 0.90625, ap: 0.9159532378914055, id: 33
+2023-03-18 19:57:44,923 : [INFO]  Test statistics: New nodes -- auc: 0.8981125, ap: 0.9081917959666261
+2023-03-18 19:57:45,065 : [INFO]  Test statistics: Old nodes -- auc: 0.916475, ap: 0.9249868769470041, id: 34
+2023-03-18 19:57:45,065 : [INFO]  Test statistics: New nodes -- auc: 0.8834374999999999, ap: 0.8824920575455146
+2023-03-18 19:57:45,187 : [INFO]  Test statistics: Old nodes -- auc: 0.9496, ap: 0.9433544818510946, id: 35
+2023-03-18 19:57:45,187 : [INFO]  Test statistics: New nodes -- auc: 0.9290499999999999, ap: 0.937724807974732
+2023-03-18 19:57:45,303 : [INFO]  Test statistics: Old nodes -- auc: 0.9341499999999999, ap: 0.9424964051631166, id: 36
+2023-03-18 19:57:45,303 : [INFO]  Test statistics: New nodes -- auc: 0.893575, ap: 0.895597286983
+2023-03-18 19:57:45,433 : [INFO]  Test statistics: Old nodes -- auc: 0.906975, ap: 0.9237860854109659, id: 37
+2023-03-18 19:57:45,433 : [INFO]  Test statistics: New nodes -- auc: 0.9174125000000001, ap: 0.9237456574700785
+2023-03-18 19:57:45,550 : [INFO]  Test statistics: Old nodes -- auc: 0.9191, ap: 0.9221820199515666, id: 38
+2023-03-18 19:57:45,551 : [INFO]  Test statistics: New nodes -- auc: 0.89535, ap: 0.9048338588454019
+2023-03-18 19:57:45,697 : [INFO]  Test statistics: Old nodes -- auc: 0.9467625, ap: 0.9466172305901634, id: 39
+2023-03-18 19:57:45,697 : [INFO]  Test statistics: New nodes -- auc: 0.9179750000000001, ap: 0.9248333852113786
+2023-03-18 19:57:45,834 : [INFO]  Test statistics: Old nodes -- auc: 0.9264, ap: 0.929653129054703, id: 40
+2023-03-18 19:57:45,834 : [INFO]  Test statistics: New nodes -- auc: 0.9143249999999999, ap: 0.9224959446630274
+2023-03-18 19:57:45,959 : [INFO]  Test statistics: Old nodes -- auc: 0.898775, ap: 0.9133415201007986, id: 41
+2023-03-18 19:57:45,959 : [INFO]  Test statistics: New nodes -- auc: 0.919775, ap: 0.9294898048615571
+2023-03-18 19:57:46,080 : [INFO]  Test statistics: Old nodes -- auc: 0.8798, ap: 0.9013178525079043, id: 42
+2023-03-18 19:57:46,080 : [INFO]  Test statistics: New nodes -- auc: 0.9228, ap: 0.9332030141304417
+2023-03-18 19:57:46,206 : [INFO]  Test statistics: Old nodes -- auc: 0.906025, ap: 0.9157899545767592, id: 43
+2023-03-18 19:57:46,206 : [INFO]  Test statistics: New nodes -- auc: 0.9545, ap: 0.9568190060372814
+2023-03-18 19:57:46,328 : [INFO]  Test statistics: Old nodes -- auc: 0.9136875, ap: 0.926162891299108, id: 44
+2023-03-18 19:57:46,328 : [INFO]  Test statistics: New nodes -- auc: 0.903825, ap: 0.9128777355145736
+2023-03-18 19:57:46,455 : [INFO]  Test statistics: Old nodes -- auc: 0.8993000000000001, ap: 0.9060417928931084, id: 45
+2023-03-18 19:57:46,455 : [INFO]  Test statistics: New nodes -- auc: 0.9009625, ap: 0.9089211207402705
+2023-03-18 19:57:46,578 : [INFO]  Test statistics: Old nodes -- auc: 0.953125, ap: 0.960072584184757, id: 46
+2023-03-18 19:57:46,578 : [INFO]  Test statistics: New nodes -- auc: 0.9624375000000001, ap: 0.9622497344175335
+2023-03-18 19:57:46,698 : [INFO]  Test statistics: Old nodes -- auc: 0.93645, ap: 0.9454535511149011, id: 47
+2023-03-18 19:57:46,698 : [INFO]  Test statistics: New nodes -- auc: 0.9304, ap: 0.9303494062059479
+2023-03-18 19:57:46,811 : [INFO]  Test statistics: Old nodes -- auc: 0.9217000000000001, ap: 0.9246011621746155, id: 48
+2023-03-18 19:57:46,811 : [INFO]  Test statistics: New nodes -- auc: 0.9358875, ap: 0.9385201951730353
+2023-03-18 19:57:46,939 : [INFO]  Test statistics: Old nodes -- auc: 0.9008875, ap: 0.9134620625761055, id: 49
+2023-03-18 19:57:46,939 : [INFO]  Test statistics: New nodes -- auc: 0.91385, ap: 0.923017767690208
+2023-03-18 19:57:47,057 : [INFO]  Test statistics: Old nodes -- auc: 0.93815, ap: 0.9420560367712454, id: 50
+2023-03-18 19:57:47,058 : [INFO]  Test statistics: New nodes -- auc: 0.876425, ap: 0.8863200408668823
+2023-03-18 19:57:47,181 : [INFO]  Test statistics: Old nodes -- auc: 0.884225, ap: 0.8985447984917229, id: 51
+2023-03-18 19:57:47,181 : [INFO]  Test statistics: New nodes -- auc: 0.8748250000000001, ap: 0.8935223584694162
+2023-03-18 19:57:47,293 : [INFO]  Test statistics: Old nodes -- auc: 0.912275, ap: 0.9101876060475622, id: 52
+2023-03-18 19:57:47,293 : [INFO]  Test statistics: New nodes -- auc: 0.9604750000000001, ap: 0.9650270105392613
+2023-03-18 19:57:47,422 : [INFO]  Test statistics: Old nodes -- auc: 0.947925, ap: 0.9518926589304209, id: 53
+2023-03-18 19:57:47,423 : [INFO]  Test statistics: New nodes -- auc: 0.9586625000000001, ap: 0.9621059198935935
+2023-03-18 19:57:47,540 : [INFO]  Test statistics: Old nodes -- auc: 0.893325, ap: 0.8975684627864788, id: 54
+2023-03-18 19:57:47,540 : [INFO]  Test statistics: New nodes -- auc: 0.88615, ap: 0.8986654735030157
+2023-03-18 19:57:47,662 : [INFO]  Test statistics: Old nodes -- auc: 0.9026, ap: 0.8958373457164699, id: 55
+2023-03-18 19:57:47,662 : [INFO]  Test statistics: New nodes -- auc: 0.8967375, ap: 0.9064591289581863
+2023-03-18 19:57:47,776 : [INFO]  Test statistics: Old nodes -- auc: 0.9400499999999999, ap: 0.9464750605362737, id: 56
+2023-03-18 19:57:47,776 : [INFO]  Test statistics: New nodes -- auc: 0.9450624999999999, ap: 0.9484266841852305
+2023-03-18 19:57:47,905 : [INFO]  Test statistics: Old nodes -- auc: 0.9295125, ap: 0.9300978795889083, id: 57
+2023-03-18 19:57:47,905 : [INFO]  Test statistics: New nodes -- auc: 0.8952499999999999, ap: 0.9127251256701395
+2023-03-18 19:57:47,996 : [INFO]  Test statistics: Old nodes -- auc: 0.9191374999999999, ap: 0.922395301895584, id: 58
+2023-03-18 19:57:47,997 : [INFO]  Test statistics: New nodes -- auc: 0.8796219281663517, ap: 0.8921908686214691
+2023-03-18 19:59:31,643 : [INFO]  num of training instances: 81029
+2023-03-18 19:59:31,643 : [INFO]  num of batches per epoch: 406
+2023-03-18 19:59:35,856 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 19:59:35,856 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 19:59:35,955 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 19:59:35,971 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 19:59:35,971 : [INFO]  (Iteration id 0) Training started
+2023-03-18 19:59:35,972 : [INFO]  start 0 epoch
+2023-03-18 20:00:34,707 : [INFO]  epoch: 0 took 58.74s
+2023-03-18 20:00:34,708 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 20:00:34,708 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 20:00:34,708 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 20:00:34,719 : [INFO]  Total Epoch mean loss: 0.7193767620718537
+2023-03-18 20:00:34,720 : [INFO]  Total val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 20:00:34,720 : [INFO]  Total val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 20:00:34,720 : [INFO]  (Iteration id 0) Training done
+2023-03-18 20:00:34,720 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 20:00:34,735 : [INFO]  _____________________________________________________ (Iteration id 0) Final model evalution ____________________________________________________________
+2023-03-18 20:00:34,736 : [INFO]  (Iteration id 0) Final model (v1) fetched
+2023-03-18 20:00:44,479 : [INFO]  Evaluation--> val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 20:00:44,479 : [INFO]  Evaluation--> val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 20:00:44,482 : [INFO]  _____________________________________________________ Training Finished ____________________________________________________________
+2023-03-18 20:00:44,482 : [INFO]  Batch testing started
+2023-03-18 20:00:44,590 : [INFO]  Test statistics: Old nodes -- auc: 0.953425, ap: 0.9559461717702358, id: 0
+2023-03-18 20:00:44,590 : [INFO]  Test statistics: New nodes -- auc: 0.9469749999999999, ap: 0.937804547670456
+2023-03-18 20:00:44,731 : [INFO]  Test statistics: Old nodes -- auc: 0.9374250000000001, ap: 0.9437596223913217, id: 1
+2023-03-18 20:00:44,731 : [INFO]  Test statistics: New nodes -- auc: 0.8962125000000001, ap: 0.9027053915089673
+2023-03-18 20:00:44,907 : [INFO]  Test statistics: Old nodes -- auc: 0.9176000000000001, ap: 0.9240886097789631, id: 2
+2023-03-18 20:00:44,907 : [INFO]  Test statistics: New nodes -- auc: 0.927125, ap: 0.9179811347100779
+2023-03-18 20:00:45,067 : [INFO]  Test statistics: Old nodes -- auc: 0.9067, ap: 0.9172612157606479, id: 3
+2023-03-18 20:00:45,067 : [INFO]  Test statistics: New nodes -- auc: 0.9091500000000001, ap: 0.9131240920788339
+2023-03-18 20:00:45,204 : [INFO]  Test statistics: Old nodes -- auc: 0.9416249999999999, ap: 0.9512112378298312, id: 4
+2023-03-18 20:00:45,204 : [INFO]  Test statistics: New nodes -- auc: 0.90245, ap: 0.9117049237912692
+2023-03-18 20:00:45,340 : [INFO]  Test statistics: Old nodes -- auc: 0.9421875, ap: 0.9465521674109418, id: 5
+2023-03-18 20:00:45,340 : [INFO]  Test statistics: New nodes -- auc: 0.9552624999999999, ap: 0.9534698424473375
+2023-03-18 20:00:45,480 : [INFO]  Test statistics: Old nodes -- auc: 0.9047999999999999, ap: 0.9112270883278972, id: 6
+2023-03-18 20:00:45,480 : [INFO]  Test statistics: New nodes -- auc: 0.9607874999999999, ap: 0.9659249526415812
+2023-03-18 20:00:45,622 : [INFO]  Test statistics: Old nodes -- auc: 0.919825, ap: 0.9263464968070436, id: 7
+2023-03-18 20:00:45,622 : [INFO]  Test statistics: New nodes -- auc: 0.882325, ap: 0.8921603924471032
+2023-03-18 20:00:45,759 : [INFO]  Test statistics: Old nodes -- auc: 0.913575, ap: 0.9208759993213518, id: 8
+2023-03-18 20:00:45,760 : [INFO]  Test statistics: New nodes -- auc: 0.90875, ap: 0.9182358852991259
+2023-03-18 20:00:45,895 : [INFO]  Test statistics: Old nodes -- auc: 0.88585, ap: 0.89694444521689, id: 9
+2023-03-18 20:00:45,895 : [INFO]  Test statistics: New nodes -- auc: 0.9359125, ap: 0.9416170910800624
+2023-03-18 20:00:46,035 : [INFO]  Test statistics: Old nodes -- auc: 0.9474625, ap: 0.9518271396406865, id: 10
+2023-03-18 20:00:46,035 : [INFO]  Test statistics: New nodes -- auc: 0.89195, ap: 0.8985222233089067
+2023-03-18 20:00:46,171 : [INFO]  Test statistics: Old nodes -- auc: 0.9623875, ap: 0.9672322263044912, id: 11
+2023-03-18 20:00:46,171 : [INFO]  Test statistics: New nodes -- auc: 0.8959374999999999, ap: 0.9017732625454625
+2023-03-18 20:00:46,310 : [INFO]  Test statistics: Old nodes -- auc: 0.932325, ap: 0.9450933209944118, id: 12
+2023-03-18 20:00:46,310 : [INFO]  Test statistics: New nodes -- auc: 0.917275, ap: 0.9176243047802
+2023-03-18 20:00:46,448 : [INFO]  Test statistics: Old nodes -- auc: 0.951125, ap: 0.9573807502990832, id: 13
+2023-03-18 20:00:46,448 : [INFO]  Test statistics: New nodes -- auc: 0.931775, ap: 0.9361934723373785
+2023-03-18 20:00:46,587 : [INFO]  Test statistics: Old nodes -- auc: 0.9249749999999999, ap: 0.9371014321930293, id: 14
+2023-03-18 20:00:46,587 : [INFO]  Test statistics: New nodes -- auc: 0.927225, ap: 0.9293939880223314
+2023-03-18 20:00:46,724 : [INFO]  Test statistics: Old nodes -- auc: 0.927275, ap: 0.9177645570646044, id: 15
+2023-03-18 20:00:46,725 : [INFO]  Test statistics: New nodes -- auc: 0.9444750000000001, ap: 0.9495631022843011
+2023-03-18 20:00:46,863 : [INFO]  Test statistics: Old nodes -- auc: 0.9287, ap: 0.9385777804434345, id: 16
+2023-03-18 20:00:46,863 : [INFO]  Test statistics: New nodes -- auc: 0.9323, ap: 0.9300263272031082
+2023-03-18 20:00:46,999 : [INFO]  Test statistics: Old nodes -- auc: 0.88875, ap: 0.9084825752030797, id: 17
+2023-03-18 20:00:47,000 : [INFO]  Test statistics: New nodes -- auc: 0.9327, ap: 0.9323105488613798
+2023-03-18 20:00:47,138 : [INFO]  Test statistics: Old nodes -- auc: 0.989725, ap: 0.9903691834958224, id: 18
+2023-03-18 20:00:47,138 : [INFO]  Test statistics: New nodes -- auc: 0.93635, ap: 0.9400840677802463
+2023-03-18 20:00:47,279 : [INFO]  Test statistics: Old nodes -- auc: 0.9538500000000001, ap: 0.9561923143595443, id: 19
+2023-03-18 20:00:47,279 : [INFO]  Test statistics: New nodes -- auc: 0.953675, ap: 0.9601801658681304
+2023-03-18 20:00:47,420 : [INFO]  Test statistics: Old nodes -- auc: 0.9375, ap: 0.9431657279288441, id: 20
+2023-03-18 20:00:47,420 : [INFO]  Test statistics: New nodes -- auc: 0.93135, ap: 0.931410786277852
+2023-03-18 20:00:47,569 : [INFO]  Test statistics: Old nodes -- auc: 0.9317124999999999, ap: 0.9412416120767816, id: 21
+2023-03-18 20:00:47,569 : [INFO]  Test statistics: New nodes -- auc: 0.9004625, ap: 0.9115636936132743
+2023-03-18 20:00:47,708 : [INFO]  Test statistics: Old nodes -- auc: 0.9041250000000001, ap: 0.9140377253358775, id: 22
+2023-03-18 20:00:47,708 : [INFO]  Test statistics: New nodes -- auc: 0.92015, ap: 0.9274765627503453
+2023-03-18 20:00:47,845 : [INFO]  Test statistics: Old nodes -- auc: 0.8875875000000001, ap: 0.9043711417666331, id: 23
+2023-03-18 20:00:47,845 : [INFO]  Test statistics: New nodes -- auc: 0.9268, ap: 0.9371442379980348
+2023-03-18 20:00:47,984 : [INFO]  Test statistics: Old nodes -- auc: 0.9037000000000001, ap: 0.9167242541088814, id: 24
+2023-03-18 20:00:47,984 : [INFO]  Test statistics: New nodes -- auc: 0.905525, ap: 0.9052119363929629
+2023-03-18 20:00:48,123 : [INFO]  Test statistics: Old nodes -- auc: 0.9392499999999999, ap: 0.9459286711904271, id: 25
+2023-03-18 20:00:48,124 : [INFO]  Test statistics: New nodes -- auc: 0.9363, ap: 0.9430395565369467
+2023-03-18 20:00:48,261 : [INFO]  Test statistics: Old nodes -- auc: 0.943925, ap: 0.9485340397507438, id: 26
+2023-03-18 20:00:48,262 : [INFO]  Test statistics: New nodes -- auc: 0.9320250000000001, ap: 0.9355961704239103
+2023-03-18 20:00:48,398 : [INFO]  Test statistics: Old nodes -- auc: 0.9356249999999999, ap: 0.9400748283288201, id: 27
+2023-03-18 20:00:48,398 : [INFO]  Test statistics: New nodes -- auc: 0.9177875, ap: 0.9241006085829908
+2023-03-18 20:00:48,538 : [INFO]  Test statistics: Old nodes -- auc: 0.9255125, ap: 0.9273387469624618, id: 28
+2023-03-18 20:00:48,539 : [INFO]  Test statistics: New nodes -- auc: 0.91675, ap: 0.9251813109721234
+2023-03-18 20:00:48,679 : [INFO]  Test statistics: Old nodes -- auc: 0.9189500000000002, ap: 0.9291874314648287, id: 29
+2023-03-18 20:00:48,679 : [INFO]  Test statistics: New nodes -- auc: 0.91915, ap: 0.9249052925857536
+2023-03-18 20:00:48,817 : [INFO]  Test statistics: Old nodes -- auc: 0.9383, ap: 0.9453972058069581, id: 30
+2023-03-18 20:00:48,818 : [INFO]  Test statistics: New nodes -- auc: 0.9016249999999999, ap: 0.9136675091434894
+2023-03-18 20:00:48,957 : [INFO]  Test statistics: Old nodes -- auc: 0.9281250000000001, ap: 0.9309629963901362, id: 31
+2023-03-18 20:00:48,957 : [INFO]  Test statistics: New nodes -- auc: 0.9469750000000001, ap: 0.9530102826649238
+2023-03-18 20:00:49,096 : [INFO]  Test statistics: Old nodes -- auc: 0.9377624999999999, ap: 0.9439339284721903, id: 32
+2023-03-18 20:00:49,096 : [INFO]  Test statistics: New nodes -- auc: 0.9252874999999999, ap: 0.9226294503549417
+2023-03-18 20:00:49,232 : [INFO]  Test statistics: Old nodes -- auc: 0.90625, ap: 0.9159532378914055, id: 33
+2023-03-18 20:00:49,233 : [INFO]  Test statistics: New nodes -- auc: 0.8981125, ap: 0.9081917959666261
+2023-03-18 20:00:49,372 : [INFO]  Test statistics: Old nodes -- auc: 0.916475, ap: 0.9249868769470041, id: 34
+2023-03-18 20:00:49,372 : [INFO]  Test statistics: New nodes -- auc: 0.8834374999999999, ap: 0.8824920575455146
+2023-03-18 20:00:49,516 : [INFO]  Test statistics: Old nodes -- auc: 0.9496, ap: 0.9433544818510946, id: 35
+2023-03-18 20:00:49,516 : [INFO]  Test statistics: New nodes -- auc: 0.9290499999999999, ap: 0.937724807974732
+2023-03-18 20:00:49,653 : [INFO]  Test statistics: Old nodes -- auc: 0.9341499999999999, ap: 0.9424964051631166, id: 36
+2023-03-18 20:00:49,654 : [INFO]  Test statistics: New nodes -- auc: 0.893575, ap: 0.895597286983
+2023-03-18 20:00:49,788 : [INFO]  Test statistics: Old nodes -- auc: 0.906975, ap: 0.9237860854109659, id: 37
+2023-03-18 20:00:49,789 : [INFO]  Test statistics: New nodes -- auc: 0.9174125000000001, ap: 0.9237456574700785
+2023-03-18 20:00:49,932 : [INFO]  Test statistics: Old nodes -- auc: 0.9191, ap: 0.9221820199515666, id: 38
+2023-03-18 20:00:49,932 : [INFO]  Test statistics: New nodes -- auc: 0.89535, ap: 0.9048338588454019
+2023-03-18 20:00:50,072 : [INFO]  Test statistics: Old nodes -- auc: 0.9467625, ap: 0.9466172305901634, id: 39
+2023-03-18 20:00:50,072 : [INFO]  Test statistics: New nodes -- auc: 0.9179750000000001, ap: 0.9248333852113786
+2023-03-18 20:00:50,209 : [INFO]  Test statistics: Old nodes -- auc: 0.9264, ap: 0.929653129054703, id: 40
+2023-03-18 20:00:50,210 : [INFO]  Test statistics: New nodes -- auc: 0.9143249999999999, ap: 0.9224959446630274
+2023-03-18 20:00:50,377 : [INFO]  Test statistics: Old nodes -- auc: 0.898775, ap: 0.9133415201007986, id: 41
+2023-03-18 20:00:50,377 : [INFO]  Test statistics: New nodes -- auc: 0.919775, ap: 0.9294898048615571
+2023-03-18 20:00:50,563 : [INFO]  Test statistics: Old nodes -- auc: 0.8798, ap: 0.9013178525079043, id: 42
+2023-03-18 20:00:50,564 : [INFO]  Test statistics: New nodes -- auc: 0.9228, ap: 0.9332030141304417
+2023-03-18 20:00:50,697 : [INFO]  Test statistics: Old nodes -- auc: 0.906025, ap: 0.9157899545767592, id: 43
+2023-03-18 20:00:50,697 : [INFO]  Test statistics: New nodes -- auc: 0.9545, ap: 0.9568190060372814
+2023-03-18 20:00:50,839 : [INFO]  Test statistics: Old nodes -- auc: 0.9136875, ap: 0.926162891299108, id: 44
+2023-03-18 20:00:50,839 : [INFO]  Test statistics: New nodes -- auc: 0.903825, ap: 0.9128777355145736
+2023-03-18 20:00:50,978 : [INFO]  Test statistics: Old nodes -- auc: 0.8993000000000001, ap: 0.9060417928931084, id: 45
+2023-03-18 20:00:50,978 : [INFO]  Test statistics: New nodes -- auc: 0.9009625, ap: 0.9089211207402705
+2023-03-18 20:00:51,120 : [INFO]  Test statistics: Old nodes -- auc: 0.953125, ap: 0.960072584184757, id: 46
+2023-03-18 20:00:51,120 : [INFO]  Test statistics: New nodes -- auc: 0.9624375000000001, ap: 0.9622497344175335
+2023-03-18 20:00:51,265 : [INFO]  Test statistics: Old nodes -- auc: 0.93645, ap: 0.9454535511149011, id: 47
+2023-03-18 20:00:51,265 : [INFO]  Test statistics: New nodes -- auc: 0.9304, ap: 0.9303494062059479
+2023-03-18 20:00:51,403 : [INFO]  Test statistics: Old nodes -- auc: 0.9217000000000001, ap: 0.9246011621746155, id: 48
+2023-03-18 20:00:51,403 : [INFO]  Test statistics: New nodes -- auc: 0.9358875, ap: 0.9385201951730353
+2023-03-18 20:00:51,541 : [INFO]  Test statistics: Old nodes -- auc: 0.9008875, ap: 0.9134620625761055, id: 49
+2023-03-18 20:00:51,542 : [INFO]  Test statistics: New nodes -- auc: 0.91385, ap: 0.923017767690208
+2023-03-18 20:00:51,681 : [INFO]  Test statistics: Old nodes -- auc: 0.93815, ap: 0.9420560367712454, id: 50
+2023-03-18 20:00:51,681 : [INFO]  Test statistics: New nodes -- auc: 0.876425, ap: 0.8863200408668823
+2023-03-18 20:00:51,817 : [INFO]  Test statistics: Old nodes -- auc: 0.884225, ap: 0.8985447984917229, id: 51
+2023-03-18 20:00:51,817 : [INFO]  Test statistics: New nodes -- auc: 0.8748250000000001, ap: 0.8935223584694162
+2023-03-18 20:00:51,955 : [INFO]  Test statistics: Old nodes -- auc: 0.912275, ap: 0.9101876060475622, id: 52
+2023-03-18 20:00:51,955 : [INFO]  Test statistics: New nodes -- auc: 0.9604750000000001, ap: 0.9650270105392613
+2023-03-18 20:00:52,093 : [INFO]  Test statistics: Old nodes -- auc: 0.947925, ap: 0.9518926589304209, id: 53
+2023-03-18 20:00:52,094 : [INFO]  Test statistics: New nodes -- auc: 0.9586625000000001, ap: 0.9621059198935935
+2023-03-18 20:00:52,233 : [INFO]  Test statistics: Old nodes -- auc: 0.893325, ap: 0.8975684627864788, id: 54
+2023-03-18 20:00:52,234 : [INFO]  Test statistics: New nodes -- auc: 0.88615, ap: 0.8986654735030157
+2023-03-18 20:00:52,380 : [INFO]  Test statistics: Old nodes -- auc: 0.9026, ap: 0.8958373457164699, id: 55
+2023-03-18 20:00:52,380 : [INFO]  Test statistics: New nodes -- auc: 0.8967375, ap: 0.9064591289581863
+2023-03-18 20:00:52,537 : [INFO]  Test statistics: Old nodes -- auc: 0.9400499999999999, ap: 0.9464750605362737, id: 56
+2023-03-18 20:00:52,538 : [INFO]  Test statistics: New nodes -- auc: 0.9450624999999999, ap: 0.9484266841852305
+2023-03-18 20:00:52,686 : [INFO]  Test statistics: Old nodes -- auc: 0.9295125, ap: 0.9300978795889083, id: 57
+2023-03-18 20:00:52,686 : [INFO]  Test statistics: New nodes -- auc: 0.8952499999999999, ap: 0.9127251256701395
+2023-03-18 20:00:52,813 : [INFO]  Test statistics: Old nodes -- auc: 0.9191374999999999, ap: 0.922395301895584, id: 58
+2023-03-18 20:00:52,813 : [INFO]  Test statistics: New nodes -- auc: 0.8796219281663517, ap: 0.8921908686214691
+2023-03-18 20:27:30,800 : [INFO]  num of training instances: 81029
+2023-03-18 20:27:30,800 : [INFO]  num of batches per epoch: 406
+2023-03-18 20:27:32,550 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 20:27:32,550 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 20:27:32,632 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 20:27:32,643 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 20:27:32,643 : [INFO]  (Iteration id 0) Training started
+2023-03-18 20:27:32,643 : [INFO]  start 0 epoch
+2023-03-18 20:28:27,542 : [INFO]  epoch: 0 took 54.90s
+2023-03-18 20:28:27,542 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 20:28:27,542 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 20:28:27,542 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 20:28:27,553 : [INFO]  Total Epoch mean loss: 0.7193767620718537
+2023-03-18 20:28:27,553 : [INFO]  Total val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 20:28:27,553 : [INFO]  Total val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 20:28:27,553 : [INFO]  (Iteration id 0) Training done
+2023-03-18 20:28:27,553 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 20:28:27,565 : [INFO]  _____________________________________________________ (Iteration id 0) Final model evalution ____________________________________________________________
+2023-03-18 20:28:27,566 : [INFO]  (Iteration id 0) Final model (v1) fetched
+2023-03-18 20:28:30,400 : [INFO]  Evaluation--> val ap: [], new node val ap: 0.9479127964062574
+2023-03-18 20:28:30,400 : [INFO]  _____________________________________________________ Training Finished ____________________________________________________________
+2023-03-18 20:28:30,400 : [INFO]  Batch testing started
+2023-03-18 20:28:30,446 : [INFO]  Test statistics: New nodes -- auc: 0.9469749999999999, ap: 0.937804547670456
+2023-03-18 20:28:30,505 : [INFO]  Test statistics: New nodes -- auc: 0.8962125000000001, ap: 0.9027053915089673
+2023-03-18 20:28:30,565 : [INFO]  Test statistics: New nodes -- auc: 0.927125, ap: 0.9179811347100779
+2023-03-18 20:28:30,628 : [INFO]  Test statistics: New nodes -- auc: 0.9091500000000001, ap: 0.9131240920788339
+2023-03-18 20:28:30,708 : [INFO]  Test statistics: New nodes -- auc: 0.90245, ap: 0.9117049237912692
+2023-03-18 20:28:30,783 : [INFO]  Test statistics: New nodes -- auc: 0.9552624999999999, ap: 0.9534698424473375
+2023-03-18 20:28:30,848 : [INFO]  Test statistics: New nodes -- auc: 0.9607874999999999, ap: 0.9659249526415812
+2023-03-18 20:28:30,911 : [INFO]  Test statistics: New nodes -- auc: 0.882325, ap: 0.8921603924471032
+2023-03-18 20:28:30,987 : [INFO]  Test statistics: New nodes -- auc: 0.90875, ap: 0.9182358852991259
+2023-03-18 20:28:31,056 : [INFO]  Test statistics: New nodes -- auc: 0.9359125, ap: 0.9416170910800624
+2023-03-18 20:28:31,124 : [INFO]  Test statistics: New nodes -- auc: 0.89195, ap: 0.8985222233089067
+2023-03-18 20:28:31,203 : [INFO]  Test statistics: New nodes -- auc: 0.8959374999999999, ap: 0.9017732625454625
+2023-03-18 20:28:31,268 : [INFO]  Test statistics: New nodes -- auc: 0.917275, ap: 0.9176243047802
+2023-03-18 20:28:31,333 : [INFO]  Test statistics: New nodes -- auc: 0.931775, ap: 0.9361934723373785
+2023-03-18 20:28:31,411 : [INFO]  Test statistics: New nodes -- auc: 0.927225, ap: 0.9293939880223314
+2023-03-18 20:28:31,479 : [INFO]  Test statistics: New nodes -- auc: 0.9444750000000001, ap: 0.9495631022843011
+2023-03-18 20:28:31,544 : [INFO]  Test statistics: New nodes -- auc: 0.9323, ap: 0.9300263272031082
+2023-03-18 20:28:31,624 : [INFO]  Test statistics: New nodes -- auc: 0.9327, ap: 0.9323105488613798
+2023-03-18 20:28:31,689 : [INFO]  Test statistics: New nodes -- auc: 0.93635, ap: 0.9400840677802463
+2023-03-18 20:28:31,755 : [INFO]  Test statistics: New nodes -- auc: 0.953675, ap: 0.9601801658681304
+2023-03-18 20:28:31,832 : [INFO]  Test statistics: New nodes -- auc: 0.93135, ap: 0.931410786277852
+2023-03-18 20:28:31,899 : [INFO]  Test statistics: New nodes -- auc: 0.9004625, ap: 0.9115636936132743
+2023-03-18 20:28:31,964 : [INFO]  Test statistics: New nodes -- auc: 0.92015, ap: 0.9274765627503453
+2023-03-18 20:28:32,045 : [INFO]  Test statistics: New nodes -- auc: 0.9268, ap: 0.9371442379980348
+2023-03-18 20:28:32,110 : [INFO]  Test statistics: New nodes -- auc: 0.905525, ap: 0.9052119363929629
+2023-03-18 20:28:32,178 : [INFO]  Test statistics: New nodes -- auc: 0.9363, ap: 0.9430395565369467
+2023-03-18 20:28:32,256 : [INFO]  Test statistics: New nodes -- auc: 0.9320250000000001, ap: 0.9355961704239103
+2023-03-18 20:28:32,320 : [INFO]  Test statistics: New nodes -- auc: 0.9177875, ap: 0.9241006085829908
+2023-03-18 20:28:32,386 : [INFO]  Test statistics: New nodes -- auc: 0.91675, ap: 0.9251813109721234
+2023-03-18 20:28:32,463 : [INFO]  Test statistics: New nodes -- auc: 0.91915, ap: 0.9249052925857536
+2023-03-18 20:28:32,529 : [INFO]  Test statistics: New nodes -- auc: 0.9016249999999999, ap: 0.9136675091434894
+2023-03-18 20:28:32,594 : [INFO]  Test statistics: New nodes -- auc: 0.9469750000000001, ap: 0.9530102826649238
+2023-03-18 20:28:32,670 : [INFO]  Test statistics: New nodes -- auc: 0.9252874999999999, ap: 0.9226294503549417
+2023-03-18 20:28:32,736 : [INFO]  Test statistics: New nodes -- auc: 0.8981125, ap: 0.9081917959666261
+2023-03-18 20:28:32,804 : [INFO]  Test statistics: New nodes -- auc: 0.8834374999999999, ap: 0.8824920575455146
+2023-03-18 20:28:32,885 : [INFO]  Test statistics: New nodes -- auc: 0.9290499999999999, ap: 0.937724807974732
+2023-03-18 20:28:32,952 : [INFO]  Test statistics: New nodes -- auc: 0.893575, ap: 0.895597286983
+2023-03-18 20:28:33,016 : [INFO]  Test statistics: New nodes -- auc: 0.9174125000000001, ap: 0.9237456574700785
+2023-03-18 20:28:33,095 : [INFO]  Test statistics: New nodes -- auc: 0.89535, ap: 0.9048338588454019
+2023-03-18 20:28:33,162 : [INFO]  Test statistics: New nodes -- auc: 0.9179750000000001, ap: 0.9248333852113786
+2023-03-18 20:28:33,230 : [INFO]  Test statistics: New nodes -- auc: 0.9143249999999999, ap: 0.9224959446630274
+2023-03-18 20:28:33,307 : [INFO]  Test statistics: New nodes -- auc: 0.919775, ap: 0.9294898048615571
+2023-03-18 20:28:33,375 : [INFO]  Test statistics: New nodes -- auc: 0.9228, ap: 0.9332030141304417
+2023-03-18 20:28:33,440 : [INFO]  Test statistics: New nodes -- auc: 0.9545, ap: 0.9568190060372814
+2023-03-18 20:28:33,518 : [INFO]  Test statistics: New nodes -- auc: 0.903825, ap: 0.9128777355145736
+2023-03-18 20:28:33,585 : [INFO]  Test statistics: New nodes -- auc: 0.9009625, ap: 0.9089211207402705
+2023-03-18 20:28:33,652 : [INFO]  Test statistics: New nodes -- auc: 0.9624375000000001, ap: 0.9622497344175335
+2023-03-18 20:28:33,733 : [INFO]  Test statistics: New nodes -- auc: 0.9304, ap: 0.9303494062059479
+2023-03-18 20:28:33,797 : [INFO]  Test statistics: New nodes -- auc: 0.9358875, ap: 0.9385201951730353
+2023-03-18 20:28:33,863 : [INFO]  Test statistics: New nodes -- auc: 0.91385, ap: 0.923017767690208
+2023-03-18 20:28:33,939 : [INFO]  Test statistics: New nodes -- auc: 0.876425, ap: 0.8863200408668823
+2023-03-18 20:28:34,008 : [INFO]  Test statistics: New nodes -- auc: 0.8748250000000001, ap: 0.8935223584694162
+2023-03-18 20:28:34,074 : [INFO]  Test statistics: New nodes -- auc: 0.9604750000000001, ap: 0.9650270105392613
+2023-03-18 20:28:34,152 : [INFO]  Test statistics: New nodes -- auc: 0.9586625000000001, ap: 0.9621059198935935
+2023-03-18 20:28:34,219 : [INFO]  Test statistics: New nodes -- auc: 0.88615, ap: 0.8986654735030157
+2023-03-18 20:28:34,283 : [INFO]  Test statistics: New nodes -- auc: 0.8967375, ap: 0.9064591289581863
+2023-03-18 20:28:34,362 : [INFO]  Test statistics: New nodes -- auc: 0.9450624999999999, ap: 0.9484266841852305
+2023-03-18 20:28:34,430 : [INFO]  Test statistics: New nodes -- auc: 0.8952499999999999, ap: 0.9127251256701395
+2023-03-18 20:28:34,477 : [INFO]  Test statistics: New nodes -- auc: 0.8796219281663517, ap: 0.8921908686214691
+2023-03-18 20:28:34,492 : [INFO]  Batches are over
+2023-03-18 20:28:38,205 : [INFO]  Evaluation--> val ap: [], new node val ap: 0.9479127964062574
+2023-03-18 20:28:38,205 : [INFO]  Distributed training done!
+2023-03-18 20:31:17,556 : [INFO]  num of training instances: 81029
+2023-03-18 20:31:17,556 : [INFO]  num of batches per epoch: 406
+2023-03-18 20:31:19,771 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 20:31:19,780 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 20:31:19,958 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 20:31:20,023 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 20:31:20,023 : [INFO]  (Iteration id 0) Training started
+2023-03-18 20:31:20,023 : [INFO]  start 0 epoch
+2023-03-18 20:32:41,680 : [INFO]  epoch: 0 took 81.66s
+2023-03-18 20:32:41,680 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 20:32:41,680 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 20:32:41,680 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 20:32:41,692 : [INFO]  Total Epoch mean loss: 0.7193767620718537
+2023-03-18 20:32:41,693 : [INFO]  Total val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 20:32:41,693 : [INFO]  Total val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 20:32:41,693 : [INFO]  (Iteration id 0) Training done
+2023-03-18 20:32:41,693 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 20:32:41,706 : [INFO]  _____________________________________________________ (Iteration id 0) Final model evalution ____________________________________________________________
+2023-03-18 20:32:41,706 : [INFO]  (Iteration id 0) Final model (v1) fetched
+2023-03-18 20:33:32,298 : [INFO]  num of training instances: 81029
+2023-03-18 20:33:32,298 : [INFO]  num of batches per epoch: 406
+2023-03-18 20:33:38,835 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 20:33:38,836 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 20:33:38,940 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 20:33:38,962 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 20:33:38,962 : [INFO]  (Iteration id 0) Training started
+2023-03-18 20:33:38,962 : [INFO]  start 0 epoch
+2023-03-18 20:34:55,444 : [INFO]  epoch: 0 took 76.48s
+2023-03-18 20:34:55,444 : [INFO]  Epoch mean loss: 0.6520243439034288
+2023-03-18 20:34:55,445 : [INFO]  val auc: 0.9337818653651936, new node val auc: 0.9465467213114754
+2023-03-18 20:34:55,445 : [INFO]  val ap: 0.9420621266611564, new node val ap: 0.95262875359211
+2023-03-18 20:34:55,451 : [INFO]  Total Epoch mean loss: 0.6520243439034288
+2023-03-18 20:34:55,451 : [INFO]  Total val auc: 0.9337818653651936, new node val auc: 0.9465467213114754
+2023-03-18 20:34:55,451 : [INFO]  Total val ap: 0.9420621266611564, new node val ap: 0.95262875359211
+2023-03-18 20:34:55,452 : [INFO]  (Iteration id 0) Training done
+2023-03-18 20:34:55,452 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 20:34:55,471 : [INFO]  _____________________________________________________ (Iteration id 0) Final model evalution ____________________________________________________________
+2023-03-18 20:34:55,471 : [INFO]  (Iteration id 0) Final model (v1) fetched
+2023-03-18 20:35:37,453 : [INFO]  num of training instances: 81029
+2023-03-18 20:35:37,457 : [INFO]  num of batches per epoch: 406
+2023-03-18 20:35:39,286 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 20:35:39,287 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 20:35:39,371 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 20:35:39,383 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 20:35:39,383 : [INFO]  (Iteration id 0) Training started
+2023-03-18 20:35:39,383 : [INFO]  start 0 epoch
+2023-03-18 20:36:50,464 : [INFO]  epoch: 0 took 71.08s
+2023-03-18 20:36:50,465 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 20:36:50,465 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 20:36:50,465 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 20:36:50,470 : [INFO]  Total Epoch mean loss: 0.7193767620718537
+2023-03-18 20:36:50,470 : [INFO]  Total val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 20:36:50,470 : [INFO]  Total val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 20:36:50,470 : [INFO]  (Iteration id 0) Training done
+2023-03-18 20:36:50,470 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 20:36:50,484 : [INFO]  _____________________________________________________ (Iteration id 0) Final model evalution ____________________________________________________________
+2023-03-18 20:36:50,485 : [INFO]  (Iteration id 0) Final model (v1) fetched
+2023-03-18 20:36:53,368 : [INFO]  Evaluation--> val AUC: 0.944, PRECISION: 0.948
+2023-03-18 20:36:53,369 : [INFO]  _____________________________________________________ Training Finished ____________________________________________________________
+2023-03-18 20:36:53,369 : [INFO]  Batch testing started
+2023-03-18 20:36:53,415 : [INFO]  Test statistics: New nodes -- auc: 0.947, ap: 0.938
+2023-03-18 20:36:53,476 : [INFO]  Test statistics: New nodes -- auc: 0.896, ap: 0.903
+2023-03-18 20:36:53,536 : [INFO]  Test statistics: New nodes -- auc: 0.927, ap: 0.918
+2023-03-18 20:36:53,601 : [INFO]  Test statistics: New nodes -- auc: 0.909, ap: 0.913
+2023-03-18 20:36:53,668 : [INFO]  Test statistics: New nodes -- auc: 0.902, ap: 0.912
+2023-03-18 20:36:53,732 : [INFO]  Test statistics: New nodes -- auc: 0.955, ap: 0.953
+2023-03-18 20:36:53,794 : [INFO]  Test statistics: New nodes -- auc: 0.961, ap: 0.966
+2023-03-18 20:36:53,858 : [INFO]  Test statistics: New nodes -- auc: 0.882, ap: 0.892
+2023-03-18 20:36:53,921 : [INFO]  Test statistics: New nodes -- auc: 0.909, ap: 0.918
+2023-03-18 20:36:53,981 : [INFO]  Test statistics: New nodes -- auc: 0.936, ap: 0.942
+2023-03-18 20:36:54,041 : [INFO]  Test statistics: New nodes -- auc: 0.892, ap: 0.899
+2023-03-18 20:36:54,104 : [INFO]  Test statistics: New nodes -- auc: 0.896, ap: 0.902
+2023-03-18 20:36:54,165 : [INFO]  Test statistics: New nodes -- auc: 0.917, ap: 0.918
+2023-03-18 20:36:54,226 : [INFO]  Test statistics: New nodes -- auc: 0.932, ap: 0.936
+2023-03-18 20:36:54,286 : [INFO]  Test statistics: New nodes -- auc: 0.927, ap: 0.929
+2023-03-18 20:36:54,354 : [INFO]  Test statistics: New nodes -- auc: 0.944, ap: 0.95
+2023-03-18 20:36:54,428 : [INFO]  Test statistics: New nodes -- auc: 0.932, ap: 0.93
+2023-03-18 20:36:54,499 : [INFO]  Test statistics: New nodes -- auc: 0.933, ap: 0.932
+2023-03-18 20:36:54,571 : [INFO]  Test statistics: New nodes -- auc: 0.936, ap: 0.94
+2023-03-18 20:36:54,640 : [INFO]  Test statistics: New nodes -- auc: 0.954, ap: 0.96
+2023-03-18 20:36:54,701 : [INFO]  Test statistics: New nodes -- auc: 0.931, ap: 0.931
+2023-03-18 20:36:54,763 : [INFO]  Test statistics: New nodes -- auc: 0.9, ap: 0.912
+2023-03-18 20:36:54,828 : [INFO]  Test statistics: New nodes -- auc: 0.92, ap: 0.927
+2023-03-18 20:36:54,890 : [INFO]  Test statistics: New nodes -- auc: 0.927, ap: 0.937
+2023-03-18 20:36:54,954 : [INFO]  Test statistics: New nodes -- auc: 0.906, ap: 0.905
+2023-03-18 20:36:55,014 : [INFO]  Test statistics: New nodes -- auc: 0.936, ap: 0.943
+2023-03-18 20:36:55,079 : [INFO]  Test statistics: New nodes -- auc: 0.932, ap: 0.936
+2023-03-18 20:36:55,143 : [INFO]  Test statistics: New nodes -- auc: 0.918, ap: 0.924
+2023-03-18 20:36:55,203 : [INFO]  Test statistics: New nodes -- auc: 0.917, ap: 0.925
+2023-03-18 20:36:55,265 : [INFO]  Test statistics: New nodes -- auc: 0.919, ap: 0.925
+2023-03-18 20:36:55,329 : [INFO]  Test statistics: New nodes -- auc: 0.902, ap: 0.914
+2023-03-18 20:36:55,391 : [INFO]  Test statistics: New nodes -- auc: 0.947, ap: 0.953
+2023-03-18 20:36:55,451 : [INFO]  Test statistics: New nodes -- auc: 0.925, ap: 0.923
+2023-03-18 20:36:55,512 : [INFO]  Test statistics: New nodes -- auc: 0.898, ap: 0.908
+2023-03-18 20:36:55,582 : [INFO]  Test statistics: New nodes -- auc: 0.883, ap: 0.882
+2023-03-18 20:36:55,644 : [INFO]  Test statistics: New nodes -- auc: 0.929, ap: 0.938
+2023-03-18 20:36:55,705 : [INFO]  Test statistics: New nodes -- auc: 0.894, ap: 0.896
+2023-03-18 20:36:55,766 : [INFO]  Test statistics: New nodes -- auc: 0.917, ap: 0.924
+2023-03-18 20:36:55,831 : [INFO]  Test statistics: New nodes -- auc: 0.895, ap: 0.905
+2023-03-18 20:36:55,893 : [INFO]  Test statistics: New nodes -- auc: 0.918, ap: 0.925
+2023-03-18 20:36:55,954 : [INFO]  Test statistics: New nodes -- auc: 0.914, ap: 0.922
+2023-03-18 20:36:56,014 : [INFO]  Test statistics: New nodes -- auc: 0.92, ap: 0.929
+2023-03-18 20:36:56,079 : [INFO]  Test statistics: New nodes -- auc: 0.923, ap: 0.933
+2023-03-18 20:36:56,143 : [INFO]  Test statistics: New nodes -- auc: 0.954, ap: 0.957
+2023-03-18 20:36:56,204 : [INFO]  Test statistics: New nodes -- auc: 0.904, ap: 0.913
+2023-03-18 20:36:56,267 : [INFO]  Test statistics: New nodes -- auc: 0.901, ap: 0.909
+2023-03-18 20:36:56,330 : [INFO]  Test statistics: New nodes -- auc: 0.962, ap: 0.962
+2023-03-18 20:36:56,393 : [INFO]  Test statistics: New nodes -- auc: 0.93, ap: 0.93
+2023-03-18 20:36:56,454 : [INFO]  Test statistics: New nodes -- auc: 0.936, ap: 0.939
+2023-03-18 20:36:56,515 : [INFO]  Test statistics: New nodes -- auc: 0.914, ap: 0.923
+2023-03-18 20:36:56,580 : [INFO]  Test statistics: New nodes -- auc: 0.876, ap: 0.886
+2023-03-18 20:36:56,641 : [INFO]  Test statistics: New nodes -- auc: 0.875, ap: 0.894
+2023-03-18 20:36:56,717 : [INFO]  Test statistics: New nodes -- auc: 0.96, ap: 0.965
+2023-03-18 20:36:56,787 : [INFO]  Test statistics: New nodes -- auc: 0.959, ap: 0.962
+2023-03-18 20:36:56,850 : [INFO]  Test statistics: New nodes -- auc: 0.886, ap: 0.899
+2023-03-18 20:36:56,913 : [INFO]  Test statistics: New nodes -- auc: 0.897, ap: 0.906
+2023-03-18 20:36:56,974 : [INFO]  Test statistics: New nodes -- auc: 0.945, ap: 0.948
+2023-03-18 20:36:57,039 : [INFO]  Test statistics: New nodes -- auc: 0.895, ap: 0.913
+2023-03-18 20:36:57,083 : [INFO]  Test statistics: New nodes -- auc: 0.88, ap: 0.892
+2023-03-18 20:36:57,096 : [INFO]  Batches are over
+2023-03-18 20:37:01,398 : [INFO]  Evaluation--> val AUC: 0.944, PRECISION: 0.948
+2023-03-18 20:37:01,398 : [INFO]  Distributed training done!
+2023-03-18 20:37:01,398 : [INFO]  Training report : Elapsed time 82.02656964000016 seconds, graph ID 4, partition ID 0, epochs 1
+2023-03-18 20:39:57,372 : [INFO]  num of training instances: 81029
+2023-03-18 20:39:57,372 : [INFO]  num of batches per epoch: 406
+2023-03-18 20:40:00,332 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 20:40:00,332 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 20:40:00,456 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 20:40:00,470 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 20:40:00,470 : [INFO]  (Iteration id 0) Training started
+2023-03-18 20:40:00,471 : [INFO]  start 0 epoch
+2023-03-18 20:41:12,958 : [INFO]  epoch: 0 took 72.49s
+2023-03-18 20:41:12,958 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 20:41:12,958 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 20:41:12,958 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 20:41:12,964 : [INFO]  Total Epoch mean loss: 0.7193767620718537
+2023-03-18 20:41:12,964 : [INFO]  Total val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 20:41:12,964 : [INFO]  Total val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 20:41:12,964 : [INFO]  (Iteration id 0) Training done
+2023-03-18 20:41:12,964 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 20:41:12,979 : [INFO]  _____________________________________________________ (Iteration id 0) Final model evalution ____________________________________________________________
+2023-03-18 20:41:12,980 : [INFO]  (Iteration id 0) Final model (v1) fetched
+2023-03-18 20:41:16,250 : [INFO]  Evaluation--> val AUC: 0.944, PRECISION: 0.948
+2023-03-18 20:41:16,250 : [INFO]  _____________________________________________________ Training Finished ____________________________________________________________
+2023-03-18 20:41:16,251 : [INFO]  Batch testing started
+2023-03-18 20:42:12,601 : [INFO]  num of training instances: 81029
+2023-03-18 20:42:12,601 : [INFO]  num of batches per epoch: 406
+2023-03-18 20:42:14,528 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 20:42:14,528 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 20:42:14,613 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 20:42:14,624 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 20:42:14,624 : [INFO]  (Iteration id 0) Training started
+2023-03-18 20:42:14,625 : [INFO]  start 0 epoch
+2023-03-18 20:43:23,781 : [INFO]  epoch: 0 took 69.16s
+2023-03-18 20:43:23,781 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 20:43:23,781 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 20:43:23,781 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 20:43:23,787 : [INFO]  Total Epoch mean loss: 0.7193767620718537
+2023-03-18 20:43:23,787 : [INFO]  Total val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 20:43:23,787 : [INFO]  Total val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 20:43:23,787 : [INFO]  (Iteration id 0) Training done
+2023-03-18 20:43:23,787 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 20:43:23,802 : [INFO]  _____________________________________________________ (Iteration id 0) Final model evalution ____________________________________________________________
+2023-03-18 20:43:23,802 : [INFO]  (Iteration id 0) Final model (v1) fetched
+2023-03-18 20:43:26,816 : [INFO]  Evaluation--> val AUC: 0.944, PRECISION: 0.948
+2023-03-18 20:43:26,816 : [INFO]  _____________________________________________________ Training Finished ____________________________________________________________
+2023-03-18 20:43:26,816 : [INFO]  Batch testing started
+2023-03-18 20:43:26,864 : [INFO]  Test stat: AUC: 0.947, PRECISION: 0.938 -- Batch number 0, Batch size 200
+2023-03-18 20:43:26,924 : [INFO]  Test stat: AUC: 0.896, PRECISION: 0.903 -- Batch number 1, Batch size 200
+2023-03-18 20:43:26,984 : [INFO]  Test stat: AUC: 0.927, PRECISION: 0.918 -- Batch number 2, Batch size 200
+2023-03-18 20:43:27,053 : [INFO]  Test stat: AUC: 0.909, PRECISION: 0.913 -- Batch number 3, Batch size 200
+2023-03-18 20:43:27,134 : [INFO]  Test stat: AUC: 0.902, PRECISION: 0.912 -- Batch number 4, Batch size 200
+2023-03-18 20:43:27,193 : [INFO]  Test stat: AUC: 0.955, PRECISION: 0.953 -- Batch number 5, Batch size 200
+2023-03-18 20:43:27,253 : [INFO]  Test stat: AUC: 0.961, PRECISION: 0.966 -- Batch number 6, Batch size 200
+2023-03-18 20:43:27,322 : [INFO]  Test stat: AUC: 0.882, PRECISION: 0.892 -- Batch number 7, Batch size 200
+2023-03-18 20:43:27,384 : [INFO]  Test stat: AUC: 0.909, PRECISION: 0.918 -- Batch number 8, Batch size 200
+2023-03-18 20:43:27,446 : [INFO]  Test stat: AUC: 0.936, PRECISION: 0.942 -- Batch number 9, Batch size 200
+2023-03-18 20:43:27,506 : [INFO]  Test stat: AUC: 0.892, PRECISION: 0.899 -- Batch number 10, Batch size 200
+2023-03-18 20:43:27,576 : [INFO]  Test stat: AUC: 0.896, PRECISION: 0.902 -- Batch number 11, Batch size 200
+2023-03-18 20:43:27,639 : [INFO]  Test stat: AUC: 0.917, PRECISION: 0.918 -- Batch number 12, Batch size 200
+2023-03-18 20:43:27,701 : [INFO]  Test stat: AUC: 0.932, PRECISION: 0.936 -- Batch number 13, Batch size 200
+2023-03-18 20:43:27,761 : [INFO]  Test stat: AUC: 0.927, PRECISION: 0.929 -- Batch number 14, Batch size 200
+2023-03-18 20:43:27,833 : [INFO]  Test stat: AUC: 0.944, PRECISION: 0.95 -- Batch number 15, Batch size 200
+2023-03-18 20:43:27,900 : [INFO]  Test stat: AUC: 0.932, PRECISION: 0.93 -- Batch number 16, Batch size 200
+2023-03-18 20:43:27,965 : [INFO]  Test stat: AUC: 0.933, PRECISION: 0.932 -- Batch number 17, Batch size 200
+2023-03-18 20:43:28,027 : [INFO]  Test stat: AUC: 0.936, PRECISION: 0.94 -- Batch number 18, Batch size 200
+2023-03-18 20:43:28,112 : [INFO]  Test stat: AUC: 0.954, PRECISION: 0.96 -- Batch number 19, Batch size 200
+2023-03-18 20:43:28,189 : [INFO]  Test stat: AUC: 0.931, PRECISION: 0.931 -- Batch number 20, Batch size 200
+2023-03-18 20:43:28,262 : [INFO]  Test stat: AUC: 0.9, PRECISION: 0.912 -- Batch number 21, Batch size 200
+2023-03-18 20:43:28,337 : [INFO]  Test stat: AUC: 0.92, PRECISION: 0.927 -- Batch number 22, Batch size 200
+2023-03-18 20:43:28,416 : [INFO]  Test stat: AUC: 0.927, PRECISION: 0.937 -- Batch number 23, Batch size 200
+2023-03-18 20:43:28,495 : [INFO]  Test stat: AUC: 0.906, PRECISION: 0.905 -- Batch number 24, Batch size 200
+2023-03-18 20:43:28,576 : [INFO]  Test stat: AUC: 0.936, PRECISION: 0.943 -- Batch number 25, Batch size 200
+2023-03-18 20:43:28,639 : [INFO]  Test stat: AUC: 0.932, PRECISION: 0.936 -- Batch number 26, Batch size 200
+2023-03-18 20:43:28,701 : [INFO]  Test stat: AUC: 0.918, PRECISION: 0.924 -- Batch number 27, Batch size 200
+2023-03-18 20:43:28,764 : [INFO]  Test stat: AUC: 0.917, PRECISION: 0.925 -- Batch number 28, Batch size 200
+2023-03-18 20:43:28,836 : [INFO]  Test stat: AUC: 0.919, PRECISION: 0.925 -- Batch number 29, Batch size 200
+2023-03-18 20:43:28,915 : [INFO]  Test stat: AUC: 0.902, PRECISION: 0.914 -- Batch number 30, Batch size 200
+2023-03-18 20:43:28,976 : [INFO]  Test stat: AUC: 0.947, PRECISION: 0.953 -- Batch number 31, Batch size 200
+2023-03-18 20:43:29,039 : [INFO]  Test stat: AUC: 0.925, PRECISION: 0.923 -- Batch number 32, Batch size 200
+2023-03-18 20:43:29,124 : [INFO]  Test stat: AUC: 0.898, PRECISION: 0.908 -- Batch number 33, Batch size 200
+2023-03-18 20:43:29,200 : [INFO]  Test stat: AUC: 0.883, PRECISION: 0.882 -- Batch number 34, Batch size 200
+2023-03-18 20:43:29,265 : [INFO]  Test stat: AUC: 0.929, PRECISION: 0.938 -- Batch number 35, Batch size 200
+2023-03-18 20:43:29,330 : [INFO]  Test stat: AUC: 0.894, PRECISION: 0.896 -- Batch number 36, Batch size 200
+2023-03-18 20:43:29,393 : [INFO]  Test stat: AUC: 0.917, PRECISION: 0.924 -- Batch number 37, Batch size 200
+2023-03-18 20:43:29,455 : [INFO]  Test stat: AUC: 0.895, PRECISION: 0.905 -- Batch number 38, Batch size 200
+2023-03-18 20:43:29,527 : [INFO]  Test stat: AUC: 0.918, PRECISION: 0.925 -- Batch number 39, Batch size 200
+2023-03-18 20:43:29,592 : [INFO]  Test stat: AUC: 0.914, PRECISION: 0.922 -- Batch number 40, Batch size 200
+2023-03-18 20:43:29,654 : [INFO]  Test stat: AUC: 0.92, PRECISION: 0.929 -- Batch number 41, Batch size 200
+2023-03-18 20:43:29,716 : [INFO]  Test stat: AUC: 0.923, PRECISION: 0.933 -- Batch number 42, Batch size 200
+2023-03-18 20:43:29,786 : [INFO]  Test stat: AUC: 0.954, PRECISION: 0.957 -- Batch number 43, Batch size 200
+2023-03-18 20:43:29,849 : [INFO]  Test stat: AUC: 0.904, PRECISION: 0.913 -- Batch number 44, Batch size 200
+2023-03-18 20:43:29,910 : [INFO]  Test stat: AUC: 0.901, PRECISION: 0.909 -- Batch number 45, Batch size 200
+2023-03-18 20:43:29,971 : [INFO]  Test stat: AUC: 0.962, PRECISION: 0.962 -- Batch number 46, Batch size 200
+2023-03-18 20:43:30,038 : [INFO]  Test stat: AUC: 0.93, PRECISION: 0.93 -- Batch number 47, Batch size 200
+2023-03-18 20:43:30,101 : [INFO]  Test stat: AUC: 0.936, PRECISION: 0.939 -- Batch number 48, Batch size 200
+2023-03-18 20:43:30,164 : [INFO]  Test stat: AUC: 0.914, PRECISION: 0.923 -- Batch number 49, Batch size 200
+2023-03-18 20:43:30,225 : [INFO]  Test stat: AUC: 0.876, PRECISION: 0.886 -- Batch number 50, Batch size 200
+2023-03-18 20:43:30,294 : [INFO]  Test stat: AUC: 0.875, PRECISION: 0.894 -- Batch number 51, Batch size 200
+2023-03-18 20:43:30,358 : [INFO]  Test stat: AUC: 0.96, PRECISION: 0.965 -- Batch number 52, Batch size 200
+2023-03-18 20:43:30,419 : [INFO]  Test stat: AUC: 0.959, PRECISION: 0.962 -- Batch number 53, Batch size 200
+2023-03-18 20:43:30,479 : [INFO]  Test stat: AUC: 0.886, PRECISION: 0.899 -- Batch number 54, Batch size 200
+2023-03-18 20:43:30,546 : [INFO]  Test stat: AUC: 0.897, PRECISION: 0.906 -- Batch number 55, Batch size 200
+2023-03-18 20:43:30,609 : [INFO]  Test stat: AUC: 0.945, PRECISION: 0.948 -- Batch number 56, Batch size 200
+2023-03-18 20:43:30,673 : [INFO]  Test stat: AUC: 0.895, PRECISION: 0.913 -- Batch number 57, Batch size 200
+2023-03-18 20:43:30,722 : [INFO]  Test stat: AUC: 0.88, PRECISION: 0.892 -- Batch number 58, Batch size 200
+2023-03-18 20:43:30,737 : [INFO]  Batches are over
+2023-03-18 20:43:34,824 : [INFO]  Evaluation--> val AUC: 0.944, PRECISION: 0.948
+2023-03-18 20:43:34,824 : [INFO]  Distributed training done!
+2023-03-18 20:43:34,824 : [INFO]  Training report : Elapsed time 80.21034875499936 seconds, graph ID 4, partition ID 0, epochs 1
+2023-03-18 20:45:08,607 : [INFO]  num of training instances: 81029
+2023-03-18 20:45:08,607 : [INFO]  num of batches per epoch: 406
+2023-03-18 20:45:10,457 : [INFO]  num of training instances: 81029
+2023-03-18 20:45:10,457 : [INFO]  num of batches per epoch: 406
+2023-03-18 20:45:11,587 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 20:45:11,588 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 20:45:11,675 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 20:45:11,688 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 20:45:11,688 : [INFO]  (Iteration id 0) Training started
+2023-03-18 20:45:11,688 : [INFO]  start 0 epoch
+2023-03-18 20:45:13,412 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-18 20:45:13,412 : [INFO]  (Iteration id 0) Connected to the server
+2023-03-18 20:45:13,557 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-18 20:45:13,567 : [INFO]  (Iteration id 0) Global model v0 fetched
+2023-03-18 20:45:13,567 : [INFO]  (Iteration id 0) Training started
+2023-03-18 20:45:13,567 : [INFO]  start 0 epoch
+2023-03-18 20:46:54,429 : [INFO]  epoch: 0 took 102.74s
+2023-03-18 20:46:54,434 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 20:46:54,434 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 20:46:54,434 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 20:46:54,447 : [INFO]  Total Epoch mean loss: 0.7193767620718537
+2023-03-18 20:46:54,447 : [INFO]  Total val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 20:46:54,447 : [INFO]  Total val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 20:46:54,448 : [INFO]  (Iteration id 0) Training done
+2023-03-18 20:46:54,448 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 20:46:56,341 : [INFO]  epoch: 0 took 102.77s
+2023-03-18 20:46:56,341 : [INFO]  Epoch mean loss: 0.7193767620718537
+2023-03-18 20:46:56,341 : [INFO]  val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 20:46:56,341 : [INFO]  val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 20:46:56,352 : [INFO]  Total Epoch mean loss: 0.7193767620718537
+2023-03-18 20:46:56,352 : [INFO]  Total val auc: 0.9292592646582443, new node val auc: 0.9435596311475409
+2023-03-18 20:46:56,352 : [INFO]  Total val ap: 0.9357414843224384, new node val ap: 0.9479127964062574
+2023-03-18 20:46:56,352 : [INFO]  (Iteration id 0) Training done
+2023-03-18 20:46:56,352 : [INFO]  (Iteration id 0) Sent local model to the server
+2023-03-18 20:46:56,368 : [INFO]  _____________________________________________________ (Iteration id 0) Final model evalution ____________________________________________________________
+2023-03-18 20:46:56,368 : [INFO]  (Iteration id 0) Final model (v1) fetched
+2023-03-18 20:46:56,381 : [INFO]  _____________________________________________________ (Iteration id 0) Final model evalution ____________________________________________________________
+2023-03-18 20:46:56,381 : [INFO]  (Iteration id 0) Final model (v1) fetched
+2023-03-18 20:47:01,494 : [INFO]  Evaluation--> val AUC: 0.944, PRECISION: 0.948
+2023-03-18 20:47:01,494 : [INFO]  _____________________________________________________ Training Finished ____________________________________________________________
+2023-03-18 20:47:01,494 : [INFO]  Batch testing started
+2023-03-18 20:47:01,553 : [INFO]  Evaluation--> val AUC: 0.944, PRECISION: 0.948
+2023-03-18 20:47:01,553 : [INFO]  _____________________________________________________ Training Finished ____________________________________________________________
+2023-03-18 20:47:01,553 : [INFO]  Batch testing started
+2023-03-18 20:47:01,575 : [INFO]  Test stat: AUC: 0.947, PRECISION: 0.938 -- Batch number 0, Batch size 200
+2023-03-18 20:47:01,623 : [INFO]  Test stat: AUC: 0.947, PRECISION: 0.938 -- Batch number 0, Batch size 200
+2023-03-18 20:47:01,735 : [INFO]  Test stat: AUC: 0.896, PRECISION: 0.903 -- Batch number 1, Batch size 200
+2023-03-18 20:47:01,746 : [INFO]  Test stat: AUC: 0.896, PRECISION: 0.903 -- Batch number 1, Batch size 200
+2023-03-18 20:47:01,924 : [INFO]  Test stat: AUC: 0.927, PRECISION: 0.918 -- Batch number 2, Batch size 200
+2023-03-18 20:47:01,937 : [INFO]  Test stat: AUC: 0.927, PRECISION: 0.918 -- Batch number 2, Batch size 200
+2023-03-18 20:47:02,053 : [INFO]  Test stat: AUC: 0.909, PRECISION: 0.913 -- Batch number 3, Batch size 200
+2023-03-18 20:47:02,053 : [INFO]  Test stat: AUC: 0.909, PRECISION: 0.913 -- Batch number 3, Batch size 200
+2023-03-18 20:47:02,143 : [INFO]  Test stat: AUC: 0.902, PRECISION: 0.912 -- Batch number 4, Batch size 200
+2023-03-18 20:47:02,237 : [INFO]  Test stat: AUC: 0.902, PRECISION: 0.912 -- Batch number 4, Batch size 200
+2023-03-18 20:47:02,342 : [INFO]  Test stat: AUC: 0.955, PRECISION: 0.953 -- Batch number 5, Batch size 200
+2023-03-18 20:47:02,351 : [INFO]  Test stat: AUC: 0.955, PRECISION: 0.953 -- Batch number 5, Batch size 200
+2023-03-18 20:47:02,457 : [INFO]  Test stat: AUC: 0.961, PRECISION: 0.966 -- Batch number 6, Batch size 200
+2023-03-18 20:47:02,496 : [INFO]  Test stat: AUC: 0.961, PRECISION: 0.966 -- Batch number 6, Batch size 200
+2023-03-18 20:47:02,602 : [INFO]  Test stat: AUC: 0.882, PRECISION: 0.892 -- Batch number 7, Batch size 200
+2023-03-18 20:47:02,648 : [INFO]  Test stat: AUC: 0.882, PRECISION: 0.892 -- Batch number 7, Batch size 200
+2023-03-18 20:47:02,746 : [INFO]  Test stat: AUC: 0.909, PRECISION: 0.918 -- Batch number 8, Batch size 200
+2023-03-18 20:47:02,758 : [INFO]  Test stat: AUC: 0.909, PRECISION: 0.918 -- Batch number 8, Batch size 200
+2023-03-18 20:47:02,883 : [INFO]  Test stat: AUC: 0.936, PRECISION: 0.942 -- Batch number 9, Batch size 200
+2023-03-18 20:47:02,907 : [INFO]  Test stat: AUC: 0.936, PRECISION: 0.942 -- Batch number 9, Batch size 200
+2023-03-18 20:47:03,018 : [INFO]  Test stat: AUC: 0.892, PRECISION: 0.899 -- Batch number 10, Batch size 200
+2023-03-18 20:47:03,021 : [INFO]  Test stat: AUC: 0.892, PRECISION: 0.899 -- Batch number 10, Batch size 200
+2023-03-18 20:47:03,149 : [INFO]  Test stat: AUC: 0.896, PRECISION: 0.902 -- Batch number 11, Batch size 200
+2023-03-18 20:47:03,182 : [INFO]  Test stat: AUC: 0.896, PRECISION: 0.902 -- Batch number 11, Batch size 200
+2023-03-18 20:47:03,298 : [INFO]  Test stat: AUC: 0.917, PRECISION: 0.918 -- Batch number 12, Batch size 200
+2023-03-18 20:47:03,300 : [INFO]  Test stat: AUC: 0.917, PRECISION: 0.918 -- Batch number 12, Batch size 200
+2023-03-18 20:47:03,434 : [INFO]  Test stat: AUC: 0.932, PRECISION: 0.936 -- Batch number 13, Batch size 200
+2023-03-18 20:47:03,460 : [INFO]  Test stat: AUC: 0.932, PRECISION: 0.936 -- Batch number 13, Batch size 200
+2023-03-18 20:47:03,584 : [INFO]  Test stat: AUC: 0.927, PRECISION: 0.929 -- Batch number 14, Batch size 200
+2023-03-18 20:47:03,586 : [INFO]  Test stat: AUC: 0.927, PRECISION: 0.929 -- Batch number 14, Batch size 200
+2023-03-18 20:47:03,704 : [INFO]  Test stat: AUC: 0.944, PRECISION: 0.95 -- Batch number 15, Batch size 200
+2023-03-18 20:47:03,752 : [INFO]  Test stat: AUC: 0.944, PRECISION: 0.95 -- Batch number 15, Batch size 200
+2023-03-18 20:47:03,862 : [INFO]  Test stat: AUC: 0.932, PRECISION: 0.93 -- Batch number 16, Batch size 200
+2023-03-18 20:47:03,872 : [INFO]  Test stat: AUC: 0.932, PRECISION: 0.93 -- Batch number 16, Batch size 200
+2023-03-18 20:47:03,985 : [INFO]  Test stat: AUC: 0.933, PRECISION: 0.932 -- Batch number 17, Batch size 200
+2023-03-18 20:47:04,023 : [INFO]  Test stat: AUC: 0.933, PRECISION: 0.932 -- Batch number 17, Batch size 200
+2023-03-18 20:47:04,120 : [INFO]  Test stat: AUC: 0.936, PRECISION: 0.94 -- Batch number 18, Batch size 200
+2023-03-18 20:47:04,132 : [INFO]  Test stat: AUC: 0.936, PRECISION: 0.94 -- Batch number 18, Batch size 200
+2023-03-18 20:47:04,237 : [INFO]  Test stat: AUC: 0.954, PRECISION: 0.96 -- Batch number 19, Batch size 200
+2023-03-18 20:47:04,279 : [INFO]  Test stat: AUC: 0.954, PRECISION: 0.96 -- Batch number 19, Batch size 200
+2023-03-18 20:47:04,388 : [INFO]  Test stat: AUC: 0.931, PRECISION: 0.931 -- Batch number 20, Batch size 200
+2023-03-18 20:47:04,399 : [INFO]  Test stat: AUC: 0.931, PRECISION: 0.931 -- Batch number 20, Batch size 200
+2023-03-18 20:47:04,516 : [INFO]  Test stat: AUC: 0.9, PRECISION: 0.912 -- Batch number 21, Batch size 200
+2023-03-18 20:47:04,552 : [INFO]  Test stat: AUC: 0.9, PRECISION: 0.912 -- Batch number 21, Batch size 200
+2023-03-18 20:47:04,652 : [INFO]  Test stat: AUC: 0.92, PRECISION: 0.927 -- Batch number 22, Batch size 200
+2023-03-18 20:47:04,660 : [INFO]  Test stat: AUC: 0.92, PRECISION: 0.927 -- Batch number 22, Batch size 200
+2023-03-18 20:47:04,774 : [INFO]  Test stat: AUC: 0.927, PRECISION: 0.937 -- Batch number 23, Batch size 200
+2023-03-18 20:47:04,809 : [INFO]  Test stat: AUC: 0.927, PRECISION: 0.937 -- Batch number 23, Batch size 200
+2023-03-18 20:47:04,918 : [INFO]  Test stat: AUC: 0.906, PRECISION: 0.905 -- Batch number 24, Batch size 200
+2023-03-18 20:47:04,930 : [INFO]  Test stat: AUC: 0.906, PRECISION: 0.905 -- Batch number 24, Batch size 200
+2023-03-18 20:47:05,046 : [INFO]  Test stat: AUC: 0.936, PRECISION: 0.943 -- Batch number 25, Batch size 200
+2023-03-18 20:47:05,085 : [INFO]  Test stat: AUC: 0.936, PRECISION: 0.943 -- Batch number 25, Batch size 200
+2023-03-18 20:47:05,187 : [INFO]  Test stat: AUC: 0.932, PRECISION: 0.936 -- Batch number 26, Batch size 200
+2023-03-18 20:47:05,196 : [INFO]  Test stat: AUC: 0.932, PRECISION: 0.936 -- Batch number 26, Batch size 200
+2023-03-18 20:47:05,295 : [INFO]  Test stat: AUC: 0.918, PRECISION: 0.924 -- Batch number 27, Batch size 200
+2023-03-18 20:47:05,344 : [INFO]  Test stat: AUC: 0.918, PRECISION: 0.924 -- Batch number 27, Batch size 200
+2023-03-18 20:47:05,455 : [INFO]  Test stat: AUC: 0.917, PRECISION: 0.925 -- Batch number 28, Batch size 200
+2023-03-18 20:47:05,458 : [INFO]  Test stat: AUC: 0.917, PRECISION: 0.925 -- Batch number 28, Batch size 200
+2023-03-18 20:47:05,577 : [INFO]  Test stat: AUC: 0.919, PRECISION: 0.925 -- Batch number 29, Batch size 200
+2023-03-18 20:47:05,623 : [INFO]  Test stat: AUC: 0.919, PRECISION: 0.925 -- Batch number 29, Batch size 200
+2023-03-18 20:47:05,719 : [INFO]  Test stat: AUC: 0.902, PRECISION: 0.914 -- Batch number 30, Batch size 200
+2023-03-18 20:47:05,733 : [INFO]  Test stat: AUC: 0.902, PRECISION: 0.914 -- Batch number 30, Batch size 200
+2023-03-18 20:47:05,853 : [INFO]  Test stat: AUC: 0.947, PRECISION: 0.953 -- Batch number 31, Batch size 200
+2023-03-18 20:47:05,872 : [INFO]  Test stat: AUC: 0.947, PRECISION: 0.953 -- Batch number 31, Batch size 200
+2023-03-18 20:47:05,975 : [INFO]  Test stat: AUC: 0.925, PRECISION: 0.923 -- Batch number 32, Batch size 200
+2023-03-18 20:47:05,985 : [INFO]  Test stat: AUC: 0.925, PRECISION: 0.923 -- Batch number 32, Batch size 200
+2023-03-18 20:47:06,109 : [INFO]  Test stat: AUC: 0.898, PRECISION: 0.908 -- Batch number 33, Batch size 200
+2023-03-18 20:47:06,121 : [INFO]  Test stat: AUC: 0.898, PRECISION: 0.908 -- Batch number 33, Batch size 200
+2023-03-18 20:47:06,237 : [INFO]  Test stat: AUC: 0.883, PRECISION: 0.882 -- Batch number 34, Batch size 200
+2023-03-18 20:47:06,244 : [INFO]  Test stat: AUC: 0.883, PRECISION: 0.882 -- Batch number 34, Batch size 200
+2023-03-18 20:47:06,377 : [INFO]  Test stat: AUC: 0.929, PRECISION: 0.938 -- Batch number 35, Batch size 200
+2023-03-18 20:47:06,380 : [INFO]  Test stat: AUC: 0.929, PRECISION: 0.938 -- Batch number 35, Batch size 200
+2023-03-18 20:47:06,500 : [INFO]  Test stat: AUC: 0.894, PRECISION: 0.896 -- Batch number 36, Batch size 200
+2023-03-18 20:47:06,505 : [INFO]  Test stat: AUC: 0.894, PRECISION: 0.896 -- Batch number 36, Batch size 200
+2023-03-18 20:47:06,643 : [INFO]  Test stat: AUC: 0.917, PRECISION: 0.924 -- Batch number 37, Batch size 200
+2023-03-18 20:47:06,649 : [INFO]  Test stat: AUC: 0.917, PRECISION: 0.924 -- Batch number 37, Batch size 200
+2023-03-18 20:47:06,775 : [INFO]  Test stat: AUC: 0.895, PRECISION: 0.905 -- Batch number 38, Batch size 200
+2023-03-18 20:47:06,776 : [INFO]  Test stat: AUC: 0.895, PRECISION: 0.905 -- Batch number 38, Batch size 200
+2023-03-18 20:47:06,904 : [INFO]  Test stat: AUC: 0.918, PRECISION: 0.925 -- Batch number 39, Batch size 200
+2023-03-18 20:47:06,939 : [INFO]  Test stat: AUC: 0.918, PRECISION: 0.925 -- Batch number 39, Batch size 200
+2023-03-18 20:47:07,039 : [INFO]  Test stat: AUC: 0.914, PRECISION: 0.922 -- Batch number 40, Batch size 200
+2023-03-18 20:47:07,053 : [INFO]  Test stat: AUC: 0.914, PRECISION: 0.922 -- Batch number 40, Batch size 200
+2023-03-18 20:47:07,170 : [INFO]  Test stat: AUC: 0.92, PRECISION: 0.929 -- Batch number 41, Batch size 200
+2023-03-18 20:47:07,190 : [INFO]  Test stat: AUC: 0.92, PRECISION: 0.929 -- Batch number 41, Batch size 200
+2023-03-18 20:47:07,306 : [INFO]  Test stat: AUC: 0.923, PRECISION: 0.933 -- Batch number 42, Batch size 200
+2023-03-18 20:47:07,310 : [INFO]  Test stat: AUC: 0.923, PRECISION: 0.933 -- Batch number 42, Batch size 200
+2023-03-18 20:47:07,447 : [INFO]  Test stat: AUC: 0.954, PRECISION: 0.957 -- Batch number 43, Batch size 200
+2023-03-18 20:47:07,463 : [INFO]  Test stat: AUC: 0.954, PRECISION: 0.957 -- Batch number 43, Batch size 200
+2023-03-18 20:47:07,578 : [INFO]  Test stat: AUC: 0.904, PRECISION: 0.913 -- Batch number 44, Batch size 200
+2023-03-18 20:47:07,580 : [INFO]  Test stat: AUC: 0.904, PRECISION: 0.913 -- Batch number 44, Batch size 200
+2023-03-18 20:47:07,685 : [INFO]  Test stat: AUC: 0.901, PRECISION: 0.909 -- Batch number 45, Batch size 200
+2023-03-18 20:47:07,734 : [INFO]  Test stat: AUC: 0.901, PRECISION: 0.909 -- Batch number 45, Batch size 200
+2023-03-18 20:47:07,855 : [INFO]  Test stat: AUC: 0.962, PRECISION: 0.962 -- Batch number 46, Batch size 200
+2023-03-18 20:47:07,855 : [INFO]  Test stat: AUC: 0.962, PRECISION: 0.962 -- Batch number 46, Batch size 200
+2023-03-18 20:47:07,958 : [INFO]  Test stat: AUC: 0.93, PRECISION: 0.93 -- Batch number 47, Batch size 200
+2023-03-18 20:47:08,039 : [INFO]  Test stat: AUC: 0.93, PRECISION: 0.93 -- Batch number 47, Batch size 200
+2023-03-18 20:47:08,134 : [INFO]  Test stat: AUC: 0.936, PRECISION: 0.939 -- Batch number 48, Batch size 200
+2023-03-18 20:47:08,142 : [INFO]  Test stat: AUC: 0.936, PRECISION: 0.939 -- Batch number 48, Batch size 200
+2023-03-18 20:47:08,279 : [INFO]  Test stat: AUC: 0.914, PRECISION: 0.923 -- Batch number 49, Batch size 200
+2023-03-18 20:47:08,300 : [INFO]  Test stat: AUC: 0.914, PRECISION: 0.923 -- Batch number 49, Batch size 200
+2023-03-18 20:47:08,395 : [INFO]  Test stat: AUC: 0.876, PRECISION: 0.886 -- Batch number 50, Batch size 200
+2023-03-18 20:47:08,409 : [INFO]  Test stat: AUC: 0.876, PRECISION: 0.886 -- Batch number 50, Batch size 200
+2023-03-18 20:47:08,514 : [INFO]  Test stat: AUC: 0.875, PRECISION: 0.894 -- Batch number 51, Batch size 200
+2023-03-18 20:47:08,548 : [INFO]  Test stat: AUC: 0.875, PRECISION: 0.894 -- Batch number 51, Batch size 200
+2023-03-18 20:47:08,682 : [INFO]  Test stat: AUC: 0.96, PRECISION: 0.965 -- Batch number 52, Batch size 200
+2023-03-18 20:47:08,682 : [INFO]  Test stat: AUC: 0.96, PRECISION: 0.965 -- Batch number 52, Batch size 200
+2023-03-18 20:47:08,811 : [INFO]  Test stat: AUC: 0.959, PRECISION: 0.962 -- Batch number 53, Batch size 200
+2023-03-18 20:47:08,834 : [INFO]  Test stat: AUC: 0.959, PRECISION: 0.962 -- Batch number 53, Batch size 200
+2023-03-18 20:47:08,956 : [INFO]  Test stat: AUC: 0.886, PRECISION: 0.899 -- Batch number 54, Batch size 200
+2023-03-18 20:47:08,957 : [INFO]  Test stat: AUC: 0.886, PRECISION: 0.899 -- Batch number 54, Batch size 200
+2023-03-18 20:47:09,070 : [INFO]  Test stat: AUC: 0.897, PRECISION: 0.906 -- Batch number 55, Batch size 200
+2023-03-18 20:47:09,104 : [INFO]  Test stat: AUC: 0.897, PRECISION: 0.906 -- Batch number 55, Batch size 200
+2023-03-18 20:47:09,234 : [INFO]  Test stat: AUC: 0.945, PRECISION: 0.948 -- Batch number 56, Batch size 200
+2023-03-18 20:47:09,235 : [INFO]  Test stat: AUC: 0.945, PRECISION: 0.948 -- Batch number 56, Batch size 200
+2023-03-18 20:47:09,357 : [INFO]  Test stat: AUC: 0.895, PRECISION: 0.913 -- Batch number 57, Batch size 200
+2023-03-18 20:47:09,403 : [INFO]  Test stat: AUC: 0.895, PRECISION: 0.913 -- Batch number 57, Batch size 200
+2023-03-18 20:47:09,479 : [INFO]  Test stat: AUC: 0.88, PRECISION: 0.892 -- Batch number 58, Batch size 200
+2023-03-18 20:47:09,490 : [INFO]  Test stat: AUC: 0.88, PRECISION: 0.892 -- Batch number 58, Batch size 200
+2023-03-18 20:47:09,512 : [INFO]  Batches are over
+2023-03-18 20:47:09,519 : [INFO]  Batches are over
+2023-03-18 20:47:17,180 : [INFO]  Evaluation--> val AUC: 0.944, PRECISION: 0.948
+2023-03-18 20:47:17,181 : [INFO]  Distributed training done!
+2023-03-18 20:47:17,181 : [INFO]  Training report : Elapsed time 123.62293587600016 seconds, graph ID 4, partition ID 0, epochs 1
+2023-03-18 20:47:17,478 : [INFO]  Evaluation--> val AUC: 0.944, PRECISION: 0.948
+2023-03-18 20:47:17,478 : [INFO]  Distributed training done!
+2023-03-18 20:47:17,478 : [INFO]  Training report : Elapsed time 125.80285449199982 seconds, graph ID 4, partition ID 0, epochs 1

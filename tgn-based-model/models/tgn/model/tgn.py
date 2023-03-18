@@ -3,13 +3,13 @@ import numpy as np
 import torch
 from collections import defaultdict
 
-from utils.utils import MergeLayer
-from modules.memory import Memory
-from modules.message_aggregator import get_message_aggregator
-from modules.message_function import get_message_function
-from modules.memory_updater import get_memory_updater
-from modules.embedding_module import get_embedding_module
-from model.time_encoding import TimeEncode
+from models.tgn.utils.utils import MergeLayer
+from models.tgn.modules.memory import Memory
+from models.tgn.modules.message_aggregator import get_message_aggregator
+from models.tgn.modules.message_function import get_message_function
+from models.tgn.modules.memory_updater import get_memory_updater
+from models.tgn.modules.embedding_module import get_embedding_module
+from models.tgn.model.time_encoding import TimeEncode
 
 
 class TGN(torch.nn.Module):

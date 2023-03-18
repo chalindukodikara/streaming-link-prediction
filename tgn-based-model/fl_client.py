@@ -19,8 +19,9 @@ import torch
 import numpy as np
 import pickle
 from pathlib import Path
+from sklearn.metrics import average_precision_score, roc_auc_score
 
-from models.tgn.evaluation.evaluation import eval_edge_prediction
+from models.tgn.evaluation.evaluation import eval_edge_prediction, eval_edge_prediction_for_some_batches
 from models.tgn.model.tgn import TGN
 from models.tgn.utils.utils import EarlyStopMonitor, RandEdgeSampler, get_neighbor_finder
 from models.tgn.utils.data_processing import get_data, compute_time_statistics
@@ -29,41 +30,8 @@ torch.manual_seed(0)
 np.random.seed(0)
 ###
 
-arg_names = [
-    'path_weights',
-    'path_nodes',
-    'path_edges',
-    'graph_id',
-    'partition_id',
-    'epochs',
-    'IP',
-    'PORT',
-    'name'
-]
 
-# args = dict(zip(arg_names, sys.argv[1:]))
-args = dict()
-args['path_weights'] = './weights/'
-args['path_nodes'] = './data/'
-args['path_edges'] = './data/'
-args['graph_id'] = '4'
-args['partition_id'] = '0'
-args['initial_epochs'] = '15'
-args['normal_epochs'] = '5'
-args['IP'] = 'localhost'
-args['PORT'] = '5000'
-args['name'] = 'elliptic'
 
-partition_id = args['partition_id']
-
-logging.basicConfig(
-    level=logging.INFO, 
-    format='%(asctime)s : [%(levelname)s]  %(message)s',
-    handlers=[
-        logging.FileHandler(f'client_{partition_id}.log'),
-        logging.StreamHandler(sys.stdout)
-    ]
-)
 
 ############
 ### Argument and global variables
@@ -74,7 +42,7 @@ parser.add_argument('--bs', type=int, default=200, help='Batch_size')
 parser.add_argument('--prefix', type=str, default='', help='Prefix to name the checkpoints')
 parser.add_argument('--n_degree', type=int, default=10, help='Number of neighbors to sample')
 parser.add_argument('--n_head', type=int, default=2, help='Number of heads used in attention layer')
-parser.add_argument('--n_epoch', type=int, default=50, help='Number of epochs')
+parser.add_argument('--n_epoch', type=int, default=1, help='Number of epochs')
 parser.add_argument('--n_layer', type=int, default=1, help='Number of network layers')
 parser.add_argument('--lr', type=float, default=0.0001, help='Learning rate')
 parser.add_argument('--patience', type=int, default=5, help='Patience for early stopping')
@@ -119,6 +87,7 @@ parser.add_argument('--path_edges', type=str, default='./data/', help='Data edge
 parser.add_argument('--graph_id', type=int, default=4, help='Graph id')
 parser.add_argument('--partition_id', type=int, default=0, help='Partition id of the graph')
 parser.add_argument('--ip', type=str, default='localhost', help='IP')
+parser.add_argument('--test_batch_size', type=int, default=200, help='Test batch size')
 parser.add_argument('--port', type=str, default='5000', help='PORT')
 parser.add_argument('--initial_epochs', type=int, default=10, help='Initial number of epochs')
 parser.add_argument('--normal_epochs', type=int, default=8, help='Normal number of epochs')
@@ -146,6 +115,55 @@ TIME_DIM = args.time_dim
 USE_MEMORY = args.use_memory
 MESSAGE_DIM = args.message_dim
 MEMORY_DIM = args.memory_dim
+######## Our parameters ################
+PATH_WEIGHTS = args.path_weights
+PATH_NODES = args.path_nodes
+PATH_EDGES = args.path_edges
+GRAPH_ID = args.graph_id
+PARTITION_ID = args.partition_id
+IP = args.ip
+PORT = args.port
+TEST_BATCH_SIZE = args.test_batch_size
+INITIAL_NUM_EPOCHS = args.initial_epochs
+NORMAL_NUM_EPOCHS = args.normal_epochs
+DATASET_NAME = args.dataset_name
+######## Our parameters ################
+
+# arg_names = [
+#     'path_weights',
+#     'path_nodes',
+#     'path_edges',
+#     'graph_id',
+#     'partition_id',
+#     'epochs',
+#     'IP',
+#     'PORT',
+#     'name'
+# ]
+#
+# # args = dict(zip(arg_names, sys.argv[1:]))
+# args = dict()
+# args['path_weights'] = './weights/'
+# args['path_nodes'] = './data/'
+# args['path_edges'] = './data/'
+# args['graph_id'] = '4'
+# args['partition_id'] = '0'
+# args['initial_epochs'] = '15'
+# args['normal_epochs'] = '5'
+# args['IP'] = 'localhost'
+# args['PORT'] = '5000'
+# args['name'] = 'elliptic'
+#
+# partition_id = args['partition_id']
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s : [%(levelname)s]  %(message)s',
+    handlers=[
+        logging.FileHandler(f'client_{PARTITION_ID}.log'),
+        logging.StreamHandler(sys.stdout)
+    ]
+)
 
 Path("./saved_models/").mkdir(parents=True, exist_ok=True)
 Path("./saved_checkpoints/").mkdir(parents=True, exist_ok=True)
@@ -188,7 +206,7 @@ mean_time_shift_src, std_time_shift_src, mean_time_shift_dst, std_time_shift_dst
     compute_time_statistics(full_data.sources, full_data.destinations, full_data.timestamps)
 
 # Initialize Model
-tgn = TGN(neighbor_finder=train_ngh_finder, node_features=node_features,
+model = TGN(neighbor_finder=train_ngh_finder, node_features=node_features,
           edge_features=edge_features, device=device,
           n_layers=NUM_LAYER,
           n_heads=NUM_HEADS, dropout=DROP_OUT, use_memory=USE_MEMORY,
@@ -205,8 +223,8 @@ tgn = TGN(neighbor_finder=train_ngh_finder, node_features=node_features,
           use_source_embedding_in_message=args.use_source_embedding_in_message,
           dyrep=args.dyrep)
 criterion = torch.nn.BCELoss()
-optimizer = torch.optim.Adam(tgn.parameters(), lr=LEARNING_RATE)
-tgn = tgn.to(device)
+optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)
+model = model.to(device)
 
 num_instance = len(train_data.sources)
 num_batch = math.ceil(num_instance / BATCH_SIZE)
@@ -220,7 +238,7 @@ idx_list = np.arange(num_instance)
 
 class Client:
 
-    def __init__(self, MODEL, graph_params, weights_path, graph_id, partition_id, initial_epochs = 10, normal_epochs = 2, IP = socket.gethostname(), PORT = 5000, HEADER_LENGTH = 10, iteration_id=1, dataset_name=""):
+    def __init__(self, MODEL, weights_path, graph_id, partition_id, initial_epochs = 10, normal_epochs = 2, IP = socket.gethostname(), PORT = 5000, HEADER_LENGTH = 10, iteration_id=0, dataset_name=""):
 
         self.HEADER_LENGTH =  HEADER_LENGTH
         self.IP = IP
@@ -235,7 +253,7 @@ class Client:
         self.normal_epochs = normal_epochs
         self.epochs = initial_epochs
 
-        self.graph_params = graph_params
+        self.graph_params = None
 
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
@@ -265,13 +283,13 @@ class Client:
 
         # svae model weights
         # weights file name : weights_graphid_workerid.npy
-        weights_path = self.weights_path + 'weights_' + self.graph_id + '_' + self.partition_id + ".npy"
+        # weights_path = self.weights_path + 'weights_' + self.graph_id + '_' + self.partition_id + ".npy"
         
         #np.save(weights_path,self.MODEL.get_weights())
 
-        weights = np.array(self.MODEL.get_weights())
+        weights = self.MODEL.state_dict()
 
-        data = {"CLIENT_ID": self.partition_id,"WEIGHTS":weights,"NUM_EXAMPLES":self.graph_params[0]}
+        data = {"CLIENT_ID": self.partition_id,"WEIGHTS":weights,"NUM_EXAMPLES":0}
 
         data = pickle.dumps(data)
         data = bytes(f"{len(data):<{self.HEADER_LENGTH}}", 'utf-8') + data
@@ -464,10 +482,13 @@ class Client:
             # Backup memory at the end of training, so later we can restore it and use it for the
             # validation on unseen nodes
             train_memory_backup = self.MODEL.memory.backup_memory()
-        val_ap, val_auc = eval_edge_prediction(model=self.MODEL,
-                                               negative_edge_sampler=val_rand_sampler,
-                                               data=val_data,
-                                               n_neighbors=NUM_NEIGHBORS)
+
+        val_ap = []
+        val_auc = []
+        # val_ap, val_auc = eval_edge_prediction(model=self.MODEL,
+        #                                        negative_edge_sampler=val_rand_sampler,
+        #                                        data=val_data,
+        #                                        n_neighbors=NUM_NEIGHBORS)
         if USE_MEMORY:
             val_memory_backup = self.MODEL.memory.backup_memory()
             # Restore memory we had at the end of training to be used when validating on new nodes.
@@ -480,16 +501,17 @@ class Client:
                                                      negative_edge_sampler=val_rand_sampler,
                                                      data=new_node_val_data,
                                                      n_neighbors=NUM_NEIGHBORS)
+        # logging.info(
+        #     'Evaluation--> val auc: {}, new node val auc: {}'.format(val_auc, nn_val_auc))
         logging.info(
-            'Evaluation--> val auc: {}, new node val auc: {}'.format(val_auc, nn_val_auc))
-        logging.info(
-            'Evaluation--> val ap: {}, new node val ap: {}'.format(val_ap, nn_val_ap))
+            'Evaluation--> val AUC: {}, PRECISION: {}'.format(round(nn_val_auc, 3), round(nn_val_ap, 3)))
         return [[val_auc, nn_val_auc], [val_ap, nn_val_ap]]
 
     def run(self):
+        initial_run = True
         while not self.STOP_FLAG:
-            if self.iteration_id > 1 and self.rounds == 0:
-                self.MODEL.set_weights(self.GLOBAL_WEIGHTS)
+            # if self.iteration_id > 1 and self.rounds == 0:
+            #     self.MODEL.set_weights(self.GLOBAL_WEIGHTS)
             read_sockets, _, exception_sockets = select.select([self.client_socket], [], [self.client_socket])
 
             for soc in read_sockets:
@@ -509,7 +531,10 @@ class Client:
                 logging.info('_____________________________________________________ (Iteration id %s) Training Round ____________________________________________________________',self.rounds, self.iteration_id)
                 logging.info('(Iteration id %s) Global model v%s fetched', self.iteration_id, self.rounds - 1)
 
-                eval = self.evaluate()
+                if initial_run:
+                    initial_run = False
+                else:
+                    eval = self.evaluate()
 
                 # logging.info('(Iteration id %s) Global model v%s - Training set evaluation : loss - %s, accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s', self.iteration_id, self.rounds - 1, eval[0][0], eval[0][1],eval[0][2],eval[0][3],f1_train,eval[0][4])
                 # logging.info('(Iteration id %s) Global model v%s - Testing set evaluation : loss - %s, accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s', self.iteration_id, self.rounds - 1,  eval[1][0], eval[1][1],eval[1][2],eval[1][3],f1_test,eval[1][4])
@@ -529,7 +554,56 @@ class Client:
                 logging.info('(Iteration id %s) Sent local model to the server', self.iteration_id)
                 self.send_model()
 
+        logging.info('_____________________________________________________ Training Finished ____________________________________________________________')
+        logging.info('Batch testing started')
+        starting_batch = -1
+        num_of_batches = 1
+
+        self.iteration_id += 1
+        self.MODEL.embedding_module.neighbor_finder = full_ngh_finder
         while not self.ITERATION_FLAG:
+            starting_batch += num_of_batches
+
+            if self.iteration_id > 1:
+                read_sockets, _, exception_sockets = select.select([self.client_socket], [], [self.client_socket])
+
+                for soc in read_sockets:
+                    self.fetch_model()
+            if self.ITERATION_FLAG:
+                logging.info('Batches are over')
+                self.evaluate()
+            else:
+                if USE_MEMORY:
+                    val_memory_backup = self.MODEL.memory.backup_memory()
+
+                ### Test
+                # test_ap, test_auc = eval_edge_prediction_for_some_batches(model=self.MODEL,
+                #                                          starting_batch=starting_batch,
+                #                                          ending_batch=starting_batch+num_of_batches,
+                #                                          negative_edge_sampler=test_rand_sampler,
+                #                                          data=test_data,
+                #                                          n_neighbors=NUM_NEIGHBORS)
+
+                if USE_MEMORY:
+                    self.MODEL.memory.restore_memory(val_memory_backup)
+
+                # Test on unseen nodes
+                nn_test_ap, nn_test_auc = eval_edge_prediction_for_some_batches(model=self.MODEL,
+                                                               starting_batch=starting_batch,
+                                                               ending_batch=starting_batch + num_of_batches,
+                                                               negative_edge_sampler=nn_test_rand_sampler,
+                                                               data=new_node_test_data,
+                                                               n_neighbors=NUM_NEIGHBORS)
+
+                # logging.info(
+                #     'Test statistics: Old nodes -- auc: {}, ap: {}, id: {}'.format(test_auc, test_ap, starting_batch))
+                logging.info(
+                    'Test stat: AUC: {}, PRECISION: {} -- Batch number {}, Batch size {}'.format(round(nn_test_auc, 3), round(nn_test_ap, 3), starting_batch, TEST_BATCH_SIZE))
+
+                self.send_model()
+
+                self.iteration_id += 1
+
 
 
 
@@ -540,26 +614,17 @@ if __name__ == "__main__":
 
     from models.supervised import Model
 
-    if 'IP' not in args.keys() or args['IP'] == 'localhost':
-        args['IP'] = socket.gethostname()
+    if IP == 'localhost':
+        IP = socket.gethostname()
 
-    if 'PORT' not in args.keys():
-        args['PORT'] = 5000
-
-    if 'epochs' not in args.keys():
-        args['epoch'] = 10
 
     logging.warning('####################################### New Training Session #######################################')
-    logging.info('Client started, graph ID %s, partition ID %s, epochs %s',args['graph_id'],args['partition_id'],args['initial_epochs'])
+    # logging.info('Client started, graph ID %s, partition ID %s, epochs %s',args['graph_id'],args['partition_id'],args['initial_epochs'])
 
 
-    graph_params = (num_train_ex, num_test_ex)
+    # logging.info('(Iteration id %s) Number of training examples - %s, Number of testing examples %s', str(1), num_train_ex,num_test_ex)
+    client = Client(model, weights_path=PATH_WEIGHTS, graph_id=GRAPH_ID, partition_id=PARTITION_ID, initial_epochs = INITIAL_NUM_EPOCHS, normal_epochs = NORMAL_NUM_EPOCHS, IP=IP, PORT=int(PORT), iteration_id=0, dataset_name=DATASET_NAME)
 
-    logging.info('(Iteration id %s) Number of training examples - %s, Number of testing examples %s', str(1), num_train_ex,num_test_ex)
-    client = Client(tgn, graph_params, weights_path=args['path_weights'], graph_id=args['graph_id'], partition_id=args['partition_id'], initial_epochs = int(args['initial_epochs']), normal_epochs = int(args['normal_epochs']) ,IP=args['IP'],PORT=int(args['PORT']), iteration_id=1, dataset_name=args['name'])
-
-    del nodes
-    del edges
     gc.collect()
 
     logging.info('(Iteration id %s) Distributed training started!', str(1))
@@ -570,6 +635,6 @@ if __name__ == "__main__":
 
     elapsed_time = end -start
     logging.info('Distributed training done!')
-    logging.info('Training report : Elapsed time %s seconds, graph ID %s, partition ID %s, epochs %s', elapsed_time,args['graph_id'],args['partition_id'],args['normal_epochs'])
+    logging.info('Training report : Elapsed time %s seconds, graph ID %s, partition ID %s, epochs %s', elapsed_time,GRAPH_ID,PARTITION_ID,NUM_EPOCH)
 
     

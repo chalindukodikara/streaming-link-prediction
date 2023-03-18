@@ -93,13 +93,13 @@ parser.add_argument('--path_nodes', type=str, default='./data/', help='Data node
 parser.add_argument('--path_edges', type=str, default='./data/', help='Data edges path')
 parser.add_argument('--graph_id', type=int, default=4, help='Graph id')
 parser.add_argument('--partition_id', type=int, default=0, help='Partition id of the graph')
-parser.add_argument('--num_clients', type=int, default=1, help='Number of clients')
+parser.add_argument('--num_clients', type=int, default=2, help='Number of clients')
 parser.add_argument('--ip', type=str, default='localhost', help='IP')
 parser.add_argument('--port', type=str, default='5000', help='PORT')
 parser.add_argument('--transfer_learning', type=bool, default=True, help='Whether transfer learning is on')
-parser.add_argument('--test_batch_size', type=int, default=10, help='Test batch size')
-parser.add_argument('--initial_num_rounds', type=int, default=6, help='Initial number of rounds')
-parser.add_argument('--normal_num_rounds', type=int, default=2, help='Normal number of rounds')
+parser.add_argument('--test_batch_size', type=int, default=200, help='Test batch size')
+parser.add_argument('--initial_num_rounds', type=int, default=1, help='Initial number of rounds')
+parser.add_argument('--normal_num_rounds', type=int, default=1, help='Normal number of rounds')
 parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
 ######## Our parameters ################
 try:
@@ -126,7 +126,6 @@ MEMORY_DIM = args.memory_dim
 ######## Our parameters ################
 PATH_WEIGHTS = args.path_weights
 PATH_NODES = args.path_nodes
-PATH_WEIGHTS = args.path_weights
 PATH_EDGES = args.path_edges
 GRAPH_ID = args.graph_id
 PARTITION_ID = args.partition_id
@@ -155,20 +154,20 @@ DATASET_NAME = args.dataset_name
 #     ]
 #
 # args = dict(zip(arg_names, sys.argv[1:]))
-args = dict()
-args['path_weights'] = './weights/'
-args['path_nodes'] = './data/'
-args['path_edges'] = './data/'
-args['graph_id'] = '4'
-args['partition_id'] = '0'
-args['num_clients'] = '1'
-args['initial_num_rounds'] = '6'
-args['normal_num_rounds'] = '2'
-args['IP'] = 'localhost'
-args['PORT'] = '5000'
-args['name'] = 'elliptic'
-args['transfer_learning'] = True
-args['TEST_BATCH_SIZE'] = '6'
+# args = dict()
+# args['path_weights'] = './weights/'
+# args['path_nodes'] = './data/'
+# args['path_edges'] = './data/'
+# args['graph_id'] = '4'
+# args['partition_id'] = '0'
+# args['num_clients'] = '1'
+# args['initial_num_rounds'] = '6'
+# args['normal_num_rounds'] = '2'
+# args['IP'] = 'localhost'
+# args['PORT'] = '5000'
+# args['name'] = 'elliptic'
+# args['transfer_learning'] = True
+# args['TEST_BATCH_SIZE'] = '6'
 class Server:
 
     def __init__(self, MODEL, INITIAL_ROUNDS, NORMAL_ROUNDS, weights_path, graph_id, MAX_CONN = 2, IP= socket.gethostname(), PORT = 5000, HEADER_LENGTH = 10,iteration_id=0, transfer_learning=False, NUM_BATCHES=0):
@@ -213,6 +212,7 @@ class Server:
 
         # Global model
         self.GLOBAL_WEIGHTS = MODEL.state_dict()
+        print('')
 
     def send_iteration_id(self, client_socket):
         data = {"ITERATION_ID": self.iteration_id}
@@ -222,14 +222,18 @@ class Server:
         client_socket.sendall(data)
 
     def update_model(self, new_weights, num_examples):
-        self.partition_sizes.append(num_examples)
-        self.weights.append(num_examples * new_weights)
+        # self.partition_sizes.append(num_examples)
+        self.weights.append(new_weights)
         # self.weights.append(new_weights)
 
         if len(self.weights) == self.MAX_CONN:
+            new_weights = self.weights[0]
+            for i in range(1, len(self.weights)):
+                for key in self.weights[i]:
+                    new_weights[key] = (new_weights[key] + self.weights[i][key])/2
 
             #avg_weight = np.mean(self.weights, axis=0)
-            avg_weight = sum(self.weights) / sum(self.partition_sizes)
+            avg_weight = new_weights
             self.weights = []
 
             self.partition_sizes = []
@@ -240,8 +244,8 @@ class Server:
             self.training_cycles += 1
 
             # weights file name : global_weights_graphid.npy
-            weights_path = self.weights_path + 'weights_' + 'graphID:' + self.graph_id + "_V" + str(self.training_cycles) + ".npy"
-            np.save(weights_path, avg_weight)
+            # weights_path = self.weights_path + 'weights_' + 'graphID:' + self.graph_id + "_V" + str(self.training_cycles) + ".npy"
+            # np.save(weights_path, avg_weight)
 
             for soc in self.sockets_list[1:]:
                 self.send_model(soc)
@@ -258,7 +262,7 @@ class Server:
             self.all_timestamps_finished = True
 
 
-        weights = np.array(self.GLOBAL_WEIGHTS)
+        weights = self.GLOBAL_WEIGHTS
 
         data = {"STOP_FLAG": self.stop_flag, "WEIGHTS": weights, "ITERATION_FLAG": self.all_timestamps_finished}
 
@@ -340,8 +344,8 @@ class Server:
                     del self.clients[notified_socket]
 
             # Save weights to use for transfer learning
-            weights_path = "./global_weights/" + 'weights_' + 'graphID:' + self.graph_id + "_V" + str(self.iteration_id) + ".npy"
-            np.save(weights_path, self.GLOBAL_WEIGHTS)
+            # weights_path = "./global_weights/" + 'weights_' + 'graphID:' + self.graph_id + "_V" + str(self.iteration_id) + ".npy"
+            # np.save(weights_path, self.GLOBAL_WEIGHTS)
 
             self.iteration_id += 1
             self.weights = []
@@ -391,10 +395,7 @@ if __name__ == "__main__":
     # Model initialization to send weights
     #####################################################################################
     ### Extract data for training, validation and testing
-    node_features, edge_features, full_data, train_data, val_data, test_data, new_node_val_data, \
-    new_node_test_data = get_data(DATA,
-                                  different_new_nodes_between_val_and_test=args.different_new_nodes,
-                                  randomize_features=args.randomize_features)
+    node_features, edge_features, full_data, train_data, val_data, test_data, new_node_val_data, new_node_test_data = get_data(DATA,different_new_nodes_between_val_and_test=args.different_new_nodes,randomize_features=args.randomize_features)
 
     # Initialize training neighbor finder to retrieve temporal graph
     train_ngh_finder = get_neighbor_finder(train_data, args.uniform)
@@ -440,15 +441,17 @@ if __name__ == "__main__":
               use_source_embedding_in_message=args.use_source_embedding_in_message,
               dyrep=args.dyrep)
 
-    num_test_instance = len(test_data.sources)
-    num_test_batch = math.ceil(num_test_instance / TEST_BATCH_SIZE)
+    # num_test_instance = len(test_data.sources)
+    # num_test_batch = math.ceil(num_test_instance / TEST_BATCH_SIZE)
     #####################################################################################
-
 
 
     logging.info('Model initialized')
 
-    server = Server(model, INITIAL_ROUNDS=int(INITIAL_NUM_ROUNDS), NORMAL_ROUNDS=int(NORMAL_NUM_ROUNDS), weights_path=PATH_WEIGHTS,graph_id=GRAPH_ID,MAX_CONN=int(NUM_CLIENTS),IP=IP,PORT=int(PORT),iteration_id=1,transfer_learning=TRANSFER_LEARNING, NUM_BATCHES=int(TEST_BATCH_SIZE))
+    num_test_instance = len(new_node_test_data.sources)
+    num_test_batch = math.ceil(num_test_instance / TEST_BATCH_SIZE)
+
+    server = Server(model, INITIAL_ROUNDS=int(INITIAL_NUM_ROUNDS), NORMAL_ROUNDS=int(NORMAL_NUM_ROUNDS), weights_path=PATH_WEIGHTS,graph_id=GRAPH_ID,MAX_CONN=int(NUM_CLIENTS),IP=IP,PORT=int(PORT),iteration_id=0,transfer_learning=TRANSFER_LEARNING, NUM_BATCHES=int(num_test_batch))
 
     del model
     del node_features, edge_features, full_data, train_data, val_data, test_data, new_node_val_data, new_node_test_data
@@ -465,4 +468,4 @@ if __name__ == "__main__":
 
     elapsed_time = end - start
     logging.info('Federated training done!')
-    logging.info('Training report : Elapsed time %s seconds, graph ID %s, number of clients %s, number of rounds %s',elapsed_time,args['graph_id'],args['num_clients'],args['normal_num_rounds'])
+    logging.info('Training report : Elapsed time %s seconds, graph ID %s, number of clients %s, number of rounds %s',elapsed_time,GRAPH_ID,NUM_CLIENTS,NORMAL_NUM_ROUNDS)
