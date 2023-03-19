@@ -4,74 +4,144 @@ import gc
 import os
 import datetime
 # pd.to_datetime(int(data.iloc[2, 3]), unit='s')
+import argparse
+import logging
+import sys
+import time
 
-def main():
-    dataset_name = 'tg'
-    number_of_timestamps = 121
-    sliding_window_size = 20
+# time.strftime('%l:%M%p %z on %b %d, %Y')
 
+np.random.seed(0)
+######## Setup logger ################
+# create data folder with the dataset name
+folder_path = "logs"
+if os.path.exists(folder_path):
+    logging.info("Folder path \"" + folder_path + "\" exists")
+    pass
+else:
+    os.makedirs(folder_path)
 
+folder_path = "pre_process"
+if os.path.exists(folder_path):
+    logging.info("Folder path \"" + folder_path + "\" exists")
+    pass
+else:
+    os.makedirs(folder_path)
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s : [%(levelname)s]  %(message)s',
+    handlers=[
+        logging.FileHandler('log/pre_process/pre_process_{}.log'.format(str(time.strftime('%l:%M%p on %b %d, %Y')))),
+        logging.StreamHandler(sys.stdout)
+    ]
+)
+######## Our parameters ################
+parser = argparse.ArgumentParser('Preprocessing')
+parser.add_argument('--dataset_name', type=str, default='tg', help='Dataset name')
+parser.add_argument('--partition_id', type=int, default=1, help='Partition ID')
+parser.add_argument('--training_batch_size', type=int, default=65536, help='Training batch size')
+parser.add_argument('--testing_batch_size', type=int, default=1024, help='Testing batch size')
+
+try:
+  args = parser.parse_args()
+except:
+  parser.print_help()
+  sys.exit(0)
+
+DATASET_NAME = args.dataset_name
+PARTITION_ID = args.partition_id
+TRAINING_BATCH_SIZE = args.training_batch_size
+TESTING_BATCH_SIZE = args.testing_batch_size
+######## Our parameters ################
+def main(dataset_name, data_edges, data_nodes, total_size, training_batch_size = 65536, testing_batch_size = 1024):
+
+    # create data folder with the dataset name
     folder_path = "data/" + dataset_name
     if os.path.exists(folder_path):
-        print("Folder path \"" + folder_path + "\" exists")
+        logging.info("Folder path \"" + folder_path + "\" exists")
         pass
     else:
         os.makedirs(folder_path)
 
-    data_edges = pd.read_csv('data/' + dataset_name + '_edges.csv')
-    if 'Unnamed: 0' in data_edges: data_edges.pop('Unnamed: 0')
-    if 'Unnamed: 0.1' in data_edges: data_edges.pop('Unnamed: 0.1')
+    current_timestamp = 0
+    batch_number = 0
+    while current_timestamp <= (total_size-training_batch_size):
+        if current_timestamp != 0: # filter training batch
+            # data_edges_temp = data_edges.loc[data_edges['timestamp'] < (current_timestamp + testing_batch_size)].loc[data_edges['timestamp'] > (current_timestamp + 1)]
+            data_edges_temp = data_edges.iloc[current_timestamp:current_timestamp + testing_batch_size]
+            current_timestamp += testing_batch_size
+        else: # filter each test batch
+            # data_edges_temp = data_edges.loc[data_edges['timestamp'] < training_batch_size].loc[data_edges['timestamp'] > 0]
+            data_edges_temp = data_edges.iloc[0:training_batch_size-1]
+            current_timestamp += training_batch_size-1
 
-    data_nodes = pd.read_csv('data/' + dataset_name + '_nodes.csv')
-    if 'Unnamed: 0' in data_nodes: data_nodes.pop('Unnamed: 0')
-    if 'Unnamed: 0.1' in data_nodes: data_nodes.pop('Unnamed: 0.1')
 
 
-    for i in range(sliding_window_size, number_of_timestamps):
-        print(i)
-        if i == sliding_window_size:
-            data_edges_temp = data_edges.loc[data_edges['timestamp'] < i+1].loc[data_edges['timestamp']>(i-sliding_window_size)]
-        else:
-            data_edges_temp = data_edges.loc[data_edges['timestamp'] < i + 1].loc[
-                data_edges['timestamp'] > (i-1)]
+        # get node list of each batch considering edge set, all sources and targets are added to the node list
         nodes_list = []
         for j in range(2):
             nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
-        nodes_set = set(nodes_list)
-        data_nodes_temp = data_nodes[data_nodes[data_nodes.columns[0]].isin(nodes_set)]
-        # nodes_not_in = data_nodes[~data_nodes[data_nodes.columns[0]].isin(nodes_set)][data_nodes.columns[0]].to_list()
-        # nodes_not_in_indexes = []
-        # for j in range(data_edges_temp.shape[0]):
-        #     if (data_edges_temp[data_edges_temp.columns[0]].iloc[j] in nodes_not_in) or (data_edges_temp[data_edges_temp.columns[1]].iloc[j] in nodes_not_in):
-        #         nodes_not_in_indexes.append(j)
-        # data_edges_temp = data_edges_temp.drop(nodes_not_in_indexes, axis=0)
 
+        # filter unique nodes
+        nodes_set = set(nodes_list)
+
+        # get nodes dataframe considering unique nodes
+        data_nodes_temp = data_nodes[data_nodes[data_nodes.columns[0]].isin(nodes_set)]
+
+        # delete unwanted variables
         del nodes_list
         del nodes_set
-        # del nodes_not_in
-        # del nodes_not_in_indexes
         gc.collect()
-        data_edges_temp = data_edges_temp.drop(columns=["timestamp"])
-        data_edges_temp = data_edges_temp.iloc[:, :]
-        nodes_list = data_nodes_temp[data_nodes_temp.columns[0]].to_list()
+
+        # drop timestamp column
+        # data_edges_temp = data_edges_temp.drop(columns=["timestamp"])
+
+        # don't drop weight column if there is
+        # data_edges_temp = data_edges_temp.iloc[:, :]
+
+        # check whether there are nodes in edge list where those nodes are not in node list
+        # nodes_list = data_nodes_temp[data_nodes_temp.columns[0]].to_list()
         # for j in range(2):
         #     for k in range(data_edges_temp.shape[0]):
         #         if data_edges_temp[data_edges_temp.columns[j]].iloc[k] in nodes_list:
         #             pass
         #         else:
         #             print("True", j, k, data_edges_temp[data_edges_temp.columns[j]].iloc[k])
-        data_edges_temp.to_csv("data/" + dataset_name + "/" + str(i+1 - sliding_window_size) + "_edges.csv", index=False)
-        data_nodes_temp.to_csv("data/" + dataset_name + "/" + str(i + 1 - sliding_window_size) + "_nodes.csv", index=False)
 
-
-
-    # df = pd.DataFrame(columns=['source', 'target', 'timestamp'])
-    # df_nodes = pd.DataFrame(columns=['0'])
-    #
-    # node_list = []
-    # for i in range(data.shape[0]):
-
+        # save
+        if batch_number > 0:
+            data_edges_temp.to_csv("data/" + dataset_name + "/" + "0_training_batch_edges.csv", index=False)
+            data_nodes_temp.to_csv("data/" + dataset_name + "/" + "0_training_batch_nodes.csv", index=False)
+        else:
+            data_edges_temp.to_csv("data/" + dataset_name + "/" + str(batch_number) + "_test_batch_edges.csv", index=False)
+            data_nodes_temp.to_csv("data/" + dataset_name + "/" + str(batch_number) + "_test_batch_nodes.csv", index=False)
+        batch_number += 1
 
 
 if __name__ == "__main__":
-    main()
+    # read edge list
+    edge_list = pd.read_csv('data/' + DATASET_NAME + '_edges.csv')
+    if 'Unnamed: 0' in edge_list: edge_list.pop('Unnamed: 0')
+    if 'Unnamed: 0.1' in edge_list: edge_list.pop('Unnamed: 0.1')
+
+    # read node list
+    node_list = pd.read_csv('data/' + DATASET_NAME + '_nodes.csv')
+    if 'Unnamed: 0' in node_list: node_list.pop('Unnamed: 0')
+    if 'Unnamed: 0.1' in node_list: node_list.pop('Unnamed: 0.1')
+
+    TOTAL_SIZE = edge_list.shape[0]
+
+    if 'timestamp' in edge_list.columns:
+        edge_list = edge_list.drop(columns=["timestamp"])
+
+    if 'weight' in edge_list.columns:
+        for i in range(3, len(edge_list.columns)):
+            if edge_list.columns[i] == 'weight':
+                weight_index = i
+                break
+        edge_list = pd.concat([edge_list.iloc[:, :2], edge_list.iloc[:, weight_index]], axis=1)
+    else:
+        edge_list = edge_list.iloc[:, :2]
+
+    main(dataset_name=DATASET_NAME, data_edges=edge_list, data_nodes=node_list, total_size=TOTAL_SIZE, training_batch_size=TRAINING_BATCH_SIZE, testing_batch_size=TESTING_BATCH_SIZE)
