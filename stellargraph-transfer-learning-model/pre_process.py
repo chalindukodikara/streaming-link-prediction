@@ -14,32 +14,30 @@ import time
 np.random.seed(0)
 ######## Setup logger ################
 # create data folder with the dataset name
-folder_path = "logs"
-if os.path.exists(folder_path):
-    logging.info("Folder path \"" + folder_path + "\" exists")
+folder_path_logs = "logs"
+if os.path.exists(folder_path_logs):
     pass
 else:
-    os.makedirs(folder_path)
+    os.makedirs(folder_path_logs)
 
-folder_path = "pre_process"
-if os.path.exists(folder_path):
-    logging.info("Folder path \"" + folder_path + "\" exists")
+folder_path_process = folder_path_logs + "/pre_process"
+if os.path.exists(folder_path_process):
     pass
 else:
-    os.makedirs(folder_path)
+    os.makedirs(folder_path_process)
 
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s : [%(levelname)s]  %(message)s',
     handlers=[
-        logging.FileHandler('log/pre_process/pre_process_{}.log'.format(str(time.strftime('%l:%M%p on %b %d, %Y')))),
+        logging.FileHandler('logs/pre_process/pre_process_{}.log'.format(str(time.strftime('%l:%M%p on %b %d, %Y')))),
         logging.StreamHandler(sys.stdout)
     ]
 )
 ######## Our parameters ################
 parser = argparse.ArgumentParser('Preprocessing')
 parser.add_argument('--dataset_name', type=str, default='tg', help='Dataset name')
-parser.add_argument('--partition_id', type=int, default=1, help='Partition ID')
+parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
 parser.add_argument('--training_batch_size', type=int, default=65536, help='Training batch size')
 parser.add_argument('--testing_batch_size', type=int, default=1024, help='Testing batch size')
 
@@ -57,7 +55,7 @@ TESTING_BATCH_SIZE = args.testing_batch_size
 def main(dataset_name, data_edges, data_nodes, total_size, training_batch_size = 65536, testing_batch_size = 1024):
 
     # create data folder with the dataset name
-    folder_path = "data/" + dataset_name
+    folder_path = "data/" + dataset_name + '_' + str(PARTITION_ID)
     if os.path.exists(folder_path):
         logging.info("Folder path \"" + folder_path + "\" exists")
         pass
@@ -71,10 +69,12 @@ def main(dataset_name, data_edges, data_nodes, total_size, training_batch_size =
             # data_edges_temp = data_edges.loc[data_edges['timestamp'] < (current_timestamp + testing_batch_size)].loc[data_edges['timestamp'] > (current_timestamp + 1)]
             data_edges_temp = data_edges.iloc[current_timestamp:current_timestamp + testing_batch_size]
             current_timestamp += testing_batch_size
+            logging.info('Test batch {} created'.format(batch_number))
         else: # filter each test batch
             # data_edges_temp = data_edges.loc[data_edges['timestamp'] < training_batch_size].loc[data_edges['timestamp'] > 0]
             data_edges_temp = data_edges.iloc[0:training_batch_size-1]
             current_timestamp += training_batch_size-1
+            logging.info('Training batch created')
 
 
 
@@ -110,12 +110,12 @@ def main(dataset_name, data_edges, data_nodes, total_size, training_batch_size =
         #             print("True", j, k, data_edges_temp[data_edges_temp.columns[j]].iloc[k])
 
         # save
-        if batch_number > 0:
-            data_edges_temp.to_csv("data/" + dataset_name + "/" + "0_training_batch_edges.csv", index=False)
-            data_nodes_temp.to_csv("data/" + dataset_name + "/" + "0_training_batch_nodes.csv", index=False)
+        if batch_number == 0:
+            data_edges_temp.to_csv("data/" + dataset_name + '_' + str(PARTITION_ID) + "/" + "0_training_batch_edges.csv", index=False)
+            data_nodes_temp.to_csv("data/" + dataset_name + '_' + str(PARTITION_ID) + "/" + "0_training_batch_nodes.csv", index=False)
         else:
-            data_edges_temp.to_csv("data/" + dataset_name + "/" + str(batch_number) + "_test_batch_edges.csv", index=False)
-            data_nodes_temp.to_csv("data/" + dataset_name + "/" + str(batch_number) + "_test_batch_nodes.csv", index=False)
+            data_edges_temp.to_csv("data/" + dataset_name + '_' + str(PARTITION_ID) + "/" + str(batch_number) + "_test_batch_edges.csv", index=False)
+            data_nodes_temp.to_csv("data/" + dataset_name + '_' + str(PARTITION_ID) + "/" + str(batch_number) + "_test_batch_nodes.csv", index=False)
         batch_number += 1
 
 

@@ -16659,3 +16659,86 @@
 2023-03-10 19:54:10,207 : [INFO]  (Iteration id 1) Connected to the server
 2023-03-10 19:54:10,326 : [INFO]  (Iteration id 1) Distributed training started!
 2023-03-10 19:54:10,337 : [INFO]  (Iteration id 1) Global model v0 fetched
+2023-03-20 16:21:55,372 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-20 16:21:55,373 : [INFO]  Client started, graph ID 4, partition ID 0, epochs 6
+2023-03-20 16:21:55,455 : [INFO]  (Iteration id 1) Model initialized 
+2023-03-20 16:22:35,113 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-20 16:22:35,113 : [INFO]  Client started, graph ID 4, partition ID 0, epochs 2
+2023-03-20 16:22:35,226 : [INFO]  (Iteration id 1) Model initialized 
+2023-03-20 16:23:38,574 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-20 16:23:39,143 : [INFO]  (Iteration id 1) Number of training examples - 79616, Number of testing examples 88462
+2023-03-20 16:23:39,144 : [INFO]  (Iteration id 1) Connected to the server
+2023-03-20 16:23:39,252 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-20 16:23:39,262 : [INFO]  (Iteration id 1) Global model v0 fetched
+2023-03-20 16:32:08,797 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-20 16:32:08,797 : [INFO]  Client started, graph ID 4, partition ID 0, epochs 2
+2023-03-20 16:32:08,990 : [INFO]  (Iteration id 1) Model initialized 
+2023-03-20 16:32:11,038 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-20 16:32:11,072 : [INFO]  (Iteration id 1) Number of training examples - 1648, Number of testing examples 1832
+2023-03-20 16:32:11,073 : [INFO]  (Iteration id 1) Connected to the server
+2023-03-20 16:32:11,162 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-20 16:32:11,175 : [INFO]  (Iteration id 1) Global model v0 fetched
+2023-03-20 16:32:15,563 : [INFO]  (Iteration id 1) Global model v0 - Training set evaluation : loss - 0.7565289735794067, accuracy - 0.4939320385456085, recall - 0.9502426981925964, AUC - 0.47457122802734375, F1 - 0.6525000059233769, precision - 0.4968274235725403
+2023-03-20 16:32:15,563 : [INFO]  (Iteration id 1) Global model v0 - Testing set evaluation : loss - 0.7553626298904419, accuracy - 0.4890829622745514, recall - 0.943231463432312, AUC - 0.47470909357070923, F1 - 0.6486486537654006, precision - 0.4942791759967804
+2023-03-20 16:32:15,563 : [INFO]  (Iteration id 1) Training started
+2023-03-20 16:32:21,335 : [INFO]  (Iteration id 1) Training done
+2023-03-20 16:32:21,335 : [INFO]  (Iteration id 1) Sent local model to the server
+2023-03-20 16:32:25,298 : [INFO]  _____________________________________________________ (Iteration id 1) Final model evalution ____________________________________________________________
+2023-03-20 16:32:25,298 : [INFO]  (Iteration id 1) Final model (v1) fetched
+2023-03-20 16:32:25,298 : [INFO]  (Iteration id 1) Training set : loss - 0, accuracy - 0.6365291476249695, recall - 0.7876213788986206, AUC - 0.7042258977890015, F1 - 0.6842382870516253, precision - 0.6048462390899658
+2023-03-20 16:32:25,298 : [INFO]  (Iteration id 1) Testing set : loss - 1, accuracy - 0.5878821015357971, recall - 0.7194322943687439, AUC - 0.6371678113937378, F1 - 0.635793534916189, precision - 0.5695765018463135
+2023-03-20 16:32:25,467 : [INFO]  (Iteration id 2) Model initialized 
+2023-03-20 16:32:26,492 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-20 16:32:26,603 : [INFO]  (Iteration id 2) Global model v0 fetched
+2023-03-20 16:32:29,321 : [INFO]  (Iteration id 2) Global model v0 - Training set evaluation : loss - 0.7557925581932068, accuracy - 0.4522292912006378, recall - 0.8471337556838989, AUC - 0.45192503929138184, F1 - 0.6073059336543121, precision - 0.47330960631370544
+2023-03-20 16:32:29,321 : [INFO]  (Iteration id 2) Global model v0 - Testing set evaluation : loss - 0.7446707487106323, accuracy - 0.47805342078208923, recall - 0.8797709941864014, AUC - 0.48272424936294556, F1 - 0.6276378581622977, precision - 0.4878306984901428
+2023-03-20 16:32:29,321 : [INFO]  (Iteration id 2) Training started
+2023-03-20 16:32:33,237 : [INFO]  (Iteration id 2) Training done
+2023-03-20 16:32:33,237 : [INFO]  (Iteration id 2) Sent local model to the server
+2023-03-20 16:32:35,601 : [INFO]  _____________________________________________________ (Iteration id 2) Final model evalution ____________________________________________________________
+2023-03-20 16:32:35,601 : [INFO]  (Iteration id 2) Final model (v1) fetched
+2023-03-20 16:32:35,601 : [INFO]  (Iteration id 2) Training set : loss - 0, accuracy - 0.5966029763221741, recall - 0.7643312215805054, AUC - 0.670782208442688, F1 - 0.6545454511614869, precision - 0.5723370313644409
+2023-03-20 16:32:35,601 : [INFO]  (Iteration id 2) Testing set : loss - 1, accuracy - 0.5791984796524048, recall - 0.75, AUC - 0.6384571194648743, F1 - 0.6405868110377392, precision - 0.5590327382087708
+2023-03-20 16:32:35,818 : [INFO]  (Iteration id 3) Model initialized 
+2023-03-20 16:32:37,338 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-20 16:32:37,458 : [INFO]  (Iteration id 3) Global model v0 fetched
+2023-03-20 16:32:41,507 : [INFO]  (Iteration id 3) Global model v0 - Training set evaluation : loss - 0.71506267786026, accuracy - 0.4953208565711975, recall - 0.9318181872367859, AUC - 0.5959153175354004, F1 - 0.6486738082526525, precision - 0.49750179052352905
+2023-03-20 16:32:41,507 : [INFO]  (Iteration id 3) Global model v0 - Testing set evaluation : loss - 0.7152009010314941, accuracy - 0.49819493293762207, recall - 0.9338147044181824, AUC - 0.5886192321777344, F1 - 0.6504610186491955, precision - 0.4990353584289551
+2023-03-20 16:32:41,507 : [INFO]  (Iteration id 3) Training started
+2023-03-20 16:32:47,351 : [INFO]  (Iteration id 3) Training done
+2023-03-20 16:32:47,351 : [INFO]  (Iteration id 3) Sent local model to the server
+2023-03-20 16:34:49,195 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-20 16:34:49,195 : [INFO]  Client started, graph ID 4, partition ID 0, epochs 2
+2023-03-20 16:34:49,479 : [INFO]  (Iteration id 1) Model initialized 
+2023-03-20 16:34:51,988 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-20 16:34:52,031 : [INFO]  (Iteration id 1) Number of training examples - 1648, Number of testing examples 1832
+2023-03-20 16:34:52,032 : [INFO]  (Iteration id 1) Connected to the server
+2023-03-20 16:34:52,151 : [INFO]  (Iteration id 1) Distributed training started!
+2023-03-20 16:34:52,159 : [INFO]  (Iteration id 1) Global model v0 fetched
+2023-03-20 16:34:57,942 : [INFO]  (Iteration id 1) Global model v0 - Training set evaluation : loss - 0.7565289735794067, accuracy - 0.4939320385456085, recall - 0.9502426981925964, AUC - 0.47457122802734375, F1 - 0.6525000059233769, precision - 0.4968274235725403
+2023-03-20 16:34:57,942 : [INFO]  (Iteration id 1) Global model v0 - Testing set evaluation : loss - 0.7553626298904419, accuracy - 0.4890829622745514, recall - 0.943231463432312, AUC - 0.47470909357070923, F1 - 0.6486486537654006, precision - 0.4942791759967804
+2023-03-20 16:34:57,942 : [INFO]  (Iteration id 1) Training started
+2023-03-20 16:35:03,832 : [INFO]  (Iteration id 1) Training done
+2023-03-20 16:35:03,833 : [INFO]  (Iteration id 1) Sent local model to the server
+2023-03-20 16:35:07,819 : [INFO]  _____________________________________________________ (Iteration id 1) Final model evalution ____________________________________________________________
+2023-03-20 16:35:07,820 : [INFO]  (Iteration id 1) Final model (v1) fetched
+2023-03-20 16:35:07,820 : [INFO]  (Iteration id 1) Training set : loss - 0, accuracy - 0.6365291476249695, recall - 0.7876213788986206, AUC - 0.7042258977890015, F1 - 0.6842382870516253, precision - 0.6048462390899658
+2023-03-20 16:35:07,820 : [INFO]  (Iteration id 1) Testing set : loss - 1, accuracy - 0.5878821015357971, recall - 0.7194322943687439, AUC - 0.6371678113937378, F1 - 0.635793534916189, precision - 0.5695765018463135
+2023-03-20 16:35:07,940 : [INFO]  (Iteration id 2) Model initialized 
+2023-03-20 16:35:08,956 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-20 16:35:09,069 : [INFO]  (Iteration id 2) Global model v0 fetched
+2023-03-20 16:35:11,810 : [INFO]  (Iteration id 2) Global model v0 - Training set evaluation : loss - 0.6571040153503418, accuracy - 0.6029723882675171, recall - 0.7919320464134216, AUC - 0.6735048890113831, F1 - 0.6660714120575587, precision - 0.5747303366661072
+2023-03-20 16:35:11,810 : [INFO]  (Iteration id 2) Global model v0 - Testing set evaluation : loss - 0.6602185964584351, accuracy - 0.597328245639801, recall - 0.7652671933174133, AUC - 0.6688402891159058, F1 - 0.6552287637830936, precision - 0.572857141494751
+2023-03-20 16:35:11,810 : [INFO]  (Iteration id 2) Training started
+2023-03-20 16:35:15,705 : [INFO]  (Iteration id 2) Training done
+2023-03-20 16:35:15,705 : [INFO]  (Iteration id 2) Sent local model to the server
+2023-03-20 16:35:18,060 : [INFO]  _____________________________________________________ (Iteration id 2) Final model evalution ____________________________________________________________
+2023-03-20 16:35:18,060 : [INFO]  (Iteration id 2) Final model (v1) fetched
+2023-03-20 16:35:18,060 : [INFO]  (Iteration id 2) Training set : loss - 0, accuracy - 0.6549893617630005, recall - 0.7983014583587646, AUC - 0.747965931892395, F1 - 0.6982358383670456, precision - 0.6204620599746704
+2023-03-20 16:35:18,060 : [INFO]  (Iteration id 2) Testing set : loss - 1, accuracy - 0.625, recall - 0.7786259651184082, AUC - 0.7020879983901978, F1 - 0.674937979251447, precision - 0.5956204533576965
+2023-03-20 16:35:18,225 : [INFO]  (Iteration id 3) Model initialized 
+2023-03-20 16:35:19,747 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-20 16:35:19,872 : [INFO]  (Iteration id 3) Global model v0 fetched
+2023-03-20 16:35:24,150 : [INFO]  (Iteration id 3) Global model v0 - Training set evaluation : loss - 0.6548394560813904, accuracy - 0.5868983864784241, recall - 0.7393048405647278, AUC - 0.6717244386672974, F1 - 0.6415313298145172, precision - 0.5665983557701111
+2023-03-20 16:35:24,150 : [INFO]  (Iteration id 3) Global model v0 - Testing set evaluation : loss - 0.6537861824035645, accuracy - 0.5992779731750488, recall - 0.7304452657699585, AUC - 0.6754117012023926, F1 - 0.6457446711114103, precision - 0.5786463022232056
+2023-03-20 16:35:24,150 : [INFO]  (Iteration id 3) Training started

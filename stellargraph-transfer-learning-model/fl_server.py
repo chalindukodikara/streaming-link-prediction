@@ -10,27 +10,98 @@ from timeit import default_timer as timer
 import gc
 import os
 import math
+from models.supervised import Model
+import argparse
+import os
+import glob
+
+
+
+######## Our parameters ################
+parser = argparse.ArgumentParser('Server')
+parser.add_argument('--path_weights', type=str, default='./weights/', help='Weights path to be saved')
+parser.add_argument('--path_nodes', type=str, default='./data/', help='Nodes path')
+parser.add_argument('--path_edges', type=str, default='./data/', help='Edges Path')
+parser.add_argument('--ip', type=str, default='localhost', help='IP')
+parser.add_argument('--port', type=int, default=5000, help='PORT')
+parser.add_argument('--dataset_name', type=str, default='tg', help='Dataset name')
+parser.add_argument('--graph_id', type=int, default=1, help='Graph ID')
+parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
+parser.add_argument('--training_rounds', type=int, default=5, help='Initial Training: number of rounds')
+parser.add_argument('--rounds', type=int, default=2, help='Streaming data testing for batches: number of rounds')
+parser.add_argument('--num_clients', type=int, default=1, help='Number of clients')
+
+try:
+  args = parser.parse_args()
+except:
+  parser.print_help()
+  sys.exit(0)
+
+WEIGHTS_PATH = args.path_weights
+NODES_PATH = args.path_nodes
+EDGES_PATH = args.path_edges
+IP = args.ip
+PORT = args.port
+DATASET_NAME = args.dataset_name
+GRAPH_ID = args.graph_id
+PARTITION_ID = args.partition_id
+TRAINING_ROUNDS = args.training_rounds
+ROUNDS = args.rounds
+NUM_CLIENTS = args.num_clients
+######## Our parameters ################
+
+######## Setup logger ################
+# create data folder with the dataset name
+folder_path_logs = "logs"
+if os.path.exists(folder_path_logs):
+    pass
+else:
+    os.makedirs(folder_path_logs)
+
+folder_path_process = folder_path_logs + "/server"
+if os.path.exists(folder_path_process):
+    pass
+else:
+    os.makedirs(folder_path_process)
 
 logging.basicConfig(
-    level=logging.INFO, 
+    level=logging.INFO,
     format='%(asctime)s : [%(levelname)s]  %(message)s',
     handlers=[
-        logging.FileHandler('server.log'),
+        logging.FileHandler('logs/server/server{}.log'.format(PARTITION_ID)),
         logging.StreamHandler(sys.stdout)
     ]
 )
 
+# Create weights folder
+folder_path = "weights"
+if os.path.exists(folder_path):
+    pass
+else:
+    os.makedirs(folder_path)
+
+# Create global weights folder
+folder_path = "global_weights"
+if os.path.exists(folder_path):
+    pass
+else:
+    os.makedirs(folder_path)
+############################################
+path =
+files = os.listdir('data/tg_0')
+paths = [os.path.join('data/tg_0', basename) for basename in files]
+NUM_TIMESTAMPS = max(paths, key=os.path.getctime)
 class Server:
 
-    def __init__(self, MODEL, INITIAL_ROUNDS, NORMAL_ROUNDS, weights_path, graph_id, MAX_CONN = 2, IP= socket.gethostname(), PORT = 5000, HEADER_LENGTH = 10,iteration_id=0, transfer_learning=False, NUM_TIMESTAMPS=0):
+    def __init__(self, MODEL, training_rounds, rounds, weights_path, graph_id, MAX_CONN = 2, IP= socket.gethostname(), PORT = 5000, HEADER_LENGTH = 10,iteration_id=0, transfer_learning=False, NUM_TIMESTAMPS=0):
 
         # Parameters
         self.HEADER_LENGTH =  HEADER_LENGTH
         self.IP = IP
         self.PORT = PORT
         self.MAX_CONN = MAX_CONN
-        self.ROUNDS = INITIAL_ROUNDS
-        self.NORMAL_ROUNDS = NORMAL_ROUNDS
+        self.training_rounds = training_rounds
+        self.rounds = rounds
 
         self.weights_path = weights_path
         self.graph_id = graph_id
@@ -102,7 +173,7 @@ class Server:
 
     def send_model(self, client_socket):
 
-        if self.ROUNDS == self.training_cycles:
+        if self.training_rounds == self.training_cycles:
             self.stop_flag = True
 
         if self.NUM_TIMESTAMPS == self.iteration_id:
@@ -199,7 +270,7 @@ class Server:
             self.partition_sizes = []
             self.training_cycles = 0
             self.stop_flag = False
-            self.ROUNDS = self.NORMAL_ROUNDS
+            self.training_rounds = self.rounds
 
             # List of sockets for select.select()
             # self.sockets_list = []
@@ -211,77 +282,21 @@ class Server:
 
 if __name__ == "__main__":
 
-    from models.supervised import Model
-
-    # Create weights folder
-    folder_path = "weights"
-    if os.path.exists(folder_path):
-        logging.info("Folder path \"" + folder_path + "\" exists")
-        pass
-    else:
-        logging.info("Weights folder created")
-        os.makedirs(folder_path)
-
-    # Create global weights folder
-    folder_path = "global_weights"
-    if os.path.exists(folder_path):
-        logging.info("Folder path \"" + folder_path + "\" exists")
-        pass
-    else:
-        logging.info("Weights folder created")
-        os.makedirs(folder_path)
-
-    # arg_names = [
-    #     'path_weights',
-    #     'path_nodes',
-    #     'path_edges',
-    #     'graph_id',
-    #     'partition_id',
-    #     'num_clients',
-    #     'num_rounds',
-    #     'IP',
-    #     'PORT',
-    #     'name',
-    #     'transfer_learning',
-    #     'num_timestamps'
-    #     ]
-    #
-    # args = dict(zip(arg_names, sys.argv[1:]))
-    args = dict()
-    args['path_weights'] = './weights/'
-    args['path_nodes'] = './data/'
-    args['path_edges'] = './data/'
-    args['graph_id'] = '4'
-    args['partition_id'] = '0'
-    args['num_clients'] = '1'
-    args['initial_num_rounds'] = '3'
-    args['normal_num_rounds'] = '2'
-    args['IP'] = 'localhost'
-    args['PORT'] = '5000'
-    args['name'] = 'tg'
-    args['transfer_learning'] = True
-    args['num_timestamps'] = '6'
-
     logging.warning('####################################### New Training Session #######################################')
     logging.info('Server started , graph ID %s, number of clients %s, number of rounds %s, transfer learning %s, number of timestamps %s',args['graph_id'],args['num_clients'], args['initial_num_rounds'], args['transfer_learning'], args['num_timestamps'])
 
-    if 'IP' not in args.keys() or args['IP'] == 'localhost':
-        args['IP'] = socket.gethostname()
+    if IP == 'localhost':
+        IP = socket.gethostname()
 
-    if 'PORT' not in args.keys():
-        args['PORT'] = 5000
-    # for timestamp_id in range(1, 25):
-    #     logging.warning('###################### New Interation (%s) started #############################', str(timestamp_id))
+    edges = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_edges.csv')
+    nodes = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_nodes.csv', index_col=0)
 
-    edges = pd.read_csv('data/' + args['name'] + '/' + str(1) + '_edges.csv')
-    nodes = pd.read_csv('data/' + args['name'] + '/' + str(1) + '_nodes.csv',index_col=0)
-
-    model = Model(nodes,edges)
+    model = Model(nodes, edges)
     model.initialize()
 
     logging.info('Model initialized')
 
-    server = Server(model, INITIAL_ROUNDS=int(args['initial_num_rounds']), NORMAL_ROUNDS=int(args['normal_num_rounds']), weights_path=args['path_weights'],graph_id=args['graph_id'],MAX_CONN=int(args['num_clients']),IP=args['IP'],PORT=int(args['PORT']),iteration_id=1,transfer_learning=args['transfer_learning'], NUM_TIMESTAMPS=int(args['num_timestamps']))
+    server = Server(model, training_rounds=TRAINING_ROUNDS, rounds=ROUNDS, weights_path=WEIGHTS_PATH, graph_id=GRAPH_ID, MAX_CONN=NUM_CLIENTS, IP=IP, PORT=PORT, iteration_id=1, transfer_learning=True, NUM_TIMESTAMPS=5)
 
     del nodes
     del edges

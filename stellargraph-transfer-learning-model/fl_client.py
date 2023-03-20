@@ -8,47 +8,69 @@ import logging
 from timeit import default_timer as timer
 import time
 import gc
+from models.supervised import Model
+import argparse
+import os
 
-arg_names = [
-    'path_weights',
-    'path_nodes',
-    'path_edges',
-    'graph_id',
-    'partition_id',
-    'epochs',
-    'IP',
-    'PORT',
-    'name'
-]
+######## Our parameters ################
+parser = argparse.ArgumentParser('Client')
+parser.add_argument('--path_weights', type=str, default='./weights/', help='Weights path to be saved')
+parser.add_argument('--path_nodes', type=str, default='./data/', help='Nodes path')
+parser.add_argument('--path_edges', type=str, default='./data/', help='Edges Path')
+parser.add_argument('--ip', type=str, default='localhost', help='IP')
+parser.add_argument('--port', type=int, default=5000, help='PORT')
+parser.add_argument('--dataset_name', type=str, default='tg', help='Dataset name')
+parser.add_argument('--graph_id', type=int, default=1, help='Graph ID')
+parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
+parser.add_argument('--training_epochs', type=int, default=5, help='Initial Training: number of epochs')
+parser.add_argument('--epochs', type=int, default=2, help='Streaming data training for batches: number of epochs')
 
-# args = dict(zip(arg_names, sys.argv[1:]))
-args = dict()
-args['path_weights'] = './weights/'
-args['path_nodes'] = './data/'
-args['path_edges'] = './data/'
-args['graph_id'] = '4'
-args['partition_id'] = '0'
-args['initial_epochs'] = '6'
-args['normal_epochs'] = '5'
-args['IP'] = 'localhost'
-args['PORT'] = '5000'
-args['name'] = 'tg'
+try:
+  args = parser.parse_args()
+except:
+  parser.print_help()
+  sys.exit(0)
 
-partition_id = args['partition_id']
+WEIGHTS_PATH = args.path_weights
+NODES_PATH = args.path_nodes
+EDGES_PATH = args.path_edges
+IP = args.ip
+PORT = args.port
+DATASET_NAME = args.dataset_name
+GRAPH_ID = args.graph_id
+PARTITION_ID = args.partition_id
+TRAINING_EPOCHS = args.training_epochs
+EPOCHS = args.epochs
+######## Our parameters ################
+
+######## Setup logger ################
+# create data folder with the dataset name
+folder_path_logs = "logs"
+if os.path.exists(folder_path_logs):
+    pass
+else:
+    os.makedirs(folder_path_logs)
+
+folder_path_process = folder_path_logs + "/client"
+if os.path.exists(folder_path_process):
+    pass
+else:
+    os.makedirs(folder_path_process)
 
 logging.basicConfig(
-    level=logging.INFO, 
+    level=logging.INFO,
     format='%(asctime)s : [%(levelname)s]  %(message)s',
     handlers=[
-        logging.FileHandler(f'client_{partition_id}.log'),
+        logging.FileHandler('logs/client/client_{}.log'.format(PARTITION_ID)),
         logging.StreamHandler(sys.stdout)
     ]
 )
+############################################
 class Client:
 
-    def __init__(self, MODEL, graph_params, weights_path, graph_id, partition_id, initial_epochs = 10, normal_epochs = 2, IP = socket.gethostname(), PORT = 5000, HEADER_LENGTH = 10, iteration_id=1, dataset_name=""):
+    def __init__(self, MODEL, graph_params, weights_path, dataset_name, graph_id, partition_id, training_epochs=30, epochs = 2, IP = socket.gethostname(), PORT = 5000, HEADER_LENGTH = 10, iteration_id=1):
 
-        self.HEADER_LENGTH =  HEADER_LENGTH
+        self.HEADER_LENGTH = HEADER_LENGTH
         self.IP = IP
         self.PORT = PORT
 
@@ -57,9 +79,9 @@ class Client:
         self.partition_id = partition_id
 
         # Initial training is bit large
-        self.initial_epochs = initial_epochs
-        self.normal_epochs = normal_epochs
-        self.epochs = initial_epochs
+        self.training_epochs = training_epochs
+        self.epochs = epochs
+        self.epochs = training_epochs
 
         self.graph_params = graph_params
 
@@ -82,10 +104,6 @@ class Client:
             else:
                 logging.info('(Iteration id %s) Connected to the server', self.iteration_id)
                 connected = True
-        
-
-
-
 
     def send_model(self):
 
@@ -147,6 +165,8 @@ class Client:
             while not self.STOP_FLAG:
                 if self.iteration_id > 1 and self.rounds == 0:
                     self.MODEL.set_weights(self.GLOBAL_WEIGHTS)
+                    print('set global weights :', self.iteration_id)
+                    pass
                 else:
                     read_sockets, _, exception_sockets = select.select([self.client_socket], [], [self.client_socket])
 
@@ -204,7 +224,7 @@ class Client:
             self.STOP_FLAG = False
             self.rounds = 0
             self.iteration_id += 1
-            self.epochs = self.normal_epochs
+            self.epochs = self.epochs
             # self.client_socket.close()
 
             edges = pd.read_csv('data/' + self.dataset_name + '/' + str(self.iteration_id) + '_edges.csv')
@@ -225,32 +245,25 @@ class Client:
 
 if __name__ == "__main__":
 
-    from models.supervised import Model
+    if IP == 'localhost':
+        IP = socket.gethostname()
 
-    if 'IP' not in args.keys() or args['IP'] == 'localhost':
-        args['IP'] = socket.gethostname()
-
-    if 'PORT' not in args.keys():
-        args['PORT'] = 5000
-
-    if 'epochs' not in args.keys():
-        args['epoch'] = 10
 
     logging.warning('####################################### New Training Session #######################################')
     logging.info('Client started, graph ID %s, partition ID %s, epochs %s',args['graph_id'],args['partition_id'],args['initial_epochs'])
 
 
-    edges = pd.read_csv('data/' + args['name'] + '/' + str(1) + '_edges.csv')
-    nodes = pd.read_csv('data/' + args['name'] + '/' + str(1) + '_nodes.csv',index_col=0)
+    edges = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_edges.csv')
+    nodes = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_nodes.csv', index_col=0)
 
-    logging.info('(Iteration id %s) Model initialized ', str(1))
-    model = Model(nodes,edges)
-    num_train_ex,num_test_ex = model.initialize()
+    logging.info('Model initialized for training')
+    model = Model(nodes, edges)
+    num_train_ex, num_test_ex = model.initialize()
 
-    graph_params = (num_train_ex,num_test_ex)
+    graph_params = (num_train_ex, num_test_ex)
 
     logging.info('(Iteration id %s) Number of training examples - %s, Number of testing examples %s', str(1), num_train_ex,num_test_ex)
-    client = Client(model, graph_params, weights_path=args['path_weights'], graph_id=args['graph_id'], partition_id=args['partition_id'], initial_epochs = int(args['initial_epochs']), normal_epochs = int(args['normal_epochs']) ,IP=args['IP'],PORT=int(args['PORT']), iteration_id=1, dataset_name=args['name'])
+    client = Client(model, graph_params, weights_path=WEIGHTS_PATH, dataset_name=DATASET_NAME, graph_id=GRAPH_ID, partition_id=PARTITION_ID, training_epochs = TRAINING_EPOCHS, epochs = EPOCHS ,IP=IP,PORT=PORT, iteration_id=1)
 
     del nodes
     del edges
@@ -264,6 +277,6 @@ if __name__ == "__main__":
 
     elapsed_time = end -start
     logging.info('Distributed training done!')
-    logging.info('Training report : Elapsed time %s seconds, graph ID %s, partition ID %s, epochs %s', elapsed_time,args['graph_id'],args['partition_id'],args['normal_epochs'])
+    logging.info('Training report : Elapsed time %s seconds, graph ID %s, partition ID %s, epochs %s', elapsed_time,args['graph_id'],args['partition_id'],args['epochs'])
 
     

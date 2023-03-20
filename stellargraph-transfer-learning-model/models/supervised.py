@@ -77,11 +77,11 @@ class Model:
         )
 
         # Train iterators
-        train_gen = GraphSAGELinkGenerator(self.graph_train, batch_size, num_samples, weighted=True, seed = 42)
+        train_gen = GraphSAGELinkGenerator(self.graph_train, batch_size, num_samples, seed = 42)
         self.train_flow = train_gen.flow(edge_ids_train, edge_labels_train, shuffle=True)
 
         # Test iterators
-        test_gen = GraphSAGELinkGenerator(self.graph_train, batch_size, num_samples, weighted=True, seed = 42)
+        test_gen = GraphSAGELinkGenerator(self.graph_train, batch_size, num_samples, seed = 42)
         self.test_flow = test_gen.flow(edge_ids_test, edge_labels_test, shuffle=True)
 
         # Model defining - Keras functional API + Stellargraph layers
