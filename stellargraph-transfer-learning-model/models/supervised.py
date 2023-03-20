@@ -112,7 +112,7 @@ class Model:
     def get_weights(self):
         return self.model.get_weights()
 
-    def fit(self,epochs = 20):
+    def fit(self, epochs = 20):
         history = self.model.fit(self.train_flow, epochs=epochs, verbose=1)
         return self.model.get_weights(),history
     
@@ -120,7 +120,7 @@ class Model:
         train_metrics = self.model.evaluate(self.train_flow)
         test_metrics = self.model.evaluate(self.test_flow)
 
-        return train_metrics,test_metrics
+        return train_metrics, test_metrics
 
 
 
@@ -170,4 +170,4 @@ if __name__ == "__main__":
 
     logging.info('Training set : accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s',eval[0][1],eval[0][2],eval[0][3],f1_train,eval[0][4])
     logging.info('Testing set : accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s',eval[1][1],eval[1][2],eval[1][3],f1_test,eval[1][4])
-    logging.info('Elapsed time : %s seconds',elapsed_time)
+    logging.info('Elapsed time : %s seconds', elapsed_time)

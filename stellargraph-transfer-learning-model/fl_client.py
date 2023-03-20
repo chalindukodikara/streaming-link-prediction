@@ -11,18 +11,22 @@ import gc
 from models.supervised import Model
 import argparse
 import os
+import warnings
+warnings.filterwarnings("ignore")
 
 ######## Our parameters ################
 parser = argparse.ArgumentParser('Client')
-parser.add_argument('--path_weights', type=str, default='./weights/', help='Weights path to be saved')
+parser.add_argument('--path_weights', type=str, default='./local_weights/', help='Weights path to be saved')
 parser.add_argument('--path_nodes', type=str, default='./data/', help='Nodes path')
 parser.add_argument('--path_edges', type=str, default='./data/', help='Edges Path')
 parser.add_argument('--ip', type=str, default='localhost', help='IP')
 parser.add_argument('--port', type=int, default=5000, help='PORT')
-parser.add_argument('--dataset_name', type=str, default='tg', help='Dataset name')
+
+######## Frequently configured #######
+parser.add_argument('--dataset_name', type=str, default='elliptic', help='Dataset name')
 parser.add_argument('--graph_id', type=int, default=1, help='Graph ID')
 parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
-parser.add_argument('--training_epochs', type=int, default=5, help='Initial Training: number of epochs')
+parser.add_argument('--training_epochs', type=int, default=1, help='Initial Training: number of epochs')
 parser.add_argument('--epochs', type=int, default=2, help='Streaming data training for batches: number of epochs')
 
 try:
@@ -68,7 +72,7 @@ logging.basicConfig(
 ############################################
 class Client:
 
-    def __init__(self, MODEL, graph_params, weights_path, dataset_name, graph_id, partition_id, training_epochs=30, epochs = 2, IP = socket.gethostname(), PORT = 5000, HEADER_LENGTH = 10, iteration_id=1):
+    def __init__(self, MODEL, graph_params, weights_path, dataset_name, graph_id, partition_id, training_epochs=30, epochs = 2, IP = socket.gethostname(), PORT = 5000, HEADER_LENGTH = 10, iteration_number=1):
 
         self.HEADER_LENGTH = HEADER_LENGTH
         self.IP = IP
@@ -79,8 +83,7 @@ class Client:
         self.partition_id = partition_id
 
         # Initial training is bit large
-        self.training_epochs = training_epochs
-        self.epochs = epochs
+        self.testing_epochs = epochs
         self.epochs = training_epochs
 
         self.graph_params = graph_params
@@ -90,10 +93,11 @@ class Client:
         self.MODEL = MODEL
         self.STOP_FLAG = False
         self.rounds = 0
-        self.iteration_id = iteration_id
+        self.iteration_number = iteration_number
         self.ITERATION_FLAG = False
         self.dataset_name = dataset_name
         self.GLOBAL_WEIGHTS = None
+        self.all_test_metric_values = [[], [], [], [], []]
 
         connected = False
         while not connected:
@@ -102,16 +106,16 @@ class Client:
             except ConnectionRefusedError:
                 time.sleep(5)
             else:
-                logging.info('(Iteration id %s) Connected to the server', self.iteration_id)
+                logging.info('Connected to the server')
                 connected = True
 
     def send_model(self):
 
         # svae model weights
         # weights file name : weights_graphid_workerid.npy
-        weights_path = self.weights_path + 'weights_' + self.graph_id + '_' + self.partition_id + ".npy"
+        weights_path = self.weights_path + 'weights_' + str(self.dataset_name) + '_client:' + str(self.partition_id) + "_R" + str(self.rounds) + ".npy"
         
-        #np.save(weights_path,self.MODEL.get_weights())
+        np.save(weights_path, self.MODEL.get_weights())
 
         weights = np.array(self.MODEL.get_weights())
 
@@ -154,83 +158,126 @@ class Client:
     def fetch_model(self):
         data = self.receive()
         # logging.info("data", data, type(data))
+        logging.info('------------------------- Received aggregated global model from the server -------------------------')
         self.MODEL.set_weights(data)
         self.GLOBAL_WEIGHTS = data
 
     def train(self):
-        self.MODEL.fit(epochs = self.epochs)
+        self.MODEL.fit(epochs=self.epochs)
 
     def run(self):
         while not self.ITERATION_FLAG:
             while not self.STOP_FLAG:
-                if self.iteration_id > 1 and self.rounds == 0:
+                if self.iteration_number > 0 and self.rounds == 0:
                     self.MODEL.set_weights(self.GLOBAL_WEIGHTS)
-                    print('set global weights :', self.iteration_id)
-                    pass
+                    if self.iteration_number == 1:
+                        logging.info('################################## Next batch processing started: transfer learning is ON ##################################')
+                    if self.iteration_number == 101:
+                        print('')
                 else:
                     read_sockets, _, exception_sockets = select.select([self.client_socket], [], [self.client_socket])
 
                     for soc in read_sockets:
                         self.fetch_model()
 
+                if self.iteration_number == 0 and self.rounds == 0:
+                    training_start_time = timer()
+                    logging.info('################################## Initial model training started ##################################')
+                elif self.rounds == 0:
+                    testing_start_time = timer()
 
                 if self.STOP_FLAG:
-                    eval = self.MODEL.evaluate()
+                    if self.iteration_number == 0:
+                        training_end_time = timer()
+                    else:
+                        testing_end_time = timer()
 
-                    try:
-                        f1_train = (2 * eval[0][2] * eval[0][4]) / (eval[0][2] + eval[0][4])
-                        f1_test = (2 * eval[1][2] * eval[1][4]) / (eval[1][2] + eval[1][4])
-                    except ZeroDivisionError as e:
-                        f1_train = "undefined"
-                        f1_test = "undefined"
 
-                    logging.info('_____________________________________________________ (Iteration id %s) Final model evalution ____________________________________________________________', self.iteration_id)
-                    logging.info('(Iteration id %s) Final model (v%s) fetched', self.iteration_id, self.rounds)
-                    logging.info('(Iteration id %s) Training set : loss - %s, accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s', self.iteration_id, [0][0], eval[0][1],eval[0][2],eval[0][3],f1_train,eval[0][4])
-                    logging.info('(Iteration id %s) Testing set : loss - %s, accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s',  self.iteration_id, [1][0], eval[1][1],eval[1][2],eval[1][3],f1_test,eval[1][4])
+                    if self.iteration_number == 0:
+                        logging.info(
+                            '################ Initial trained model: Final global model evalution after %s rounds ################', self.rounds)
+
+                        eval = self.MODEL.evaluate()
+
+                        try:
+                            f1_train = round((2 * eval[0][2] * eval[0][4]) / (eval[0][2] + eval[0][4]), 2)
+                            f1_test = round((2 * eval[1][2] * eval[1][4]) / (eval[1][2] + eval[1][4]), 2)
+                        except ZeroDivisionError as e:
+                            f1_train = "undefined"
+                            f1_test = "undefined"
+
+                        logging.info(
+                            'Initially trained model: Training set : loss - %s, accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s, training time - %s seconds',
+                            round(eval[0][0], 2), round(eval[0][1], 2), round(eval[0][2], 2), round(eval[0][3], 2), f1_train, round(eval[0][4], 2), round(training_start_time - training_end_time, 0))
+                        logging.info(
+                            'Initially trained model: Testing set : loss - %s, accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s',
+                            round(eval[1][0], 2), round(eval[1][1], 2), round(eval[1][2], 2), round(eval[1][3], 2), f1_test, round(eval[1][4], 2))
+
+                    else:
+                        logging.info('Batch number %s model fetched from the server', self.iteration_number)
+                        logging.info('################ Batch %s: final global model evalution after %s rounds ################', self.iteration_number, self.rounds)
+
+                        eval = self.MODEL.evaluate()
+
+                        try:
+                            f1_train = round((2 * eval[0][2] * eval[0][4]) / (eval[0][2] + eval[0][4]), 2)
+                            f1_test = round((2 * eval[1][2] * eval[1][4]) / (eval[1][2] + eval[1][4]), 2)
+                        except ZeroDivisionError as e:
+                            f1_train = "undefined"
+                            f1_test = "undefined"
+
+                        logging.info(
+                            'Batch %s: Training set : loss - %s, accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s, training time - %s seconds',
+                            self.iteration_number, round(eval[0][0], 2), round(eval[0][1], 2), round(eval[0][2], 2), round(eval[0][3], 2), f1_train, round(eval[0][4], 2), round(testing_start_time - testing_end_time, 0))
+                        logging.info(
+                            'Batch %s: Testing set : loss - %s, accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s',
+                            self.iteration_number, round(eval[1][0], 2), round(eval[1][1], 2), round(eval[1][2], 2), round(eval[1][3], 2), f1_test, round(eval[1][4], 2))
+
+                        self.all_test_metric_values[0].append(round(eval[1][1], 2)) # accuracy
+                        self.all_test_metric_values[1].append(round(eval[1][2], 2)) # recall
+                        self.all_test_metric_values[2].append(round(eval[1][3], 2)) # auc
+                        self.all_test_metric_values[3].append(f1_test) # f1
+                        self.all_test_metric_values[4].append(round(eval[1][4], 2)) # precision
+
+
                 else:
-
                     self.rounds += 1
-                    logging.info('_____________________________________________________ (Iteration id %s) Training Round ____________________________________________________________',self.rounds, self.iteration_id)
-                    logging.info('(Iteration id %s) Global model v%s fetched', self.iteration_id, self.rounds - 1)
-
-                    eval = self.MODEL.evaluate()
-
-                    try:
-                        f1_train = (2 * eval[0][2] * eval[0][4]) / (eval[0][2] + eval[0][4])
-                        f1_test = (2 * eval[1][2] * eval[1][4]) / (eval[1][2] + eval[1][4])
-                    except ZeroDivisionError as e:
-                        f1_train = "undefined"
-                        f1_test = "undefined"
-
-                    logging.info('(Iteration id %s) Global model v%s - Training set evaluation : loss - %s, accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s', self.iteration_id, self.rounds - 1, eval[0][0], eval[0][1],eval[0][2],eval[0][3],f1_train,eval[0][4])
-                    logging.info('(Iteration id %s) Global model v%s - Testing set evaluation : loss - %s, accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s', self.iteration_id, self.rounds - 1,  eval[1][0], eval[1][1],eval[1][2],eval[1][3],f1_test,eval[1][4])
-
-
-                    logging.info('(Iteration id %s) Training started', self.iteration_id)
-                    self.train()
-                    logging.info('(Iteration id %s) Training done', self.iteration_id)
 
                     # eval = self.MODEL.evaluate()
+                    # try:
+                    #     f1_train = (2 * eval[0][2] * eval[0][4]) / (eval[0][2] + eval[0][4])
+                    #     f1_test = (2 * eval[1][2] * eval[1][4]) / (eval[1][2] + eval[1][4])
+                    # except ZeroDivisionError as e:
+                    #     f1_train = "undefined"
+                    #     f1_test = "undefined"
+                    #
+                    # logging.info('(Iteration id %s) Global model v%s - Training set evaluation : loss - %s, accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s', self.iteration_number, self.rounds - 1, eval[0][0], eval[0][1],eval[0][2],eval[0][3],f1_train,eval[0][4])
+                    # logging.info('(Iteration id %s) Global model v%s - Testing set evaluation : loss - %s, accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s', self.iteration_number, self.rounds - 1,  eval[1][0], eval[1][1],eval[1][2],eval[1][3],f1_test,eval[1][4])
 
-                    # f1_train = (2 * eval[0][2] * eval[0][4]) / (eval[0][2] + eval[0][4])
-                    # f1_test = (2 * eval[1][2] * eval[1][4]) / (eval[1][2] + eval[1][4])
-                    # logging.info('After Round %s - Local model - Training set evaluation : loss - %s, accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s',self.rounds, eval[0][0], eval[0][1],eval[0][2],eval[0][3],f1_train,eval[0][4])
-                    # logging.info('After Round %s - Local model - Testing set evaluation : loss - %s, accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s',self.rounds, eval[1][0], eval[1][1],eval[1][2],eval[1][3],f1_test,eval[1][4])
+                    if self.iteration_number == 0:
+                        logging.info('------------------------- Initial model training: round %s -------------------------', self.rounds)
+                    else:
+                        logging.info('------------------------- Batch %s training: round %s -------------------------', self.iteration_number, self.rounds)
 
-                    logging.info('(Iteration id %s) Sent local model to the server', self.iteration_id)
+                    self.train()
+
+                    if self.iteration_number == 0:
+                        logging.info('------------------------- Training, round %s: Sent local model to the server -------------------------', self.rounds)
+                    else:
+                        logging.info('------------------------- Batch %s, round %s: Sent local model to the server -------------------------', self.iteration_number, self.rounds)
+
                     self.send_model()
 
             self.STOP_FLAG = False
             self.rounds = 0
-            self.iteration_id += 1
-            self.epochs = self.epochs
+            self.iteration_number += 1
+            self.epochs = self.testing_epochs
             # self.client_socket.close()
 
-            edges = pd.read_csv('data/' + self.dataset_name + '/' + str(self.iteration_id) + '_edges.csv')
-            nodes = pd.read_csv('data/' + self.dataset_name + '/' + str(self.iteration_id) + '_nodes.csv', index_col=0)
+            edges = pd.read_csv('data/' + self.dataset_name + '_' + str(PARTITION_ID) + '/' + str(self.iteration_number) + '_test_batch_edges.csv')
+            nodes = pd.read_csv('data/' + self.dataset_name + '_' + str(PARTITION_ID) + '/' + str(self.iteration_number) + '_test_batch_nodes.csv', index_col=0)
 
-            logging.info('(Iteration id %s) Model initialized ', str(self.iteration_id))
+            logging.info('Batch %s initialized ', str(self.iteration_number))
             self.MODEL = Model(nodes, edges)
             num_train_ex, num_test_ex = self.MODEL.initialize()
 
@@ -239,9 +286,7 @@ class Client:
             del nodes
             del edges
             gc.collect()
-
-
-
+        logging.info('Result report : Accuracy - %d (%d), Recall - %d (%d), AUC - %d (%d), F1 - %d (%d), Precision - %d (%d)', round(np.mean(self.all_test_metric_values[0]), 2), round(np.std(self.all_test_metric_values[0]), 2), round(np.mean(self.all_test_metric_values[1]), 2), round(np.std(self.all_test_metric_values[1]), 2), round(np.mean(self.all_test_metric_values[2]), 2), round(np.std(self.all_test_metric_values[2]), 2), round(np.mean(self.all_test_metric_values[3]), 2), round(np.std(self.all_test_metric_values[3]), 2), round(np.mean(self.all_test_metric_values[4]), 2), round(np.std(self.all_test_metric_values[4]), 2), round(np.mean(self.all_test_metric_values[5]), 2), round(np.std(self.all_test_metric_values[5]), 2) )
 
 if __name__ == "__main__":
 
@@ -249,8 +294,8 @@ if __name__ == "__main__":
         IP = socket.gethostname()
 
 
-    logging.warning('####################################### New Training Session #######################################')
-    logging.info('Client started, graph ID %s, partition ID %s, epochs %s',args['graph_id'],args['partition_id'],args['initial_epochs'])
+    logging.warning('####################################### New Training Session: Client %s #######################################', PARTITION_ID)
+    logging.info('Client started, graph name %s, graph ID %s, partition ID %s, training epochs %s, epochs %s', DATASET_NAME, GRAPH_ID, PARTITION_ID, TRAINING_EPOCHS, EPOCHS)
 
 
     edges = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_edges.csv')
@@ -262,21 +307,23 @@ if __name__ == "__main__":
 
     graph_params = (num_train_ex, num_test_ex)
 
-    logging.info('(Iteration id %s) Number of training examples - %s, Number of testing examples %s', str(1), num_train_ex,num_test_ex)
-    client = Client(model, graph_params, weights_path=WEIGHTS_PATH, dataset_name=DATASET_NAME, graph_id=GRAPH_ID, partition_id=PARTITION_ID, training_epochs = TRAINING_EPOCHS, epochs = EPOCHS ,IP=IP,PORT=PORT, iteration_id=1)
+    logging.info('Number of training examples - %s, Number of testing examples - %s', num_train_ex,num_test_ex)
+
+    client = Client(model, graph_params, weights_path=WEIGHTS_PATH, dataset_name=DATASET_NAME, graph_id=GRAPH_ID, partition_id=PARTITION_ID, training_epochs=TRAINING_EPOCHS, epochs=EPOCHS , IP=IP, PORT=PORT, iteration_number=0)
 
     del nodes
     del edges
     gc.collect()
 
-    logging.info('(Iteration id %s) Distributed training started!', str(1))
+    logging.info('Distributed training for streaming graphs started!')
 
     start = timer()
     client.run()
     end = timer()
 
     elapsed_time = end -start
+
     logging.info('Distributed training done!')
-    logging.info('Training report : Elapsed time %s seconds, graph ID %s, partition ID %s, epochs %s', elapsed_time,args['graph_id'],args['partition_id'],args['epochs'])
+    logging.info('Training report : Total elapsed time %s seconds, graph name %s, graph ID %s, partition ID %s, training epochs %s, epochs %s', elapsed_time, DATASET_NAME, GRAPH_ID, PARTITION_ID, TRAINING_EPOCHS, EPOCHS)
 
     

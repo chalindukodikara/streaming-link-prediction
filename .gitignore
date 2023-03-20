@@ -1,6 +1,7 @@
 # Files
 stellargraph-transfer-learning-model/data/
 stellargraph-transfer-learning-model/weights/
+tellargraph-transfer-learning-model/local_weights/
 stellargraph-transfer-learning-model/global_weights/
 
 tgn-based-model/data/

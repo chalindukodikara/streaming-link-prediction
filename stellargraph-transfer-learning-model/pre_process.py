@@ -8,7 +8,7 @@ import argparse
 import logging
 import sys
 import time
-
+import shutil
 # time.strftime('%l:%M%p %z on %b %d, %Y')
 
 np.random.seed(0)
@@ -36,7 +36,7 @@ logging.basicConfig(
 )
 ######## Our parameters ################
 parser = argparse.ArgumentParser('Preprocessing')
-parser.add_argument('--dataset_name', type=str, default='tg', help='Dataset name')
+parser.add_argument('--dataset_name', type=str, default='elliptic', help='Dataset name')
 parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
 parser.add_argument('--training_batch_size', type=int, default=65536, help='Training batch size')
 parser.add_argument('--testing_batch_size', type=int, default=1024, help='Testing batch size')
@@ -57,8 +57,9 @@ def main(dataset_name, data_edges, data_nodes, total_size, training_batch_size =
     # create data folder with the dataset name
     folder_path = "data/" + dataset_name + '_' + str(PARTITION_ID)
     if os.path.exists(folder_path):
+        shutil.rmtree(folder_path)
+        os.makedirs(folder_path)
         logging.info("Folder path \"" + folder_path + "\" exists")
-        pass
     else:
         os.makedirs(folder_path)
 
@@ -143,5 +144,6 @@ if __name__ == "__main__":
         edge_list = pd.concat([edge_list.iloc[:, :2], edge_list.iloc[:, weight_index]], axis=1)
     else:
         edge_list = edge_list.iloc[:, :2]
-
+    logging.info('_____________________________________________________ %s: Pre-processing started _____________________________________________________', DATASET_NAME)
     main(dataset_name=DATASET_NAME, data_edges=edge_list, data_nodes=node_list, total_size=TOTAL_SIZE, training_batch_size=TRAINING_BATCH_SIZE, testing_batch_size=TESTING_BATCH_SIZE)
+    logging.info('_____________ %s: Pre-processing finished, total size %s, training batch size %s, testing batch size %s _____________', DATASET_NAME, TOTAL_SIZE, TRAINING_BATCH_SIZE, TESTING_BATCH_SIZE)
