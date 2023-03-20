@@ -65,7 +65,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s : [%(levelname)s]  %(message)s',
     handlers=[
-        logging.FileHandler('logs/client/client_{}.log'.format(PARTITION_ID)),
+        logging.FileHandler('logs/client/client_{}_{}.log'.format(PARTITION_ID, str(time.strftime('%l:%M%p on %b %d, %Y')))),
         logging.StreamHandler(sys.stdout)
     ]
 )

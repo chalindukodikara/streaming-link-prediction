@@ -3,6 +3,7 @@ stellargraph-transfer-learning-model/data/
 stellargraph-transfer-learning-model/weights/
 tellargraph-transfer-learning-model/local_weights/
 stellargraph-transfer-learning-model/global_weights/
+tellargraph-transfer-learning-model/logs/
 
 tgn-based-model/data/
 tgn-based-model/models/tgn/data/
