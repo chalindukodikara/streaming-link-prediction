@@ -1,0 +1,3 @@
+2023-03-22 20:08:28,975 : [INFO]  _____________________________________________________ wikipedia: Pre-processing started _____________________________________________________
+2023-03-22 20:08:28,976 : [INFO]  Training batch created
+2023-03-22 20:08:29,093 : [INFO]  _____________ wikipedia: Pre-processing finished, total size 67674, training batch size 65536, testing batch size 1024 _____________

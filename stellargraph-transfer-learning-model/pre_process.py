@@ -36,10 +36,10 @@ logging.basicConfig(
 )
 ######## Our parameters ################
 parser = argparse.ArgumentParser('Preprocessing')
-parser.add_argument('--dataset_name', type=str, default='elliptic', help='Dataset name')
-parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
-parser.add_argument('--partition_size', type=int, default=0, help='Partition size')
-parser.add_argument('--training_batch_size', type=int, default=65536, help='Training batch size')
+parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
+parser.add_argument('--partition_id', type=int, default=3, help='Partition ID')
+parser.add_argument('--partition_size', type=int, default=4, help='Partition size')
+parser.add_argument('--training_batch_size', type=int, default=10240, help='Training batch size')
 parser.add_argument('--testing_batch_size', type=int, default=1024, help='Testing batch size')
 
 try:
@@ -139,7 +139,7 @@ if __name__ == "__main__":
         edge_list = edge_list.drop(columns=["timestamp"])
 
     if 'weight' in edge_list.columns:
-        for i in range(3, len(edge_list.columns)):
+        for i in range(2, len(edge_list.columns)):
             if edge_list.columns[i] == 'weight':
                 weight_index = i
                 break

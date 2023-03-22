@@ -26,15 +26,15 @@ parser.add_argument('--path_edges', type=str, default='./data/', help='Edges Pat
 parser.add_argument('--ip', type=str, default='localhost', help='IP')
 parser.add_argument('--port', type=int, default=5000, help='PORT')
 parser.add_argument('--graph_id', type=int, default=1, help='Graph ID')
+parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
 
 ######## Frequently configured #######
-parser.add_argument('--dataset_name', type=str, default='elliptic', help='Dataset name')
-parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
-parser.add_argument('--partition_size', type=int, default=0, help='Partition size')
-parser.add_argument('--partition_algorithm', type=str, default='fennel', help='Partition algorithm')
-parser.add_argument('--training_rounds', type=int, default=1, help='Initial Training: number of rounds')
-parser.add_argument('--rounds', type=int, default=1, help='Streaming data testing for batches: number of rounds')
-parser.add_argument('--num_clients', type=int, default=1, help='Number of clients')
+parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
+parser.add_argument('--partition_size', type=int, default=4, help='Partition size')
+parser.add_argument('--partition_algorithm', type=str, default='hash', help='Partition algorithm')
+parser.add_argument('--training_rounds', type=int, default=5, help='Initial Training: number of rounds')
+parser.add_argument('--rounds', type=int, default=2, help='Streaming data testing for batches: number of rounds')
+parser.add_argument('--num_clients', type=int, default=4, help='Number of clients')
 
 
 try:
@@ -95,10 +95,14 @@ if os.path.exists(folder_path):
 else:
     os.makedirs(folder_path)
 ############################################
-path = 'data/' + DATASET_NAME + '_' + str(PARTITION_ID)
-files = os.listdir(path)
-paths = [os.path.join(path, basename) for basename in files]
-NUM_TIMESTAMPS = int(max(paths, key=os.path.getctime).split('/')[-1].split('_')[0])
+# Find the minimum batch number in partitions
+timestamps = []
+for partition in range(PARTITION_SIZE):
+    path = 'data/' + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(partition)
+    files = os.listdir(path)
+    paths = [os.path.join(path, basename) for basename in files]
+    timestamps.append(int(max(paths, key=os.path.getctime).split('/')[-1].split('_')[0]))
+NUM_TIMESTAMPS = min(timestamps)
 
 class Server:
 
