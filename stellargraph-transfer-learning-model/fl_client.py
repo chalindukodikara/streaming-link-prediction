@@ -26,6 +26,8 @@ parser.add_argument('--port', type=int, default=5000, help='PORT')
 parser.add_argument('--dataset_name', type=str, default='elliptic', help='Dataset name')
 parser.add_argument('--graph_id', type=int, default=1, help='Graph ID')
 parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
+parser.add_argument('--partition_size', type=int, default=0, help='Partition size')
+parser.add_argument('--partition_algorithm', type=str, default='fennel', help='Partition algorithm')
 parser.add_argument('--training_epochs', type=int, default=1, help='Initial Training: number of epochs')
 parser.add_argument('--epochs', type=int, default=2, help='Streaming data training for batches: number of epochs')
 
@@ -43,6 +45,8 @@ PORT = args.port
 DATASET_NAME = args.dataset_name
 GRAPH_ID = args.graph_id
 PARTITION_ID = args.partition_id
+PARTITION_SIZE = args.partition_size
+PARTITION_ALGORITHM = args.partition_algorithm
 TRAINING_EPOCHS = args.training_epochs
 EPOCHS = args.epochs
 ######## Our parameters ################
@@ -65,7 +69,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s : [%(levelname)s]  %(message)s',
     handlers=[
-        logging.FileHandler('logs/client/client_{}_{}.log'.format(PARTITION_ID, str(time.strftime('%l:%M%p on %b %d, %Y')))),
+        logging.FileHandler('logs/client/algorithm_{}_partition_size_{}_client_{}_{}.log'.format(PARTITION_ALGORITHM, PARTITION_SIZE, PARTITION_ID, str(time.strftime('%l:%M%p on %b %d, %Y')))),
         logging.StreamHandler(sys.stdout)
     ]
 )
@@ -274,8 +278,8 @@ class Client:
             self.epochs = self.testing_epochs
             # self.client_socket.close()
 
-            edges = pd.read_csv('data/' + self.dataset_name + '_' + str(PARTITION_ID) + '/' + str(self.iteration_number) + '_test_batch_edges.csv')
-            nodes = pd.read_csv('data/' + self.dataset_name + '_' + str(PARTITION_ID) + '/' + str(self.iteration_number) + '_test_batch_nodes.csv', index_col=0)
+            edges = pd.read_csv('data/' + self.dataset_name + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(self.iteration_number) + '_test_batch_edges.csv')
+            nodes = pd.read_csv('data/' + self.dataset_name + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(self.iteration_number) + '_test_batch_nodes.csv', index_col=0)
 
             logging.info('Batch %s initialized ', str(self.iteration_number))
             self.MODEL = Model(nodes, edges)
@@ -298,8 +302,8 @@ if __name__ == "__main__":
     logging.info('Client started, graph name %s, graph ID %s, partition ID %s, training epochs %s, epochs %s', DATASET_NAME, GRAPH_ID, PARTITION_ID, TRAINING_EPOCHS, EPOCHS)
 
 
-    edges = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_edges.csv')
-    nodes = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_nodes.csv', index_col=0)
+    edges = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_edges.csv')
+    nodes = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_nodes.csv', index_col=0)
 
     logging.info('Model initialized for training')
     model = Model(nodes, edges)

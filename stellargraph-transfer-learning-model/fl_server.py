@@ -30,6 +30,8 @@ parser.add_argument('--graph_id', type=int, default=1, help='Graph ID')
 ######## Frequently configured #######
 parser.add_argument('--dataset_name', type=str, default='elliptic', help='Dataset name')
 parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
+parser.add_argument('--partition_size', type=int, default=0, help='Partition size')
+parser.add_argument('--partition_algorithm', type=str, default='fennel', help='Partition algorithm')
 parser.add_argument('--training_rounds', type=int, default=1, help='Initial Training: number of rounds')
 parser.add_argument('--rounds', type=int, default=1, help='Streaming data testing for batches: number of rounds')
 parser.add_argument('--num_clients', type=int, default=1, help='Number of clients')
@@ -49,6 +51,8 @@ PORT = args.port
 DATASET_NAME = args.dataset_name
 GRAPH_ID = args.graph_id
 PARTITION_ID = args.partition_id
+PARTITION_SIZE = args.partition_size
+PARTITION_ALGORITHM = args.partition_algorithm
 TRAINING_ROUNDS = args.training_rounds
 ROUNDS = args.rounds
 NUM_CLIENTS = args.num_clients
@@ -72,7 +76,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s : [%(levelname)s]  %(message)s',
     handlers=[
-        logging.FileHandler('logs/server/server{}.log'.format(str(time.strftime('%l:%M%p on %b %d, %Y')))),
+        logging.FileHandler('logs/server/algorithm_{}_partition_size_{}_{}.log'.format(PARTITION_ALGORITHM, PARTITION_SIZE, (time.strftime('%l:%M%p on %b %d, %Y')))),
         logging.StreamHandler(sys.stdout)
     ]
 )
@@ -297,8 +301,8 @@ if __name__ == "__main__":
     if IP == 'localhost':
         IP = socket.gethostname()
 
-    edges = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_edges.csv')
-    nodes = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_nodes.csv', index_col=0)
+    edges = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_edges.csv')
+    nodes = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_nodes.csv', index_col=0)
 
     model = Model(nodes, edges)
     model.initialize()

@@ -9,3 +9,5 @@ tgn-based-model/data/
 tgn-based-model/models/tgn/data/
 tgn-based-model/weights/
 tgn-based-model/global_weights/
+
+datasets/dynamic-datasets

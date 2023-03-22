@@ -38,6 +38,7 @@ logging.basicConfig(
 parser = argparse.ArgumentParser('Preprocessing')
 parser.add_argument('--dataset_name', type=str, default='elliptic', help='Dataset name')
 parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
+parser.add_argument('--partition_size', type=int, default=0, help='Partition size')
 parser.add_argument('--training_batch_size', type=int, default=65536, help='Training batch size')
 parser.add_argument('--testing_batch_size', type=int, default=1024, help='Testing batch size')
 
@@ -49,13 +50,14 @@ except:
 
 DATASET_NAME = args.dataset_name
 PARTITION_ID = args.partition_id
+PARTITION_SIZE = args.partition_size
 TRAINING_BATCH_SIZE = args.training_batch_size
 TESTING_BATCH_SIZE = args.testing_batch_size
 ######## Our parameters ################
 def main(dataset_name, data_edges, data_nodes, total_size, training_batch_size = 65536, testing_batch_size = 1024):
 
     # create data folder with the dataset name
-    folder_path = "data/" + dataset_name + '_' + str(PARTITION_ID)
+    folder_path = "data/" + dataset_name + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID)
     if os.path.exists(folder_path):
         shutil.rmtree(folder_path)
         os.makedirs(folder_path)
@@ -112,22 +114,22 @@ def main(dataset_name, data_edges, data_nodes, total_size, training_batch_size =
 
         # save
         if batch_number == 0:
-            data_edges_temp.to_csv("data/" + dataset_name + '_' + str(PARTITION_ID) + "/" + "0_training_batch_edges.csv", index=False)
-            data_nodes_temp.to_csv("data/" + dataset_name + '_' + str(PARTITION_ID) + "/" + "0_training_batch_nodes.csv", index=False)
+            data_edges_temp.to_csv("data/" + dataset_name + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + "/" + "0_training_batch_edges.csv", index=False)
+            data_nodes_temp.to_csv("data/" + dataset_name + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + "/" + "0_training_batch_nodes.csv", index=False)
         else:
-            data_edges_temp.to_csv("data/" + dataset_name + '_' + str(PARTITION_ID) + "/" + str(batch_number) + "_test_batch_edges.csv", index=False)
-            data_nodes_temp.to_csv("data/" + dataset_name + '_' + str(PARTITION_ID) + "/" + str(batch_number) + "_test_batch_nodes.csv", index=False)
+            data_edges_temp.to_csv("data/" + dataset_name + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + "/" + str(batch_number) + "_test_batch_edges.csv", index=False)
+            data_nodes_temp.to_csv("data/" + dataset_name + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + "/" + str(batch_number) + "_test_batch_nodes.csv", index=False)
         batch_number += 1
 
 
 if __name__ == "__main__":
     # read edge list
-    edge_list = pd.read_csv('data/' + DATASET_NAME + '_edges.csv')
+    edge_list = pd.read_csv('data/' + DATASET_NAME + '_edges_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '.csv')
     if 'Unnamed: 0' in edge_list: edge_list.pop('Unnamed: 0')
     if 'Unnamed: 0.1' in edge_list: edge_list.pop('Unnamed: 0.1')
 
     # read node list
-    node_list = pd.read_csv('data/' + DATASET_NAME + '_nodes.csv')
+    node_list = pd.read_csv('data/' + DATASET_NAME + '_nodes_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '.csv')
     if 'Unnamed: 0' in node_list: node_list.pop('Unnamed: 0')
     if 'Unnamed: 0.1' in node_list: node_list.pop('Unnamed: 0.1')
 
