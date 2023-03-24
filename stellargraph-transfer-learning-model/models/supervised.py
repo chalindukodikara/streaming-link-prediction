@@ -50,30 +50,30 @@ class Model:
     def initialize(self,**hyper_params):
 
         if(not "batch_size" in hyper_params.keys()):
-            batch_size = 20
+            batch_size = 40
         if(not "layer_sizes" in hyper_params.keys()):
             num_samples = [20, 10]
         if(not "num_samples" in hyper_params.keys()):
-            layer_sizes = [10, 10 ]
+            layer_sizes = [25, 25]
         if(not "bias" in hyper_params.keys()):
             bias = True
         if(not "dropout" in hyper_params.keys()):
             dropout = 0.1
         if(not "lr" in hyper_params.keys()):
-            lr = 1e-2
+            lr = 1e-3
 
         graph = sg.StellarGraph(nodes=self.nodes,edges=self.edges)
 
         # Test split
         edge_splitter_test = EdgeSplitter(graph)
         self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
-            p=0.1, method="global", keep_connected=False, seed = 42
+            p=0.1, method="global", keep_connected=False, seed = 2023
         )
 
         # Train split
         edge_splitter_train = EdgeSplitter(self.graph_test)
         self.graph_train, edge_ids_train, edge_labels_train = edge_splitter_train.train_test_split(
-            p=0.1, method="global", keep_connected=False, seed = 42
+            p=0.1, method="global", keep_connected=False, seed = 2023
         )
 
         # Train iterators
@@ -81,7 +81,7 @@ class Model:
         self.train_flow = train_gen.flow(edge_ids_train, edge_labels_train, shuffle=True)
 
         # Test iterators
-        test_gen = GraphSAGELinkGenerator(self.graph_train, batch_size, num_samples, weighted=True, seed = 42)
+        test_gen = GraphSAGELinkGenerator(self.graph_test, batch_size, num_samples, weighted=True, seed = 42)
         self.test_flow = test_gen.flow(edge_ids_test, edge_labels_test, shuffle=True)
 
         # Model defining - Keras functional API + Stellargraph layers

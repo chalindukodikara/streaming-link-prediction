@@ -37,10 +37,11 @@ logging.basicConfig(
 ######## Our parameters ################
 parser = argparse.ArgumentParser('Preprocessing')
 parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
-parser.add_argument('--partition_id', type=int, default=3, help='Partition ID')
-parser.add_argument('--partition_size', type=int, default=4, help='Partition size')
+parser.add_argument('--partition_id', type=int, default=7, help='Partition ID')
+parser.add_argument('--partition_size', type=int, default=8, help='Partition size')
 parser.add_argument('--training_batch_size', type=int, default=10240, help='Training batch size')
 parser.add_argument('--testing_batch_size', type=int, default=1024, help='Testing batch size')
+
 
 try:
   args = parser.parse_args()
@@ -54,6 +55,7 @@ PARTITION_SIZE = args.partition_size
 TRAINING_BATCH_SIZE = args.training_batch_size
 TESTING_BATCH_SIZE = args.testing_batch_size
 ######## Our parameters ################
+
 def main(dataset_name, data_edges, data_nodes, total_size, training_batch_size = 65536, testing_batch_size = 1024):
 
     # create data folder with the dataset name

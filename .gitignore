@@ -5,9 +5,22 @@ tellargraph-transfer-learning-model/local_weights/
 stellargraph-transfer-learning-model/global_weights/
 tellargraph-transfer-learning-model/logs/
 
+stellargraph-no-tl-batch-model/data/
+stellargraph-no-tl-batch-model/weights/
+stellargraph-no-tl-batch-model/local_weights/
+stellargraph-no-tl-batch-model/global_weights/
+stellargraph-no-tl-batch-model/logs/
+
+stellargraph-naive-approach/data/
+stellargraph-naive-approach/weights/
+stellargraph-naive-approach/local_weights/
+stellargraph-naive-approach/global_weights/
+stellargraph-naive-approach/logs/
+
 tgn-based-model/data/
 tgn-based-model/models/tgn/data/
 tgn-based-model/weights/
 tgn-based-model/global_weights/
+
 
 datasets/dynamic-datasets

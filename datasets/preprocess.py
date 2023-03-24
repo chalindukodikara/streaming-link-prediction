@@ -14,7 +14,7 @@ np.random.seed(0)
 ######## Our parameters ################
 parser = argparse.ArgumentParser('Preprocessing')
 parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
-parser.add_argument('--partition_size', type=int, default=4, help='Partition size')
+parser.add_argument('--partition_size', type=int, default=8, help='Partition size')
 parser.add_argument('--partition_algorithm', type=str, default='hash', help='Partition algorithm')
 
 try:

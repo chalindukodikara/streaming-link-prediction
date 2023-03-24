@@ -87,6 +87,7 @@ parser.add_argument('--use_source_embedding_in_message', action='store_true',
                     help='Whether to use the embedding of the source node as part of the message')
 parser.add_argument('--dyrep', action='store_true',
                     help='Whether to run the dyrep model')
+
 ######## Our parameters ################
 parser.add_argument('--path_weights', type=str, default='./weights/', help='Weights path')
 parser.add_argument('--path_nodes', type=str, default='./data/', help='Data nodes path')
@@ -102,6 +103,7 @@ parser.add_argument('--initial_num_rounds', type=int, default=1, help='Initial n
 parser.add_argument('--normal_num_rounds', type=int, default=1, help='Normal number of rounds')
 parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
 ######## Our parameters ################
+
 try:
   args = parser.parse_args()
 except:
@@ -138,36 +140,7 @@ INITIAL_NUM_ROUNDS = args.initial_num_rounds
 NORMAL_NUM_ROUNDS = args.normal_num_rounds
 DATASET_NAME = args.dataset_name
 ######## Our parameters ################
-# arg_names = [
-#     'path_weights',
-#     'path_nodes',
-#     'path_edges',
-#     'graph_id',
-#     'partition_id',
-#     'num_clients',
-#     'num_rounds',
-#     'IP',
-#     'PORT',
-#     'name',
-#     'transfer_learning',
-#     'num_timestamps'
-#     ]
-#
-# args = dict(zip(arg_names, sys.argv[1:]))
-# args = dict()
-# args['path_weights'] = './weights/'
-# args['path_nodes'] = './data/'
-# args['path_edges'] = './data/'
-# args['graph_id'] = '4'
-# args['partition_id'] = '0'
-# args['num_clients'] = '1'
-# args['initial_num_rounds'] = '6'
-# args['normal_num_rounds'] = '2'
-# args['IP'] = 'localhost'
-# args['PORT'] = '5000'
-# args['name'] = 'elliptic'
-# args['transfer_learning'] = True
-# args['TEST_BATCH_SIZE'] = '6'
+
 class Server:
 
     def __init__(self, MODEL, INITIAL_ROUNDS, NORMAL_ROUNDS, weights_path, graph_id, MAX_CONN = 2, IP= socket.gethostname(), PORT = 5000, HEADER_LENGTH = 10,iteration_id=0, transfer_learning=False, NUM_BATCHES=0):

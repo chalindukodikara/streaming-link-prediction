@@ -10,7 +10,6 @@ from timeit import default_timer as timer
 import gc
 import os
 import math
-from models.supervised import Model
 import argparse
 import os
 import glob
@@ -30,11 +29,11 @@ parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
 
 ######## Frequently configured #######
 parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
-parser.add_argument('--partition_size', type=int, default=4, help='Partition size')
+parser.add_argument('--partition_size', type=int, default=1, help='Partition size')
+parser.add_argument('--num_clients', type=int, default=1, help='Number of clients')
 parser.add_argument('--partition_algorithm', type=str, default='hash', help='Partition algorithm')
 parser.add_argument('--training_rounds', type=int, default=5, help='Initial Training: number of rounds')
-parser.add_argument('--rounds', type=int, default=2, help='Streaming data testing for batches: number of rounds')
-parser.add_argument('--num_clients', type=int, default=4, help='Number of clients')
+parser.add_argument('--rounds', type=int, default=3, help='Streaming data testing for batches: number of rounds')
 
 
 try:
@@ -76,7 +75,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s : [%(levelname)s]  %(message)s',
     handlers=[
-        logging.FileHandler('logs/server/algorithm_{}_partition_size_{}_{}.log'.format(PARTITION_ALGORITHM, PARTITION_SIZE, (time.strftime('%l:%M%p on %b %d, %Y')))),
+        logging.FileHandler('logs/server/{}_{}_{}_partition_{}.log'.format(str(time.strftime('%H:%M:%S %l:%M%p on %b %d, %Y')), DATASET_NAME, PARTITION_ALGORITHM, PARTITION_SIZE)),
         logging.StreamHandler(sys.stdout)
     ]
 )
@@ -189,8 +188,10 @@ class Server:
 
 
         weights = np.array(self.GLOBAL_WEIGHTS)
-
-        data = {"STOP_FLAG": self.stop_flag, "WEIGHTS": weights, "ITERATION_FLAG": self.all_timestamps_finished}
+        if self.iteration_number != 0:
+            data = {"STOP_FLAG": self.stop_flag, "WEIGHTS": weights, "ITERATION_FLAG": self.all_timestamps_finished}
+        else:
+            data = {"STOP_FLAG": self.stop_flag, "WEIGHTS": weights, "ITERATION_FLAG": self.all_timestamps_finished, "NUM_TIMESTAMPS": self.num_timestamps}
 
         data = pickle.dumps(data)
         data = bytes(f"{len(data):<{self.HEADER_LENGTH}}", 'utf-8') + data
@@ -307,6 +308,8 @@ if __name__ == "__main__":
 
     edges = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_edges.csv')
     nodes = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_nodes.csv', index_col=0)
+
+    from models.supervised import Model
 
     model = Model(nodes, edges)
     model.initialize()
