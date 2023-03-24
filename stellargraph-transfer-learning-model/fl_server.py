@@ -19,7 +19,7 @@ warnings.filterwarnings("ignore")
 
 ######## Our parameters ################
 parser = argparse.ArgumentParser('Server')
-parser.add_argument('--path_weights', type=str, default='./weights/', help='Weights path to be saved')
+parser.add_argument('--path_weights', type=str, default='./local_weights/', help='Weights path to be saved')
 parser.add_argument('--path_nodes', type=str, default='./data/', help='Nodes path')
 parser.add_argument('--path_edges', type=str, default='./data/', help='Edges Path')
 parser.add_argument('--ip', type=str, default='localhost', help='IP')

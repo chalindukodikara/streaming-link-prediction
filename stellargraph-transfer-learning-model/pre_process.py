@@ -37,8 +37,8 @@ logging.basicConfig(
 ######## Our parameters ################
 parser = argparse.ArgumentParser('Preprocessing')
 parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
-parser.add_argument('--partition_id', type=int, default=7, help='Partition ID')
-parser.add_argument('--partition_size', type=int, default=8, help='Partition size')
+parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
+parser.add_argument('--partition_size', type=int, default=2, help='Partition size')
 parser.add_argument('--training_batch_size', type=int, default=10240, help='Training batch size')
 parser.add_argument('--testing_batch_size', type=int, default=1024, help='Testing batch size')
 
