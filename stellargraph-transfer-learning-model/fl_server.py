@@ -29,10 +29,10 @@ parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
 
 ######## Frequently configured #######
 parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
-parser.add_argument('--partition_size', type=int, default=1, help='Partition size')
-parser.add_argument('--num_clients', type=int, default=1, help='Number of clients')
+parser.add_argument('--partition_size', type=int, default=2, help='Partition size')
+parser.add_argument('--num_clients', type=int, default=2, help='Number of clients')
 parser.add_argument('--partition_algorithm', type=str, default='hash', help='Partition algorithm')
-parser.add_argument('--training_rounds', type=int, default=5, help='Initial Training: number of rounds')
+parser.add_argument('--training_rounds', type=int, default=6, help='Initial Training: number of rounds')
 parser.add_argument('--rounds', type=int, default=3, help='Streaming data testing for batches: number of rounds')
 
 
@@ -75,7 +75,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s : [%(levelname)s]  %(message)s',
     handlers=[
-        logging.FileHandler('logs/server/{}_{}_{}_partition_{}.log'.format(str(time.strftime('%H:%M:%S %l:%M%p on %b %d, %Y')), DATASET_NAME, PARTITION_ALGORITHM, PARTITION_SIZE)),
+        logging.FileHandler('logs/server/{}_{}_{}_partition_{}.log'.format(str(time.strftime('%m %d %H:%M:%S # %l:%M%p on %b %d, %Y')), DATASET_NAME, PARTITION_ALGORITHM, PARTITION_SIZE)),
         logging.StreamHandler(sys.stdout)
     ]
 )
@@ -149,11 +149,9 @@ class Server:
     def update_model(self, new_weights, num_examples):
         self.partition_sizes.append(num_examples)
         self.weights.append(num_examples * new_weights)
-        # self.weights.append(new_weights)
 
-        if len(self.weights) == self.MAX_CONN:
-
-            #avg_weight = np.mean(self.weights, axis=0)
+        # if len(self.weights) == self.MAX_CONN:
+        if (len(self.weights) % self.MAX_CONN) == 0 and len(self.weights) != 0:
             avg_weight = sum(self.weights) / sum(self.partition_sizes)
             self.weights = []
 

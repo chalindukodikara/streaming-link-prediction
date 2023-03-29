@@ -19,7 +19,7 @@ warnings.filterwarnings("ignore")
 
 ######## Our parameters ################
 parser = argparse.ArgumentParser('Server')
-parser.add_argument('--path_weights', type=str, default='./weights/', help='Weights path to be saved')
+parser.add_argument('--path_weights', type=str, default='./local_weights/', help='Weights path to be saved')
 parser.add_argument('--path_nodes', type=str, default='./data/', help='Nodes path')
 parser.add_argument('--path_edges', type=str, default='./data/', help='Edges Path')
 parser.add_argument('--ip', type=str, default='localhost', help='IP')
@@ -28,11 +28,11 @@ parser.add_argument('--graph_id', type=int, default=1, help='Graph ID')
 parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
 
 ######## Frequently configured #######
-parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
-parser.add_argument('--partition_size', type=int, default=4, help='Partition size')
-parser.add_argument('--num_clients', type=int, default=4, help='Number of clients')
+parser.add_argument('--dataset_name', type=str, default='facebook', help='Dataset name')
+parser.add_argument('--partition_size', type=int, default=0, help='Partition size')
+parser.add_argument('--num_clients', type=int, default=2, help='Number of clients')
 parser.add_argument('--partition_algorithm', type=str, default='hash', help='Partition algorithm')
-parser.add_argument('--training_rounds', type=int, default=5, help='Initial Training: number of rounds')
+parser.add_argument('--training_rounds', type=int, default=6, help='Initial Training: number of rounds')
 parser.add_argument('--rounds', type=int, default=3, help='Streaming data testing for batches: number of rounds')
 
 
@@ -76,7 +76,7 @@ logging.basicConfig(
     format='%(asctime)s : [%(levelname)s]  %(message)s',
     handlers=[
         logging.FileHandler(
-            'logs/server/{}_{}_{}_partition_{}.log'.format(str(time.strftime('%H:%M:%S %l:%M%p on %b %d, %Y')),
+            'logs/server/{}_{}_{}_partition_{}.log'.format(str(time.strftime('%m %d %H:%M:%S # %l:%M%p on %b %d, %Y')),
                                                            DATASET_NAME, PARTITION_ALGORITHM, PARTITION_SIZE)),
         logging.StreamHandler(sys.stdout)
     ]
@@ -187,9 +187,6 @@ class Server:
 
         if self.num_timestamps == self.iteration_number:
             self.all_timestamps_finished = True
-
-
-        weights = np.array(self.GLOBAL_WEIGHTS)
 
         weights = np.array(self.GLOBAL_WEIGHTS)
         if self.iteration_number != 0:

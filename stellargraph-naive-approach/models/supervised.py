@@ -54,13 +54,13 @@ class Model:
         if(not "layer_sizes" in hyper_params.keys()):
             num_samples = [20, 10]
         if(not "num_samples" in hyper_params.keys()):
-            layer_sizes = [25, 25 ]
+            layer_sizes = [15, 15 ]
         if(not "bias" in hyper_params.keys()):
             bias = True
         if(not "dropout" in hyper_params.keys()):
             dropout = 0.1
         if(not "lr" in hyper_params.keys()):
-            lr = 1e-3
+            lr = 1e-2
 
         graph = sg.StellarGraph(nodes=self.nodes,edges=self.edges)
 
@@ -77,11 +77,11 @@ class Model:
         )
 
         # Train iterators
-        train_gen = GraphSAGELinkGenerator(self.graph_train, batch_size, num_samples, weighted=True, seed = 42)
+        train_gen = GraphSAGELinkGenerator(self.graph_train, batch_size, num_samples, weighted=False, seed = 42)
         self.train_flow = train_gen.flow(edge_ids_train, edge_labels_train, shuffle=True)
 
         # Test iterators
-        test_gen = GraphSAGELinkGenerator(self.graph_test, batch_size, num_samples, weighted=True, seed = 42)
+        test_gen = GraphSAGELinkGenerator(self.graph_test, batch_size, num_samples, weighted=False, seed = 42)
         self.test_flow = test_gen.flow(edge_ids_test, edge_labels_test, shuffle=True)
 
         # Model defining - Keras functional API + Stellargraph layers
