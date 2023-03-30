@@ -217,20 +217,7 @@ class Client:
             str(round(np.std(self.all_test_metric_values[4]), 4)),
             str(round(np.mean(self.all_test_metric_values[5]), 2)),
             str(round(np.std(self.all_test_metric_values[5]), 2)))
-        logging.info(
-            'Result report : Accuracy 99th - 90th (%s, %s), Recall 99th - 90th (%s, %s), AUC 99th - 90th (%s, %s), F1 99th - 90th (%s, %s), Precision 99th - 90th (%s, %s), Mean time for a batch - %s (%s) seconds',
-            str(round(np.percentile(self.all_test_metric_values[0], 99), 4)),
-            str(round(np.percentile(self.all_test_metric_values[0], 90), 4)),
-            str(round(np.percentile(self.all_test_metric_values[1], 99), 4)),
-            str(round(np.percentile(self.all_test_metric_values[1], 90), 4)),
-            str(round(np.percentile(self.all_test_metric_values[2], 99), 4)),
-            str(round(np.percentile(self.all_test_metric_values[2], 90), 4)),
-            str(round(np.percentile(self.all_test_metric_values[3], 99), 4)),
-            str(round(np.percentile(self.all_test_metric_values[3], 90), 4)),
-            str(round(np.percentile(self.all_test_metric_values[4], 99), 4)),
-            str(round(np.percentile(self.all_test_metric_values[4], 90), 4)),
-            str(round(np.mean(self.all_test_metric_values[5]), 2)),
-            str(round(np.std(self.all_test_metric_values[5]), 2)))
+        logging.info('Result report : Accuracy 99th - 90th (%s, %s), Recall 99th - 90th (%s, %s), AUC 99th - 90th (%s, %s), F1 99th - 90th (%s, %s), Precision 99th - 90th (%s, %s), Mean time for a batch - %s (%s) seconds - 99th - 90th (%s, %s)', str(round(np.percentile(self.all_test_metric_values[0], 99), 4)), str(round(np.percentile(self.all_test_metric_values[0], 90), 4)), str(round(np.percentile(self.all_test_metric_values[1], 99), 4)), str(round(np.percentile(self.all_test_metric_values[1], 90), 4)), str(round(np.percentile(self.all_test_metric_values[2], 99), 4)), str(round(np.percentile(self.all_test_metric_values[2], 90), 4)), str(round(np.percentile(self.all_test_metric_values[3], 99), 4)), str(round(np.percentile(self.all_test_metric_values[3], 90), 4)), str(round(np.percentile(self.all_test_metric_values[4], 99), 4)), str(round(np.percentile(self.all_test_metric_values[4], 90), 4)), str(0), str(0), str(0), str(0))
         logging.info(str(self.all_test_metric_values))
 
 

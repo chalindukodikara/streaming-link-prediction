@@ -69,6 +69,9 @@ def create_flights(data_edges, data_nodes, training_batch_size, testing_batch_si
             current_timestamp += training_batch_size - 1
             logging.info('Training batch created')
 
+        if data_edges_temp.empty:
+            logging.info('Batch %s: is empty', batch_number)
+
         # get node list of each batch considering edge set, all sources and targets are added to the node list
         nodes_list = []
         for j in range(2):
@@ -117,6 +120,10 @@ def create_facebook(data_edges, data_nodes, training_batch_size, testing_batch_s
             current_timestamp += initial_timestamp
             logging.info('Training batch created')
 
+        if data_edges_temp.empty:
+            logging.info('Batch %s: is empty', batch_number)
+
+
         # get node list of each batch considering edge set, all sources and targets are added to the node list
         nodes_list = []
         for j in range(2):
@@ -162,6 +169,10 @@ def create_dblp(data_edges, data_nodes, training_batch_size, testing_batch_size,
             data_edges_temp = data_edges.loc[data_edges['timestamp'] < current_timestamp + training_batch_size].loc[data_edges['timestamp'] >= 0]
             current_timestamp += training_batch_size - 1
             logging.info('Training batch created')
+
+        if data_edges_temp.empty:
+            logging.info('Batch %s: is empty', batch_number)
+
 
         # get node list of each batch considering edge set, all sources and targets are added to the node list
         nodes_list = []

@@ -36,11 +36,11 @@ logging.basicConfig(
 )
 ######## Our parameters ################
 parser = argparse.ArgumentParser('Preprocessing')
-parser.add_argument('--dataset_name', type=str, default='flights', help='Dataset name')
+parser.add_argument('--dataset_name', type=str, default='facebook', help='Dataset name')
 parser.add_argument('--partition_id', type=int, default=7, help='Partition ID')
 parser.add_argument('--partition_size', type=int, default=8, help='Partition size')
 parser.add_argument('--training_batch_size', type=int, default=20, help='Training batch size: can be days, hours, weeks, years')
-parser.add_argument('--testing_batch_size', type=int, default=2, help='Testing batch size: can be days, hours, weeks, years')
+parser.add_argument('--testing_batch_size', type=int, default=1, help='Testing batch size: can be days, hours, weeks, years')
 
 
 try:
@@ -56,7 +56,7 @@ TRAINING_BATCH_SIZE = args.training_batch_size
 TESTING_BATCH_SIZE = args.testing_batch_size
 ######## Our parameters ################
 
-def create_flights(data_edges, data_nodes, training_batch_size, testing_batch_size, initial_timestamp=0, last_timestamp=121): # In days
+def create_flights(data_edges, data_nodes, training_batch_size, testing_batch_size, initial_timestamp=0, last_timestamp=121): # In days: 2 , 20
     current_timestamp = initial_timestamp
     batch_number = 0
     while current_timestamp <= (last_timestamp - testing_batch_size):
@@ -68,6 +68,9 @@ def create_flights(data_edges, data_nodes, training_batch_size, testing_batch_si
             data_edges_temp = data_edges.loc[data_edges['timestamp'] < current_timestamp + training_batch_size].loc[data_edges['timestamp'] >= current_timestamp]
             current_timestamp += training_batch_size - 1
             logging.info('Training batch created')
+
+        if data_edges_temp.empty:
+            logging.info('Batch %s: is empty', batch_number)
 
         # get node list of each batch considering edge set, all sources and targets are added to the node list
         nodes_list = []
@@ -103,7 +106,7 @@ def create_flights(data_edges, data_nodes, training_batch_size, testing_batch_si
                     batch_number) + "_test_batch_nodes.csv", index=False)
         batch_number += 1
 
-def create_facebook(data_edges, data_nodes, training_batch_size, testing_batch_size, initial_timestamp=1157454929, last_timestamp=1232231923): # In hours: testing batch size = 2 hours
+def create_facebook(data_edges, data_nodes, training_batch_size, testing_batch_size, initial_timestamp=1157454929, last_timestamp=1232231923): # In hours: testing batch size = 1 hours
     testing_batch_size = testing_batch_size * 3600 * 1000 # convert into seconds and then miliseconds
     current_timestamp = 0
     batch_number = 0
@@ -116,6 +119,9 @@ def create_facebook(data_edges, data_nodes, training_batch_size, testing_batch_s
             data_edges_temp = data_edges.loc[data_edges['timestamp'] == current_timestamp]
             current_timestamp += initial_timestamp
             logging.info('Training batch created')
+
+        if data_edges_temp.empty:
+            logging.info('Batch %s: is empty', batch_number)
 
         # get node list of each batch considering edge set, all sources and targets are added to the node list
         nodes_list = []
@@ -162,6 +168,10 @@ def create_dblp(data_edges, data_nodes, training_batch_size, testing_batch_size,
             data_edges_temp = data_edges.loc[data_edges['timestamp'] < current_timestamp + training_batch_size].loc[data_edges['timestamp'] >= current_timestamp]
             current_timestamp += training_batch_size - 1
             logging.info('Training batch created')
+
+        if data_edges_temp.empty:
+            logging.info('Batch %s: is empty', batch_number)
+
 
         # get node list of each batch considering edge set, all sources and targets are added to the node list
         nodes_list = []
