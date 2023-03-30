@@ -1,15 +1,15 @@
 # Files
-distributed-Incremental-ensemble-graphsagage/data/*
-distributed-Incremental-ensemble-graphsagage/weights/
-distributed-Incremental-ensemble-graphsagage/local_weights/
-distributed-Incremental-ensemble-graphsagage/global_weights/
-distributed-Incremental-ensemble-graphsagage/logs/
+distributed-incremental-ensemble-graphsagage/data/*
+distributed-incremental-ensemble-graphsagage/weights/
+distributed-incremental-ensemble-graphsagage/local_weights/
+distributed-incremental-ensemble-graphsagage/global_weights/
+distributed-incremental-ensemble-graphsagage/logs/
 
-distributed-Incremental-graphsage/data/*
-distributed-Incremental-graphsage/weights/
-distributed-Incremental-graphsage/local_weights/
-distributed-Incremental-graphsage/global_weights/
-distributed-Incremental-graphsage/logs/
+distributed-incremental-graphsage/data/*
+distributed-incremental-graphsage/weights/
+distributed-incremental-graphsage/local_weights/
+distributed-incremental-graphsage/global_weights/
+distributed-incremental-graphsage/logs/
 
 distributed-retraining-graphsage/data/*
 distributed-retraining-graphsage/weights/
