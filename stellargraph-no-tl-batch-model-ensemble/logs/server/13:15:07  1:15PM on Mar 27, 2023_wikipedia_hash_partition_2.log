@@ -1,0 +1,1529 @@
+2023-03-27 13:15:07,869 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-27 13:15:07,869 : [INFO]  Server started , graph ID 1, number of clients 2, number of rounds 6, number of timestamps 93
+2023-03-27 13:15:16,082 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-27 13:15:16,302 : [INFO]  Distributed training for streaming graphs started!
+2023-03-27 13:15:19,358 : [INFO]  Accepted new connection at 127.0.0.1:48292
+2023-03-27 13:15:19,358 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:48292
+2023-03-27 13:15:32,018 : [INFO]  Initial training: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:15:38,929 : [INFO]  Accepted new connection at 127.0.0.1:33192
+2023-03-27 13:15:38,933 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:33192
+2023-03-27 13:15:51,656 : [INFO]  Initial training: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:15:51,656 : [INFO]  Initial training round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:15:51,656 : [INFO]  Initial training round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:15:51,656 : [INFO]  ____________________________________ Initial training: round 1 finished ____________________________________
+2023-03-27 13:16:06,531 : [INFO]  Initial training: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:16:06,768 : [INFO]  Initial training: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:16:06,772 : [INFO]  Initial training round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:16:06,772 : [INFO]  Initial training round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:16:06,772 : [INFO]  ____________________________________ Initial training: round 2 finished ____________________________________
+2023-03-27 13:16:21,580 : [INFO]  Initial training: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:16:21,699 : [INFO]  Initial training: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:16:21,699 : [INFO]  Initial training round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:16:21,699 : [INFO]  Initial training round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:16:21,699 : [INFO]  ____________________________________ Initial training: round 3 finished ____________________________________
+2023-03-27 13:16:36,571 : [INFO]  Initial training: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:16:36,787 : [INFO]  Initial training: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:16:36,787 : [INFO]  Initial training round 4: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:16:36,787 : [INFO]  Initial training round 4: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:16:36,787 : [INFO]  ____________________________________ Initial training: round 4 finished ____________________________________
+2023-03-27 13:16:51,461 : [INFO]  Initial training: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:16:51,633 : [INFO]  Initial training: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:16:51,633 : [INFO]  Initial training round 5: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:16:51,633 : [INFO]  Initial training round 5: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:16:51,633 : [INFO]  ____________________________________ Initial training: round 5 finished ____________________________________
+2023-03-27 13:17:06,200 : [INFO]  Initial training: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:17:06,370 : [INFO]  Initial training: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:17:06,370 : [INFO]  Initial training round 6: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:17:06,371 : [INFO]  Initial training round 6: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:17:06,371 : [INFO]  ____________________________________ Initial training: round 6 finished ____________________________________
+2023-03-27 13:17:06,371 : [INFO]  #################################### Initial Trained final model sent to clients ####################################
+2023-03-27 13:17:15,924 : [INFO]  Batch 1: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:17:15,994 : [INFO]  Batch 1: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:17:15,995 : [INFO]  Batch 1, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:17:15,995 : [INFO]  Batch 1, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:17:15,995 : [INFO]  ____________________________________ Batch 1: round 1 finished ____________________________________
+2023-03-27 13:17:17,763 : [INFO]  Batch 1: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:17:17,767 : [INFO]  Batch 1: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:17:17,768 : [INFO]  Batch 1, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:17:17,768 : [INFO]  Batch 1, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:17:17,768 : [INFO]  ____________________________________ Batch 1: round 2 finished ____________________________________
+2023-03-27 13:17:19,488 : [INFO]  Batch 1: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:17:19,520 : [INFO]  Batch 1: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:17:19,520 : [INFO]  Batch 1, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:17:19,520 : [INFO]  Batch 1, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:17:19,520 : [INFO]  ____________________________________ Batch 1: round 3 finished ____________________________________
+2023-03-27 13:17:19,520 : [INFO]  #################################### Batch 1: sent the final model to clients ####################################
+2023-03-27 13:17:24,788 : [INFO]  Batch 2: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:17:24,877 : [INFO]  Batch 2: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:17:24,877 : [INFO]  Batch 2, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:17:24,877 : [INFO]  Batch 2, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:17:24,877 : [INFO]  ____________________________________ Batch 2: round 1 finished ____________________________________
+2023-03-27 13:17:26,583 : [INFO]  Batch 2: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:17:26,654 : [INFO]  Batch 2: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:17:26,655 : [INFO]  Batch 2, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:17:26,655 : [INFO]  Batch 2, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:17:26,655 : [INFO]  ____________________________________ Batch 2: round 2 finished ____________________________________
+2023-03-27 13:17:28,484 : [INFO]  Batch 2: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:17:28,541 : [INFO]  Batch 2: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:17:28,541 : [INFO]  Batch 2, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:17:28,541 : [INFO]  Batch 2, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:17:28,541 : [INFO]  ____________________________________ Batch 2: round 3 finished ____________________________________
+2023-03-27 13:17:28,541 : [INFO]  #################################### Batch 2: sent the final model to clients ####################################
+2023-03-27 13:17:33,826 : [INFO]  Batch 3: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:17:33,944 : [INFO]  Batch 3: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:17:33,945 : [INFO]  Batch 3, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:17:33,945 : [INFO]  Batch 3, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:17:33,945 : [INFO]  ____________________________________ Batch 3: round 1 finished ____________________________________
+2023-03-27 13:17:35,842 : [INFO]  Batch 3: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:17:35,843 : [INFO]  Batch 3: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:17:35,843 : [INFO]  Batch 3, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:17:35,843 : [INFO]  Batch 3, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:17:35,843 : [INFO]  ____________________________________ Batch 3: round 2 finished ____________________________________
+2023-03-27 13:17:37,816 : [INFO]  Batch 3: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:17:37,839 : [INFO]  Batch 3: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:17:37,840 : [INFO]  Batch 3, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:17:37,840 : [INFO]  Batch 3, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:17:37,840 : [INFO]  ____________________________________ Batch 3: round 3 finished ____________________________________
+2023-03-27 13:17:37,840 : [INFO]  #################################### Batch 3: sent the final model to clients ####################################
+2023-03-27 13:17:43,117 : [INFO]  Batch 4: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:17:43,120 : [INFO]  Batch 4: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:17:43,121 : [INFO]  Batch 4, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:17:43,121 : [INFO]  Batch 4, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:17:43,121 : [INFO]  ____________________________________ Batch 4: round 1 finished ____________________________________
+2023-03-27 13:17:44,955 : [INFO]  Batch 4: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:17:45,073 : [INFO]  Batch 4: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:17:45,239 : [INFO]  Batch 4, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:17:45,239 : [INFO]  Batch 4, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:17:45,239 : [INFO]  ____________________________________ Batch 4: round 2 finished ____________________________________
+2023-03-27 13:17:46,962 : [INFO]  Batch 4: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:17:46,965 : [INFO]  Batch 4: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:17:46,966 : [INFO]  Batch 4, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:17:46,966 : [INFO]  Batch 4, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:17:46,966 : [INFO]  ____________________________________ Batch 4: round 3 finished ____________________________________
+2023-03-27 13:17:46,966 : [INFO]  #################################### Batch 4: sent the final model to clients ####################################
+2023-03-27 13:17:52,181 : [INFO]  Batch 5: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:17:52,296 : [INFO]  Batch 5: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:17:52,296 : [INFO]  Batch 5, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:17:52,296 : [INFO]  Batch 5, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:17:52,296 : [INFO]  ____________________________________ Batch 5: round 1 finished ____________________________________
+2023-03-27 13:17:53,913 : [INFO]  Batch 5: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:17:54,008 : [INFO]  Batch 5: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:17:54,008 : [INFO]  Batch 5, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:17:54,008 : [INFO]  Batch 5, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:17:54,008 : [INFO]  ____________________________________ Batch 5: round 2 finished ____________________________________
+2023-03-27 13:17:55,665 : [INFO]  Batch 5: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:17:55,779 : [INFO]  Batch 5: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:17:55,780 : [INFO]  Batch 5, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:17:55,780 : [INFO]  Batch 5, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:17:55,780 : [INFO]  ____________________________________ Batch 5: round 3 finished ____________________________________
+2023-03-27 13:17:55,780 : [INFO]  #################################### Batch 5: sent the final model to clients ####################################
+2023-03-27 13:18:01,032 : [INFO]  Batch 6: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:01,038 : [INFO]  Batch 6: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:01,038 : [INFO]  Batch 6, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:01,039 : [INFO]  Batch 6, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:01,039 : [INFO]  ____________________________________ Batch 6: round 1 finished ____________________________________
+2023-03-27 13:18:02,779 : [INFO]  Batch 6: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:02,801 : [INFO]  Batch 6: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:02,801 : [INFO]  Batch 6, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:02,801 : [INFO]  Batch 6, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:02,801 : [INFO]  ____________________________________ Batch 6: round 2 finished ____________________________________
+2023-03-27 13:18:04,580 : [INFO]  Batch 6: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:04,582 : [INFO]  Batch 6: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:04,583 : [INFO]  Batch 6, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:04,583 : [INFO]  Batch 6, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:04,583 : [INFO]  ____________________________________ Batch 6: round 3 finished ____________________________________
+2023-03-27 13:18:04,583 : [INFO]  #################################### Batch 6: sent the final model to clients ####################################
+2023-03-27 13:18:09,820 : [INFO]  Batch 7: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:09,906 : [INFO]  Batch 7: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:09,906 : [INFO]  Batch 7, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:09,907 : [INFO]  Batch 7, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:09,907 : [INFO]  ____________________________________ Batch 7: round 1 finished ____________________________________
+2023-03-27 13:18:11,598 : [INFO]  Batch 7: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:11,624 : [INFO]  Batch 7: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:11,625 : [INFO]  Batch 7, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:11,625 : [INFO]  Batch 7, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:11,625 : [INFO]  ____________________________________ Batch 7: round 2 finished ____________________________________
+2023-03-27 13:18:13,330 : [INFO]  Batch 7: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:13,344 : [INFO]  Batch 7: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:13,345 : [INFO]  Batch 7, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:13,345 : [INFO]  Batch 7, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:13,345 : [INFO]  ____________________________________ Batch 7: round 3 finished ____________________________________
+2023-03-27 13:18:13,345 : [INFO]  #################################### Batch 7: sent the final model to clients ####################################
+2023-03-27 13:18:18,669 : [INFO]  Batch 8: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:18,732 : [INFO]  Batch 8: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:18,732 : [INFO]  Batch 8, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:18,732 : [INFO]  Batch 8, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:18,732 : [INFO]  ____________________________________ Batch 8: round 1 finished ____________________________________
+2023-03-27 13:18:20,444 : [INFO]  Batch 8: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:20,500 : [INFO]  Batch 8: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:20,501 : [INFO]  Batch 8, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:20,501 : [INFO]  Batch 8, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:20,501 : [INFO]  ____________________________________ Batch 8: round 2 finished ____________________________________
+2023-03-27 13:18:22,165 : [INFO]  Batch 8: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:22,198 : [INFO]  Batch 8: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:22,198 : [INFO]  Batch 8, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:22,198 : [INFO]  Batch 8, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:22,198 : [INFO]  ____________________________________ Batch 8: round 3 finished ____________________________________
+2023-03-27 13:18:22,199 : [INFO]  #################################### Batch 8: sent the final model to clients ####################################
+2023-03-27 13:18:27,457 : [INFO]  Batch 9: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:27,461 : [INFO]  Batch 9: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:27,461 : [INFO]  Batch 9, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:27,462 : [INFO]  Batch 9, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:27,462 : [INFO]  ____________________________________ Batch 9: round 1 finished ____________________________________
+2023-03-27 13:18:29,184 : [INFO]  Batch 9: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:29,191 : [INFO]  Batch 9: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:29,191 : [INFO]  Batch 9, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:29,192 : [INFO]  Batch 9, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:29,192 : [INFO]  ____________________________________ Batch 9: round 2 finished ____________________________________
+2023-03-27 13:18:30,941 : [INFO]  Batch 9: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:30,964 : [INFO]  Batch 9: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:30,964 : [INFO]  Batch 9, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:30,965 : [INFO]  Batch 9, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:30,965 : [INFO]  ____________________________________ Batch 9: round 3 finished ____________________________________
+2023-03-27 13:18:30,965 : [INFO]  #################################### Batch 9: sent the final model to clients ####################################
+2023-03-27 13:18:36,257 : [INFO]  Batch 10: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:36,265 : [INFO]  Batch 10: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:36,265 : [INFO]  Batch 10, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:36,265 : [INFO]  Batch 10, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:36,266 : [INFO]  ____________________________________ Batch 10: round 1 finished ____________________________________
+2023-03-27 13:18:37,960 : [INFO]  Batch 10: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:37,961 : [INFO]  Batch 10: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:37,962 : [INFO]  Batch 10, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:37,962 : [INFO]  Batch 10, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:37,962 : [INFO]  ____________________________________ Batch 10: round 2 finished ____________________________________
+2023-03-27 13:18:39,705 : [INFO]  Batch 10: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:39,716 : [INFO]  Batch 10: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:39,716 : [INFO]  Batch 10, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:39,716 : [INFO]  Batch 10, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:39,717 : [INFO]  ____________________________________ Batch 10: round 3 finished ____________________________________
+2023-03-27 13:18:39,717 : [INFO]  #################################### Batch 10: sent the final model to clients ####################################
+2023-03-27 13:18:44,926 : [INFO]  Batch 11: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:45,002 : [INFO]  Batch 11: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:45,002 : [INFO]  Batch 11, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:45,002 : [INFO]  Batch 11, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:45,002 : [INFO]  ____________________________________ Batch 11: round 1 finished ____________________________________
+2023-03-27 13:18:46,667 : [INFO]  Batch 11: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:46,724 : [INFO]  Batch 11: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:46,724 : [INFO]  Batch 11, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:46,724 : [INFO]  Batch 11, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:46,724 : [INFO]  ____________________________________ Batch 11: round 2 finished ____________________________________
+2023-03-27 13:18:48,417 : [INFO]  Batch 11: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:48,476 : [INFO]  Batch 11: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:48,477 : [INFO]  Batch 11, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:48,477 : [INFO]  Batch 11, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:48,477 : [INFO]  ____________________________________ Batch 11: round 3 finished ____________________________________
+2023-03-27 13:18:48,477 : [INFO]  #################################### Batch 11: sent the final model to clients ####################################
+2023-03-27 13:18:53,739 : [INFO]  Batch 12: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:53,745 : [INFO]  Batch 12: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:53,745 : [INFO]  Batch 12, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:53,745 : [INFO]  Batch 12, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:53,746 : [INFO]  ____________________________________ Batch 12: round 1 finished ____________________________________
+2023-03-27 13:18:55,463 : [INFO]  Batch 12: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:55,473 : [INFO]  Batch 12: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:55,473 : [INFO]  Batch 12, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:55,474 : [INFO]  Batch 12, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:55,474 : [INFO]  ____________________________________ Batch 12: round 2 finished ____________________________________
+2023-03-27 13:18:57,162 : [INFO]  Batch 12: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:18:57,190 : [INFO]  Batch 12: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:18:57,191 : [INFO]  Batch 12, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:18:57,191 : [INFO]  Batch 12, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:18:57,191 : [INFO]  ____________________________________ Batch 12: round 3 finished ____________________________________
+2023-03-27 13:18:57,191 : [INFO]  #################################### Batch 12: sent the final model to clients ####################################
+2023-03-27 13:19:02,425 : [INFO]  Batch 13: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:02,455 : [INFO]  Batch 13: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:02,455 : [INFO]  Batch 13, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:02,455 : [INFO]  Batch 13, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:02,455 : [INFO]  ____________________________________ Batch 13: round 1 finished ____________________________________
+2023-03-27 13:19:04,084 : [INFO]  Batch 13: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:04,090 : [INFO]  Batch 13: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:04,090 : [INFO]  Batch 13, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:04,090 : [INFO]  Batch 13, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:04,090 : [INFO]  ____________________________________ Batch 13: round 2 finished ____________________________________
+2023-03-27 13:19:05,724 : [INFO]  Batch 13: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:05,771 : [INFO]  Batch 13: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:05,772 : [INFO]  Batch 13, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:05,772 : [INFO]  Batch 13, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:05,772 : [INFO]  ____________________________________ Batch 13: round 3 finished ____________________________________
+2023-03-27 13:19:05,772 : [INFO]  #################################### Batch 13: sent the final model to clients ####################################
+2023-03-27 13:19:10,959 : [INFO]  Batch 14: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:10,976 : [INFO]  Batch 14: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:10,976 : [INFO]  Batch 14, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:10,976 : [INFO]  Batch 14, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:10,977 : [INFO]  ____________________________________ Batch 14: round 1 finished ____________________________________
+2023-03-27 13:19:12,632 : [INFO]  Batch 14: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:12,686 : [INFO]  Batch 14: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:12,686 : [INFO]  Batch 14, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:12,687 : [INFO]  Batch 14, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:12,687 : [INFO]  ____________________________________ Batch 14: round 2 finished ____________________________________
+2023-03-27 13:19:14,381 : [INFO]  Batch 14: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:14,424 : [INFO]  Batch 14: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:14,424 : [INFO]  Batch 14, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:14,424 : [INFO]  Batch 14, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:14,424 : [INFO]  ____________________________________ Batch 14: round 3 finished ____________________________________
+2023-03-27 13:19:14,424 : [INFO]  #################################### Batch 14: sent the final model to clients ####################################
+2023-03-27 13:19:19,681 : [INFO]  Batch 15: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:19,692 : [INFO]  Batch 15: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:19,692 : [INFO]  Batch 15, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:19,693 : [INFO]  Batch 15, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:19,693 : [INFO]  ____________________________________ Batch 15: round 1 finished ____________________________________
+2023-03-27 13:19:21,378 : [INFO]  Batch 15: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:21,396 : [INFO]  Batch 15: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:21,397 : [INFO]  Batch 15, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:21,397 : [INFO]  Batch 15, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:21,397 : [INFO]  ____________________________________ Batch 15: round 2 finished ____________________________________
+2023-03-27 13:19:23,075 : [INFO]  Batch 15: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:23,104 : [INFO]  Batch 15: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:23,105 : [INFO]  Batch 15, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:23,105 : [INFO]  Batch 15, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:23,105 : [INFO]  ____________________________________ Batch 15: round 3 finished ____________________________________
+2023-03-27 13:19:23,105 : [INFO]  #################################### Batch 15: sent the final model to clients ####################################
+2023-03-27 13:19:28,350 : [INFO]  Batch 16: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:28,351 : [INFO]  Batch 16: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:28,351 : [INFO]  Batch 16, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:28,351 : [INFO]  Batch 16, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:28,351 : [INFO]  ____________________________________ Batch 16: round 1 finished ____________________________________
+2023-03-27 13:19:30,006 : [INFO]  Batch 16: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:30,041 : [INFO]  Batch 16: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:30,041 : [INFO]  Batch 16, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:30,041 : [INFO]  Batch 16, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:30,041 : [INFO]  ____________________________________ Batch 16: round 2 finished ____________________________________
+2023-03-27 13:19:31,713 : [INFO]  Batch 16: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:31,741 : [INFO]  Batch 16: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:31,741 : [INFO]  Batch 16, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:31,741 : [INFO]  Batch 16, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:31,742 : [INFO]  ____________________________________ Batch 16: round 3 finished ____________________________________
+2023-03-27 13:19:31,742 : [INFO]  #################################### Batch 16: sent the final model to clients ####################################
+2023-03-27 13:19:36,947 : [INFO]  Batch 17: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:36,953 : [INFO]  Batch 17: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:36,954 : [INFO]  Batch 17, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:36,954 : [INFO]  Batch 17, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:36,954 : [INFO]  ____________________________________ Batch 17: round 1 finished ____________________________________
+2023-03-27 13:19:38,651 : [INFO]  Batch 17: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:38,656 : [INFO]  Batch 17: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:38,657 : [INFO]  Batch 17, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:38,657 : [INFO]  Batch 17, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:38,657 : [INFO]  ____________________________________ Batch 17: round 2 finished ____________________________________
+2023-03-27 13:19:40,374 : [INFO]  Batch 17: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:40,385 : [INFO]  Batch 17: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:40,385 : [INFO]  Batch 17, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:40,385 : [INFO]  Batch 17, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:40,385 : [INFO]  ____________________________________ Batch 17: round 3 finished ____________________________________
+2023-03-27 13:19:40,386 : [INFO]  #################################### Batch 17: sent the final model to clients ####################################
+2023-03-27 13:19:45,578 : [INFO]  Batch 18: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:45,581 : [INFO]  Batch 18: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:45,581 : [INFO]  Batch 18, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:45,581 : [INFO]  Batch 18, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:45,581 : [INFO]  ____________________________________ Batch 18: round 1 finished ____________________________________
+2023-03-27 13:19:47,237 : [INFO]  Batch 18: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:47,261 : [INFO]  Batch 18: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:47,261 : [INFO]  Batch 18, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:47,261 : [INFO]  Batch 18, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:47,261 : [INFO]  ____________________________________ Batch 18: round 2 finished ____________________________________
+2023-03-27 13:19:48,919 : [INFO]  Batch 18: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:48,923 : [INFO]  Batch 18: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:48,923 : [INFO]  Batch 18, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:48,924 : [INFO]  Batch 18, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:48,924 : [INFO]  ____________________________________ Batch 18: round 3 finished ____________________________________
+2023-03-27 13:19:48,924 : [INFO]  #################################### Batch 18: sent the final model to clients ####################################
+2023-03-27 13:19:54,118 : [INFO]  Batch 19: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:54,137 : [INFO]  Batch 19: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:54,138 : [INFO]  Batch 19, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:54,138 : [INFO]  Batch 19, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:54,138 : [INFO]  ____________________________________ Batch 19: round 1 finished ____________________________________
+2023-03-27 13:19:55,757 : [INFO]  Batch 19: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:55,831 : [INFO]  Batch 19: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:55,832 : [INFO]  Batch 19, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:55,832 : [INFO]  Batch 19, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:55,832 : [INFO]  ____________________________________ Batch 19: round 2 finished ____________________________________
+2023-03-27 13:19:57,444 : [INFO]  Batch 19: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:19:57,512 : [INFO]  Batch 19: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:19:57,512 : [INFO]  Batch 19, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:19:57,513 : [INFO]  Batch 19, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:19:57,513 : [INFO]  ____________________________________ Batch 19: round 3 finished ____________________________________
+2023-03-27 13:19:57,513 : [INFO]  #################################### Batch 19: sent the final model to clients ####################################
+2023-03-27 13:20:02,794 : [INFO]  Batch 20: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:02,828 : [INFO]  Batch 20: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:02,828 : [INFO]  Batch 20, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:02,828 : [INFO]  Batch 20, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:02,828 : [INFO]  ____________________________________ Batch 20: round 1 finished ____________________________________
+2023-03-27 13:20:04,550 : [INFO]  Batch 20: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:04,583 : [INFO]  Batch 20: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:04,583 : [INFO]  Batch 20, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:04,583 : [INFO]  Batch 20, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:04,583 : [INFO]  ____________________________________ Batch 20: round 2 finished ____________________________________
+2023-03-27 13:20:06,251 : [INFO]  Batch 20: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:06,292 : [INFO]  Batch 20: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:06,293 : [INFO]  Batch 20, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:06,293 : [INFO]  Batch 20, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:06,293 : [INFO]  ____________________________________ Batch 20: round 3 finished ____________________________________
+2023-03-27 13:20:06,293 : [INFO]  #################################### Batch 20: sent the final model to clients ####################################
+2023-03-27 13:20:11,600 : [INFO]  Batch 21: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:11,614 : [INFO]  Batch 21: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:11,614 : [INFO]  Batch 21, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:11,614 : [INFO]  Batch 21, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:11,614 : [INFO]  ____________________________________ Batch 21: round 1 finished ____________________________________
+2023-03-27 13:20:13,309 : [INFO]  Batch 21: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:13,324 : [INFO]  Batch 21: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:13,324 : [INFO]  Batch 21, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:13,324 : [INFO]  Batch 21, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:13,324 : [INFO]  ____________________________________ Batch 21: round 2 finished ____________________________________
+2023-03-27 13:20:15,037 : [INFO]  Batch 21: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:15,080 : [INFO]  Batch 21: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:15,081 : [INFO]  Batch 21, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:15,081 : [INFO]  Batch 21, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:15,081 : [INFO]  ____________________________________ Batch 21: round 3 finished ____________________________________
+2023-03-27 13:20:15,081 : [INFO]  #################################### Batch 21: sent the final model to clients ####################################
+2023-03-27 13:20:20,261 : [INFO]  Batch 22: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:20,359 : [INFO]  Batch 22: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:20,360 : [INFO]  Batch 22, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:20,360 : [INFO]  Batch 22, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:20,360 : [INFO]  ____________________________________ Batch 22: round 1 finished ____________________________________
+2023-03-27 13:20:22,153 : [INFO]  Batch 22: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:22,237 : [INFO]  Batch 22: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:22,237 : [INFO]  Batch 22, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:22,237 : [INFO]  Batch 22, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:22,237 : [INFO]  ____________________________________ Batch 22: round 2 finished ____________________________________
+2023-03-27 13:20:23,877 : [INFO]  Batch 22: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:23,929 : [INFO]  Batch 22: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:23,929 : [INFO]  Batch 22, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:23,929 : [INFO]  Batch 22, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:23,929 : [INFO]  ____________________________________ Batch 22: round 3 finished ____________________________________
+2023-03-27 13:20:23,929 : [INFO]  #################################### Batch 22: sent the final model to clients ####################################
+2023-03-27 13:20:29,182 : [INFO]  Batch 23: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:29,222 : [INFO]  Batch 23: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:29,222 : [INFO]  Batch 23, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:29,222 : [INFO]  Batch 23, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:29,222 : [INFO]  ____________________________________ Batch 23: round 1 finished ____________________________________
+2023-03-27 13:20:30,941 : [INFO]  Batch 23: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:30,987 : [INFO]  Batch 23: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:30,987 : [INFO]  Batch 23, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:30,987 : [INFO]  Batch 23, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:30,987 : [INFO]  ____________________________________ Batch 23: round 2 finished ____________________________________
+2023-03-27 13:20:32,681 : [INFO]  Batch 23: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:32,696 : [INFO]  Batch 23: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:32,696 : [INFO]  Batch 23, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:32,696 : [INFO]  Batch 23, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:32,696 : [INFO]  ____________________________________ Batch 23: round 3 finished ____________________________________
+2023-03-27 13:20:32,696 : [INFO]  #################################### Batch 23: sent the final model to clients ####################################
+2023-03-27 13:20:37,992 : [INFO]  Batch 24: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:37,993 : [INFO]  Batch 24: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:37,993 : [INFO]  Batch 24, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:37,993 : [INFO]  Batch 24, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:37,993 : [INFO]  ____________________________________ Batch 24: round 1 finished ____________________________________
+2023-03-27 13:20:39,658 : [INFO]  Batch 24: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:39,663 : [INFO]  Batch 24: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:39,663 : [INFO]  Batch 24, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:39,663 : [INFO]  Batch 24, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:39,663 : [INFO]  ____________________________________ Batch 24: round 2 finished ____________________________________
+2023-03-27 13:20:41,343 : [INFO]  Batch 24: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:41,350 : [INFO]  Batch 24: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:41,351 : [INFO]  Batch 24, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:41,351 : [INFO]  Batch 24, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:41,351 : [INFO]  ____________________________________ Batch 24: round 3 finished ____________________________________
+2023-03-27 13:20:41,351 : [INFO]  #################################### Batch 24: sent the final model to clients ####################################
+2023-03-27 13:20:46,614 : [INFO]  Batch 25: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:46,633 : [INFO]  Batch 25: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:46,634 : [INFO]  Batch 25, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:46,634 : [INFO]  Batch 25, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:46,634 : [INFO]  ____________________________________ Batch 25: round 1 finished ____________________________________
+2023-03-27 13:20:48,412 : [INFO]  Batch 25: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:48,413 : [INFO]  Batch 25: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:48,413 : [INFO]  Batch 25, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:48,413 : [INFO]  Batch 25, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:48,413 : [INFO]  ____________________________________ Batch 25: round 2 finished ____________________________________
+2023-03-27 13:20:50,209 : [INFO]  Batch 25: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:50,224 : [INFO]  Batch 25: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:50,224 : [INFO]  Batch 25, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:50,225 : [INFO]  Batch 25, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:50,225 : [INFO]  ____________________________________ Batch 25: round 3 finished ____________________________________
+2023-03-27 13:20:50,225 : [INFO]  #################################### Batch 25: sent the final model to clients ####################################
+2023-03-27 13:20:55,600 : [INFO]  Batch 26: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:55,654 : [INFO]  Batch 26: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:55,655 : [INFO]  Batch 26, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:55,655 : [INFO]  Batch 26, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:55,655 : [INFO]  ____________________________________ Batch 26: round 1 finished ____________________________________
+2023-03-27 13:20:57,407 : [INFO]  Batch 26: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:57,416 : [INFO]  Batch 26: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:57,416 : [INFO]  Batch 26, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:57,417 : [INFO]  Batch 26, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:57,417 : [INFO]  ____________________________________ Batch 26: round 2 finished ____________________________________
+2023-03-27 13:20:59,206 : [INFO]  Batch 26: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:20:59,207 : [INFO]  Batch 26: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:20:59,208 : [INFO]  Batch 26, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:20:59,208 : [INFO]  Batch 26, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:20:59,208 : [INFO]  ____________________________________ Batch 26: round 3 finished ____________________________________
+2023-03-27 13:20:59,208 : [INFO]  #################################### Batch 26: sent the final model to clients ####################################
+2023-03-27 13:21:04,577 : [INFO]  Batch 27: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:04,628 : [INFO]  Batch 27: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:04,629 : [INFO]  Batch 27, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:04,629 : [INFO]  Batch 27, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:04,629 : [INFO]  ____________________________________ Batch 27: round 1 finished ____________________________________
+2023-03-27 13:21:06,295 : [INFO]  Batch 27: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:06,336 : [INFO]  Batch 27: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:06,336 : [INFO]  Batch 27, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:06,336 : [INFO]  Batch 27, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:06,336 : [INFO]  ____________________________________ Batch 27: round 2 finished ____________________________________
+2023-03-27 13:21:07,983 : [INFO]  Batch 27: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:08,052 : [INFO]  Batch 27: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:08,053 : [INFO]  Batch 27, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:08,053 : [INFO]  Batch 27, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:08,053 : [INFO]  ____________________________________ Batch 27: round 3 finished ____________________________________
+2023-03-27 13:21:08,053 : [INFO]  #################################### Batch 27: sent the final model to clients ####################################
+2023-03-27 13:21:13,272 : [INFO]  Batch 28: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:13,298 : [INFO]  Batch 28: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:13,298 : [INFO]  Batch 28, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:13,298 : [INFO]  Batch 28, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:13,298 : [INFO]  ____________________________________ Batch 28: round 1 finished ____________________________________
+2023-03-27 13:21:14,961 : [INFO]  Batch 28: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:14,962 : [INFO]  Batch 28: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:14,962 : [INFO]  Batch 28, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:14,962 : [INFO]  Batch 28, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:14,962 : [INFO]  ____________________________________ Batch 28: round 2 finished ____________________________________
+2023-03-27 13:21:16,683 : [INFO]  Batch 28: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:16,687 : [INFO]  Batch 28: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:16,687 : [INFO]  Batch 28, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:16,687 : [INFO]  Batch 28, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:16,687 : [INFO]  ____________________________________ Batch 28: round 3 finished ____________________________________
+2023-03-27 13:21:16,687 : [INFO]  #################################### Batch 28: sent the final model to clients ####################################
+2023-03-27 13:21:22,072 : [INFO]  Batch 29: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:22,141 : [INFO]  Batch 29: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:22,141 : [INFO]  Batch 29, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:22,141 : [INFO]  Batch 29, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:22,141 : [INFO]  ____________________________________ Batch 29: round 1 finished ____________________________________
+2023-03-27 13:21:23,831 : [INFO]  Batch 29: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:23,891 : [INFO]  Batch 29: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:23,891 : [INFO]  Batch 29, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:23,891 : [INFO]  Batch 29, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:23,891 : [INFO]  ____________________________________ Batch 29: round 2 finished ____________________________________
+2023-03-27 13:21:25,590 : [INFO]  Batch 29: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:25,658 : [INFO]  Batch 29: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:25,659 : [INFO]  Batch 29, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:25,659 : [INFO]  Batch 29, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:25,659 : [INFO]  ____________________________________ Batch 29: round 3 finished ____________________________________
+2023-03-27 13:21:25,659 : [INFO]  #################################### Batch 29: sent the final model to clients ####################################
+2023-03-27 13:21:30,932 : [INFO]  Batch 30: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:30,948 : [INFO]  Batch 30: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:30,948 : [INFO]  Batch 30, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:30,948 : [INFO]  Batch 30, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:30,948 : [INFO]  ____________________________________ Batch 30: round 1 finished ____________________________________
+2023-03-27 13:21:32,600 : [INFO]  Batch 30: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:32,615 : [INFO]  Batch 30: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:32,615 : [INFO]  Batch 30, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:32,615 : [INFO]  Batch 30, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:32,615 : [INFO]  ____________________________________ Batch 30: round 2 finished ____________________________________
+2023-03-27 13:21:34,296 : [INFO]  Batch 30: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:34,349 : [INFO]  Batch 30: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:34,349 : [INFO]  Batch 30, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:34,350 : [INFO]  Batch 30, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:34,350 : [INFO]  ____________________________________ Batch 30: round 3 finished ____________________________________
+2023-03-27 13:21:34,350 : [INFO]  #################################### Batch 30: sent the final model to clients ####################################
+2023-03-27 13:21:39,597 : [INFO]  Batch 31: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:39,631 : [INFO]  Batch 31: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:39,631 : [INFO]  Batch 31, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:39,631 : [INFO]  Batch 31, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:39,631 : [INFO]  ____________________________________ Batch 31: round 1 finished ____________________________________
+2023-03-27 13:21:41,301 : [INFO]  Batch 31: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:41,301 : [INFO]  Batch 31: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:41,302 : [INFO]  Batch 31, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:41,302 : [INFO]  Batch 31, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:41,302 : [INFO]  ____________________________________ Batch 31: round 2 finished ____________________________________
+2023-03-27 13:21:43,033 : [INFO]  Batch 31: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:43,057 : [INFO]  Batch 31: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:43,058 : [INFO]  Batch 31, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:43,058 : [INFO]  Batch 31, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:43,058 : [INFO]  ____________________________________ Batch 31: round 3 finished ____________________________________
+2023-03-27 13:21:43,058 : [INFO]  #################################### Batch 31: sent the final model to clients ####################################
+2023-03-27 13:21:48,369 : [INFO]  Batch 32: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:48,439 : [INFO]  Batch 32: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:48,440 : [INFO]  Batch 32, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:48,440 : [INFO]  Batch 32, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:48,440 : [INFO]  ____________________________________ Batch 32: round 1 finished ____________________________________
+2023-03-27 13:21:50,161 : [INFO]  Batch 32: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:50,254 : [INFO]  Batch 32: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:50,255 : [INFO]  Batch 32, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:50,255 : [INFO]  Batch 32, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:50,255 : [INFO]  ____________________________________ Batch 32: round 2 finished ____________________________________
+2023-03-27 13:21:51,934 : [INFO]  Batch 32: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:51,985 : [INFO]  Batch 32: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:51,985 : [INFO]  Batch 32, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:51,986 : [INFO]  Batch 32, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:51,986 : [INFO]  ____________________________________ Batch 32: round 3 finished ____________________________________
+2023-03-27 13:21:51,986 : [INFO]  #################################### Batch 32: sent the final model to clients ####################################
+2023-03-27 13:21:57,283 : [INFO]  Batch 33: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:57,317 : [INFO]  Batch 33: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:57,317 : [INFO]  Batch 33, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:57,317 : [INFO]  Batch 33, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:57,317 : [INFO]  ____________________________________ Batch 33: round 1 finished ____________________________________
+2023-03-27 13:21:59,001 : [INFO]  Batch 33: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:21:59,021 : [INFO]  Batch 33: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:21:59,022 : [INFO]  Batch 33, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:21:59,022 : [INFO]  Batch 33, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:21:59,022 : [INFO]  ____________________________________ Batch 33: round 2 finished ____________________________________
+2023-03-27 13:22:00,704 : [INFO]  Batch 33: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:00,715 : [INFO]  Batch 33: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:00,716 : [INFO]  Batch 33, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:00,716 : [INFO]  Batch 33, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:00,716 : [INFO]  ____________________________________ Batch 33: round 3 finished ____________________________________
+2023-03-27 13:22:00,716 : [INFO]  #################################### Batch 33: sent the final model to clients ####################################
+2023-03-27 13:22:06,014 : [INFO]  Batch 34: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:06,015 : [INFO]  Batch 34: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:06,015 : [INFO]  Batch 34, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:06,015 : [INFO]  Batch 34, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:06,015 : [INFO]  ____________________________________ Batch 34: round 1 finished ____________________________________
+2023-03-27 13:22:07,718 : [INFO]  Batch 34: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:07,719 : [INFO]  Batch 34: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:07,720 : [INFO]  Batch 34, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:07,720 : [INFO]  Batch 34, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:07,720 : [INFO]  ____________________________________ Batch 34: round 2 finished ____________________________________
+2023-03-27 13:22:09,403 : [INFO]  Batch 34: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:09,404 : [INFO]  Batch 34: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:09,404 : [INFO]  Batch 34, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:09,404 : [INFO]  Batch 34, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:09,404 : [INFO]  ____________________________________ Batch 34: round 3 finished ____________________________________
+2023-03-27 13:22:09,404 : [INFO]  #################################### Batch 34: sent the final model to clients ####################################
+2023-03-27 13:22:14,637 : [INFO]  Batch 35: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:14,664 : [INFO]  Batch 35: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:14,664 : [INFO]  Batch 35, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:14,664 : [INFO]  Batch 35, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:14,664 : [INFO]  ____________________________________ Batch 35: round 1 finished ____________________________________
+2023-03-27 13:22:16,314 : [INFO]  Batch 35: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:16,343 : [INFO]  Batch 35: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:16,343 : [INFO]  Batch 35, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:16,344 : [INFO]  Batch 35, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:16,344 : [INFO]  ____________________________________ Batch 35: round 2 finished ____________________________________
+2023-03-27 13:22:17,977 : [INFO]  Batch 35: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:18,006 : [INFO]  Batch 35: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:18,006 : [INFO]  Batch 35, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:18,006 : [INFO]  Batch 35, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:18,006 : [INFO]  ____________________________________ Batch 35: round 3 finished ____________________________________
+2023-03-27 13:22:18,006 : [INFO]  #################################### Batch 35: sent the final model to clients ####################################
+2023-03-27 13:22:23,328 : [INFO]  Batch 36: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:23,329 : [INFO]  Batch 36: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:23,329 : [INFO]  Batch 36, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:23,329 : [INFO]  Batch 36, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:23,329 : [INFO]  ____________________________________ Batch 36: round 1 finished ____________________________________
+2023-03-27 13:22:25,041 : [INFO]  Batch 36: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:25,047 : [INFO]  Batch 36: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:25,047 : [INFO]  Batch 36, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:25,047 : [INFO]  Batch 36, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:25,047 : [INFO]  ____________________________________ Batch 36: round 2 finished ____________________________________
+2023-03-27 13:22:26,774 : [INFO]  Batch 36: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:26,777 : [INFO]  Batch 36: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:26,778 : [INFO]  Batch 36, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:26,778 : [INFO]  Batch 36, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:26,778 : [INFO]  ____________________________________ Batch 36: round 3 finished ____________________________________
+2023-03-27 13:22:26,778 : [INFO]  #################################### Batch 36: sent the final model to clients ####################################
+2023-03-27 13:22:32,007 : [INFO]  Batch 37: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:32,085 : [INFO]  Batch 37: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:32,085 : [INFO]  Batch 37, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:32,085 : [INFO]  Batch 37, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:32,085 : [INFO]  ____________________________________ Batch 37: round 1 finished ____________________________________
+2023-03-27 13:22:33,760 : [INFO]  Batch 37: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:33,762 : [INFO]  Batch 37: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:33,762 : [INFO]  Batch 37, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:33,762 : [INFO]  Batch 37, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:33,762 : [INFO]  ____________________________________ Batch 37: round 2 finished ____________________________________
+2023-03-27 13:22:35,448 : [INFO]  Batch 37: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:35,518 : [INFO]  Batch 37: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:35,518 : [INFO]  Batch 37, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:35,519 : [INFO]  Batch 37, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:35,519 : [INFO]  ____________________________________ Batch 37: round 3 finished ____________________________________
+2023-03-27 13:22:35,519 : [INFO]  #################################### Batch 37: sent the final model to clients ####################################
+2023-03-27 13:22:40,786 : [INFO]  Batch 38: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:40,788 : [INFO]  Batch 38: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:40,789 : [INFO]  Batch 38, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:40,789 : [INFO]  Batch 38, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:40,789 : [INFO]  ____________________________________ Batch 38: round 1 finished ____________________________________
+2023-03-27 13:22:42,524 : [INFO]  Batch 38: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:42,549 : [INFO]  Batch 38: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:42,550 : [INFO]  Batch 38, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:42,550 : [INFO]  Batch 38, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:42,550 : [INFO]  ____________________________________ Batch 38: round 2 finished ____________________________________
+2023-03-27 13:22:44,215 : [INFO]  Batch 38: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:44,245 : [INFO]  Batch 38: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:44,245 : [INFO]  Batch 38, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:44,245 : [INFO]  Batch 38, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:44,245 : [INFO]  ____________________________________ Batch 38: round 3 finished ____________________________________
+2023-03-27 13:22:44,246 : [INFO]  #################################### Batch 38: sent the final model to clients ####################################
+2023-03-27 13:22:49,540 : [INFO]  Batch 39: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:49,545 : [INFO]  Batch 39: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:49,546 : [INFO]  Batch 39, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:49,546 : [INFO]  Batch 39, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:49,546 : [INFO]  ____________________________________ Batch 39: round 1 finished ____________________________________
+2023-03-27 13:22:51,233 : [INFO]  Batch 39: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:51,244 : [INFO]  Batch 39: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:51,244 : [INFO]  Batch 39, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:51,244 : [INFO]  Batch 39, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:51,244 : [INFO]  ____________________________________ Batch 39: round 2 finished ____________________________________
+2023-03-27 13:22:52,943 : [INFO]  Batch 39: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:52,953 : [INFO]  Batch 39: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:52,953 : [INFO]  Batch 39, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:52,953 : [INFO]  Batch 39, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:52,953 : [INFO]  ____________________________________ Batch 39: round 3 finished ____________________________________
+2023-03-27 13:22:52,953 : [INFO]  #################################### Batch 39: sent the final model to clients ####################################
+2023-03-27 13:22:58,194 : [INFO]  Batch 40: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:58,277 : [INFO]  Batch 40: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:58,277 : [INFO]  Batch 40, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:58,278 : [INFO]  Batch 40, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:58,278 : [INFO]  ____________________________________ Batch 40: round 1 finished ____________________________________
+2023-03-27 13:22:59,907 : [INFO]  Batch 40: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:22:59,967 : [INFO]  Batch 40: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:22:59,967 : [INFO]  Batch 40, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:22:59,968 : [INFO]  Batch 40, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:22:59,968 : [INFO]  ____________________________________ Batch 40: round 2 finished ____________________________________
+2023-03-27 13:23:01,606 : [INFO]  Batch 40: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:01,656 : [INFO]  Batch 40: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:01,657 : [INFO]  Batch 40, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:01,657 : [INFO]  Batch 40, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:01,657 : [INFO]  ____________________________________ Batch 40: round 3 finished ____________________________________
+2023-03-27 13:23:01,657 : [INFO]  #################################### Batch 40: sent the final model to clients ####################################
+2023-03-27 13:23:06,913 : [INFO]  Batch 41: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:06,933 : [INFO]  Batch 41: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:06,933 : [INFO]  Batch 41, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:06,933 : [INFO]  Batch 41, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:06,933 : [INFO]  ____________________________________ Batch 41: round 1 finished ____________________________________
+2023-03-27 13:23:08,599 : [INFO]  Batch 41: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:08,607 : [INFO]  Batch 41: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:08,607 : [INFO]  Batch 41, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:08,608 : [INFO]  Batch 41, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:08,608 : [INFO]  ____________________________________ Batch 41: round 2 finished ____________________________________
+2023-03-27 13:23:10,245 : [INFO]  Batch 41: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:10,257 : [INFO]  Batch 41: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:10,258 : [INFO]  Batch 41, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:10,258 : [INFO]  Batch 41, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:10,258 : [INFO]  ____________________________________ Batch 41: round 3 finished ____________________________________
+2023-03-27 13:23:10,258 : [INFO]  #################################### Batch 41: sent the final model to clients ####################################
+2023-03-27 13:23:15,483 : [INFO]  Batch 42: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:15,541 : [INFO]  Batch 42: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:15,542 : [INFO]  Batch 42, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:15,542 : [INFO]  Batch 42, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:15,542 : [INFO]  ____________________________________ Batch 42: round 1 finished ____________________________________
+2023-03-27 13:23:17,246 : [INFO]  Batch 42: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:17,283 : [INFO]  Batch 42: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:17,286 : [INFO]  Batch 42, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:17,287 : [INFO]  Batch 42, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:17,287 : [INFO]  ____________________________________ Batch 42: round 2 finished ____________________________________
+2023-03-27 13:23:19,062 : [INFO]  Batch 42: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:19,095 : [INFO]  Batch 42: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:19,095 : [INFO]  Batch 42, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:19,095 : [INFO]  Batch 42, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:19,095 : [INFO]  ____________________________________ Batch 42: round 3 finished ____________________________________
+2023-03-27 13:23:19,095 : [INFO]  #################################### Batch 42: sent the final model to clients ####################################
+2023-03-27 13:23:24,382 : [INFO]  Batch 43: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:24,433 : [INFO]  Batch 43: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:24,433 : [INFO]  Batch 43, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:24,433 : [INFO]  Batch 43, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:24,433 : [INFO]  ____________________________________ Batch 43: round 1 finished ____________________________________
+2023-03-27 13:23:26,105 : [INFO]  Batch 43: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:26,116 : [INFO]  Batch 43: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:26,116 : [INFO]  Batch 43, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:26,117 : [INFO]  Batch 43, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:26,117 : [INFO]  ____________________________________ Batch 43: round 2 finished ____________________________________
+2023-03-27 13:23:27,801 : [INFO]  Batch 43: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:27,804 : [INFO]  Batch 43: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:27,805 : [INFO]  Batch 43, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:27,805 : [INFO]  Batch 43, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:27,805 : [INFO]  ____________________________________ Batch 43: round 3 finished ____________________________________
+2023-03-27 13:23:27,805 : [INFO]  #################################### Batch 43: sent the final model to clients ####################################
+2023-03-27 13:23:33,119 : [INFO]  Batch 44: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:33,134 : [INFO]  Batch 44: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:33,134 : [INFO]  Batch 44, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:33,134 : [INFO]  Batch 44, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:33,135 : [INFO]  ____________________________________ Batch 44: round 1 finished ____________________________________
+2023-03-27 13:23:34,817 : [INFO]  Batch 44: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:34,817 : [INFO]  Batch 44: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:34,818 : [INFO]  Batch 44, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:34,818 : [INFO]  Batch 44, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:34,818 : [INFO]  ____________________________________ Batch 44: round 2 finished ____________________________________
+2023-03-27 13:23:36,529 : [INFO]  Batch 44: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:36,557 : [INFO]  Batch 44: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:36,557 : [INFO]  Batch 44, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:36,557 : [INFO]  Batch 44, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:36,557 : [INFO]  ____________________________________ Batch 44: round 3 finished ____________________________________
+2023-03-27 13:23:36,558 : [INFO]  #################################### Batch 44: sent the final model to clients ####################################
+2023-03-27 13:23:41,853 : [INFO]  Batch 45: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:41,855 : [INFO]  Batch 45: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:41,856 : [INFO]  Batch 45, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:41,856 : [INFO]  Batch 45, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:41,856 : [INFO]  ____________________________________ Batch 45: round 1 finished ____________________________________
+2023-03-27 13:23:43,521 : [INFO]  Batch 45: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:43,578 : [INFO]  Batch 45: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:43,579 : [INFO]  Batch 45, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:43,579 : [INFO]  Batch 45, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:43,579 : [INFO]  ____________________________________ Batch 45: round 2 finished ____________________________________
+2023-03-27 13:23:45,229 : [INFO]  Batch 45: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:45,262 : [INFO]  Batch 45: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:45,263 : [INFO]  Batch 45, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:45,263 : [INFO]  Batch 45, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:45,263 : [INFO]  ____________________________________ Batch 45: round 3 finished ____________________________________
+2023-03-27 13:23:45,263 : [INFO]  #################################### Batch 45: sent the final model to clients ####################################
+2023-03-27 13:23:50,623 : [INFO]  Batch 46: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:50,757 : [INFO]  Batch 46: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:50,757 : [INFO]  Batch 46, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:50,757 : [INFO]  Batch 46, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:50,758 : [INFO]  ____________________________________ Batch 46: round 1 finished ____________________________________
+2023-03-27 13:23:52,400 : [INFO]  Batch 46: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:52,487 : [INFO]  Batch 46: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:52,488 : [INFO]  Batch 46, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:52,488 : [INFO]  Batch 46, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:52,488 : [INFO]  ____________________________________ Batch 46: round 2 finished ____________________________________
+2023-03-27 13:23:54,130 : [INFO]  Batch 46: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:54,215 : [INFO]  Batch 46: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:54,216 : [INFO]  Batch 46, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:54,216 : [INFO]  Batch 46, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:54,216 : [INFO]  ____________________________________ Batch 46: round 3 finished ____________________________________
+2023-03-27 13:23:54,216 : [INFO]  #################################### Batch 46: sent the final model to clients ####################################
+2023-03-27 13:23:59,496 : [INFO]  Batch 47: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:23:59,578 : [INFO]  Batch 47: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:23:59,578 : [INFO]  Batch 47, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:23:59,578 : [INFO]  Batch 47, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:23:59,578 : [INFO]  ____________________________________ Batch 47: round 1 finished ____________________________________
+2023-03-27 13:24:01,253 : [INFO]  Batch 47: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:01,278 : [INFO]  Batch 47: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:01,278 : [INFO]  Batch 47, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:01,279 : [INFO]  Batch 47, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:01,279 : [INFO]  ____________________________________ Batch 47: round 2 finished ____________________________________
+2023-03-27 13:24:02,888 : [INFO]  Batch 47: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:02,953 : [INFO]  Batch 47: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:02,953 : [INFO]  Batch 47, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:02,953 : [INFO]  Batch 47, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:02,953 : [INFO]  ____________________________________ Batch 47: round 3 finished ____________________________________
+2023-03-27 13:24:02,953 : [INFO]  #################################### Batch 47: sent the final model to clients ####################################
+2023-03-27 13:24:08,173 : [INFO]  Batch 48: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:08,310 : [INFO]  Batch 48: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:08,311 : [INFO]  Batch 48, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:08,311 : [INFO]  Batch 48, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:08,311 : [INFO]  ____________________________________ Batch 48: round 1 finished ____________________________________
+2023-03-27 13:24:09,946 : [INFO]  Batch 48: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:10,041 : [INFO]  Batch 48: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:10,042 : [INFO]  Batch 48, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:10,042 : [INFO]  Batch 48, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:10,042 : [INFO]  ____________________________________ Batch 48: round 2 finished ____________________________________
+2023-03-27 13:24:11,639 : [INFO]  Batch 48: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:11,740 : [INFO]  Batch 48: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:11,740 : [INFO]  Batch 48, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:11,740 : [INFO]  Batch 48, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:11,740 : [INFO]  ____________________________________ Batch 48: round 3 finished ____________________________________
+2023-03-27 13:24:11,740 : [INFO]  #################################### Batch 48: sent the final model to clients ####################################
+2023-03-27 13:24:16,996 : [INFO]  Batch 49: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:17,017 : [INFO]  Batch 49: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:17,017 : [INFO]  Batch 49, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:17,017 : [INFO]  Batch 49, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:17,017 : [INFO]  ____________________________________ Batch 49: round 1 finished ____________________________________
+2023-03-27 13:24:18,694 : [INFO]  Batch 49: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:18,730 : [INFO]  Batch 49: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:18,730 : [INFO]  Batch 49, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:18,731 : [INFO]  Batch 49, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:18,731 : [INFO]  ____________________________________ Batch 49: round 2 finished ____________________________________
+2023-03-27 13:24:20,393 : [INFO]  Batch 49: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:20,410 : [INFO]  Batch 49: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:20,410 : [INFO]  Batch 49, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:20,411 : [INFO]  Batch 49, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:20,411 : [INFO]  ____________________________________ Batch 49: round 3 finished ____________________________________
+2023-03-27 13:24:20,411 : [INFO]  #################################### Batch 49: sent the final model to clients ####################################
+2023-03-27 13:24:25,720 : [INFO]  Batch 50: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:25,748 : [INFO]  Batch 50: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:25,749 : [INFO]  Batch 50, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:25,749 : [INFO]  Batch 50, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:25,749 : [INFO]  ____________________________________ Batch 50: round 1 finished ____________________________________
+2023-03-27 13:24:27,398 : [INFO]  Batch 50: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:27,436 : [INFO]  Batch 50: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:27,436 : [INFO]  Batch 50, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:27,436 : [INFO]  Batch 50, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:27,436 : [INFO]  ____________________________________ Batch 50: round 2 finished ____________________________________
+2023-03-27 13:24:29,114 : [INFO]  Batch 50: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:29,131 : [INFO]  Batch 50: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:29,131 : [INFO]  Batch 50, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:29,131 : [INFO]  Batch 50, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:29,131 : [INFO]  ____________________________________ Batch 50: round 3 finished ____________________________________
+2023-03-27 13:24:29,131 : [INFO]  #################################### Batch 50: sent the final model to clients ####################################
+2023-03-27 13:24:34,472 : [INFO]  Batch 51: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:34,480 : [INFO]  Batch 51: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:34,480 : [INFO]  Batch 51, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:34,480 : [INFO]  Batch 51, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:34,481 : [INFO]  ____________________________________ Batch 51: round 1 finished ____________________________________
+2023-03-27 13:24:36,208 : [INFO]  Batch 51: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:36,244 : [INFO]  Batch 51: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:36,245 : [INFO]  Batch 51, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:36,245 : [INFO]  Batch 51, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:36,245 : [INFO]  ____________________________________ Batch 51: round 2 finished ____________________________________
+2023-03-27 13:24:37,886 : [INFO]  Batch 51: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:37,904 : [INFO]  Batch 51: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:37,904 : [INFO]  Batch 51, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:37,905 : [INFO]  Batch 51, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:37,905 : [INFO]  ____________________________________ Batch 51: round 3 finished ____________________________________
+2023-03-27 13:24:37,905 : [INFO]  #################################### Batch 51: sent the final model to clients ####################################
+2023-03-27 13:24:43,197 : [INFO]  Batch 52: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:43,205 : [INFO]  Batch 52: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:43,205 : [INFO]  Batch 52, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:43,206 : [INFO]  Batch 52, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:43,206 : [INFO]  ____________________________________ Batch 52: round 1 finished ____________________________________
+2023-03-27 13:24:44,855 : [INFO]  Batch 52: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:44,914 : [INFO]  Batch 52: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:44,914 : [INFO]  Batch 52, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:44,914 : [INFO]  Batch 52, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:44,914 : [INFO]  ____________________________________ Batch 52: round 2 finished ____________________________________
+2023-03-27 13:24:46,573 : [INFO]  Batch 52: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:46,590 : [INFO]  Batch 52: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:46,590 : [INFO]  Batch 52, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:46,590 : [INFO]  Batch 52, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:46,590 : [INFO]  ____________________________________ Batch 52: round 3 finished ____________________________________
+2023-03-27 13:24:46,590 : [INFO]  #################################### Batch 52: sent the final model to clients ####################################
+2023-03-27 13:24:51,895 : [INFO]  Batch 53: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:51,953 : [INFO]  Batch 53: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:51,954 : [INFO]  Batch 53, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:51,954 : [INFO]  Batch 53, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:51,954 : [INFO]  ____________________________________ Batch 53: round 1 finished ____________________________________
+2023-03-27 13:24:53,640 : [INFO]  Batch 53: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:53,669 : [INFO]  Batch 53: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:53,670 : [INFO]  Batch 53, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:53,670 : [INFO]  Batch 53, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:53,670 : [INFO]  ____________________________________ Batch 53: round 2 finished ____________________________________
+2023-03-27 13:24:55,322 : [INFO]  Batch 53: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:24:55,368 : [INFO]  Batch 53: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:24:55,369 : [INFO]  Batch 53, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:24:55,369 : [INFO]  Batch 53, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:24:55,369 : [INFO]  ____________________________________ Batch 53: round 3 finished ____________________________________
+2023-03-27 13:24:55,369 : [INFO]  #################################### Batch 53: sent the final model to clients ####################################
+2023-03-27 13:25:00,647 : [INFO]  Batch 54: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:00,669 : [INFO]  Batch 54: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:00,670 : [INFO]  Batch 54, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:00,670 : [INFO]  Batch 54, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:00,670 : [INFO]  ____________________________________ Batch 54: round 1 finished ____________________________________
+2023-03-27 13:25:02,311 : [INFO]  Batch 54: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:02,337 : [INFO]  Batch 54: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:02,337 : [INFO]  Batch 54, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:02,337 : [INFO]  Batch 54, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:02,337 : [INFO]  ____________________________________ Batch 54: round 2 finished ____________________________________
+2023-03-27 13:25:04,015 : [INFO]  Batch 54: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:04,028 : [INFO]  Batch 54: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:04,028 : [INFO]  Batch 54, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:04,029 : [INFO]  Batch 54, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:04,029 : [INFO]  ____________________________________ Batch 54: round 3 finished ____________________________________
+2023-03-27 13:25:04,029 : [INFO]  #################################### Batch 54: sent the final model to clients ####################################
+2023-03-27 13:25:09,325 : [INFO]  Batch 55: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:09,389 : [INFO]  Batch 55: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:09,389 : [INFO]  Batch 55, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:09,389 : [INFO]  Batch 55, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:09,389 : [INFO]  ____________________________________ Batch 55: round 1 finished ____________________________________
+2023-03-27 13:25:11,040 : [INFO]  Batch 55: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:11,083 : [INFO]  Batch 55: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:11,083 : [INFO]  Batch 55, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:11,083 : [INFO]  Batch 55, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:11,083 : [INFO]  ____________________________________ Batch 55: round 2 finished ____________________________________
+2023-03-27 13:25:12,701 : [INFO]  Batch 55: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:12,764 : [INFO]  Batch 55: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:12,764 : [INFO]  Batch 55, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:12,765 : [INFO]  Batch 55, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:12,765 : [INFO]  ____________________________________ Batch 55: round 3 finished ____________________________________
+2023-03-27 13:25:12,765 : [INFO]  #################################### Batch 55: sent the final model to clients ####################################
+2023-03-27 13:25:18,034 : [INFO]  Batch 56: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:18,077 : [INFO]  Batch 56: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:18,077 : [INFO]  Batch 56, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:18,077 : [INFO]  Batch 56, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:18,077 : [INFO]  ____________________________________ Batch 56: round 1 finished ____________________________________
+2023-03-27 13:25:19,727 : [INFO]  Batch 56: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:19,752 : [INFO]  Batch 56: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:19,753 : [INFO]  Batch 56, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:19,753 : [INFO]  Batch 56, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:19,753 : [INFO]  ____________________________________ Batch 56: round 2 finished ____________________________________
+2023-03-27 13:25:21,424 : [INFO]  Batch 56: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:21,432 : [INFO]  Batch 56: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:21,433 : [INFO]  Batch 56, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:21,433 : [INFO]  Batch 56, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:21,433 : [INFO]  ____________________________________ Batch 56: round 3 finished ____________________________________
+2023-03-27 13:25:21,433 : [INFO]  #################################### Batch 56: sent the final model to clients ####################################
+2023-03-27 13:25:26,790 : [INFO]  Batch 57: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:26,872 : [INFO]  Batch 57: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:26,872 : [INFO]  Batch 57, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:26,872 : [INFO]  Batch 57, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:26,873 : [INFO]  ____________________________________ Batch 57: round 1 finished ____________________________________
+2023-03-27 13:25:28,578 : [INFO]  Batch 57: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:28,587 : [INFO]  Batch 57: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:28,588 : [INFO]  Batch 57, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:28,588 : [INFO]  Batch 57, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:28,588 : [INFO]  ____________________________________ Batch 57: round 2 finished ____________________________________
+2023-03-27 13:25:30,260 : [INFO]  Batch 57: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:30,268 : [INFO]  Batch 57: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:30,268 : [INFO]  Batch 57, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:30,268 : [INFO]  Batch 57, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:30,268 : [INFO]  ____________________________________ Batch 57: round 3 finished ____________________________________
+2023-03-27 13:25:30,268 : [INFO]  #################################### Batch 57: sent the final model to clients ####################################
+2023-03-27 13:25:35,562 : [INFO]  Batch 58: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:35,614 : [INFO]  Batch 58: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:35,614 : [INFO]  Batch 58, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:35,614 : [INFO]  Batch 58, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:35,614 : [INFO]  ____________________________________ Batch 58: round 1 finished ____________________________________
+2023-03-27 13:25:37,294 : [INFO]  Batch 58: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:37,312 : [INFO]  Batch 58: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:37,312 : [INFO]  Batch 58, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:37,312 : [INFO]  Batch 58, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:37,312 : [INFO]  ____________________________________ Batch 58: round 2 finished ____________________________________
+2023-03-27 13:25:38,920 : [INFO]  Batch 58: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:38,933 : [INFO]  Batch 58: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:38,933 : [INFO]  Batch 58, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:38,933 : [INFO]  Batch 58, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:38,933 : [INFO]  ____________________________________ Batch 58: round 3 finished ____________________________________
+2023-03-27 13:25:38,933 : [INFO]  #################################### Batch 58: sent the final model to clients ####################################
+2023-03-27 13:25:44,240 : [INFO]  Batch 59: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:44,271 : [INFO]  Batch 59: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:44,271 : [INFO]  Batch 59, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:44,271 : [INFO]  Batch 59, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:44,271 : [INFO]  ____________________________________ Batch 59: round 1 finished ____________________________________
+2023-03-27 13:25:45,921 : [INFO]  Batch 59: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:45,922 : [INFO]  Batch 59: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:45,923 : [INFO]  Batch 59, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:45,923 : [INFO]  Batch 59, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:45,923 : [INFO]  ____________________________________ Batch 59: round 2 finished ____________________________________
+2023-03-27 13:25:47,575 : [INFO]  Batch 59: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:47,582 : [INFO]  Batch 59: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:47,583 : [INFO]  Batch 59, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:47,583 : [INFO]  Batch 59, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:47,583 : [INFO]  ____________________________________ Batch 59: round 3 finished ____________________________________
+2023-03-27 13:25:47,583 : [INFO]  #################################### Batch 59: sent the final model to clients ####################################
+2023-03-27 13:25:52,923 : [INFO]  Batch 60: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:52,939 : [INFO]  Batch 60: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:52,940 : [INFO]  Batch 60, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:52,940 : [INFO]  Batch 60, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:52,940 : [INFO]  ____________________________________ Batch 60: round 1 finished ____________________________________
+2023-03-27 13:25:54,624 : [INFO]  Batch 60: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:54,653 : [INFO]  Batch 60: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:54,654 : [INFO]  Batch 60, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:54,654 : [INFO]  Batch 60, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:54,654 : [INFO]  ____________________________________ Batch 60: round 2 finished ____________________________________
+2023-03-27 13:25:56,300 : [INFO]  Batch 60: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:25:56,338 : [INFO]  Batch 60: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:25:56,339 : [INFO]  Batch 60, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:25:56,339 : [INFO]  Batch 60, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:25:56,339 : [INFO]  ____________________________________ Batch 60: round 3 finished ____________________________________
+2023-03-27 13:25:56,339 : [INFO]  #################################### Batch 60: sent the final model to clients ####################################
+2023-03-27 13:26:01,642 : [INFO]  Batch 61: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:01,652 : [INFO]  Batch 61: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:01,652 : [INFO]  Batch 61, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:01,653 : [INFO]  Batch 61, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:01,653 : [INFO]  ____________________________________ Batch 61: round 1 finished ____________________________________
+2023-03-27 13:26:03,295 : [INFO]  Batch 61: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:03,332 : [INFO]  Batch 61: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:03,333 : [INFO]  Batch 61, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:03,333 : [INFO]  Batch 61, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:03,333 : [INFO]  ____________________________________ Batch 61: round 2 finished ____________________________________
+2023-03-27 13:26:04,995 : [INFO]  Batch 61: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:05,046 : [INFO]  Batch 61: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:05,046 : [INFO]  Batch 61, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:05,046 : [INFO]  Batch 61, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:05,046 : [INFO]  ____________________________________ Batch 61: round 3 finished ____________________________________
+2023-03-27 13:26:05,046 : [INFO]  #################################### Batch 61: sent the final model to clients ####################################
+2023-03-27 13:26:10,360 : [INFO]  Batch 62: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:10,430 : [INFO]  Batch 62: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:10,431 : [INFO]  Batch 62, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:10,431 : [INFO]  Batch 62, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:10,431 : [INFO]  ____________________________________ Batch 62: round 1 finished ____________________________________
+2023-03-27 13:26:12,096 : [INFO]  Batch 62: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:12,111 : [INFO]  Batch 62: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:12,112 : [INFO]  Batch 62, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:12,112 : [INFO]  Batch 62, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:12,112 : [INFO]  ____________________________________ Batch 62: round 2 finished ____________________________________
+2023-03-27 13:26:13,766 : [INFO]  Batch 62: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:13,795 : [INFO]  Batch 62: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:13,796 : [INFO]  Batch 62, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:13,796 : [INFO]  Batch 62, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:13,796 : [INFO]  ____________________________________ Batch 62: round 3 finished ____________________________________
+2023-03-27 13:26:13,796 : [INFO]  #################################### Batch 62: sent the final model to clients ####################################
+2023-03-27 13:26:19,123 : [INFO]  Batch 63: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:19,155 : [INFO]  Batch 63: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:19,156 : [INFO]  Batch 63, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:19,156 : [INFO]  Batch 63, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:19,156 : [INFO]  ____________________________________ Batch 63: round 1 finished ____________________________________
+2023-03-27 13:26:20,809 : [INFO]  Batch 63: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:20,812 : [INFO]  Batch 63: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:20,812 : [INFO]  Batch 63, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:20,812 : [INFO]  Batch 63, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:20,813 : [INFO]  ____________________________________ Batch 63: round 2 finished ____________________________________
+2023-03-27 13:26:22,517 : [INFO]  Batch 63: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:22,520 : [INFO]  Batch 63: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:22,520 : [INFO]  Batch 63, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:22,520 : [INFO]  Batch 63, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:22,520 : [INFO]  ____________________________________ Batch 63: round 3 finished ____________________________________
+2023-03-27 13:26:22,520 : [INFO]  #################################### Batch 63: sent the final model to clients ####################################
+2023-03-27 13:26:27,806 : [INFO]  Batch 64: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:27,897 : [INFO]  Batch 64: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:27,898 : [INFO]  Batch 64, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:27,898 : [INFO]  Batch 64, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:27,898 : [INFO]  ____________________________________ Batch 64: round 1 finished ____________________________________
+2023-03-27 13:26:29,537 : [INFO]  Batch 64: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:29,621 : [INFO]  Batch 64: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:29,621 : [INFO]  Batch 64, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:29,621 : [INFO]  Batch 64, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:29,622 : [INFO]  ____________________________________ Batch 64: round 2 finished ____________________________________
+2023-03-27 13:26:31,278 : [INFO]  Batch 64: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:31,332 : [INFO]  Batch 64: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:31,332 : [INFO]  Batch 64, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:31,333 : [INFO]  Batch 64, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:31,333 : [INFO]  ____________________________________ Batch 64: round 3 finished ____________________________________
+2023-03-27 13:26:31,333 : [INFO]  #################################### Batch 64: sent the final model to clients ####################################
+2023-03-27 13:26:36,664 : [INFO]  Batch 65: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:36,709 : [INFO]  Batch 65: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:36,709 : [INFO]  Batch 65, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:36,710 : [INFO]  Batch 65, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:36,710 : [INFO]  ____________________________________ Batch 65: round 1 finished ____________________________________
+2023-03-27 13:26:38,405 : [INFO]  Batch 65: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:38,430 : [INFO]  Batch 65: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:38,431 : [INFO]  Batch 65, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:38,431 : [INFO]  Batch 65, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:38,431 : [INFO]  ____________________________________ Batch 65: round 2 finished ____________________________________
+2023-03-27 13:26:40,098 : [INFO]  Batch 65: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:40,116 : [INFO]  Batch 65: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:40,116 : [INFO]  Batch 65, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:40,116 : [INFO]  Batch 65, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:40,116 : [INFO]  ____________________________________ Batch 65: round 3 finished ____________________________________
+2023-03-27 13:26:40,116 : [INFO]  #################################### Batch 65: sent the final model to clients ####################################
+2023-03-27 13:26:45,439 : [INFO]  Batch 66: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:45,465 : [INFO]  Batch 66: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:45,465 : [INFO]  Batch 66, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:45,465 : [INFO]  Batch 66, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:45,466 : [INFO]  ____________________________________ Batch 66: round 1 finished ____________________________________
+2023-03-27 13:26:47,128 : [INFO]  Batch 66: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:47,169 : [INFO]  Batch 66: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:47,169 : [INFO]  Batch 66, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:47,169 : [INFO]  Batch 66, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:47,169 : [INFO]  ____________________________________ Batch 66: round 2 finished ____________________________________
+2023-03-27 13:26:48,824 : [INFO]  Batch 66: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:48,827 : [INFO]  Batch 66: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:48,827 : [INFO]  Batch 66, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:48,828 : [INFO]  Batch 66, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:48,828 : [INFO]  ____________________________________ Batch 66: round 3 finished ____________________________________
+2023-03-27 13:26:48,828 : [INFO]  #################################### Batch 66: sent the final model to clients ####################################
+2023-03-27 13:26:54,151 : [INFO]  Batch 67: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:54,184 : [INFO]  Batch 67: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:54,184 : [INFO]  Batch 67, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:54,184 : [INFO]  Batch 67, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:54,184 : [INFO]  ____________________________________ Batch 67: round 1 finished ____________________________________
+2023-03-27 13:26:55,853 : [INFO]  Batch 67: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:55,871 : [INFO]  Batch 67: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:55,872 : [INFO]  Batch 67, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:55,872 : [INFO]  Batch 67, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:55,872 : [INFO]  ____________________________________ Batch 67: round 2 finished ____________________________________
+2023-03-27 13:26:57,515 : [INFO]  Batch 67: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:26:57,553 : [INFO]  Batch 67: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:26:57,554 : [INFO]  Batch 67, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:26:57,554 : [INFO]  Batch 67, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:26:57,554 : [INFO]  ____________________________________ Batch 67: round 3 finished ____________________________________
+2023-03-27 13:26:57,554 : [INFO]  #################################### Batch 67: sent the final model to clients ####################################
+2023-03-27 13:27:02,877 : [INFO]  Batch 68: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:02,969 : [INFO]  Batch 68: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:02,970 : [INFO]  Batch 68, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:02,970 : [INFO]  Batch 68, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:02,970 : [INFO]  ____________________________________ Batch 68: round 1 finished ____________________________________
+2023-03-27 13:27:04,611 : [INFO]  Batch 68: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:04,680 : [INFO]  Batch 68: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:04,680 : [INFO]  Batch 68, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:04,680 : [INFO]  Batch 68, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:04,680 : [INFO]  ____________________________________ Batch 68: round 2 finished ____________________________________
+2023-03-27 13:27:06,384 : [INFO]  Batch 68: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:06,429 : [INFO]  Batch 68: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:06,430 : [INFO]  Batch 68, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:06,430 : [INFO]  Batch 68, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:06,430 : [INFO]  ____________________________________ Batch 68: round 3 finished ____________________________________
+2023-03-27 13:27:06,430 : [INFO]  #################################### Batch 68: sent the final model to clients ####################################
+2023-03-27 13:27:11,684 : [INFO]  Batch 69: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:11,783 : [INFO]  Batch 69: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:11,783 : [INFO]  Batch 69, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:11,783 : [INFO]  Batch 69, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:11,783 : [INFO]  ____________________________________ Batch 69: round 1 finished ____________________________________
+2023-03-27 13:27:13,381 : [INFO]  Batch 69: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:13,402 : [INFO]  Batch 69: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:13,403 : [INFO]  Batch 69, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:13,403 : [INFO]  Batch 69, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:13,403 : [INFO]  ____________________________________ Batch 69: round 2 finished ____________________________________
+2023-03-27 13:27:15,026 : [INFO]  Batch 69: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:15,073 : [INFO]  Batch 69: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:15,074 : [INFO]  Batch 69, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:15,074 : [INFO]  Batch 69, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:15,074 : [INFO]  ____________________________________ Batch 69: round 3 finished ____________________________________
+2023-03-27 13:27:15,074 : [INFO]  #################################### Batch 69: sent the final model to clients ####################################
+2023-03-27 13:27:20,354 : [INFO]  Batch 70: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:20,397 : [INFO]  Batch 70: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:20,398 : [INFO]  Batch 70, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:20,398 : [INFO]  Batch 70, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:20,398 : [INFO]  ____________________________________ Batch 70: round 1 finished ____________________________________
+2023-03-27 13:27:22,074 : [INFO]  Batch 70: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:22,077 : [INFO]  Batch 70: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:22,077 : [INFO]  Batch 70, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:22,077 : [INFO]  Batch 70, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:22,077 : [INFO]  ____________________________________ Batch 70: round 2 finished ____________________________________
+2023-03-27 13:27:23,746 : [INFO]  Batch 70: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:23,748 : [INFO]  Batch 70: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:23,749 : [INFO]  Batch 70, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:23,749 : [INFO]  Batch 70, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:23,749 : [INFO]  ____________________________________ Batch 70: round 3 finished ____________________________________
+2023-03-27 13:27:23,749 : [INFO]  #################################### Batch 70: sent the final model to clients ####################################
+2023-03-27 13:27:29,107 : [INFO]  Batch 71: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:29,121 : [INFO]  Batch 71: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:29,122 : [INFO]  Batch 71, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:29,122 : [INFO]  Batch 71, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:29,122 : [INFO]  ____________________________________ Batch 71: round 1 finished ____________________________________
+2023-03-27 13:27:30,771 : [INFO]  Batch 71: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:30,788 : [INFO]  Batch 71: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:30,789 : [INFO]  Batch 71, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:30,789 : [INFO]  Batch 71, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:30,789 : [INFO]  ____________________________________ Batch 71: round 2 finished ____________________________________
+2023-03-27 13:27:32,447 : [INFO]  Batch 71: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:32,463 : [INFO]  Batch 71: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:32,463 : [INFO]  Batch 71, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:32,463 : [INFO]  Batch 71, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:32,463 : [INFO]  ____________________________________ Batch 71: round 3 finished ____________________________________
+2023-03-27 13:27:32,464 : [INFO]  #################################### Batch 71: sent the final model to clients ####################################
+2023-03-27 13:27:37,798 : [INFO]  Batch 72: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:37,833 : [INFO]  Batch 72: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:37,833 : [INFO]  Batch 72, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:37,834 : [INFO]  Batch 72, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:37,834 : [INFO]  ____________________________________ Batch 72: round 1 finished ____________________________________
+2023-03-27 13:27:39,540 : [INFO]  Batch 72: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:39,548 : [INFO]  Batch 72: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:39,549 : [INFO]  Batch 72, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:39,549 : [INFO]  Batch 72, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:39,549 : [INFO]  ____________________________________ Batch 72: round 2 finished ____________________________________
+2023-03-27 13:27:41,229 : [INFO]  Batch 72: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:41,235 : [INFO]  Batch 72: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:41,235 : [INFO]  Batch 72, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:41,236 : [INFO]  Batch 72, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:41,236 : [INFO]  ____________________________________ Batch 72: round 3 finished ____________________________________
+2023-03-27 13:27:41,236 : [INFO]  #################################### Batch 72: sent the final model to clients ####################################
+2023-03-27 13:27:46,564 : [INFO]  Batch 73: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:46,607 : [INFO]  Batch 73: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:46,607 : [INFO]  Batch 73, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:46,607 : [INFO]  Batch 73, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:46,608 : [INFO]  ____________________________________ Batch 73: round 1 finished ____________________________________
+2023-03-27 13:27:48,301 : [INFO]  Batch 73: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:48,349 : [INFO]  Batch 73: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:48,349 : [INFO]  Batch 73, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:48,349 : [INFO]  Batch 73, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:48,349 : [INFO]  ____________________________________ Batch 73: round 2 finished ____________________________________
+2023-03-27 13:27:50,033 : [INFO]  Batch 73: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:50,060 : [INFO]  Batch 73: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:50,061 : [INFO]  Batch 73, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:50,061 : [INFO]  Batch 73, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:50,061 : [INFO]  ____________________________________ Batch 73: round 3 finished ____________________________________
+2023-03-27 13:27:50,061 : [INFO]  #################################### Batch 73: sent the final model to clients ####################################
+2023-03-27 13:27:55,376 : [INFO]  Batch 74: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:55,393 : [INFO]  Batch 74: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:55,394 : [INFO]  Batch 74, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:55,394 : [INFO]  Batch 74, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:55,394 : [INFO]  ____________________________________ Batch 74: round 1 finished ____________________________________
+2023-03-27 13:27:57,064 : [INFO]  Batch 74: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:57,068 : [INFO]  Batch 74: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:57,068 : [INFO]  Batch 74, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:57,068 : [INFO]  Batch 74, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:57,068 : [INFO]  ____________________________________ Batch 74: round 2 finished ____________________________________
+2023-03-27 13:27:58,736 : [INFO]  Batch 74: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:27:58,739 : [INFO]  Batch 74: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:27:58,739 : [INFO]  Batch 74, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:27:58,739 : [INFO]  Batch 74, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:27:58,740 : [INFO]  ____________________________________ Batch 74: round 3 finished ____________________________________
+2023-03-27 13:27:58,740 : [INFO]  #################################### Batch 74: sent the final model to clients ####################################
+2023-03-27 13:28:04,059 : [INFO]  Batch 75: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:04,099 : [INFO]  Batch 75: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:04,100 : [INFO]  Batch 75, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:04,100 : [INFO]  Batch 75, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:04,100 : [INFO]  ____________________________________ Batch 75: round 1 finished ____________________________________
+2023-03-27 13:28:05,757 : [INFO]  Batch 75: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:05,773 : [INFO]  Batch 75: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:05,773 : [INFO]  Batch 75, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:05,773 : [INFO]  Batch 75, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:05,774 : [INFO]  ____________________________________ Batch 75: round 2 finished ____________________________________
+2023-03-27 13:28:07,442 : [INFO]  Batch 75: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:07,473 : [INFO]  Batch 75: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:07,474 : [INFO]  Batch 75, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:07,474 : [INFO]  Batch 75, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:07,474 : [INFO]  ____________________________________ Batch 75: round 3 finished ____________________________________
+2023-03-27 13:28:07,474 : [INFO]  #################################### Batch 75: sent the final model to clients ####################################
+2023-03-27 13:28:12,805 : [INFO]  Batch 76: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:12,833 : [INFO]  Batch 76: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:12,833 : [INFO]  Batch 76, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:12,833 : [INFO]  Batch 76, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:12,833 : [INFO]  ____________________________________ Batch 76: round 1 finished ____________________________________
+2023-03-27 13:28:14,531 : [INFO]  Batch 76: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:14,557 : [INFO]  Batch 76: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:14,557 : [INFO]  Batch 76, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:14,557 : [INFO]  Batch 76, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:14,558 : [INFO]  ____________________________________ Batch 76: round 2 finished ____________________________________
+2023-03-27 13:28:16,267 : [INFO]  Batch 76: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:16,289 : [INFO]  Batch 76: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:16,290 : [INFO]  Batch 76, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:16,290 : [INFO]  Batch 76, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:16,290 : [INFO]  ____________________________________ Batch 76: round 3 finished ____________________________________
+2023-03-27 13:28:16,290 : [INFO]  #################################### Batch 76: sent the final model to clients ####################################
+2023-03-27 13:28:21,658 : [INFO]  Batch 77: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:21,673 : [INFO]  Batch 77: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:21,673 : [INFO]  Batch 77, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:21,674 : [INFO]  Batch 77, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:21,674 : [INFO]  ____________________________________ Batch 77: round 1 finished ____________________________________
+2023-03-27 13:28:23,329 : [INFO]  Batch 77: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:23,352 : [INFO]  Batch 77: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:23,353 : [INFO]  Batch 77, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:23,353 : [INFO]  Batch 77, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:23,353 : [INFO]  ____________________________________ Batch 77: round 2 finished ____________________________________
+2023-03-27 13:28:24,999 : [INFO]  Batch 77: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:25,016 : [INFO]  Batch 77: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:25,017 : [INFO]  Batch 77, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:25,017 : [INFO]  Batch 77, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:25,017 : [INFO]  ____________________________________ Batch 77: round 3 finished ____________________________________
+2023-03-27 13:28:25,017 : [INFO]  #################################### Batch 77: sent the final model to clients ####################################
+2023-03-27 13:28:30,394 : [INFO]  Batch 78: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:30,410 : [INFO]  Batch 78: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:30,411 : [INFO]  Batch 78, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:30,411 : [INFO]  Batch 78, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:30,411 : [INFO]  ____________________________________ Batch 78: round 1 finished ____________________________________
+2023-03-27 13:28:32,080 : [INFO]  Batch 78: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:32,106 : [INFO]  Batch 78: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:32,107 : [INFO]  Batch 78, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:32,107 : [INFO]  Batch 78, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:32,107 : [INFO]  ____________________________________ Batch 78: round 2 finished ____________________________________
+2023-03-27 13:28:33,762 : [INFO]  Batch 78: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:33,779 : [INFO]  Batch 78: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:33,780 : [INFO]  Batch 78, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:33,780 : [INFO]  Batch 78, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:33,780 : [INFO]  ____________________________________ Batch 78: round 3 finished ____________________________________
+2023-03-27 13:28:33,780 : [INFO]  #################################### Batch 78: sent the final model to clients ####################################
+2023-03-27 13:28:39,185 : [INFO]  Batch 79: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:39,206 : [INFO]  Batch 79: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:39,207 : [INFO]  Batch 79, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:39,207 : [INFO]  Batch 79, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:39,207 : [INFO]  ____________________________________ Batch 79: round 1 finished ____________________________________
+2023-03-27 13:28:40,910 : [INFO]  Batch 79: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:40,942 : [INFO]  Batch 79: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:40,943 : [INFO]  Batch 79, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:40,943 : [INFO]  Batch 79, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:40,943 : [INFO]  ____________________________________ Batch 79: round 2 finished ____________________________________
+2023-03-27 13:28:42,642 : [INFO]  Batch 79: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:42,680 : [INFO]  Batch 79: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:42,680 : [INFO]  Batch 79, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:42,681 : [INFO]  Batch 79, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:42,681 : [INFO]  ____________________________________ Batch 79: round 3 finished ____________________________________
+2023-03-27 13:28:42,681 : [INFO]  #################################### Batch 79: sent the final model to clients ####################################
+2023-03-27 13:28:48,088 : [INFO]  Batch 80: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:48,093 : [INFO]  Batch 80: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:48,093 : [INFO]  Batch 80, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:48,094 : [INFO]  Batch 80, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:48,094 : [INFO]  ____________________________________ Batch 80: round 1 finished ____________________________________
+2023-03-27 13:28:49,768 : [INFO]  Batch 80: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:49,804 : [INFO]  Batch 80: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:49,804 : [INFO]  Batch 80, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:49,804 : [INFO]  Batch 80, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:49,804 : [INFO]  ____________________________________ Batch 80: round 2 finished ____________________________________
+2023-03-27 13:28:51,481 : [INFO]  Batch 80: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:51,516 : [INFO]  Batch 80: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:51,517 : [INFO]  Batch 80, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:51,517 : [INFO]  Batch 80, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:51,517 : [INFO]  ____________________________________ Batch 80: round 3 finished ____________________________________
+2023-03-27 13:28:51,517 : [INFO]  #################################### Batch 80: sent the final model to clients ####################################
+2023-03-27 13:28:56,896 : [INFO]  Batch 81: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:56,934 : [INFO]  Batch 81: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:56,935 : [INFO]  Batch 81, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:56,935 : [INFO]  Batch 81, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:56,935 : [INFO]  ____________________________________ Batch 81: round 1 finished ____________________________________
+2023-03-27 13:28:58,589 : [INFO]  Batch 81: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:28:58,600 : [INFO]  Batch 81: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:28:58,600 : [INFO]  Batch 81, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:28:58,600 : [INFO]  Batch 81, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:28:58,600 : [INFO]  ____________________________________ Batch 81: round 2 finished ____________________________________
+2023-03-27 13:29:00,304 : [INFO]  Batch 81: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:00,322 : [INFO]  Batch 81: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:00,323 : [INFO]  Batch 81, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:00,323 : [INFO]  Batch 81, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:00,323 : [INFO]  ____________________________________ Batch 81: round 3 finished ____________________________________
+2023-03-27 13:29:00,323 : [INFO]  #################################### Batch 81: sent the final model to clients ####################################
+2023-03-27 13:29:05,715 : [INFO]  Batch 82: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:05,743 : [INFO]  Batch 82: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:05,744 : [INFO]  Batch 82, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:05,744 : [INFO]  Batch 82, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:05,744 : [INFO]  ____________________________________ Batch 82: round 1 finished ____________________________________
+2023-03-27 13:29:07,444 : [INFO]  Batch 82: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:07,455 : [INFO]  Batch 82: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:07,455 : [INFO]  Batch 82, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:07,455 : [INFO]  Batch 82, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:07,455 : [INFO]  ____________________________________ Batch 82: round 2 finished ____________________________________
+2023-03-27 13:29:09,173 : [INFO]  Batch 82: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:09,173 : [INFO]  Batch 82: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:09,173 : [INFO]  Batch 82, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:09,173 : [INFO]  Batch 82, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:09,173 : [INFO]  ____________________________________ Batch 82: round 3 finished ____________________________________
+2023-03-27 13:29:09,174 : [INFO]  #################################### Batch 82: sent the final model to clients ####################################
+2023-03-27 13:29:14,523 : [INFO]  Batch 83: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:14,527 : [INFO]  Batch 83: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:14,527 : [INFO]  Batch 83, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:14,527 : [INFO]  Batch 83, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:14,527 : [INFO]  ____________________________________ Batch 83: round 1 finished ____________________________________
+2023-03-27 13:29:16,177 : [INFO]  Batch 83: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:16,177 : [INFO]  Batch 83: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:16,177 : [INFO]  Batch 83, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:16,177 : [INFO]  Batch 83, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:16,178 : [INFO]  ____________________________________ Batch 83: round 2 finished ____________________________________
+2023-03-27 13:29:17,856 : [INFO]  Batch 83: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:17,874 : [INFO]  Batch 83: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:17,875 : [INFO]  Batch 83, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:17,875 : [INFO]  Batch 83, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:17,875 : [INFO]  ____________________________________ Batch 83: round 3 finished ____________________________________
+2023-03-27 13:29:17,875 : [INFO]  #################################### Batch 83: sent the final model to clients ####################################
+2023-03-27 13:29:23,286 : [INFO]  Batch 84: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:23,293 : [INFO]  Batch 84: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:23,293 : [INFO]  Batch 84, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:23,294 : [INFO]  Batch 84, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:23,294 : [INFO]  ____________________________________ Batch 84: round 1 finished ____________________________________
+2023-03-27 13:29:24,960 : [INFO]  Batch 84: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:24,968 : [INFO]  Batch 84: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:24,969 : [INFO]  Batch 84, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:24,969 : [INFO]  Batch 84, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:24,969 : [INFO]  ____________________________________ Batch 84: round 2 finished ____________________________________
+2023-03-27 13:29:26,635 : [INFO]  Batch 84: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:26,668 : [INFO]  Batch 84: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:26,668 : [INFO]  Batch 84, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:26,668 : [INFO]  Batch 84, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:26,668 : [INFO]  ____________________________________ Batch 84: round 3 finished ____________________________________
+2023-03-27 13:29:26,668 : [INFO]  #################################### Batch 84: sent the final model to clients ####################################
+2023-03-27 13:29:31,982 : [INFO]  Batch 85: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:32,026 : [INFO]  Batch 85: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:32,026 : [INFO]  Batch 85, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:32,026 : [INFO]  Batch 85, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:32,027 : [INFO]  ____________________________________ Batch 85: round 1 finished ____________________________________
+2023-03-27 13:29:33,687 : [INFO]  Batch 85: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:33,712 : [INFO]  Batch 85: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:33,712 : [INFO]  Batch 85, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:33,712 : [INFO]  Batch 85, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:33,713 : [INFO]  ____________________________________ Batch 85: round 2 finished ____________________________________
+2023-03-27 13:29:35,402 : [INFO]  Batch 85: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:35,402 : [INFO]  Batch 85: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:35,403 : [INFO]  Batch 85, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:35,403 : [INFO]  Batch 85, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:35,403 : [INFO]  ____________________________________ Batch 85: round 3 finished ____________________________________
+2023-03-27 13:29:35,403 : [INFO]  #################################### Batch 85: sent the final model to clients ####################################
+2023-03-27 13:29:40,727 : [INFO]  Batch 86: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:40,789 : [INFO]  Batch 86: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:40,789 : [INFO]  Batch 86, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:40,790 : [INFO]  Batch 86, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:40,790 : [INFO]  ____________________________________ Batch 86: round 1 finished ____________________________________
+2023-03-27 13:29:42,384 : [INFO]  Batch 86: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:42,435 : [INFO]  Batch 86: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:42,436 : [INFO]  Batch 86, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:42,436 : [INFO]  Batch 86, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:42,436 : [INFO]  ____________________________________ Batch 86: round 2 finished ____________________________________
+2023-03-27 13:29:44,070 : [INFO]  Batch 86: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:44,126 : [INFO]  Batch 86: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:44,127 : [INFO]  Batch 86, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:44,127 : [INFO]  Batch 86, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:44,127 : [INFO]  ____________________________________ Batch 86: round 3 finished ____________________________________
+2023-03-27 13:29:44,127 : [INFO]  #################################### Batch 86: sent the final model to clients ####################################
+2023-03-27 13:29:49,555 : [INFO]  Batch 87: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:49,606 : [INFO]  Batch 87: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:49,607 : [INFO]  Batch 87, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:49,607 : [INFO]  Batch 87, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:49,607 : [INFO]  ____________________________________ Batch 87: round 1 finished ____________________________________
+2023-03-27 13:29:51,309 : [INFO]  Batch 87: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:51,318 : [INFO]  Batch 87: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:51,319 : [INFO]  Batch 87, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:51,319 : [INFO]  Batch 87, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:51,319 : [INFO]  ____________________________________ Batch 87: round 2 finished ____________________________________
+2023-03-27 13:29:53,019 : [INFO]  Batch 87: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:53,027 : [INFO]  Batch 87: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:53,027 : [INFO]  Batch 87, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:53,028 : [INFO]  Batch 87, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:53,028 : [INFO]  ____________________________________ Batch 87: round 3 finished ____________________________________
+2023-03-27 13:29:53,028 : [INFO]  #################################### Batch 87: sent the final model to clients ####################################
+2023-03-27 13:29:58,363 : [INFO]  Batch 88: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:29:58,412 : [INFO]  Batch 88: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:29:58,412 : [INFO]  Batch 88, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:29:58,412 : [INFO]  Batch 88, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:29:58,412 : [INFO]  ____________________________________ Batch 88: round 1 finished ____________________________________
+2023-03-27 13:30:00,073 : [INFO]  Batch 88: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:30:00,085 : [INFO]  Batch 88: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:30:00,085 : [INFO]  Batch 88, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:30:00,085 : [INFO]  Batch 88, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:30:00,086 : [INFO]  ____________________________________ Batch 88: round 2 finished ____________________________________
+2023-03-27 13:30:01,752 : [INFO]  Batch 88: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:30:01,752 : [INFO]  Batch 88: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:30:01,753 : [INFO]  Batch 88, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:30:01,753 : [INFO]  Batch 88, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:30:01,753 : [INFO]  ____________________________________ Batch 88: round 3 finished ____________________________________
+2023-03-27 13:30:01,753 : [INFO]  #################################### Batch 88: sent the final model to clients ####################################
+2023-03-27 13:30:07,090 : [INFO]  Batch 89: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:30:07,094 : [INFO]  Batch 89: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:30:07,095 : [INFO]  Batch 89, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:30:07,095 : [INFO]  Batch 89, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:30:07,095 : [INFO]  ____________________________________ Batch 89: round 1 finished ____________________________________
+2023-03-27 13:30:08,752 : [INFO]  Batch 89: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:30:08,781 : [INFO]  Batch 89: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:30:08,781 : [INFO]  Batch 89, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:30:08,782 : [INFO]  Batch 89, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:30:08,782 : [INFO]  ____________________________________ Batch 89: round 2 finished ____________________________________
+2023-03-27 13:30:10,412 : [INFO]  Batch 89: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:30:10,414 : [INFO]  Batch 89: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:30:10,415 : [INFO]  Batch 89, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:30:10,415 : [INFO]  Batch 89, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:30:10,415 : [INFO]  ____________________________________ Batch 89: round 3 finished ____________________________________
+2023-03-27 13:30:10,415 : [INFO]  #################################### Batch 89: sent the final model to clients ####################################
+2023-03-27 13:30:15,753 : [INFO]  Batch 90: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:30:15,803 : [INFO]  Batch 90: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:30:15,804 : [INFO]  Batch 90, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:30:15,804 : [INFO]  Batch 90, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:30:15,804 : [INFO]  ____________________________________ Batch 90: round 1 finished ____________________________________
+2023-03-27 13:30:17,454 : [INFO]  Batch 90: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:30:17,471 : [INFO]  Batch 90: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:30:17,472 : [INFO]  Batch 90, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:30:17,472 : [INFO]  Batch 90, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:30:17,472 : [INFO]  ____________________________________ Batch 90: round 2 finished ____________________________________
+2023-03-27 13:30:19,112 : [INFO]  Batch 90: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:30:19,118 : [INFO]  Batch 90: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:30:19,118 : [INFO]  Batch 90, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:30:19,118 : [INFO]  Batch 90, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:30:19,118 : [INFO]  ____________________________________ Batch 90: round 3 finished ____________________________________
+2023-03-27 13:30:19,118 : [INFO]  #################################### Batch 90: sent the final model to clients ####################################
+2023-03-27 13:30:24,425 : [INFO]  Batch 91: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:30:24,460 : [INFO]  Batch 91: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:30:24,460 : [INFO]  Batch 91, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:30:24,460 : [INFO]  Batch 91, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:30:24,460 : [INFO]  ____________________________________ Batch 91: round 1 finished ____________________________________
+2023-03-27 13:30:26,077 : [INFO]  Batch 91: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:30:26,117 : [INFO]  Batch 91: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:30:26,117 : [INFO]  Batch 91, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:30:26,117 : [INFO]  Batch 91, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:30:26,117 : [INFO]  ____________________________________ Batch 91: round 2 finished ____________________________________
+2023-03-27 13:30:27,792 : [INFO]  Batch 91: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:30:27,843 : [INFO]  Batch 91: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:30:27,843 : [INFO]  Batch 91, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:30:27,844 : [INFO]  Batch 91, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:30:27,844 : [INFO]  ____________________________________ Batch 91: round 3 finished ____________________________________
+2023-03-27 13:30:27,844 : [INFO]  #################################### Batch 91: sent the final model to clients ####################################
+2023-03-27 13:30:33,235 : [INFO]  Batch 92: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:30:33,285 : [INFO]  Batch 92: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:30:33,286 : [INFO]  Batch 92, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:30:33,286 : [INFO]  Batch 92, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:30:33,286 : [INFO]  ____________________________________ Batch 92: round 1 finished ____________________________________
+2023-03-27 13:30:34,912 : [INFO]  Batch 92: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:30:34,964 : [INFO]  Batch 92: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:30:34,964 : [INFO]  Batch 92, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:30:34,965 : [INFO]  Batch 92, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:30:34,965 : [INFO]  ____________________________________ Batch 92: round 2 finished ____________________________________
+2023-03-27 13:30:36,576 : [INFO]  Batch 92: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:30:36,643 : [INFO]  Batch 92: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:30:36,644 : [INFO]  Batch 92, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:30:36,644 : [INFO]  Batch 92, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:30:36,644 : [INFO]  ____________________________________ Batch 92: round 3 finished ____________________________________
+2023-03-27 13:30:36,644 : [INFO]  #################################### Batch 92: sent the final model to clients ####################################
+2023-03-27 13:30:42,033 : [INFO]  Batch 93: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:30:42,068 : [INFO]  Batch 93: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:30:42,069 : [INFO]  Batch 93, round 1: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:30:42,069 : [INFO]  Batch 93, round 1: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:30:42,069 : [INFO]  ____________________________________ Batch 93: round 1 finished ____________________________________
+2023-03-27 13:30:43,767 : [INFO]  Batch 93: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:30:43,768 : [INFO]  Batch 93: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:30:43,768 : [INFO]  Batch 93, round 2: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:30:43,768 : [INFO]  Batch 93, round 2: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:30:43,768 : [INFO]  ____________________________________ Batch 93: round 2 finished ____________________________________
+2023-03-27 13:30:45,595 : [INFO]  Batch 93: recieved model from client-0 at 127.0.0.1:48292
+2023-03-27 13:30:45,626 : [INFO]  Batch 93: recieved model from client-1 at 127.0.0.1:33192
+2023-03-27 13:30:45,627 : [INFO]  Batch 93, round 3: aggregated global model sent to client-0 at 127.0.0.1:48292
+2023-03-27 13:30:45,627 : [INFO]  Batch 93, round 3: aggregated global model sent to client-1 at 127.0.0.1:33192
+2023-03-27 13:30:45,627 : [INFO]  ____________________________________ Batch 93: round 3 finished ____________________________________
+2023-03-27 13:30:45,627 : [INFO]  #################################### Batch 93: sent the final model to clients ####################################
+2023-03-27 13:30:45,627 : [INFO]  Distributed training done!
+2023-03-27 13:30:45,627 : [INFO]  Training report : Total elapsed time 929.0 seconds, graph ID 1, number of clients 2, training rounds 6, rounds 3, number of timestamps 93

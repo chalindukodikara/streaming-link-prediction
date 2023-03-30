@@ -1,38 +1,45 @@
 # Files
-stellargraph-transfer-learning-model/data/*
-stellargraph-transfer-learning-model/weights/
-stellargraph-transfer-learning-model/local_weights/
-stellargraph-transfer-learning-model/global_weights/
-stellargraph-transfer-learning-model/logs/
+distributed-Incremental-ensemble-graphsagage/data/*
+distributed-Incremental-ensemble-graphsagage/weights/
+distributed-Incremental-ensemble-graphsagage/local_weights/
+distributed-Incremental-ensemble-graphsagage/global_weights/
+distributed-Incremental-ensemble-graphsagage/logs/
 
-stellargraph-transfer-learning-model-ensemble/data/*
-stellargraph-transfer-learning-model-ensemble/weights/
-stellargraph-transfer-learning-model-ensemble/local_weights/
-stellargraph-transfer-learning-model-ensemble/global_weights/
-stellargraph-transfer-learning-model-ensemble/logs/
+distributed-Incremental-graphsage/data/*
+distributed-Incremental-graphsage/weights/
+distributed-Incremental-graphsage/local_weights/
+distributed-Incremental-graphsage/global_weights/
+distributed-Incremental-graphsage/logs/
 
-stellargraph-no-tl-batch-model/data/*
-stellargraph-no-tl-batch-model/weights/
-stellargraph-no-tl-batch-model/local_weights/
-stellargraph-no-tl-batch-model/global_weights/
-stellargraph-no-tl-batch-model/logs/
+distributed-retraining-graphsage/data/*
+distributed-retraining-graphsage/weights/
+distributed-retraining-graphsage/local_weights/
+distributed-retraining-graphsage/global_weights/
+distributed-retraining-graphsage/logs/
 
-stellargraph-no-tl-batch-model-ensemble/data/*
-stellargraph-no-tl-batch-model-ensemble/weights/
-stellargraph-no-tl-batch-model-ensemble/local_weights/
-stellargraph-no-tl-batch-model-ensemble/global_weights/
-stellargraph-no-tl-batch-model-ensemble/logs/
+distributed-retraining-incremental-graphsage/data/*
+distributed-retraining-incremental-graphsage/weights/
+distributed-retraining-incremental-graphsage/local_weights/
+distributed-retraining-incremental-graphsage/global_weights/
+distributed-retraining-incremental-graphsage/logs/
 
-stellargraph-naive-approach/data/*
-stellargraph-naive-approach/weights/
-stellargraph-naive-approach/local_weights/
-stellargraph-naive-approach/global_weights/
-stellargraph-naive-approach/logs/
+single-node-retraining-incremental-graphsage/data/*
+single-node-retraining-incremental-graphsage/weights/
+single-node-retraining-incremental-graphsage/local_weights/
+single-node-retraining-incremental-graphsage/global_weights/
+single-node-retraining-incremental-graphsage/logs/
 
-tgn-based-model/data/
+single-node-pre-trained-incremental-graphsage/data/*
+single-node-pre-trained-incremental-graphsage/models/tgn/data/
+single-node-pre-trained-incremental-graphsage/local_weights/
+single-node-pre-trained-incremental-graphsage/global_weights/
+single-node-pre-trained-incremental-graphsage/logs/
+
+tgn-based-model/data/*
 tgn-based-model/models/tgn/data/
 tgn-based-model/weights/
 tgn-based-model/global_weights/
+tgn-based-model/logs/
 
 
 datasets/dynamic-datasets/*

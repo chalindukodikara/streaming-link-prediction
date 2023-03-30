@@ -1,0 +1,9 @@
+2023-03-28 20:44:20,229 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-28 20:44:20,229 : [INFO]  Server started , graph ID 1, number of clients 2, number of rounds 1, number of timestamps 0
+2023-03-28 20:44:28,524 : [INFO]  Distributed training for streaming graphs started!
+2023-03-28 20:45:00,401 : [INFO]  Accepted new connection at 127.0.0.1:49262
+2023-03-28 20:45:00,402 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:49262
+2023-03-28 20:45:00,489 : [INFO]  Accepted new connection at 127.0.0.1:49278
+2023-03-28 20:45:00,489 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:49278
+2023-03-28 20:45:44,002 : [INFO]  Initial training: recieved model from client-1 at 127.0.0.1:49262
+2023-03-28 20:45:44,272 : [INFO]  Initial training: recieved model from client-0 at 127.0.0.1:49278

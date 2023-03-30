@@ -1,0 +1,15 @@
+2023-03-29 18:17:15,965 : [WARNING]  ####################################### New Training Session: Client 0 #######################################
+2023-03-29 18:17:15,966 : [INFO]  Client started, graph name wikipedia, graph ID 1, partition ID 0, training epochs 1, epochs 3
+2023-03-29 18:17:19,404 : [INFO]  Model initialized for training
+2023-03-29 18:17:25,602 : [INFO]  Number of training examples - 1842, Number of testing examples - 2046
+2023-03-29 18:17:25,603 : [INFO]  Connected to the server
+2023-03-29 18:17:25,744 : [INFO]  Distributed training for streaming graphs started!
+2023-03-29 18:17:25,745 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:17:25,757 : [INFO]  ################################## Initial model training started ##################################
+2023-03-29 18:17:25,757 : [INFO]  ------------------------- Initial model training: round 1 -------------------------
+2023-03-29 18:17:34,544 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:17:42,478 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:17:42,486 : [INFO]  ------------------------- Training round 1, loss: 0.7101 -------------------------
+2023-03-29 18:17:42,486 : [INFO]  ------------------------- Training, round 1: Sent local model to the server -------------------------
+2023-03-29 18:17:43,759 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:17:43,762 : [INFO]  ################ Initial trained model: Final global model evalution after 1 rounds ################

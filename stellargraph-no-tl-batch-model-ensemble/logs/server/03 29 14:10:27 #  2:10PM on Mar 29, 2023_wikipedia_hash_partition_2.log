@@ -1,0 +1,80 @@
+2023-03-29 14:10:27,582 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-29 14:10:27,583 : [INFO]  Server started , graph ID 1, number of clients 2, number of rounds 6, number of timestamps 90
+2023-03-29 14:10:34,184 : [INFO]  Distributed training for streaming graphs started!
+2023-03-29 14:10:35,431 : [INFO]  Accepted new connection at 127.0.0.1:34626
+2023-03-29 14:10:35,432 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:34626
+2023-03-29 14:10:37,302 : [INFO]  Accepted new connection at 127.0.0.1:52818
+2023-03-29 14:10:37,302 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:52818
+2023-03-29 14:11:10,910 : [INFO]  Initial training: recieved model from client-0 at 127.0.0.1:34626
+2023-03-29 14:11:11,951 : [INFO]  Initial training: recieved model from client-1 at 127.0.0.1:52818
+2023-03-29 14:11:11,952 : [INFO]  Initial training round 1: aggregated global model sent to client-0 at 127.0.0.1:34626
+2023-03-29 14:11:11,952 : [INFO]  Initial training round 1: aggregated global model sent to client-1 at 127.0.0.1:52818
+2023-03-29 14:11:11,952 : [INFO]  ____________________________________ Initial training: round 1 finished ____________________________________
+2023-03-29 14:11:42,233 : [INFO]  Initial training: recieved model from client-1 at 127.0.0.1:52818
+2023-03-29 14:11:43,252 : [INFO]  Initial training: recieved model from client-0 at 127.0.0.1:34626
+2023-03-29 14:11:43,252 : [INFO]  Initial training round 2: aggregated global model sent to client-0 at 127.0.0.1:34626
+2023-03-29 14:11:43,252 : [INFO]  Initial training round 2: aggregated global model sent to client-1 at 127.0.0.1:52818
+2023-03-29 14:11:43,252 : [INFO]  ____________________________________ Initial training: round 2 finished ____________________________________
+2023-03-29 14:12:13,385 : [INFO]  Initial training: recieved model from client-1 at 127.0.0.1:52818
+2023-03-29 14:12:14,524 : [INFO]  Initial training: recieved model from client-0 at 127.0.0.1:34626
+2023-03-29 14:12:14,525 : [INFO]  Initial training round 3: aggregated global model sent to client-0 at 127.0.0.1:34626
+2023-03-29 14:12:14,525 : [INFO]  Initial training round 3: aggregated global model sent to client-1 at 127.0.0.1:52818
+2023-03-29 14:12:14,525 : [INFO]  ____________________________________ Initial training: round 3 finished ____________________________________
+2023-03-29 14:12:46,755 : [INFO]  Initial training: recieved model from client-1 at 127.0.0.1:52818
+2023-03-29 14:12:47,694 : [INFO]  Initial training: recieved model from client-0 at 127.0.0.1:34626
+2023-03-29 14:12:47,695 : [INFO]  Initial training round 4: aggregated global model sent to client-0 at 127.0.0.1:34626
+2023-03-29 14:12:47,695 : [INFO]  Initial training round 4: aggregated global model sent to client-1 at 127.0.0.1:52818
+2023-03-29 14:12:47,695 : [INFO]  ____________________________________ Initial training: round 4 finished ____________________________________
+2023-03-29 14:13:17,632 : [INFO]  Initial training: recieved model from client-1 at 127.0.0.1:52818
+2023-03-29 14:13:23,212 : [INFO]  Initial training: recieved model from client-0 at 127.0.0.1:34626
+2023-03-29 14:13:23,212 : [INFO]  Initial training round 5: aggregated global model sent to client-0 at 127.0.0.1:34626
+2023-03-29 14:13:23,212 : [INFO]  Initial training round 5: aggregated global model sent to client-1 at 127.0.0.1:52818
+2023-03-29 14:13:23,212 : [INFO]  ____________________________________ Initial training: round 5 finished ____________________________________
+2023-03-29 14:13:53,293 : [INFO]  Initial training: recieved model from client-1 at 127.0.0.1:52818
+2023-03-29 14:13:54,432 : [INFO]  Initial training: recieved model from client-0 at 127.0.0.1:34626
+2023-03-29 14:13:54,433 : [INFO]  Initial training round 6: aggregated global model sent to client-0 at 127.0.0.1:34626
+2023-03-29 14:13:54,433 : [INFO]  Initial training round 6: aggregated global model sent to client-1 at 127.0.0.1:52818
+2023-03-29 14:13:54,433 : [INFO]  ____________________________________ Initial training: round 6 finished ____________________________________
+2023-03-29 14:13:54,433 : [INFO]  #################################### Initial Trained final model sent to clients ####################################
+2023-03-29 14:15:07,151 : [INFO]  Batch 1: recieved model from client-1 at 127.0.0.1:52818
+2023-03-29 14:15:09,413 : [INFO]  Batch 1: recieved model from client-0 at 127.0.0.1:34626
+2023-03-29 14:15:09,414 : [INFO]  Batch 1, round 1: aggregated global model sent to client-0 at 127.0.0.1:34626
+2023-03-29 14:15:09,414 : [INFO]  Batch 1, round 1: aggregated global model sent to client-1 at 127.0.0.1:52818
+2023-03-29 14:15:09,414 : [INFO]  ____________________________________ Batch 1: round 1 finished ____________________________________
+2023-03-29 14:15:13,023 : [INFO]  Batch 1: recieved model from client-1 at 127.0.0.1:52818
+2023-03-29 14:15:13,171 : [INFO]  Batch 1: recieved model from client-0 at 127.0.0.1:34626
+2023-03-29 14:15:13,172 : [INFO]  Batch 1, round 2: aggregated global model sent to client-0 at 127.0.0.1:34626
+2023-03-29 14:15:13,172 : [INFO]  Batch 1, round 2: aggregated global model sent to client-1 at 127.0.0.1:52818
+2023-03-29 14:15:13,172 : [INFO]  ____________________________________ Batch 1: round 2 finished ____________________________________
+2023-03-29 14:15:16,822 : [INFO]  Batch 1: recieved model from client-1 at 127.0.0.1:52818
+2023-03-29 14:15:16,958 : [INFO]  Batch 1: recieved model from client-0 at 127.0.0.1:34626
+2023-03-29 14:15:16,958 : [INFO]  Batch 1, round 3: aggregated global model sent to client-0 at 127.0.0.1:34626
+2023-03-29 14:15:16,958 : [INFO]  Batch 1, round 3: aggregated global model sent to client-1 at 127.0.0.1:52818
+2023-03-29 14:15:16,958 : [INFO]  ____________________________________ Batch 1: round 3 finished ____________________________________
+2023-03-29 14:15:16,958 : [INFO]  #################################### Batch 1: sent the final model to clients ####################################
+2023-03-29 14:15:36,554 : [INFO]  Batch 2: recieved model from client-1 at 127.0.0.1:52818
+2023-03-29 14:15:37,567 : [INFO]  Batch 2: recieved model from client-0 at 127.0.0.1:34626
+2023-03-29 14:15:37,568 : [INFO]  Batch 2, round 1: aggregated global model sent to client-0 at 127.0.0.1:34626
+2023-03-29 14:15:37,568 : [INFO]  Batch 2, round 1: aggregated global model sent to client-1 at 127.0.0.1:52818
+2023-03-29 14:15:37,568 : [INFO]  ____________________________________ Batch 2: round 1 finished ____________________________________
+2023-03-29 14:15:41,185 : [INFO]  Batch 2: recieved model from client-1 at 127.0.0.1:52818
+2023-03-29 14:15:41,276 : [INFO]  Batch 2: recieved model from client-0 at 127.0.0.1:34626
+2023-03-29 14:15:41,276 : [INFO]  Batch 2, round 2: aggregated global model sent to client-0 at 127.0.0.1:34626
+2023-03-29 14:15:41,276 : [INFO]  Batch 2, round 2: aggregated global model sent to client-1 at 127.0.0.1:52818
+2023-03-29 14:15:41,276 : [INFO]  ____________________________________ Batch 2: round 2 finished ____________________________________
+2023-03-29 14:15:44,895 : [INFO]  Batch 2: recieved model from client-1 at 127.0.0.1:52818
+2023-03-29 14:15:44,988 : [INFO]  Batch 2: recieved model from client-0 at 127.0.0.1:34626
+2023-03-29 14:15:44,988 : [INFO]  Batch 2, round 3: aggregated global model sent to client-0 at 127.0.0.1:34626
+2023-03-29 14:15:44,988 : [INFO]  Batch 2, round 3: aggregated global model sent to client-1 at 127.0.0.1:52818
+2023-03-29 14:15:44,989 : [INFO]  ____________________________________ Batch 2: round 3 finished ____________________________________
+2023-03-29 14:15:44,989 : [INFO]  #################################### Batch 2: sent the final model to clients ####################################
+2023-03-29 14:16:02,702 : [INFO]  Batch 3: recieved model from client-1 at 127.0.0.1:52818
+2023-03-29 14:16:03,146 : [INFO]  Batch 3: recieved model from client-0 at 127.0.0.1:34626
+2023-03-29 14:16:03,146 : [INFO]  Batch 3, round 1: aggregated global model sent to client-0 at 127.0.0.1:34626
+2023-03-29 14:16:03,146 : [INFO]  Batch 3, round 1: aggregated global model sent to client-1 at 127.0.0.1:52818
+2023-03-29 14:16:03,147 : [INFO]  ____________________________________ Batch 3: round 1 finished ____________________________________
+2023-03-29 14:16:06,980 : [INFO]  Batch 3: recieved model from client-1 at 127.0.0.1:52818
+2023-03-29 14:16:07,218 : [INFO]  Batch 3: recieved model from client-0 at 127.0.0.1:34626
+2023-03-29 14:16:07,219 : [INFO]  Batch 3, round 2: aggregated global model sent to client-0 at 127.0.0.1:34626
+2023-03-29 14:16:07,219 : [INFO]  Batch 3, round 2: aggregated global model sent to client-1 at 127.0.0.1:52818
+2023-03-29 14:16:07,219 : [INFO]  ____________________________________ Batch 3: round 2 finished ____________________________________

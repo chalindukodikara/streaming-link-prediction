@@ -1,0 +1,22 @@
+2023-03-29 00:35:42,860 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-29 00:35:42,860 : [INFO]  Server started , graph ID 1, number of clients 2, number of rounds 2, number of timestamps 90
+2023-03-29 00:35:52,584 : [INFO]  Distributed training for streaming graphs started!
+2023-03-29 00:35:53,521 : [INFO]  Accepted new connection at 127.0.0.1:53160
+2023-03-29 00:35:53,521 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:53160
+2023-03-29 00:35:55,713 : [INFO]  Accepted new connection at 127.0.0.1:53166
+2023-03-29 00:35:55,713 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:53166
+2023-03-29 00:36:59,192 : [INFO]  Initial training: recieved model from client-1 at 127.0.0.1:53166
+2023-03-29 00:37:02,013 : [INFO]  Initial training: recieved model from client-0 at 127.0.0.1:53160
+2023-03-29 00:37:02,014 : [INFO]  Initial training round 1: aggregated global model sent to client-0 at 127.0.0.1:53160
+2023-03-29 00:37:02,014 : [INFO]  Initial training round 1: aggregated global model sent to client-1 at 127.0.0.1:53166
+2023-03-29 00:37:02,014 : [INFO]  ____________________________________ Initial training: round 1 finished ____________________________________
+2023-03-29 00:37:41,277 : [INFO]  Initial training: recieved model from client-1 at 127.0.0.1:53166
+2023-03-29 00:37:42,124 : [INFO]  Initial training: recieved model from client-0 at 127.0.0.1:53160
+2023-03-29 00:37:42,125 : [INFO]  Initial training round 2: aggregated global model sent to client-0 at 127.0.0.1:53160
+2023-03-29 00:37:42,125 : [INFO]  Initial training round 2: aggregated global model sent to client-1 at 127.0.0.1:53166
+2023-03-29 00:37:42,126 : [INFO]  ____________________________________ Initial training: round 2 finished ____________________________________
+2023-03-29 00:37:42,126 : [INFO]  #################################### Initial Trained final model sent to clients ####################################
+2023-03-29 00:43:40,632 : [ERROR]  Client-1 closed connection at 127.0.0.1:53166
+2023-03-29 00:43:51,983 : [INFO]  Accepted new connection at 127.0.0.1:45704
+2023-03-29 00:43:51,984 : [INFO]  Batch 1, round 0: aggregated global model sent to client-new at 127.0.0.1:45704
+2023-03-29 00:44:09,732 : [ERROR]  Client-new closed connection at 127.0.0.1:45704

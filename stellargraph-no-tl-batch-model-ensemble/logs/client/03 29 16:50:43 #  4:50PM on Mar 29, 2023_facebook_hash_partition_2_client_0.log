@@ -1,0 +1,10 @@
+2023-03-29 16:50:43,670 : [WARNING]  ####################################### New Training Session: Client 0 #######################################
+2023-03-29 16:50:43,670 : [INFO]  Client started, graph name facebook, graph ID 1, partition ID 0, training epochs 3, epochs 3
+2023-03-29 16:50:51,274 : [INFO]  Model initialized for training
+2023-03-29 16:51:23,442 : [INFO]  Number of training examples - 11796, Number of testing examples - 13106
+2023-03-29 16:51:28,446 : [INFO]  Connected to the server
+2023-03-29 16:51:28,698 : [INFO]  Distributed training for streaming graphs started!
+2023-03-29 16:51:28,699 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 16:51:28,725 : [INFO]  ################################## Initial model training started ##################################
+2023-03-29 16:51:28,725 : [INFO]  ------------------------- Initial model training: round 1 -------------------------
+2023-03-29 16:53:42,975 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
