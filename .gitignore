@@ -11,23 +11,23 @@ distributed-incremental-graphsage/local_weights/
 distributed-incremental-graphsage/global_weights/
 distributed-incremental-graphsage/logs/
 
-distributed-pre-trained-incremental-graphsage/data/*
-distributed-pre-trained-incremental-graphsage/models/tgn/data/
-distributed-pre-trained-incremental-graphsage/local_weights/
-distributed-pre-trained-incremental-graphsage/global_weights/
-distributed-pre-trained-incremental-graphsage/logs/
+distributed-pre-trained-graphsage/data/*
+distributed-pre-trained-graphsage/models/tgn/data/
+distributed-pre-trained-graphsage/local_weights/
+distributed-pre-trained-graphsage/global_weights/
+distributed-pre-trained-graphsage/logs/
 
-distributed-retraining-graphsage/data/*
-distributed-retraining-graphsage/weights/
-distributed-retraining-graphsage/local_weights/
-distributed-retraining-graphsage/global_weights/
-distributed-retraining-graphsage/logs/
+distributed-retrained-graphsage/data/*
+distributed-retrained-graphsage/weights/
+distributed-retrained-graphsage/local_weights/
+distributed-retrained-graphsage/global_weights/
+distributed-retrained-graphsage/logs/
 
-distributed-retraining-incremental-graphsage/data/*
-distributed-retraining-incremental-graphsage/weights/
-distributed-retraining-incremental-graphsage/local_weights/
-distributed-retraining-incremental-graphsage/global_weights/
-distributed-retraining-incremental-graphsage/logs/
+distributed-retrained-incremental-graphsage/data/*
+distributed-retrained-incremental-graphsage/weights/
+distributed-retrained-incremental-graphsage/local_weights/
+distributed-retrained-incremental-graphsage/global_weights/
+distributed-retrained-incremental-graphsage/logs/
 
 single-node-incremental-ensemble-graphsage/data/*
 single-node-incremental-ensemble-graphsage/weights/
@@ -41,23 +41,23 @@ single-node-incremental-graphsage/local_weights/
 single-node-incremental-graphsage/global_weights/
 single-node-incremental-graphsage/logs/
 
-single-node-pre-trained-incremental-graphsage/data/*
-single-node-pre-trained-incremental-graphsage/models/tgn/data/
-single-node-pre-trained-incremental-graphsage/local_weights/
-single-node-pre-trained-incremental-graphsage/global_weights/
-single-node-pre-trained-incremental-graphsage/logs/
+single-node-pre-trained-graphsage/data/*
+single-node-pre-trained-graphsage/models/tgn/data/
+single-node-pre-trained-graphsage/local_weights/
+single-node-pre-trained-graphsage/global_weights/
+single-node-pre-trained-graphsage/logs/
 
-single-node-retraining-graphsage/data/*
-single-node-retraining-graphsage/weights/
-single-node-retraining-graphsage/local_weights/
-single-node-retraining-graphsage/global_weights/
-single-node-retraining-graphsage/logs/
+single-node-retrained-graphsage/data/*
+single-node-retrained-graphsage/weights/
+single-node-retrained-graphsage/local_weights/
+single-node-retrained-graphsage/global_weights/
+single-node-retrained-graphsage/logs/
 
-single-node-retraining-incremental-graphsage/data/*
-single-node-retraining-incremental-graphsage/weights/
-single-node-retraining-incremental-graphsage/local_weights/
-single-node-retraining-incremental-graphsage/global_weights/
-single-node-retraining-incremental-graphsage/logs/
+single-node-retrained-incremental-graphsage/data/*
+single-node-retrained-incremental-graphsage/weights/
+single-node-retrained-incremental-graphsage/local_weights/
+single-node-retrained-incremental-graphsage/global_weights/
+single-node-retrained-incremental-graphsage/logs/
 
 tgn-based-model/data/*
 tgn-based-model/models/tgn/data/

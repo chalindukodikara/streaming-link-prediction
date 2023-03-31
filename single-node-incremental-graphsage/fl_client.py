@@ -25,10 +25,10 @@ parser.add_argument('--partition_size', type=int, default=1, help='Partition siz
 parser.add_argument('--graph_id', type=int, default=1, help='Graph ID')
 
 ######## Frequently configured #######
-parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
+parser.add_argument('--dataset_name', type=str, default='facebook', help='Dataset name')
 parser.add_argument('--partition_algorithm', type=str, default='hash', help='Partition algorithm')
-parser.add_argument('--training_epochs', type=int, default=50, help='Initial Training: number of epochs')
-parser.add_argument('--epochs', type=int, default=50, help='Streaming data training for batches: number of epochs')
+parser.add_argument('--training_epochs', type=int, default=40, help='Initial Training: number of epochs')
+parser.add_argument('--epochs', type=int, default=20, help='Streaming data training for batches: number of epochs')
 
 try:
   args = parser.parse_args()
@@ -118,7 +118,7 @@ class Client:
     def run(self):
         while True:
             if self.iteration_number > 0:
-                # self.MODEL.set_weights(self.GLOBAL_WEIGHTS)
+                self.MODEL.set_weights(self.GLOBAL_WEIGHTS)
                 if self.iteration_number == 1:
                     logging.info('################################## Next batch processing started: incremental learning is OFF ##################################')
 
@@ -197,6 +197,7 @@ class Client:
 
             # self.client_socket.close()
             if self.iteration_number <= NUM_TIMESTAMPS:
+                self.GLOBAL_WEIGHTS = self.MODEL.get_weights()
                 edges = pd.read_csv('data/' + self.dataset_name + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(self.iteration_number) + '_test_batch_edges.csv')
                 nodes = pd.read_csv('data/' + self.dataset_name + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(self.iteration_number) + '_test_batch_nodes.csv', index_col=0)
 
