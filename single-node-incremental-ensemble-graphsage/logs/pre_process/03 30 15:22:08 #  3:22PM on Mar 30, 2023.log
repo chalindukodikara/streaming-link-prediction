@@ -1,0 +1,24 @@
+2023-03-30 15:22:08,599 : [INFO]  _____________________________________________________ facebook: Pre-processing started _____________________________________________________
+2023-03-30 15:22:08,603 : [INFO]  Folder path "data/facebook_8_7" exists
+2023-03-30 15:22:08,609 : [INFO]  Training batch created
+2023-03-30 15:22:09,147 : [INFO]  Test batch 1 created
+2023-03-30 15:22:09,174 : [INFO]  Test batch 2 created
+2023-03-30 15:22:09,206 : [INFO]  Test batch 3 created
+2023-03-30 15:22:09,243 : [INFO]  Test batch 4 created
+2023-03-30 15:22:09,283 : [INFO]  Test batch 5 created
+2023-03-30 15:22:09,324 : [INFO]  Test batch 6 created
+2023-03-30 15:22:09,368 : [INFO]  Test batch 7 created
+2023-03-30 15:22:09,412 : [INFO]  Test batch 8 created
+2023-03-30 15:22:09,456 : [INFO]  Test batch 9 created
+2023-03-30 15:22:09,504 : [INFO]  Test batch 10 created
+2023-03-30 15:22:09,559 : [INFO]  Test batch 11 created
+2023-03-30 15:22:09,615 : [INFO]  Test batch 12 created
+2023-03-30 15:22:09,662 : [INFO]  Test batch 13 created
+2023-03-30 15:22:09,711 : [INFO]  Test batch 14 created
+2023-03-30 15:22:09,770 : [INFO]  Test batch 15 created
+2023-03-30 15:22:09,835 : [INFO]  Test batch 16 created
+2023-03-30 15:22:09,911 : [INFO]  Test batch 17 created
+2023-03-30 15:22:09,987 : [INFO]  Test batch 18 created
+2023-03-30 15:22:10,072 : [INFO]  Test batch 19 created
+2023-03-30 15:22:10,169 : [INFO]  Test batch 20 created
+2023-03-30 15:22:10,268 : [INFO]  _____________ facebook: Pre-processing finished, training batch size 20, testing batch size 1 _____________

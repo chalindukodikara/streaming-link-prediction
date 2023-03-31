@@ -1,0 +1,11 @@
+2023-03-28 20:14:05,626 : [WARNING]  ####################################### New Training Session: Client 0 #######################################
+2023-03-28 20:14:05,626 : [INFO]  Client started, graph name wikipedia, graph ID 1, partition ID 0, training epochs 1, epochs 1
+2023-03-28 20:14:08,658 : [INFO]  Model initialized for training
+2023-03-28 20:14:12,452 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-28 20:14:12,503 : [INFO]  Number of training examples - 1842, Number of testing examples - 2046
+2023-03-28 20:14:12,503 : [INFO]  Connected to the server
+2023-03-28 20:14:12,615 : [INFO]  Distributed training for streaming graphs started!
+2023-03-28 20:14:12,616 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-28 20:14:12,616 : [INFO]  ################################## Initial model training started ##################################
+2023-03-28 20:14:12,616 : [INFO]  ------------------------- Initial model training: round 1 -------------------------
+2023-03-28 20:14:20,458 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision

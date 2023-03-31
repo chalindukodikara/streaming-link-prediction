@@ -1,0 +1,3 @@
+2023-03-28 19:54:14,990 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-28 19:54:14,990 : [INFO]  Server started , graph ID 1, number of clients 2, number of rounds 1, number of timestamps 0
+2023-03-28 19:54:38,764 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.

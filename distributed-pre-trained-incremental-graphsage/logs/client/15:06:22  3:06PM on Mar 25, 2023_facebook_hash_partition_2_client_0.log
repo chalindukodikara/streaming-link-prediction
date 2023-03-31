@@ -1,0 +1,615 @@
+2023-03-25 15:06:22,955 : [WARNING]  ####################################### New Training Session: Client 0 #######################################
+2023-03-25 15:06:22,955 : [INFO]  Client started, graph name facebook, graph ID 1, partition ID 0, training epochs 8, epochs 8
+2023-03-25 15:06:28,014 : [INFO]  Model initialized for training
+2023-03-25 15:06:42,781 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:06:42,959 : [INFO]  Number of training examples - 11796, Number of testing examples - 13106
+2023-03-25 15:06:42,959 : [INFO]  Connected to the server
+2023-03-25 15:06:43,068 : [INFO]  Distributed training for streaming graphs started!
+2023-03-25 15:06:43,068 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:06:43,078 : [INFO]  ################################## Initial model training started ##################################
+2023-03-25 15:06:43,079 : [INFO]  ------------------------- Initial model training: round 1 -------------------------
+2023-03-25 15:10:20,622 : [INFO]  ------------------------- Training round 1, loss: 0.6158 -------------------------
+2023-03-25 15:10:20,622 : [INFO]  ------------------------- Training, round 1: Sent local model to the server -------------------------
+2023-03-25 15:10:20,625 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:10:20,627 : [INFO]  ------------------------- Initial model training: round 2 -------------------------
+2023-03-25 15:13:41,533 : [INFO]  ------------------------- Training round 2, loss: 0.593 -------------------------
+2023-03-25 15:13:41,533 : [INFO]  ------------------------- Training, round 2: Sent local model to the server -------------------------
+2023-03-25 15:13:43,206 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:13:43,208 : [INFO]  ------------------------- Initial model training: round 3 -------------------------
+2023-03-25 15:17:14,028 : [INFO]  ------------------------- Training round 3, loss: 0.5904 -------------------------
+2023-03-25 15:17:14,029 : [INFO]  ------------------------- Training, round 3: Sent local model to the server -------------------------
+2023-03-25 15:17:15,870 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:17:15,872 : [INFO]  ------------------------- Initial model training: round 4 -------------------------
+2023-03-25 15:20:55,444 : [INFO]  ------------------------- Training round 4, loss: 0.5889 -------------------------
+2023-03-25 15:20:55,444 : [INFO]  ------------------------- Training, round 4: Sent local model to the server -------------------------
+2023-03-25 15:20:57,201 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:20:57,203 : [INFO]  ------------------------- Initial model training: round 5 -------------------------
+2023-03-25 15:24:22,874 : [INFO]  ------------------------- Training round 5, loss: 0.5875 -------------------------
+2023-03-25 15:24:22,874 : [INFO]  ------------------------- Training, round 5: Sent local model to the server -------------------------
+2023-03-25 15:24:25,296 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:24:25,298 : [INFO]  ################ Initial trained model: Final global model evalution after 5 rounds ################
+2023-03-25 15:25:14,107 : [INFO]  Initially trained model: Training set : loss - 0.59, accuracy - 0.7, recall - 0.87, AUC - 0.83, F1 - 0.74, precision - 0.65, training time - -1062.0 seconds
+2023-03-25 15:25:14,108 : [INFO]  Initially trained model: Testing set : loss - 0.59, accuracy - 0.69, recall - 0.87, AUC - 0.83, F1 - 0.74, precision - 0.64
+2023-03-25 15:25:14,179 : [INFO]  Batch 1 initialized 
+2023-03-25 15:25:14,651 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:25:15,180 : [INFO]  ################################## Next batch processing started: transfer learning is ON ##################################
+2023-03-25 15:25:15,180 : [INFO]  ------------------------- Batch 1 training: round 1 -------------------------
+2023-03-25 15:25:19,733 : [INFO]  ------------------------- Batch round 1, loss: 0.5879 -------------------------
+2023-03-25 15:25:19,734 : [INFO]  ------------------------- Batch 1, round 1: Sent local model to the server -------------------------
+2023-03-25 15:25:19,738 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:25:19,740 : [INFO]  ------------------------- Batch 1 training: round 2 -------------------------
+2023-03-25 15:25:22,648 : [INFO]  ------------------------- Batch round 2, loss: 0.5778 -------------------------
+2023-03-25 15:25:22,648 : [INFO]  ------------------------- Batch 1, round 2: Sent local model to the server -------------------------
+2023-03-25 15:25:22,659 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:25:22,664 : [INFO]  ------------------------- Batch 1 training: round 3 -------------------------
+2023-03-25 15:25:25,609 : [INFO]  ------------------------- Batch round 3, loss: 0.5587 -------------------------
+2023-03-25 15:25:25,609 : [INFO]  ------------------------- Batch 1, round 3: Sent local model to the server -------------------------
+2023-03-25 15:25:25,614 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:25:25,616 : [INFO]  Batch number 1 model fetched from the server
+2023-03-25 15:25:25,616 : [INFO]  ################ Batch 1: final global model evalution after 3 rounds ################
+2023-03-25 15:25:26,980 : [INFO]  Batch 1: Training set : loss - 0.5678, accuracy - 0.7337, recall - 0.9239, AUC - 0.864, F1 - 0.7763, precision - 0.6693, training time - -10.0 seconds
+2023-03-25 15:25:26,981 : [INFO]  Batch 1: Testing set : loss - 0.5669, accuracy - 0.7353, recall - 0.8922, AUC - 0.8665, F1 - 0.7712, precision - 0.6791
+2023-03-25 15:25:26,994 : [INFO]  Batch 2 initialized 
+2023-03-25 15:25:27,421 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:25:27,574 : [INFO]  ------------------------- Batch 2 training: round 1 -------------------------
+2023-03-25 15:25:32,972 : [INFO]  ------------------------- Batch round 1, loss: 0.5624 -------------------------
+2023-03-25 15:25:32,972 : [INFO]  ------------------------- Batch 2, round 1: Sent local model to the server -------------------------
+2023-03-25 15:25:33,086 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:25:33,089 : [INFO]  ------------------------- Batch 2 training: round 2 -------------------------
+2023-03-25 15:25:35,764 : [INFO]  ------------------------- Batch round 2, loss: 0.5522 -------------------------
+2023-03-25 15:25:35,764 : [INFO]  ------------------------- Batch 2, round 2: Sent local model to the server -------------------------
+2023-03-25 15:25:35,817 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:25:35,819 : [INFO]  ------------------------- Batch 2 training: round 3 -------------------------
+2023-03-25 15:25:38,483 : [INFO]  ------------------------- Batch round 3, loss: 0.5405 -------------------------
+2023-03-25 15:25:38,483 : [INFO]  ------------------------- Batch 2, round 3: Sent local model to the server -------------------------
+2023-03-25 15:25:38,536 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:25:38,538 : [INFO]  Batch number 2 model fetched from the server
+2023-03-25 15:25:38,538 : [INFO]  ################ Batch 2: final global model evalution after 3 rounds ################
+2023-03-25 15:25:39,869 : [INFO]  Batch 2: Training set : loss - 0.5415, accuracy - 0.788, recall - 0.9565, AUC - 0.8842, F1 - 0.8186, precision - 0.7154, training time - -11.0 seconds
+2023-03-25 15:25:39,869 : [INFO]  Batch 2: Testing set : loss - 0.5681, accuracy - 0.7157, recall - 0.9314, AUC - 0.872, F1 - 0.7661, precision - 0.6507
+2023-03-25 15:25:39,881 : [INFO]  Batch 3 initialized 
+2023-03-25 15:25:40,305 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:25:40,528 : [INFO]  ------------------------- Batch 3 training: round 1 -------------------------
+2023-03-25 15:25:45,660 : [INFO]  ------------------------- Batch round 1, loss: 0.5347 -------------------------
+2023-03-25 15:25:45,660 : [INFO]  ------------------------- Batch 3, round 1: Sent local model to the server -------------------------
+2023-03-25 15:25:45,853 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:25:45,855 : [INFO]  ------------------------- Batch 3 training: round 2 -------------------------
+2023-03-25 15:25:48,969 : [INFO]  ------------------------- Batch round 2, loss: 0.5265 -------------------------
+2023-03-25 15:25:48,970 : [INFO]  ------------------------- Batch 3, round 2: Sent local model to the server -------------------------
+2023-03-25 15:25:49,019 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:25:49,022 : [INFO]  ------------------------- Batch 3 training: round 3 -------------------------
+2023-03-25 15:25:52,163 : [INFO]  ------------------------- Batch round 3, loss: 0.5268 -------------------------
+2023-03-25 15:25:52,163 : [INFO]  ------------------------- Batch 3, round 3: Sent local model to the server -------------------------
+2023-03-25 15:25:52,288 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:25:52,291 : [INFO]  Batch number 3 model fetched from the server
+2023-03-25 15:25:52,291 : [INFO]  ################ Batch 3: final global model evalution after 3 rounds ################
+2023-03-25 15:25:53,618 : [INFO]  Batch 3: Training set : loss - 0.5246, accuracy - 0.7826, recall - 0.8913, AUC - 0.884, F1 - 0.8039, precision - 0.7321, training time - -12.0 seconds
+2023-03-25 15:25:53,618 : [INFO]  Batch 3: Testing set : loss - 0.558, accuracy - 0.7157, recall - 0.9412, AUC - 0.8775, F1 - 0.768, precision - 0.6486
+2023-03-25 15:25:53,632 : [INFO]  Batch 4 initialized 
+2023-03-25 15:25:54,072 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:25:54,293 : [INFO]  ------------------------- Batch 4 training: round 1 -------------------------
+2023-03-25 15:25:59,272 : [INFO]  ------------------------- Batch round 1, loss: 0.5544 -------------------------
+2023-03-25 15:25:59,272 : [INFO]  ------------------------- Batch 4, round 1: Sent local model to the server -------------------------
+2023-03-25 15:25:59,323 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:25:59,325 : [INFO]  ------------------------- Batch 4 training: round 2 -------------------------
+2023-03-25 15:26:02,336 : [INFO]  ------------------------- Batch round 2, loss: 0.5396 -------------------------
+2023-03-25 15:26:02,336 : [INFO]  ------------------------- Batch 4, round 2: Sent local model to the server -------------------------
+2023-03-25 15:26:02,346 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:26:02,348 : [INFO]  ------------------------- Batch 4 training: round 3 -------------------------
+2023-03-25 15:26:05,111 : [INFO]  ------------------------- Batch round 3, loss: 0.5375 -------------------------
+2023-03-25 15:26:05,111 : [INFO]  ------------------------- Batch 4, round 3: Sent local model to the server -------------------------
+2023-03-25 15:26:05,123 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:26:05,125 : [INFO]  Batch number 4 model fetched from the server
+2023-03-25 15:26:05,125 : [INFO]  ################ Batch 4: final global model evalution after 3 rounds ################
+2023-03-25 15:26:06,460 : [INFO]  Batch 4: Training set : loss - 0.5331, accuracy - 0.75, recall - 0.9457, AUC - 0.926, F1 - 0.7909, precision - 0.6797, training time - -11.0 seconds
+2023-03-25 15:26:06,460 : [INFO]  Batch 4: Testing set : loss - 0.5736, accuracy - 0.6961, recall - 0.9412, AUC - 0.8963, F1 - 0.7559, precision - 0.6316
+2023-03-25 15:26:06,473 : [INFO]  Batch 5 initialized 
+2023-03-25 15:26:06,901 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:26:07,131 : [INFO]  ------------------------- Batch 5 training: round 1 -------------------------
+2023-03-25 15:26:11,804 : [INFO]  ------------------------- Batch round 1, loss: 0.526 -------------------------
+2023-03-25 15:26:11,804 : [INFO]  ------------------------- Batch 5, round 1: Sent local model to the server -------------------------
+2023-03-25 15:26:12,074 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:26:12,076 : [INFO]  ------------------------- Batch 5 training: round 2 -------------------------
+2023-03-25 15:26:14,776 : [INFO]  ------------------------- Batch round 2, loss: 0.5152 -------------------------
+2023-03-25 15:26:14,777 : [INFO]  ------------------------- Batch 5, round 2: Sent local model to the server -------------------------
+2023-03-25 15:26:14,783 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:26:14,785 : [INFO]  ------------------------- Batch 5 training: round 3 -------------------------
+2023-03-25 15:26:17,527 : [INFO]  ------------------------- Batch round 3, loss: 0.5144 -------------------------
+2023-03-25 15:26:17,527 : [INFO]  ------------------------- Batch 5, round 3: Sent local model to the server -------------------------
+2023-03-25 15:26:17,592 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:26:17,595 : [INFO]  Batch number 5 model fetched from the server
+2023-03-25 15:26:17,595 : [INFO]  ################ Batch 5: final global model evalution after 3 rounds ################
+2023-03-25 15:26:18,923 : [INFO]  Batch 5: Training set : loss - 0.5107, accuracy - 0.8207, recall - 0.9674, AUC - 0.9392, F1 - 0.8436, precision - 0.7479, training time - -10.0 seconds
+2023-03-25 15:26:18,923 : [INFO]  Batch 5: Testing set : loss - 0.5689, accuracy - 0.7353, recall - 0.8922, AUC - 0.849, F1 - 0.7712, precision - 0.6791
+2023-03-25 15:26:18,936 : [INFO]  Batch 6 initialized 
+2023-03-25 15:26:19,763 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:26:19,997 : [INFO]  ------------------------- Batch 6 training: round 1 -------------------------
+2023-03-25 15:26:25,242 : [INFO]  ------------------------- Batch round 1, loss: 0.5611 -------------------------
+2023-03-25 15:26:25,242 : [INFO]  ------------------------- Batch 6, round 1: Sent local model to the server -------------------------
+2023-03-25 15:26:25,250 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:26:25,253 : [INFO]  ------------------------- Batch 6 training: round 2 -------------------------
+2023-03-25 15:26:28,261 : [INFO]  ------------------------- Batch round 2, loss: 0.5492 -------------------------
+2023-03-25 15:26:28,261 : [INFO]  ------------------------- Batch 6, round 2: Sent local model to the server -------------------------
+2023-03-25 15:26:28,277 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:26:28,280 : [INFO]  ------------------------- Batch 6 training: round 3 -------------------------
+2023-03-25 15:26:32,137 : [INFO]  ------------------------- Batch round 3, loss: 0.5459 -------------------------
+2023-03-25 15:26:32,138 : [INFO]  ------------------------- Batch 6, round 3: Sent local model to the server -------------------------
+2023-03-25 15:26:32,164 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:26:32,167 : [INFO]  Batch number 6 model fetched from the server
+2023-03-25 15:26:32,167 : [INFO]  ################ Batch 6: final global model evalution after 3 rounds ################
+2023-03-25 15:26:33,872 : [INFO]  Batch 6: Training set : loss - 0.5492, accuracy - 0.7446, recall - 0.9457, AUC - 0.8652, F1 - 0.7873, precision - 0.6744, training time - -12.0 seconds
+2023-03-25 15:26:33,872 : [INFO]  Batch 6: Testing set : loss - 0.5594, accuracy - 0.7353, recall - 0.9118, AUC - 0.8775, F1 - 0.775, precision - 0.6739
+2023-03-25 15:26:33,883 : [INFO]  Batch 7 initialized 
+2023-03-25 15:26:34,544 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:26:34,890 : [INFO]  ------------------------- Batch 7 training: round 1 -------------------------
+2023-03-25 15:26:40,711 : [INFO]  ------------------------- Batch round 1, loss: 0.5653 -------------------------
+2023-03-25 15:26:40,712 : [INFO]  ------------------------- Batch 7, round 1: Sent local model to the server -------------------------
+2023-03-25 15:26:40,758 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:26:40,760 : [INFO]  ------------------------- Batch 7 training: round 2 -------------------------
+2023-03-25 15:26:44,478 : [INFO]  ------------------------- Batch round 2, loss: 0.5611 -------------------------
+2023-03-25 15:26:44,478 : [INFO]  ------------------------- Batch 7, round 2: Sent local model to the server -------------------------
+2023-03-25 15:26:44,481 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:26:44,484 : [INFO]  ------------------------- Batch 7 training: round 3 -------------------------
+2023-03-25 15:26:47,927 : [INFO]  ------------------------- Batch round 3, loss: 0.5495 -------------------------
+2023-03-25 15:26:47,927 : [INFO]  ------------------------- Batch 7, round 3: Sent local model to the server -------------------------
+2023-03-25 15:26:47,957 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:26:47,960 : [INFO]  Batch number 7 model fetched from the server
+2023-03-25 15:26:47,960 : [INFO]  ################ Batch 7: final global model evalution after 3 rounds ################
+2023-03-25 15:26:49,700 : [INFO]  Batch 7: Training set : loss - 0.5482, accuracy - 0.788, recall - 0.9674, AUC - 0.8781, F1 - 0.8203, precision - 0.712, training time - -13.0 seconds
+2023-03-25 15:26:49,700 : [INFO]  Batch 7: Testing set : loss - 0.5774, accuracy - 0.7059, recall - 0.8627, AUC - 0.8298, F1 - 0.7458, precision - 0.6567
+2023-03-25 15:26:49,707 : [INFO]  Batch 8 initialized 
+2023-03-25 15:26:50,353 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:26:50,837 : [INFO]  ------------------------- Batch 8 training: round 1 -------------------------
+2023-03-25 15:26:57,200 : [INFO]  ------------------------- Batch round 1, loss: 0.5816 -------------------------
+2023-03-25 15:26:57,200 : [INFO]  ------------------------- Batch 8, round 1: Sent local model to the server -------------------------
+2023-03-25 15:26:57,307 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:26:57,312 : [INFO]  ------------------------- Batch 8 training: round 2 -------------------------
+2023-03-25 15:27:01,084 : [INFO]  ------------------------- Batch round 2, loss: 0.5634 -------------------------
+2023-03-25 15:27:01,084 : [INFO]  ------------------------- Batch 8, round 2: Sent local model to the server -------------------------
+2023-03-25 15:27:01,087 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:27:01,088 : [INFO]  ------------------------- Batch 8 training: round 3 -------------------------
+2023-03-25 15:27:04,707 : [INFO]  ------------------------- Batch round 3, loss: 0.5507 -------------------------
+2023-03-25 15:27:04,707 : [INFO]  ------------------------- Batch 8, round 3: Sent local model to the server -------------------------
+2023-03-25 15:27:04,710 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:27:04,712 : [INFO]  Batch number 8 model fetched from the server
+2023-03-25 15:27:04,712 : [INFO]  ################ Batch 8: final global model evalution after 3 rounds ################
+2023-03-25 15:27:06,041 : [INFO]  Batch 8: Training set : loss - 0.5579, accuracy - 0.7174, recall - 0.8913, AUC - 0.8814, F1 - 0.7593, precision - 0.6613, training time - -14.0 seconds
+2023-03-25 15:27:06,041 : [INFO]  Batch 8: Testing set : loss - 0.5737, accuracy - 0.7353, recall - 0.8627, AUC - 0.8448, F1 - 0.7652, precision - 0.6875
+2023-03-25 15:27:06,054 : [INFO]  Batch 9 initialized 
+2023-03-25 15:27:06,513 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:27:06,919 : [INFO]  ------------------------- Batch 9 training: round 1 -------------------------
+2023-03-25 15:27:12,302 : [INFO]  ------------------------- Batch round 1, loss: 0.5554 -------------------------
+2023-03-25 15:27:12,302 : [INFO]  ------------------------- Batch 9, round 1: Sent local model to the server -------------------------
+2023-03-25 15:27:12,468 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:27:12,470 : [INFO]  ------------------------- Batch 9 training: round 2 -------------------------
+2023-03-25 15:27:15,344 : [INFO]  ------------------------- Batch round 2, loss: 0.5373 -------------------------
+2023-03-25 15:27:15,344 : [INFO]  ------------------------- Batch 9, round 2: Sent local model to the server -------------------------
+2023-03-25 15:27:15,530 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:27:15,532 : [INFO]  ------------------------- Batch 9 training: round 3 -------------------------
+2023-03-25 15:27:18,589 : [INFO]  ------------------------- Batch round 3, loss: 0.5298 -------------------------
+2023-03-25 15:27:18,589 : [INFO]  ------------------------- Batch 9, round 3: Sent local model to the server -------------------------
+2023-03-25 15:27:18,670 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:27:18,673 : [INFO]  Batch number 9 model fetched from the server
+2023-03-25 15:27:18,673 : [INFO]  ################ Batch 9: final global model evalution after 3 rounds ################
+2023-03-25 15:27:20,394 : [INFO]  Batch 9: Training set : loss - 0.5272, accuracy - 0.788, recall - 0.9674, AUC - 0.9246, F1 - 0.8203, precision - 0.712, training time - -12.0 seconds
+2023-03-25 15:27:20,394 : [INFO]  Batch 9: Testing set : loss - 0.5519, accuracy - 0.7304, recall - 0.8627, AUC - 0.8718, F1 - 0.7619, precision - 0.6822
+2023-03-25 15:27:20,407 : [INFO]  Batch 10 initialized 
+2023-03-25 15:27:20,876 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:27:21,268 : [INFO]  ------------------------- Batch 10 training: round 1 -------------------------
+2023-03-25 15:27:27,123 : [INFO]  ------------------------- Batch round 1, loss: 0.5499 -------------------------
+2023-03-25 15:27:27,123 : [INFO]  ------------------------- Batch 10, round 1: Sent local model to the server -------------------------
+2023-03-25 15:27:27,170 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:27:27,172 : [INFO]  ------------------------- Batch 10 training: round 2 -------------------------
+2023-03-25 15:27:30,582 : [INFO]  ------------------------- Batch round 2, loss: 0.5397 -------------------------
+2023-03-25 15:27:30,582 : [INFO]  ------------------------- Batch 10, round 2: Sent local model to the server -------------------------
+2023-03-25 15:27:30,588 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:27:30,591 : [INFO]  ------------------------- Batch 10 training: round 3 -------------------------
+2023-03-25 15:27:34,080 : [INFO]  ------------------------- Batch round 3, loss: 0.5322 -------------------------
+2023-03-25 15:27:34,080 : [INFO]  ------------------------- Batch 10, round 3: Sent local model to the server -------------------------
+2023-03-25 15:27:34,137 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:27:34,139 : [INFO]  Batch number 10 model fetched from the server
+2023-03-25 15:27:34,139 : [INFO]  ################ Batch 10: final global model evalution after 3 rounds ################
+2023-03-25 15:27:35,699 : [INFO]  Batch 10: Training set : loss - 0.5272, accuracy - 0.7717, recall - 0.9674, AUC - 0.9196, F1 - 0.8091, precision - 0.6953, training time - -13.0 seconds
+2023-03-25 15:27:35,699 : [INFO]  Batch 10: Testing set : loss - 0.5459, accuracy - 0.7598, recall - 0.902, AUC - 0.8923, F1 - 0.7897, precision - 0.7023
+2023-03-25 15:27:35,709 : [INFO]  Batch 11 initialized 
+2023-03-25 15:27:36,252 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:27:36,516 : [INFO]  ------------------------- Batch 11 training: round 1 -------------------------
+2023-03-25 15:27:41,937 : [INFO]  ------------------------- Batch round 1, loss: 0.5749 -------------------------
+2023-03-25 15:27:41,937 : [INFO]  ------------------------- Batch 11, round 1: Sent local model to the server -------------------------
+2023-03-25 15:27:41,940 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:27:41,942 : [INFO]  ------------------------- Batch 11 training: round 2 -------------------------
+2023-03-25 15:27:44,781 : [INFO]  ------------------------- Batch round 2, loss: 0.5646 -------------------------
+2023-03-25 15:27:44,781 : [INFO]  ------------------------- Batch 11, round 2: Sent local model to the server -------------------------
+2023-03-25 15:27:44,784 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:27:44,786 : [INFO]  ------------------------- Batch 11 training: round 3 -------------------------
+2023-03-25 15:27:47,696 : [INFO]  ------------------------- Batch round 3, loss: 0.5591 -------------------------
+2023-03-25 15:27:47,696 : [INFO]  ------------------------- Batch 11, round 3: Sent local model to the server -------------------------
+2023-03-25 15:27:47,890 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:27:47,892 : [INFO]  Batch number 11 model fetched from the server
+2023-03-25 15:27:47,892 : [INFO]  ################ Batch 11: final global model evalution after 3 rounds ################
+2023-03-25 15:27:49,172 : [INFO]  Batch 11: Training set : loss - 0.559, accuracy - 0.7065, recall - 0.9239, AUC - 0.8829, F1 - 0.7589, precision - 0.6439, training time - -11.0 seconds
+2023-03-25 15:27:49,173 : [INFO]  Batch 11: Testing set : loss - 0.5553, accuracy - 0.7157, recall - 0.8922, AUC - 0.9059, F1 - 0.7583, precision - 0.6594
+2023-03-25 15:27:49,190 : [INFO]  Batch 12 initialized 
+2023-03-25 15:27:49,600 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:27:49,847 : [INFO]  ------------------------- Batch 12 training: round 1 -------------------------
+2023-03-25 15:27:54,977 : [INFO]  ------------------------- Batch round 1, loss: 0.5568 -------------------------
+2023-03-25 15:27:54,977 : [INFO]  ------------------------- Batch 12, round 1: Sent local model to the server -------------------------
+2023-03-25 15:27:54,980 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:27:54,982 : [INFO]  ------------------------- Batch 12 training: round 2 -------------------------
+2023-03-25 15:27:58,174 : [INFO]  ------------------------- Batch round 2, loss: 0.5494 -------------------------
+2023-03-25 15:27:58,174 : [INFO]  ------------------------- Batch 12, round 2: Sent local model to the server -------------------------
+2023-03-25 15:27:58,178 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:27:58,179 : [INFO]  ------------------------- Batch 12 training: round 3 -------------------------
+2023-03-25 15:28:01,124 : [INFO]  ------------------------- Batch round 3, loss: 0.544 -------------------------
+2023-03-25 15:28:01,124 : [INFO]  ------------------------- Batch 12, round 3: Sent local model to the server -------------------------
+2023-03-25 15:28:01,127 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:28:01,129 : [INFO]  Batch number 12 model fetched from the server
+2023-03-25 15:28:01,129 : [INFO]  ################ Batch 12: final global model evalution after 3 rounds ################
+2023-03-25 15:28:02,517 : [INFO]  Batch 12: Training set : loss - 0.5371, accuracy - 0.7663, recall - 0.8696, AUC - 0.8797, F1 - 0.7882, precision - 0.7207, training time - -11.0 seconds
+2023-03-25 15:28:02,517 : [INFO]  Batch 12: Testing set : loss - 0.5894, accuracy - 0.6814, recall - 0.8137, AUC - 0.8083, F1 - 0.7186, precision - 0.6434
+2023-03-25 15:28:02,530 : [INFO]  Batch 13 initialized 
+2023-03-25 15:28:02,997 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:28:03,271 : [INFO]  ------------------------- Batch 13 training: round 1 -------------------------
+2023-03-25 15:28:08,728 : [INFO]  ------------------------- Batch round 1, loss: 0.597 -------------------------
+2023-03-25 15:28:08,728 : [INFO]  ------------------------- Batch 13, round 1: Sent local model to the server -------------------------
+2023-03-25 15:28:08,827 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:28:08,832 : [INFO]  ------------------------- Batch 13 training: round 2 -------------------------
+2023-03-25 15:28:12,695 : [INFO]  ------------------------- Batch round 2, loss: 0.5821 -------------------------
+2023-03-25 15:28:12,695 : [INFO]  ------------------------- Batch 13, round 2: Sent local model to the server -------------------------
+2023-03-25 15:28:12,749 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:28:12,751 : [INFO]  ------------------------- Batch 13 training: round 3 -------------------------
+2023-03-25 15:28:15,864 : [INFO]  ------------------------- Batch round 3, loss: 0.5742 -------------------------
+2023-03-25 15:28:15,864 : [INFO]  ------------------------- Batch 13, round 3: Sent local model to the server -------------------------
+2023-03-25 15:28:15,913 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:28:15,916 : [INFO]  Batch number 13 model fetched from the server
+2023-03-25 15:28:15,916 : [INFO]  ################ Batch 13: final global model evalution after 3 rounds ################
+2023-03-25 15:28:17,431 : [INFO]  Batch 13: Training set : loss - 0.5708, accuracy - 0.7446, recall - 0.913, AUC - 0.8386, F1 - 0.7814, precision - 0.6829, training time - -13.0 seconds
+2023-03-25 15:28:17,432 : [INFO]  Batch 13: Testing set : loss - 0.5824, accuracy - 0.701, recall - 0.7941, AUC - 0.8093, F1 - 0.7265, precision - 0.6694
+2023-03-25 15:28:17,444 : [INFO]  Batch 14 initialized 
+2023-03-25 15:28:17,894 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:28:18,155 : [INFO]  ------------------------- Batch 14 training: round 1 -------------------------
+2023-03-25 15:28:23,445 : [INFO]  ------------------------- Batch round 1, loss: 0.5491 -------------------------
+2023-03-25 15:28:23,445 : [INFO]  ------------------------- Batch 14, round 1: Sent local model to the server -------------------------
+2023-03-25 15:28:23,610 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:28:23,613 : [INFO]  ------------------------- Batch 14 training: round 2 -------------------------
+2023-03-25 15:28:26,654 : [INFO]  ------------------------- Batch round 2, loss: 0.534 -------------------------
+2023-03-25 15:28:26,654 : [INFO]  ------------------------- Batch 14, round 2: Sent local model to the server -------------------------
+2023-03-25 15:28:26,677 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:28:26,679 : [INFO]  ------------------------- Batch 14 training: round 3 -------------------------
+2023-03-25 15:28:29,549 : [INFO]  ------------------------- Batch round 3, loss: 0.5301 -------------------------
+2023-03-25 15:28:29,549 : [INFO]  ------------------------- Batch 14, round 3: Sent local model to the server -------------------------
+2023-03-25 15:28:29,552 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:28:29,554 : [INFO]  Batch number 14 model fetched from the server
+2023-03-25 15:28:29,554 : [INFO]  ################ Batch 14: final global model evalution after 3 rounds ################
+2023-03-25 15:28:30,940 : [INFO]  Batch 14: Training set : loss - 0.5259, accuracy - 0.788, recall - 0.9239, AUC - 0.8937, F1 - 0.8134, precision - 0.7265, training time - -11.0 seconds
+2023-03-25 15:28:30,940 : [INFO]  Batch 14: Testing set : loss - 0.5627, accuracy - 0.7108, recall - 0.8922, AUC - 0.8703, F1 - 0.7552, precision - 0.6547
+2023-03-25 15:28:30,951 : [INFO]  Batch 15 initialized 
+2023-03-25 15:28:31,445 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:28:31,733 : [INFO]  ------------------------- Batch 15 training: round 1 -------------------------
+2023-03-25 15:28:36,937 : [INFO]  ------------------------- Batch round 1, loss: 0.5642 -------------------------
+2023-03-25 15:28:36,937 : [INFO]  ------------------------- Batch 15, round 1: Sent local model to the server -------------------------
+2023-03-25 15:28:36,940 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:28:36,942 : [INFO]  ------------------------- Batch 15 training: round 2 -------------------------
+2023-03-25 15:28:40,110 : [INFO]  ------------------------- Batch round 2, loss: 0.5503 -------------------------
+2023-03-25 15:28:40,110 : [INFO]  ------------------------- Batch 15, round 2: Sent local model to the server -------------------------
+2023-03-25 15:28:40,113 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:28:40,115 : [INFO]  ------------------------- Batch 15 training: round 3 -------------------------
+2023-03-25 15:28:43,190 : [INFO]  ------------------------- Batch round 3, loss: 0.5424 -------------------------
+2023-03-25 15:28:43,190 : [INFO]  ------------------------- Batch 15, round 3: Sent local model to the server -------------------------
+2023-03-25 15:28:43,397 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:28:43,399 : [INFO]  Batch number 15 model fetched from the server
+2023-03-25 15:28:43,399 : [INFO]  ################ Batch 15: final global model evalution after 3 rounds ################
+2023-03-25 15:28:44,997 : [INFO]  Batch 15: Training set : loss - 0.5457, accuracy - 0.7554, recall - 0.9674, AUC - 0.8894, F1 - 0.7982, precision - 0.6794, training time - -12.0 seconds
+2023-03-25 15:28:44,998 : [INFO]  Batch 15: Testing set : loss - 0.568, accuracy - 0.7157, recall - 0.8627, AUC - 0.8516, F1 - 0.7521, precision - 0.6667
+2023-03-25 15:28:45,008 : [INFO]  Batch 16 initialized 
+2023-03-25 15:28:45,474 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:28:45,753 : [INFO]  ------------------------- Batch 16 training: round 1 -------------------------
+2023-03-25 15:28:50,636 : [INFO]  ------------------------- Batch round 1, loss: 0.5542 -------------------------
+2023-03-25 15:28:50,636 : [INFO]  ------------------------- Batch 16, round 1: Sent local model to the server -------------------------
+2023-03-25 15:28:50,743 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:28:50,745 : [INFO]  ------------------------- Batch 16 training: round 2 -------------------------
+2023-03-25 15:28:53,898 : [INFO]  ------------------------- Batch round 2, loss: 0.5501 -------------------------
+2023-03-25 15:28:53,898 : [INFO]  ------------------------- Batch 16, round 2: Sent local model to the server -------------------------
+2023-03-25 15:28:53,901 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:28:53,903 : [INFO]  ------------------------- Batch 16 training: round 3 -------------------------
+2023-03-25 15:28:56,961 : [INFO]  ------------------------- Batch round 3, loss: 0.5406 -------------------------
+2023-03-25 15:28:56,961 : [INFO]  ------------------------- Batch 16, round 3: Sent local model to the server -------------------------
+2023-03-25 15:28:57,054 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:28:57,056 : [INFO]  Batch number 16 model fetched from the server
+2023-03-25 15:28:57,056 : [INFO]  ################ Batch 16: final global model evalution after 3 rounds ################
+2023-03-25 15:28:58,735 : [INFO]  Batch 16: Training set : loss - 0.5391, accuracy - 0.7717, recall - 0.9348, AUC - 0.8987, F1 - 0.8037, precision - 0.7049, training time - -11.0 seconds
+2023-03-25 15:28:58,735 : [INFO]  Batch 16: Testing set : loss - 0.5363, accuracy - 0.75, recall - 0.951, AUC - 0.9295, F1 - 0.7918, precision - 0.6783
+2023-03-25 15:28:58,745 : [INFO]  Batch 17 initialized 
+2023-03-25 15:28:59,506 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:28:59,733 : [INFO]  ------------------------- Batch 17 training: round 1 -------------------------
+2023-03-25 15:29:04,809 : [INFO]  ------------------------- Batch round 1, loss: 0.5555 -------------------------
+2023-03-25 15:29:04,810 : [INFO]  ------------------------- Batch 17, round 1: Sent local model to the server -------------------------
+2023-03-25 15:29:05,001 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:29:05,003 : [INFO]  ------------------------- Batch 17 training: round 2 -------------------------
+2023-03-25 15:29:08,087 : [INFO]  ------------------------- Batch round 2, loss: 0.5388 -------------------------
+2023-03-25 15:29:08,088 : [INFO]  ------------------------- Batch 17, round 2: Sent local model to the server -------------------------
+2023-03-25 15:29:08,091 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:29:08,092 : [INFO]  ------------------------- Batch 17 training: round 3 -------------------------
+2023-03-25 15:29:11,285 : [INFO]  ------------------------- Batch round 3, loss: 0.5253 -------------------------
+2023-03-25 15:29:11,286 : [INFO]  ------------------------- Batch 17, round 3: Sent local model to the server -------------------------
+2023-03-25 15:29:11,289 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:29:11,291 : [INFO]  Batch number 17 model fetched from the server
+2023-03-25 15:29:11,291 : [INFO]  ################ Batch 17: final global model evalution after 3 rounds ################
+2023-03-25 15:29:12,831 : [INFO]  Batch 17: Training set : loss - 0.5213, accuracy - 0.837, recall - 0.9565, AUC - 0.8943, F1 - 0.8544, precision - 0.7719, training time - -12.0 seconds
+2023-03-25 15:29:12,831 : [INFO]  Batch 17: Testing set : loss - 0.5695, accuracy - 0.7059, recall - 0.8725, AUC - 0.8747, F1 - 0.7479, precision - 0.6544
+2023-03-25 15:29:12,847 : [INFO]  Batch 18 initialized 
+2023-03-25 15:29:13,289 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:29:13,563 : [INFO]  ------------------------- Batch 18 training: round 1 -------------------------
+2023-03-25 15:29:18,411 : [INFO]  ------------------------- Batch round 1, loss: 0.5913 -------------------------
+2023-03-25 15:29:18,411 : [INFO]  ------------------------- Batch 18, round 1: Sent local model to the server -------------------------
+2023-03-25 15:29:18,745 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:29:18,747 : [INFO]  ------------------------- Batch 18 training: round 2 -------------------------
+2023-03-25 15:29:21,651 : [INFO]  ------------------------- Batch round 2, loss: 0.5771 -------------------------
+2023-03-25 15:29:21,651 : [INFO]  ------------------------- Batch 18, round 2: Sent local model to the server -------------------------
+2023-03-25 15:29:21,889 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:29:21,890 : [INFO]  ------------------------- Batch 18 training: round 3 -------------------------
+2023-03-25 15:29:25,642 : [INFO]  ------------------------- Batch round 3, loss: 0.5637 -------------------------
+2023-03-25 15:29:25,642 : [INFO]  ------------------------- Batch 18, round 3: Sent local model to the server -------------------------
+2023-03-25 15:29:25,818 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:29:25,822 : [INFO]  Batch number 18 model fetched from the server
+2023-03-25 15:29:25,822 : [INFO]  ################ Batch 18: final global model evalution after 3 rounds ################
+2023-03-25 15:29:27,239 : [INFO]  Batch 18: Training set : loss - 0.5733, accuracy - 0.6957, recall - 0.9239, AUC - 0.8394, F1 - 0.7522, precision - 0.6343, training time - -12.0 seconds
+2023-03-25 15:29:27,239 : [INFO]  Batch 18: Testing set : loss - 0.6064, accuracy - 0.6618, recall - 0.902, AUC - 0.84, F1 - 0.7273, precision - 0.6093
+2023-03-25 15:29:27,245 : [INFO]  Batch 19 initialized 
+2023-03-25 15:29:27,772 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:29:28,113 : [INFO]  ------------------------- Batch 19 training: round 1 -------------------------
+2023-03-25 15:29:33,350 : [INFO]  ------------------------- Batch round 1, loss: 0.5904 -------------------------
+2023-03-25 15:29:33,351 : [INFO]  ------------------------- Batch 19, round 1: Sent local model to the server -------------------------
+2023-03-25 15:29:33,492 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:29:33,494 : [INFO]  ------------------------- Batch 19 training: round 2 -------------------------
+2023-03-25 15:29:36,440 : [INFO]  ------------------------- Batch round 2, loss: 0.5856 -------------------------
+2023-03-25 15:29:36,440 : [INFO]  ------------------------- Batch 19, round 2: Sent local model to the server -------------------------
+2023-03-25 15:29:36,556 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:29:36,558 : [INFO]  ------------------------- Batch 19 training: round 3 -------------------------
+2023-03-25 15:29:39,486 : [INFO]  ------------------------- Batch round 3, loss: 0.5738 -------------------------
+2023-03-25 15:29:39,486 : [INFO]  ------------------------- Batch 19, round 3: Sent local model to the server -------------------------
+2023-03-25 15:29:39,581 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:29:39,583 : [INFO]  Batch number 19 model fetched from the server
+2023-03-25 15:29:39,583 : [INFO]  ################ Batch 19: final global model evalution after 3 rounds ################
+2023-03-25 15:29:41,056 : [INFO]  Batch 19: Training set : loss - 0.5737, accuracy - 0.7283, recall - 0.8913, AUC - 0.8162, F1 - 0.7664, precision - 0.6721, training time - -11.0 seconds
+2023-03-25 15:29:41,057 : [INFO]  Batch 19: Testing set : loss - 0.5826, accuracy - 0.7108, recall - 0.8725, AUC - 0.8304, F1 - 0.7511, precision - 0.6593
+2023-03-25 15:29:41,069 : [INFO]  Batch 20 initialized 
+2023-03-25 15:29:41,534 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:29:41,812 : [INFO]  ------------------------- Batch 20 training: round 1 -------------------------
+2023-03-25 15:29:46,623 : [INFO]  ------------------------- Batch round 1, loss: 0.5434 -------------------------
+2023-03-25 15:29:46,623 : [INFO]  ------------------------- Batch 20, round 1: Sent local model to the server -------------------------
+2023-03-25 15:29:46,736 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:29:46,737 : [INFO]  ------------------------- Batch 20 training: round 2 -------------------------
+2023-03-25 15:29:50,858 : [INFO]  ------------------------- Batch round 2, loss: 0.5402 -------------------------
+2023-03-25 15:29:50,858 : [INFO]  ------------------------- Batch 20, round 2: Sent local model to the server -------------------------
+2023-03-25 15:29:50,980 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:29:50,982 : [INFO]  ------------------------- Batch 20 training: round 3 -------------------------
+2023-03-25 15:29:54,208 : [INFO]  ------------------------- Batch round 3, loss: 0.529 -------------------------
+2023-03-25 15:29:54,209 : [INFO]  ------------------------- Batch 20, round 3: Sent local model to the server -------------------------
+2023-03-25 15:29:54,333 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:29:54,336 : [INFO]  Batch number 20 model fetched from the server
+2023-03-25 15:29:54,337 : [INFO]  ################ Batch 20: final global model evalution after 3 rounds ################
+2023-03-25 15:29:55,853 : [INFO]  Batch 20: Training set : loss - 0.5323, accuracy - 0.75, recall - 0.9891, AUC - 0.9324, F1 - 0.7982, precision - 0.6691, training time - -13.0 seconds
+2023-03-25 15:29:55,853 : [INFO]  Batch 20: Testing set : loss - 0.5701, accuracy - 0.7157, recall - 0.9314, AUC - 0.8924, F1 - 0.7661, precision - 0.6507
+2023-03-25 15:29:55,864 : [INFO]  Batch 21 initialized 
+2023-03-25 15:29:56,332 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:29:56,605 : [INFO]  ------------------------- Batch 21 training: round 1 -------------------------
+2023-03-25 15:30:01,620 : [INFO]  ------------------------- Batch round 1, loss: 0.5974 -------------------------
+2023-03-25 15:30:01,620 : [INFO]  ------------------------- Batch 21, round 1: Sent local model to the server -------------------------
+2023-03-25 15:30:01,726 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:30:01,728 : [INFO]  ------------------------- Batch 21 training: round 2 -------------------------
+2023-03-25 15:30:04,586 : [INFO]  ------------------------- Batch round 2, loss: 0.5738 -------------------------
+2023-03-25 15:30:04,586 : [INFO]  ------------------------- Batch 21, round 2: Sent local model to the server -------------------------
+2023-03-25 15:30:04,656 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:30:04,658 : [INFO]  ------------------------- Batch 21 training: round 3 -------------------------
+2023-03-25 15:30:07,762 : [INFO]  ------------------------- Batch round 3, loss: 0.5689 -------------------------
+2023-03-25 15:30:07,762 : [INFO]  ------------------------- Batch 21, round 3: Sent local model to the server -------------------------
+2023-03-25 15:30:07,765 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:30:07,767 : [INFO]  Batch number 21 model fetched from the server
+2023-03-25 15:30:07,767 : [INFO]  ################ Batch 21: final global model evalution after 3 rounds ################
+2023-03-25 15:30:09,092 : [INFO]  Batch 21: Training set : loss - 0.5685, accuracy - 0.7337, recall - 0.9239, AUC - 0.827, F1 - 0.7763, precision - 0.6693, training time - -11.0 seconds
+2023-03-25 15:30:09,092 : [INFO]  Batch 21: Testing set : loss - 0.5595, accuracy - 0.7304, recall - 0.9216, AUC - 0.8655, F1 - 0.7737, precision - 0.6667
+2023-03-25 15:30:09,104 : [INFO]  Batch 22 initialized 
+2023-03-25 15:30:09,579 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:30:09,846 : [INFO]  ------------------------- Batch 22 training: round 1 -------------------------
+2023-03-25 15:30:15,863 : [INFO]  ------------------------- Batch round 1, loss: 0.5903 -------------------------
+2023-03-25 15:30:15,864 : [INFO]  ------------------------- Batch 22, round 1: Sent local model to the server -------------------------
+2023-03-25 15:30:15,959 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:30:15,963 : [INFO]  ------------------------- Batch 22 training: round 2 -------------------------
+2023-03-25 15:30:19,248 : [INFO]  ------------------------- Batch round 2, loss: 0.5744 -------------------------
+2023-03-25 15:30:19,248 : [INFO]  ------------------------- Batch 22, round 2: Sent local model to the server -------------------------
+2023-03-25 15:30:19,251 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:30:19,253 : [INFO]  ------------------------- Batch 22 training: round 3 -------------------------
+2023-03-25 15:30:22,411 : [INFO]  ------------------------- Batch round 3, loss: 0.567 -------------------------
+2023-03-25 15:30:22,411 : [INFO]  ------------------------- Batch 22, round 3: Sent local model to the server -------------------------
+2023-03-25 15:30:22,414 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:30:22,416 : [INFO]  Batch number 22 model fetched from the server
+2023-03-25 15:30:22,416 : [INFO]  ################ Batch 22: final global model evalution after 3 rounds ################
+2023-03-25 15:30:24,019 : [INFO]  Batch 22: Training set : loss - 0.5609, accuracy - 0.7554, recall - 0.9022, AUC - 0.8207, F1 - 0.7867, precision - 0.6975, training time - -13.0 seconds
+2023-03-25 15:30:24,020 : [INFO]  Batch 22: Testing set : loss - 0.6418, accuracy - 0.6275, recall - 0.8235, AUC - 0.7623, F1 - 0.6885, precision - 0.5915
+2023-03-25 15:30:24,028 : [INFO]  Batch 23 initialized 
+2023-03-25 15:30:24,571 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:30:24,923 : [INFO]  ------------------------- Batch 23 training: round 1 -------------------------
+2023-03-25 15:30:30,109 : [INFO]  ------------------------- Batch round 1, loss: 0.5774 -------------------------
+2023-03-25 15:30:30,109 : [INFO]  ------------------------- Batch 23, round 1: Sent local model to the server -------------------------
+2023-03-25 15:30:30,113 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:30:30,116 : [INFO]  ------------------------- Batch 23 training: round 2 -------------------------
+2023-03-25 15:30:33,864 : [INFO]  ------------------------- Batch round 2, loss: 0.565 -------------------------
+2023-03-25 15:30:33,864 : [INFO]  ------------------------- Batch 23, round 2: Sent local model to the server -------------------------
+2023-03-25 15:30:33,962 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:30:33,964 : [INFO]  ------------------------- Batch 23 training: round 3 -------------------------
+2023-03-25 15:30:37,513 : [INFO]  ------------------------- Batch round 3, loss: 0.5473 -------------------------
+2023-03-25 15:30:37,513 : [INFO]  ------------------------- Batch 23, round 3: Sent local model to the server -------------------------
+2023-03-25 15:30:37,516 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:30:37,519 : [INFO]  Batch number 23 model fetched from the server
+2023-03-25 15:30:37,520 : [INFO]  ################ Batch 23: final global model evalution after 3 rounds ################
+2023-03-25 15:30:39,186 : [INFO]  Batch 23: Training set : loss - 0.5434, accuracy - 0.7609, recall - 0.9348, AUC - 0.9007, F1 - 0.7963, precision - 0.6935, training time - -13.0 seconds
+2023-03-25 15:30:39,186 : [INFO]  Batch 23: Testing set : loss - 0.5692, accuracy - 0.7059, recall - 0.902, AUC - 0.8836, F1 - 0.7541, precision - 0.6479
+2023-03-25 15:30:39,195 : [INFO]  Batch 24 initialized 
+2023-03-25 15:30:39,680 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:30:39,949 : [INFO]  ------------------------- Batch 24 training: round 1 -------------------------
+2023-03-25 15:30:45,749 : [INFO]  ------------------------- Batch round 1, loss: 0.5969 -------------------------
+2023-03-25 15:30:45,749 : [INFO]  ------------------------- Batch 24, round 1: Sent local model to the server -------------------------
+2023-03-25 15:30:45,753 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:30:45,755 : [INFO]  ------------------------- Batch 24 training: round 2 -------------------------
+2023-03-25 15:30:49,056 : [INFO]  ------------------------- Batch round 2, loss: 0.5845 -------------------------
+2023-03-25 15:30:49,056 : [INFO]  ------------------------- Batch 24, round 2: Sent local model to the server -------------------------
+2023-03-25 15:30:49,060 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:30:49,061 : [INFO]  ------------------------- Batch 24 training: round 3 -------------------------
+2023-03-25 15:30:52,119 : [INFO]  ------------------------- Batch round 3, loss: 0.577 -------------------------
+2023-03-25 15:30:52,119 : [INFO]  ------------------------- Batch 24, round 3: Sent local model to the server -------------------------
+2023-03-25 15:30:52,122 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:30:52,124 : [INFO]  Batch number 24 model fetched from the server
+2023-03-25 15:30:52,124 : [INFO]  ################ Batch 24: final global model evalution after 3 rounds ################
+2023-03-25 15:30:53,596 : [INFO]  Batch 24: Training set : loss - 0.5779, accuracy - 0.712, recall - 0.9022, AUC - 0.826, F1 - 0.758, precision - 0.6535, training time - -12.0 seconds
+2023-03-25 15:30:53,596 : [INFO]  Batch 24: Testing set : loss - 0.5927, accuracy - 0.6863, recall - 0.902, AUC - 0.8249, F1 - 0.7419, precision - 0.6301
+2023-03-25 15:30:53,605 : [INFO]  Batch 25 initialized 
+2023-03-25 15:30:54,086 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:30:54,389 : [INFO]  ------------------------- Batch 25 training: round 1 -------------------------
+2023-03-25 15:31:00,802 : [INFO]  ------------------------- Batch round 1, loss: 0.5704 -------------------------
+2023-03-25 15:31:00,802 : [INFO]  ------------------------- Batch 25, round 1: Sent local model to the server -------------------------
+2023-03-25 15:31:00,805 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:31:00,807 : [INFO]  ------------------------- Batch 25 training: round 2 -------------------------
+2023-03-25 15:31:04,315 : [INFO]  ------------------------- Batch round 2, loss: 0.5517 -------------------------
+2023-03-25 15:31:04,315 : [INFO]  ------------------------- Batch 25, round 2: Sent local model to the server -------------------------
+2023-03-25 15:31:04,608 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:31:04,610 : [INFO]  ------------------------- Batch 25 training: round 3 -------------------------
+2023-03-25 15:31:08,401 : [INFO]  ------------------------- Batch round 3, loss: 0.5428 -------------------------
+2023-03-25 15:31:08,401 : [INFO]  ------------------------- Batch 25, round 3: Sent local model to the server -------------------------
+2023-03-25 15:31:08,405 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:31:08,407 : [INFO]  Batch number 25 model fetched from the server
+2023-03-25 15:31:08,407 : [INFO]  ################ Batch 25: final global model evalution after 3 rounds ################
+2023-03-25 15:31:09,918 : [INFO]  Batch 25: Training set : loss - 0.5373, accuracy - 0.7772, recall - 0.9457, AUC - 0.892, F1 - 0.8093, precision - 0.7073, training time - -14.0 seconds
+2023-03-25 15:31:09,918 : [INFO]  Batch 25: Testing set : loss - 0.5662, accuracy - 0.7255, recall - 0.9118, AUC - 0.8803, F1 - 0.7686, precision - 0.6643
+2023-03-25 15:31:09,926 : [INFO]  Batch 26 initialized 
+2023-03-25 15:31:10,492 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:31:10,812 : [INFO]  ------------------------- Batch 26 training: round 1 -------------------------
+2023-03-25 15:31:16,196 : [INFO]  ------------------------- Batch round 1, loss: 0.5704 -------------------------
+2023-03-25 15:31:16,196 : [INFO]  ------------------------- Batch 26, round 1: Sent local model to the server -------------------------
+2023-03-25 15:31:16,385 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:31:16,390 : [INFO]  ------------------------- Batch 26 training: round 2 -------------------------
+2023-03-25 15:31:19,883 : [INFO]  ------------------------- Batch round 2, loss: 0.5613 -------------------------
+2023-03-25 15:31:19,883 : [INFO]  ------------------------- Batch 26, round 2: Sent local model to the server -------------------------
+2023-03-25 15:31:19,887 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:31:19,889 : [INFO]  ------------------------- Batch 26 training: round 3 -------------------------
+2023-03-25 15:31:23,325 : [INFO]  ------------------------- Batch round 3, loss: 0.5515 -------------------------
+2023-03-25 15:31:23,325 : [INFO]  ------------------------- Batch 26, round 3: Sent local model to the server -------------------------
+2023-03-25 15:31:23,328 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:31:23,329 : [INFO]  Batch number 26 model fetched from the server
+2023-03-25 15:31:23,330 : [INFO]  ################ Batch 26: final global model evalution after 3 rounds ################
+2023-03-25 15:31:24,855 : [INFO]  Batch 26: Training set : loss - 0.5474, accuracy - 0.7663, recall - 0.9022, AUC - 0.879, F1 - 0.7943, precision - 0.7094, training time - -13.0 seconds
+2023-03-25 15:31:24,855 : [INFO]  Batch 26: Testing set : loss - 0.5766, accuracy - 0.7157, recall - 0.9118, AUC - 0.8475, F1 - 0.7623, precision - 0.6549
+2023-03-25 15:31:24,864 : [INFO]  Batch 27 initialized 
+2023-03-25 15:31:25,316 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:31:25,613 : [INFO]  ------------------------- Batch 27 training: round 1 -------------------------
+2023-03-25 15:31:30,437 : [INFO]  ------------------------- Batch round 1, loss: 0.6014 -------------------------
+2023-03-25 15:31:30,437 : [INFO]  ------------------------- Batch 27, round 1: Sent local model to the server -------------------------
+2023-03-25 15:31:30,448 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:31:30,451 : [INFO]  ------------------------- Batch 27 training: round 2 -------------------------
+2023-03-25 15:31:33,618 : [INFO]  ------------------------- Batch round 2, loss: 0.5896 -------------------------
+2023-03-25 15:31:33,618 : [INFO]  ------------------------- Batch 27, round 2: Sent local model to the server -------------------------
+2023-03-25 15:31:33,622 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:31:33,624 : [INFO]  ------------------------- Batch 27 training: round 3 -------------------------
+2023-03-25 15:31:36,733 : [INFO]  ------------------------- Batch round 3, loss: 0.5765 -------------------------
+2023-03-25 15:31:36,733 : [INFO]  ------------------------- Batch 27, round 3: Sent local model to the server -------------------------
+2023-03-25 15:31:36,880 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:31:36,884 : [INFO]  Batch number 27 model fetched from the server
+2023-03-25 15:31:36,884 : [INFO]  ################ Batch 27: final global model evalution after 3 rounds ################
+2023-03-25 15:31:38,641 : [INFO]  Batch 27: Training set : loss - 0.5774, accuracy - 0.7446, recall - 0.9348, AUC - 0.8527, F1 - 0.7854, precision - 0.6772, training time - -11.0 seconds
+2023-03-25 15:31:38,641 : [INFO]  Batch 27: Testing set : loss - 0.5868, accuracy - 0.701, recall - 0.9706, AUC - 0.8525, F1 - 0.7645, precision - 0.6306
+2023-03-25 15:31:38,653 : [INFO]  Batch 28 initialized 
+2023-03-25 15:31:39,176 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:31:39,472 : [INFO]  ------------------------- Batch 28 training: round 1 -------------------------
+2023-03-25 15:31:45,215 : [INFO]  ------------------------- Batch round 1, loss: 0.5611 -------------------------
+2023-03-25 15:31:45,215 : [INFO]  ------------------------- Batch 28, round 1: Sent local model to the server -------------------------
+2023-03-25 15:31:45,227 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:31:45,234 : [INFO]  ------------------------- Batch 28 training: round 2 -------------------------
+2023-03-25 15:31:48,261 : [INFO]  ------------------------- Batch round 2, loss: 0.5411 -------------------------
+2023-03-25 15:31:48,262 : [INFO]  ------------------------- Batch 28, round 2: Sent local model to the server -------------------------
+2023-03-25 15:31:48,327 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:31:48,329 : [INFO]  ------------------------- Batch 28 training: round 3 -------------------------
+2023-03-25 15:31:51,255 : [INFO]  ------------------------- Batch round 3, loss: 0.5342 -------------------------
+2023-03-25 15:31:51,255 : [INFO]  ------------------------- Batch 28, round 3: Sent local model to the server -------------------------
+2023-03-25 15:31:51,264 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:31:51,266 : [INFO]  Batch number 28 model fetched from the server
+2023-03-25 15:31:51,267 : [INFO]  ################ Batch 28: final global model evalution after 3 rounds ################
+2023-03-25 15:31:52,936 : [INFO]  Batch 28: Training set : loss - 0.5256, accuracy - 0.7935, recall - 0.8913, AUC - 0.8867, F1 - 0.8119, precision - 0.7455, training time - -12.0 seconds
+2023-03-25 15:31:52,937 : [INFO]  Batch 28: Testing set : loss - 0.5805, accuracy - 0.7157, recall - 0.8431, AUC - 0.826, F1 - 0.7478, precision - 0.6719
+2023-03-25 15:31:52,947 : [INFO]  Batch 29 initialized 
+2023-03-25 15:31:53,664 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:31:54,098 : [INFO]  ------------------------- Batch 29 training: round 1 -------------------------
+2023-03-25 15:31:59,097 : [INFO]  ------------------------- Batch round 1, loss: 0.5445 -------------------------
+2023-03-25 15:31:59,097 : [INFO]  ------------------------- Batch 29, round 1: Sent local model to the server -------------------------
+2023-03-25 15:31:59,356 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:31:59,358 : [INFO]  ------------------------- Batch 29 training: round 2 -------------------------
+2023-03-25 15:32:02,007 : [INFO]  ------------------------- Batch round 2, loss: 0.525 -------------------------
+2023-03-25 15:32:02,007 : [INFO]  ------------------------- Batch 29, round 2: Sent local model to the server -------------------------
+2023-03-25 15:32:02,308 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:32:02,310 : [INFO]  ------------------------- Batch 29 training: round 3 -------------------------
+2023-03-25 15:32:05,061 : [INFO]  ------------------------- Batch round 3, loss: 0.5173 -------------------------
+2023-03-25 15:32:05,061 : [INFO]  ------------------------- Batch 29, round 3: Sent local model to the server -------------------------
+2023-03-25 15:32:05,317 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:32:05,318 : [INFO]  Batch number 29 model fetched from the server
+2023-03-25 15:32:05,319 : [INFO]  ################ Batch 29: final global model evalution after 3 rounds ################
+2023-03-25 15:32:06,626 : [INFO]  Batch 29: Training set : loss - 0.5165, accuracy - 0.8207, recall - 1.0, AUC - 0.935, F1 - 0.8479, precision - 0.736, training time - -11.0 seconds
+2023-03-25 15:32:06,627 : [INFO]  Batch 29: Testing set : loss - 0.5637, accuracy - 0.7255, recall - 0.9118, AUC - 0.8589, F1 - 0.7686, precision - 0.6643
+2023-03-25 15:32:06,642 : [INFO]  Batch 30 initialized 
+2023-03-25 15:32:07,082 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:32:07,355 : [INFO]  ------------------------- Batch 30 training: round 1 -------------------------
+2023-03-25 15:32:11,986 : [INFO]  ------------------------- Batch round 1, loss: 0.5755 -------------------------
+2023-03-25 15:32:11,986 : [INFO]  ------------------------- Batch 30, round 1: Sent local model to the server -------------------------
+2023-03-25 15:32:12,066 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:32:12,068 : [INFO]  ------------------------- Batch 30 training: round 2 -------------------------
+2023-03-25 15:32:14,954 : [INFO]  ------------------------- Batch round 2, loss: 0.5593 -------------------------
+2023-03-25 15:32:14,955 : [INFO]  ------------------------- Batch 30, round 2: Sent local model to the server -------------------------
+2023-03-25 15:32:15,024 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:32:15,027 : [INFO]  ------------------------- Batch 30 training: round 3 -------------------------
+2023-03-25 15:32:17,906 : [INFO]  ------------------------- Batch round 3, loss: 0.5442 -------------------------
+2023-03-25 15:32:17,906 : [INFO]  ------------------------- Batch 30, round 3: Sent local model to the server -------------------------
+2023-03-25 15:32:17,930 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:32:17,933 : [INFO]  Batch number 30 model fetched from the server
+2023-03-25 15:32:17,933 : [INFO]  ################ Batch 30: final global model evalution after 3 rounds ################
+2023-03-25 15:32:19,286 : [INFO]  Batch 30: Training set : loss - 0.5433, accuracy - 0.788, recall - 0.9457, AUC - 0.888, F1 - 0.8169, precision - 0.719, training time - -11.0 seconds
+2023-03-25 15:32:19,287 : [INFO]  Batch 30: Testing set : loss - 0.5416, accuracy - 0.7304, recall - 0.9902, AUC - 0.9417, F1 - 0.786, precision - 0.6516
+2023-03-25 15:32:19,298 : [INFO]  Batch 31 initialized 
+2023-03-25 15:32:19,729 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:32:20,042 : [INFO]  ------------------------- Batch 31 training: round 1 -------------------------
+2023-03-25 15:32:24,886 : [INFO]  ------------------------- Batch round 1, loss: 0.6099 -------------------------
+2023-03-25 15:32:24,887 : [INFO]  ------------------------- Batch 31, round 1: Sent local model to the server -------------------------
+2023-03-25 15:32:24,890 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:32:24,892 : [INFO]  ------------------------- Batch 31 training: round 2 -------------------------
+2023-03-25 15:32:27,809 : [INFO]  ------------------------- Batch round 2, loss: 0.5807 -------------------------
+2023-03-25 15:32:27,809 : [INFO]  ------------------------- Batch 31, round 2: Sent local model to the server -------------------------
+2023-03-25 15:32:27,813 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:32:27,815 : [INFO]  ------------------------- Batch 31 training: round 3 -------------------------
+2023-03-25 15:32:30,828 : [INFO]  ------------------------- Batch round 3, loss: 0.5738 -------------------------
+2023-03-25 15:32:30,829 : [INFO]  ------------------------- Batch 31, round 3: Sent local model to the server -------------------------
+2023-03-25 15:32:30,832 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:32:30,833 : [INFO]  Batch number 31 model fetched from the server
+2023-03-25 15:32:30,833 : [INFO]  ################ Batch 31: final global model evalution after 3 rounds ################
+2023-03-25 15:32:32,173 : [INFO]  Batch 31: Training set : loss - 0.5727, accuracy - 0.7337, recall - 0.8696, AUC - 0.843, F1 - 0.7656, precision - 0.6838, training time - -11.0 seconds
+2023-03-25 15:32:32,173 : [INFO]  Batch 31: Testing set : loss - 0.5879, accuracy - 0.701, recall - 0.8333, AUC - 0.8221, F1 - 0.7359, precision - 0.6589
+2023-03-25 15:32:32,181 : [INFO]  Batch 32 initialized 
+2023-03-25 15:32:32,609 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:32:32,917 : [INFO]  ------------------------- Batch 32 training: round 1 -------------------------
+2023-03-25 15:32:37,560 : [INFO]  ------------------------- Batch round 1, loss: 0.5804 -------------------------
+2023-03-25 15:32:37,560 : [INFO]  ------------------------- Batch 32, round 1: Sent local model to the server -------------------------
+2023-03-25 15:32:37,663 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:32:37,665 : [INFO]  ------------------------- Batch 32 training: round 2 -------------------------
+2023-03-25 15:32:40,608 : [INFO]  ------------------------- Batch round 2, loss: 0.5669 -------------------------
+2023-03-25 15:32:40,608 : [INFO]  ------------------------- Batch 32, round 2: Sent local model to the server -------------------------
+2023-03-25 15:32:40,611 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:32:40,613 : [INFO]  ------------------------- Batch 32 training: round 3 -------------------------
+2023-03-25 15:32:43,566 : [INFO]  ------------------------- Batch round 3, loss: 0.5598 -------------------------
+2023-03-25 15:32:43,566 : [INFO]  ------------------------- Batch 32, round 3: Sent local model to the server -------------------------
+2023-03-25 15:32:43,569 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 15:32:43,570 : [INFO]  Batch number 32 model fetched from the server
+2023-03-25 15:32:43,570 : [INFO]  ################ Batch 32: final global model evalution after 3 rounds ################
+2023-03-25 15:32:44,941 : [INFO]  Batch 32: Training set : loss - 0.5542, accuracy - 0.788, recall - 0.9239, AUC - 0.8451, F1 - 0.8134, precision - 0.7265, training time - -11.0 seconds
+2023-03-25 15:32:44,941 : [INFO]  Batch 32: Testing set : loss - 0.5482, accuracy - 0.7696, recall - 0.902, AUC - 0.8814, F1 - 0.7965, precision - 0.7132
+2023-03-25 15:32:44,947 : [INFO]  Batch 33 initialized 
+2023-03-25 15:32:45,390 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 15:32:45,691 : [INFO]  ------------------------- Batch 33 training: round 1 -------------------------
+2023-03-25 15:32:50,808 : [INFO]  ------------------------- Batch round 1, loss: 0.5832 -------------------------
+2023-03-25 15:32:50,808 : [INFO]  ------------------------- Batch 33, round 1: Sent local model to the server -------------------------
+2023-03-25 15:32:50,814 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------

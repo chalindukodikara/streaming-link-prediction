@@ -1,0 +1,14 @@
+2023-03-28 20:39:40,608 : [WARNING]  ####################################### New Training Session: Client 0 #######################################
+2023-03-28 20:39:40,609 : [INFO]  Client started, graph name wikipedia, graph ID 1, partition ID 0, training epochs 1, epochs 6
+2023-03-28 20:39:47,702 : [INFO]  Model initialized for training
+2023-03-28 20:40:02,827 : [INFO]  Number of training examples - 1842, Number of testing examples - 2046
+2023-03-28 20:40:02,827 : [INFO]  Connected to the server
+2023-03-28 20:40:02,959 : [INFO]  Distributed training for streaming graphs started!
+2023-03-28 20:40:02,961 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-28 20:40:02,961 : [INFO]  ################################## Initial model training started ##################################
+2023-03-28 20:40:02,961 : [INFO]  ------------------------- Initial model training: round 1 -------------------------
+2023-03-28 20:40:15,828 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-28 20:40:29,140 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-28 20:40:41,554 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-28 20:40:54,171 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-28 20:41:06,250 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision

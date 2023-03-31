@@ -1,0 +1,178 @@
+2023-03-29 18:21:20,577 : [WARNING]  ####################################### New Training Session: Client 1 #######################################
+2023-03-29 18:21:20,577 : [INFO]  Client started, graph name wikipedia, graph ID 1, partition ID 1, training epochs 3, epochs 3
+2023-03-29 18:21:23,576 : [INFO]  Model initialized for training
+2023-03-29 18:21:26,896 : [INFO]  Number of training examples - 1842, Number of testing examples - 2046
+2023-03-29 18:21:26,896 : [INFO]  Connected to the server
+2023-03-29 18:21:26,990 : [INFO]  Distributed training for streaming graphs started!
+2023-03-29 18:21:26,991 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:21:27,000 : [INFO]  ################################## Initial model training started ##################################
+2023-03-29 18:21:27,000 : [INFO]  ------------------------- Initial model training: round 1 -------------------------
+2023-03-29 18:21:33,462 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:21:37,838 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:21:42,740 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:21:51,285 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:21:59,085 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:22:06,529 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:22:06,536 : [INFO]  ------------------------- Training round 1, loss: 0.6196 -------------------------
+2023-03-29 18:22:06,536 : [INFO]  ------------------------- Training, round 1: Sent local model to the server -------------------------
+2023-03-29 18:22:06,541 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:22:06,544 : [INFO]  ------------------------- Initial model training: round 2 -------------------------
+2023-03-29 18:22:12,924 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:22:19,583 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:22:26,123 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:22:34,755 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:22:43,693 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:22:51,829 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:22:51,833 : [INFO]  ------------------------- Training round 2, loss: 0.5736 -------------------------
+2023-03-29 18:22:51,833 : [INFO]  ------------------------- Training, round 2: Sent local model to the server -------------------------
+2023-03-29 18:22:51,838 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:22:51,842 : [INFO]  ------------------------- Initial model training: round 3 -------------------------
+2023-03-29 18:23:00,288 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:23:08,036 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:23:15,893 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:23:25,109 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:23:32,263 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:23:41,084 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:23:41,099 : [INFO]  ------------------------- Training round 3, loss: 0.5668 -------------------------
+2023-03-29 18:23:41,100 : [INFO]  ------------------------- Training, round 3: Sent local model to the server -------------------------
+2023-03-29 18:23:41,120 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:23:41,126 : [INFO]  ------------------------- Initial model training: round 4 -------------------------
+2023-03-29 18:23:50,554 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:23:58,500 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:24:07,403 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:24:16,027 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:24:23,376 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:24:29,609 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:24:29,612 : [INFO]  ------------------------- Training round 4, loss: 0.4796 -------------------------
+2023-03-29 18:24:29,613 : [INFO]  ------------------------- Training, round 4: Sent local model to the server -------------------------
+2023-03-29 18:24:29,623 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:24:29,626 : [INFO]  ------------------------- Initial model training: round 5 -------------------------
+2023-03-29 18:24:36,185 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:24:41,939 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:24:49,000 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:24:56,979 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:25:02,985 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:25:10,315 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:25:10,324 : [INFO]  ------------------------- Training round 5, loss: 0.4408 -------------------------
+2023-03-29 18:25:10,325 : [INFO]  ------------------------- Training, round 5: Sent local model to the server -------------------------
+2023-03-29 18:25:10,334 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:25:10,339 : [INFO]  ------------------------- Initial model training: round 6 -------------------------
+2023-03-29 18:25:20,329 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:25:27,795 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:25:35,963 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:25:45,172 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:25:54,648 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:26:02,457 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall,auc,precision,val_loss,val_binary_accuracy,val_recall,val_auc,val_precision
+2023-03-29 18:26:02,462 : [INFO]  ------------------------- Training round 6, loss: 0.4639 -------------------------
+2023-03-29 18:26:02,462 : [INFO]  ------------------------- Training, round 6: Sent local model to the server -------------------------
+2023-03-29 18:26:02,477 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:26:02,485 : [INFO]  ################ Initial trained model: Final global model evalution after 6 rounds ################
+2023-03-29 18:27:37,710 : [INFO]  Initially trained model: Training set : loss - 0.45, accuracy - 0.8, recall - 0.91, AUC - 0.9, F1 - 0.82, precision - 0.75, training time - -275.0 seconds
+2023-03-29 18:27:37,710 : [INFO]  Initially trained model: Testing set : loss - 0.46, accuracy - 0.81, recall - 0.9, AUC - 0.9, F1 - 0.83, precision - 0.77
+2023-03-29 18:27:37,736 : [INFO]  Batch 1 initialized 
+2023-03-29 18:27:39,076 : [INFO]  ################################## Next batch processing started: transfer learning is ON ##################################
+2023-03-29 18:27:39,076 : [INFO]  ------------------------- Batch 1 training: round 1 -------------------------
+2023-03-29 18:27:42,519 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:43,167 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:43,785 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:49,025 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:50,275 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:50,977 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:50,980 : [INFO]  ------------------------- Batch round 1, loss: 0.4238 -------------------------
+2023-03-29 18:27:50,980 : [INFO]  ------------------------- Batch 1, round 1: Sent local model to the server -------------------------
+2023-03-29 18:27:50,984 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:27:50,986 : [INFO]  ------------------------- Batch 1 training: round 2 -------------------------
+2023-03-29 18:27:51,719 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:52,229 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:52,835 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:53,806 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:54,381 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:54,986 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:54,992 : [INFO]  ------------------------- Batch round 2, loss: 0.3813 -------------------------
+2023-03-29 18:27:54,992 : [INFO]  ------------------------- Batch 1, round 2: Sent local model to the server -------------------------
+2023-03-29 18:27:55,248 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:27:55,252 : [INFO]  ------------------------- Batch 1 training: round 3 -------------------------
+2023-03-29 18:27:56,121 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:56,741 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:57,338 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:58,263 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:58,879 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:59,499 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_1,auc_1,precision_1,val_loss,val_binary_accuracy,val_recall_1,val_auc_1,val_precision_1
+2023-03-29 18:27:59,503 : [INFO]  ------------------------- Batch round 3, loss: 0.4645 -------------------------
+2023-03-29 18:27:59,503 : [INFO]  ------------------------- Batch 1, round 3: Sent local model to the server -------------------------
+2023-03-29 18:27:59,541 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:27:59,546 : [INFO]  Batch number 1 model fetched from the server
+2023-03-29 18:27:59,546 : [INFO]  ################ Batch 1: final global model evalution after 3 rounds ################
+2023-03-29 18:28:10,051 : [INFO]  Batch 1: Training set : loss - 0.3902, accuracy - 0.8804, recall - 0.9402, AUC - 0.9256, F1 - 0.8872, precision - 0.8398, training time - -20.0 seconds
+2023-03-29 18:28:10,052 : [INFO]  Batch 1: Testing set : loss - 0.5276, accuracy - 0.8562, recall - 0.9314, AUC - 0.9093, F1 - 0.8664, precision - 0.81
+2023-03-29 18:28:10,070 : [INFO]  Batch 2 initialized 
+2023-03-29 18:28:12,015 : [INFO]  ------------------------- Batch 2 training: round 1 -------------------------
+2023-03-29 18:28:16,555 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:17,672 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:18,416 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:22,565 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:23,430 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:24,181 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:24,187 : [INFO]  ------------------------- Batch round 1, loss: 0.4509 -------------------------
+2023-03-29 18:28:24,187 : [INFO]  ------------------------- Batch 2, round 1: Sent local model to the server -------------------------
+2023-03-29 18:28:24,194 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:28:24,200 : [INFO]  ------------------------- Batch 2 training: round 2 -------------------------
+2023-03-29 18:28:25,114 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:25,792 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:26,427 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:27,315 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:27,933 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:28,537 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:28,541 : [INFO]  ------------------------- Batch round 2, loss: 0.4623 -------------------------
+2023-03-29 18:28:28,541 : [INFO]  ------------------------- Batch 2, round 2: Sent local model to the server -------------------------
+2023-03-29 18:28:28,548 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:28:28,554 : [INFO]  ------------------------- Batch 2 training: round 3 -------------------------
+2023-03-29 18:28:29,722 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:30,558 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:31,410 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:32,372 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:32,977 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:33,624 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_2,auc_2,precision_2,val_loss,val_binary_accuracy,val_recall_2,val_auc_2,val_precision_2
+2023-03-29 18:28:33,628 : [INFO]  ------------------------- Batch round 3, loss: 0.4833 -------------------------
+2023-03-29 18:28:33,628 : [INFO]  ------------------------- Batch 2, round 3: Sent local model to the server -------------------------
+2023-03-29 18:28:33,636 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:28:33,641 : [INFO]  Batch number 2 model fetched from the server
+2023-03-29 18:28:33,641 : [INFO]  ################ Batch 2: final global model evalution after 3 rounds ################
+2023-03-29 18:28:46,302 : [INFO]  Batch 2: Training set : loss - 0.4921, accuracy - 0.8089, recall - 0.9112, AUC - 0.8594, F1 - 0.8266, precision - 0.7564, training time - -22.0 seconds
+2023-03-29 18:28:46,304 : [INFO]  Batch 2: Testing set : loss - 0.7399, accuracy - 0.8064, recall - 0.8521, AUC - 0.8507, F1 - 0.8149, precision - 0.7808
+2023-03-29 18:28:46,323 : [INFO]  Batch 3 initialized 
+2023-03-29 18:28:48,565 : [INFO]  ------------------------- Batch 3 training: round 1 -------------------------
+2023-03-29 18:28:54,729 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:28:55,528 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:28:56,406 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:29:01,148 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:29:01,688 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:29:02,185 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:29:02,188 : [INFO]  ------------------------- Batch round 1, loss: 0.4233 -------------------------
+2023-03-29 18:29:02,188 : [INFO]  ------------------------- Batch 3, round 1: Sent local model to the server -------------------------
+2023-03-29 18:29:02,193 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:29:02,196 : [INFO]  ------------------------- Batch 3 training: round 2 -------------------------
+2023-03-29 18:29:02,939 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:29:03,490 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:29:03,999 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:29:04,706 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:29:05,322 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:29:05,926 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:29:05,931 : [INFO]  ------------------------- Batch round 2, loss: 0.5159 -------------------------
+2023-03-29 18:29:05,931 : [INFO]  ------------------------- Batch 3, round 2: Sent local model to the server -------------------------
+2023-03-29 18:29:05,950 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:29:05,956 : [INFO]  ------------------------- Batch 3 training: round 3 -------------------------
+2023-03-29 18:29:06,807 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:29:07,400 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:29:08,020 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:29:08,896 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:29:09,695 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:29:10,499 : [WARNING]  Early stopping conditioned on metric `val_acc` which is not available. Available metrics are: loss,binary_accuracy,recall_3,auc_3,precision_3,val_loss,val_binary_accuracy,val_recall_3,val_auc_3,val_precision_3
+2023-03-29 18:29:10,503 : [INFO]  ------------------------- Batch round 3, loss: 0.4082 -------------------------
+2023-03-29 18:29:10,503 : [INFO]  ------------------------- Batch 3, round 3: Sent local model to the server -------------------------
+2023-03-29 18:29:10,656 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-29 18:29:10,662 : [INFO]  Batch number 3 model fetched from the server
+2023-03-29 18:29:10,662 : [INFO]  ################ Batch 3: final global model evalution after 3 rounds ################
+2023-03-29 18:29:25,133 : [INFO]  Batch 3: Training set : loss - 0.4445, accuracy - 0.8727, recall - 0.9366, AUC - 0.9068, F1 - 0.8805, precision - 0.8308, training time - -22.0 seconds
+2023-03-29 18:29:25,134 : [INFO]  Batch 3: Testing set : loss - 0.6941, accuracy - 0.7835, recall - 0.8407, AUC - 0.8635, F1 - 0.7954, precision - 0.7547
+2023-03-29 18:29:25,141 : [INFO]  Result report : Accuracy - 0.8154 (0.0303), Recall - 0.8747 (0.0403), AUC - 0.8745 (0.0252), F1 - 0.8256 (0.03), Precision - 0.7818 (0.0226)

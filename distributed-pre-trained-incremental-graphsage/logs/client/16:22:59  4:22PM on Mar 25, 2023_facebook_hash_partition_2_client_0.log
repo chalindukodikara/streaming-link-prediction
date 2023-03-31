@@ -1,0 +1,16 @@
+2023-03-25 16:22:59,938 : [WARNING]  ####################################### New Training Session: Client 0 #######################################
+2023-03-25 16:22:59,938 : [INFO]  Client started, graph name facebook, graph ID 1, partition ID 0, training epochs 6, epochs 6
+2023-03-25 16:23:03,532 : [INFO]  Model initialized for training
+2023-03-25 16:23:15,680 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-25 16:23:15,801 : [INFO]  Number of training examples - 11796, Number of testing examples - 13106
+2023-03-25 16:23:15,801 : [INFO]  Connected to the server
+2023-03-25 16:23:15,884 : [INFO]  Distributed training for streaming graphs started!
+2023-03-25 16:23:15,885 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 16:23:15,891 : [INFO]  ################################## Initial model training started ##################################
+2023-03-25 16:23:15,892 : [INFO]  ------------------------- Initial model training: round 1 -------------------------
+2023-03-25 16:25:41,000 : [INFO]  ------------------------- Training round 1, loss: 0.6222 -------------------------
+2023-03-25 16:25:41,000 : [INFO]  ------------------------- Training, round 1: Sent local model to the server -------------------------
+2023-03-25 16:25:41,003 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
+2023-03-25 16:25:41,005 : [INFO]  ------------------------- Initial model training: round 2 -------------------------
+2023-03-25 16:28:12,708 : [INFO]  ------------------------- Training round 2, loss: 0.5953 -------------------------
+2023-03-25 16:28:12,708 : [INFO]  ------------------------- Training, round 2: Sent local model to the server -------------------------

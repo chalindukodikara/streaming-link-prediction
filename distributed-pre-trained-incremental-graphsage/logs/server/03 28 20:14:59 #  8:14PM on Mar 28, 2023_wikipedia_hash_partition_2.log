@@ -1,0 +1,27 @@
+2023-03-28 20:14:59,035 : [WARNING]  ####################################### New Training Session #######################################
+2023-03-28 20:14:59,036 : [INFO]  Server started , graph ID 1, number of clients 2, number of rounds 1, number of timestamps 0
+2023-03-28 20:15:06,266 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+2023-03-28 20:15:06,417 : [INFO]  Distributed training for streaming graphs started!
+2023-03-28 20:15:08,477 : [INFO]  Accepted new connection at 127.0.0.1:43510
+2023-03-28 20:15:08,477 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:43510
+2023-03-28 20:15:17,338 : [ERROR]  Client-new closed connection at 127.0.0.1:43510
+2023-03-28 20:19:24,846 : [INFO]  Accepted new connection at 127.0.0.1:35472
+2023-03-28 20:19:24,846 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:35472
+2023-03-28 20:19:35,013 : [ERROR]  Client-new closed connection at 127.0.0.1:35472
+2023-03-28 20:24:37,055 : [INFO]  Accepted new connection at 127.0.0.1:54460
+2023-03-28 20:24:37,055 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:54460
+2023-03-28 20:24:45,740 : [ERROR]  Client-new closed connection at 127.0.0.1:54460
+2023-03-28 20:25:31,912 : [INFO]  Accepted new connection at 127.0.0.1:40690
+2023-03-28 20:25:31,913 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:40690
+2023-03-28 20:25:40,271 : [ERROR]  Client-new closed connection at 127.0.0.1:40690
+2023-03-28 20:27:01,953 : [INFO]  Accepted new connection at 127.0.0.1:48090
+2023-03-28 20:27:01,954 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:48090
+2023-03-28 20:27:36,632 : [ERROR]  Client-new closed connection at 127.0.0.1:48090
+2023-03-28 20:28:52,672 : [INFO]  Accepted new connection at 127.0.0.1:35554
+2023-03-28 20:28:52,672 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:35554
+2023-03-28 20:29:29,957 : [ERROR]  Client-new closed connection at 127.0.0.1:35554
+2023-03-28 20:30:16,055 : [INFO]  Accepted new connection at 127.0.0.1:57798
+2023-03-28 20:30:16,055 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:57798
+2023-03-28 20:32:51,812 : [ERROR]  Client-new closed connection at 127.0.0.1:57798
+2023-03-28 20:40:02,827 : [INFO]  Accepted new connection at 127.0.0.1:46354
+2023-03-28 20:40:02,828 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:46354

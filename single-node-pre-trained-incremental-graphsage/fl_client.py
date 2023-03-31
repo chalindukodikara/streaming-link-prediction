@@ -200,6 +200,15 @@ class Client:
                 nodes = pd.read_csv(
                     'data/' + self.dataset_name + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(
                         self.iteration_number) + '_test_batch_nodes.csv', index_col=0)
+                logging.info('Batch %s initialized ', str(self.iteration_number))
+                self.MODEL = Model(nodes, edges)
+                num_train_ex, num_test_ex = self.MODEL.initialize()
+
+                self.graph_params = (num_train_ex, num_test_ex)
+
+                del nodes
+                del edges
+                gc.collect()
 
             else:
                 break
