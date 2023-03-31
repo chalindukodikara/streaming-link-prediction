@@ -1,3 +1,0 @@
-2023-03-30 15:25:10,586 : [WARNING]  ####################################### New Training Session #######################################
-2023-03-30 15:25:10,586 : [INFO]  Server started , graph ID 1, number of clients 2, number of rounds 6, number of timestamps 3
-2023-03-30 15:25:18,419 : [INFO]  Distributed training for streaming graphs started!

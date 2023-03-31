@@ -1,5 +1,0 @@
-2023-03-29 16:50:41,600 : [WARNING]  ####################################### New Training Session #######################################
-2023-03-29 16:50:41,601 : [INFO]  Server started , graph ID 1, number of clients 2, number of rounds 3, number of timestamps 465
-2023-03-29 16:51:25,134 : [INFO]  Distributed training for streaming graphs started!
-2023-03-29 16:51:28,446 : [INFO]  Accepted new connection at 127.0.0.1:39744
-2023-03-29 16:51:28,447 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:39744

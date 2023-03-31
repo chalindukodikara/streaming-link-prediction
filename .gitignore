@@ -29,11 +29,11 @@ distributed-retraining-incremental-graphsage/local_weights/
 distributed-retraining-incremental-graphsage/global_weights/
 distributed-retraining-incremental-graphsage/logs/
 
-single-node-retraining-incremental-ensemble-graphsage/data/*
-single-node-retraining-incremental-ensemble-graphsage/weights/
-single-node-retraining-incremental-ensemble-graphsage/local_weights/
-single-node-retraining-incremental-ensemble-graphsage/global_weights/
-single-node-retraining-incremental-ensemble-graphsage/logs/
+single-node-incremental-ensemble-graphsage/data/*
+single-node-incremental-ensemble-graphsage/weights/
+single-node-incremental-ensemble-graphsage/local_weights/
+single-node-incremental-ensemble-graphsage/global_weights/
+single-node-incremental-ensemble-graphsage/logs/
 
 single-node-incremental-graphsage/data/*
 single-node-incremental-graphsage/weights/

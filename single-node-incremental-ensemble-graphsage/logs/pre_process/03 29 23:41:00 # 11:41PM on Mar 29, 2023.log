@@ -1,3 +1,0 @@
-2023-03-29 23:41:24,422 : [INFO]  _____________________________________________________ dblp: Pre-processing started _____________________________________________________
-2023-03-29 23:41:24,427 : [INFO]  Folder path "data/dblp_4_0" exists
-2023-03-29 23:41:24,427 : [INFO]  _____________ dblp: Pre-processing finished, training batch size 16, testing batch size 4 _____________

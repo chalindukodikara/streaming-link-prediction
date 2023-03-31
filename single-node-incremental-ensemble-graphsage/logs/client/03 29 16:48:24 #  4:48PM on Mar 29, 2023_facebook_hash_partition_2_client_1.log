@@ -1,9 +1,0 @@
-2023-03-29 16:48:24,799 : [WARNING]  ####################################### New Training Session: Client 1 #######################################
-2023-03-29 16:48:24,799 : [INFO]  Client started, graph name facebook, graph ID 1, partition ID 1, training epochs 3, epochs 3
-2023-03-29 16:48:27,665 : [INFO]  Model initialized for training
-2023-03-29 16:48:48,840 : [INFO]  Number of training examples - 11796, Number of testing examples - 13106
-2023-03-29 16:48:48,840 : [INFO]  Connected to the server
-2023-03-29 16:48:48,928 : [INFO]  Distributed training for streaming graphs started!
-2023-03-29 16:48:48,929 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
-2023-03-29 16:48:48,939 : [INFO]  ################################## Initial model training started ##################################
-2023-03-29 16:48:48,939 : [INFO]  ------------------------- Initial model training: round 1 -------------------------
