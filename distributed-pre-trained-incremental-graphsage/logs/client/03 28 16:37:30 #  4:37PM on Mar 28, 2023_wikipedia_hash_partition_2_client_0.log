@@ -1,3 +1,0 @@
-2023-03-28 16:37:30,161 : [WARNING]  ####################################### New Training Session: Client 0 #######################################
-2023-03-28 16:37:30,161 : [INFO]  Client started, graph name wikipedia, graph ID 1, partition ID 0, training epochs 1, epochs 1
-2023-03-28 16:37:32,617 : [INFO]  Model initialized for training

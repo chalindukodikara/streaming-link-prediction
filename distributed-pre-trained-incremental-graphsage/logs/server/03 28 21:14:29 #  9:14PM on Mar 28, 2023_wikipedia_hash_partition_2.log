@@ -1,7 +1,0 @@
-2023-03-28 21:14:29,216 : [WARNING]  ####################################### New Training Session #######################################
-2023-03-28 21:14:29,216 : [INFO]  Server started , graph ID 1, number of clients 2, number of rounds 1, number of timestamps 0
-2023-03-28 21:14:35,693 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
-2023-03-28 21:14:35,872 : [INFO]  Distributed training for streaming graphs started!
-2023-03-28 21:14:39,505 : [INFO]  Accepted new connection at 127.0.0.1:49962
-2023-03-28 21:14:39,506 : [INFO]  Randomly initialized global model sent to client-new at 127.0.0.1:49962
-2023-03-28 21:14:58,487 : [INFO]  Initial training: recieved model from client-0 at 127.0.0.1:49962

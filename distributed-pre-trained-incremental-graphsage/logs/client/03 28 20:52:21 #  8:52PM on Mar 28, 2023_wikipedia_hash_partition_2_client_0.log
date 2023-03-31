@@ -1,7 +1,0 @@
-2023-03-28 20:52:21,854 : [WARNING]  ####################################### New Training Session: Client 0 #######################################
-2023-03-28 20:52:21,854 : [INFO]  Client started, graph name wikipedia, graph ID 1, partition ID 0, training epochs 2, epochs 2
-2023-03-28 20:52:27,818 : [INFO]  Model initialized for training
-2023-03-28 20:52:42,202 : [INFO]  Number of training examples - 1842, Number of testing examples - 2046
-2023-03-28 20:52:42,203 : [INFO]  Connected to the server
-2023-03-28 20:52:42,339 : [INFO]  Distributed training for streaming graphs started!
-2023-03-28 20:52:42,340 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------

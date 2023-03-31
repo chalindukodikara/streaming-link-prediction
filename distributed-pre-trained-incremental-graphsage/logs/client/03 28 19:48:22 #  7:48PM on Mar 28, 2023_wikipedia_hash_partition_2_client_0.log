@@ -1,5 +1,0 @@
-2023-03-28 19:48:22,802 : [WARNING]  ####################################### New Training Session: Client 0 #######################################
-2023-03-28 19:48:22,803 : [INFO]  Client started, graph name wikipedia, graph ID 1, partition ID 0, training epochs 1, epochs 1
-2023-03-28 19:48:25,959 : [INFO]  Model initialized for training
-2023-03-28 19:48:29,844 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
-2023-03-28 19:48:29,896 : [INFO]  Number of training examples - 1842, Number of testing examples - 2046

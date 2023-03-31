@@ -1,8 +1,0 @@
-2023-03-28 19:55:06,333 : [WARNING]  ####################################### New Training Session: Client 0 #######################################
-2023-03-28 19:55:06,334 : [INFO]  Client started, graph name wikipedia, graph ID 1, partition ID 0, training epochs 1, epochs 1
-2023-03-28 19:55:14,243 : [INFO]  Model initialized for training
-2023-03-28 19:55:30,032 : [WARNING]  `lr` is deprecated, please use `learning_rate` instead, or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
-2023-03-28 19:55:30,174 : [INFO]  Number of training examples - 1842, Number of testing examples - 2046
-2023-03-28 19:55:35,179 : [INFO]  Connected to the server
-2023-03-28 19:55:35,331 : [INFO]  Distributed training for streaming graphs started!
-2023-03-28 20:07:41,718 : [INFO]  ------------------------- Received aggregated global model from the server -------------------------
