@@ -320,5 +320,11 @@ if __name__ == "__main__":
     end = timer()
 
     elapsed_time = end - start
+
+    logging.info(
+        "______________________________________________________________________________________________________ Final Values ______________________________________________________________________________________________________")
+    logging.info(
+        "##########################################################################################################################################################################################################################")
+
     logging.info('Distributed training done!')
     logging.info('Training report : Total elapsed time %s seconds, graph ID %s, number of clients %s, training rounds %s, rounds %s, number of timestamps %s', round(elapsed_time, 0), GRAPH_ID, NUM_CLIENTS, TRAINING_ROUNDS, ROUNDS, NUM_TIMESTAMPS)

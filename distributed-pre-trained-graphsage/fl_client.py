@@ -282,6 +282,12 @@ class Client:
             self.all_test_metric_values[5].append(0)  # time
 
             self.iteration_number += 1
+
+        logging.info(
+            "______________________________________________________________________________________________________ Final Values ______________________________________________________________________________________________________")
+        logging.info(
+            "##########################################################################################################################################################################################################################")
+
         logging.info(
             'Result report : Accuracy - %s (%s), Recall - %s (%s), AUC - %s (%s), F1 - %s (%s), Precision - %s (%s), Mean time for a batch - %s (%s) seconds',
             str(round(np.mean(self.all_test_metric_values[0]), 4)),
@@ -297,6 +303,12 @@ class Client:
             str(round(np.mean(self.all_test_metric_values[5]), 2)),
             str(round(np.std(self.all_test_metric_values[5]), 2)))
         logging.info('Result report : Accuracy 99th - 90th (%s, %s), Recall 99th - 90th (%s, %s), AUC 99th - 90th (%s, %s), F1 99th - 90th (%s, %s), Precision 99th - 90th (%s, %s), Mean time for a batch - %s (%s) seconds - 99th - 90th (%s, %s)', str(round(np.percentile(self.all_test_metric_values[0], 99), 4)), str(round(np.percentile(self.all_test_metric_values[0], 90), 4)), str(round(np.percentile(self.all_test_metric_values[1], 99), 4)), str(round(np.percentile(self.all_test_metric_values[1], 90), 4)), str(round(np.percentile(self.all_test_metric_values[2], 99), 4)), str(round(np.percentile(self.all_test_metric_values[2], 90), 4)), str(round(np.percentile(self.all_test_metric_values[3], 99), 4)), str(round(np.percentile(self.all_test_metric_values[3], 90), 4)), str(round(np.percentile(self.all_test_metric_values[4], 99), 4)), str(round(np.percentile(self.all_test_metric_values[4], 90), 4)), str(0), str(0), str(0), str(0))
+        logging.info(
+            "______________________________________________________________________________________________________ Final Values ______________________________________________________________________________________________________")
+        logging.info(
+            "##########################################################################################################################################################################################################################")
+
+
         logging.info(str(self.all_test_metric_values))
 
 if __name__ == "__main__":

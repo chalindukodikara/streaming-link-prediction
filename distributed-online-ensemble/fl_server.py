@@ -75,9 +75,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s : [%(levelname)s]  %(message)s',
     handlers=[
-        logging.FileHandler(
-            'logs/server/{}_{}_{}_partition_{}.log'.format(str(time.strftime('%m %d %H:%M:%S # %l:%M%p on %b %d, %Y')),
-                                                           DATASET_NAME, PARTITION_ALGORITHM, PARTITION_SIZE)),
+        logging.FileHandler('logs/server/{}_{}_{}_partition_{}.log'.format(str(time.strftime('%m %d %H:%M:%S # %l:%M%p on %b %d, %Y')), DATASET_NAME, PARTITION_ALGORITHM, PARTITION_SIZE)),
         logging.StreamHandler(sys.stdout)
     ]
 )
@@ -148,15 +146,33 @@ class Server:
         # Global model
         self.GLOBAL_WEIGHTS = MODEL.get_weights()
 
+        # Only for ensemble version
+        self.ensemble_models = MODEL.n_estimators
+
     def update_model(self, new_weights, num_examples):
         self.partition_sizes.append(num_examples)
-        self.weights.append(num_examples * new_weights)
-        # self.weights.append(new_weights)
+        # self.weights.append(num_examples * new_weights)
 
-        if len(self.weights) == self.MAX_CONN:
+        # for ensemble version ###############
+        weights_list = []
+        for i in range(self.ensemble_models):
+            weights_list.append(num_examples * new_weights[i])
 
-            #avg_weight = np.mean(self.weights, axis=0)
-            avg_weight = sum(self.weights) / sum(self.partition_sizes)
+        self.weights.append(weights_list)
+        # for ensemble version ###############
+
+        # if len(self.weights) == self.MAX_CONN:
+        if (len(self.weights) % self.MAX_CONN) == 0 and len(self.weights) != 0:
+            # for ensemble version ###############
+            avg_weight = []
+            for i in range(self.ensemble_models):
+                weights_list = []
+                for j in range(0, NUM_CLIENTS):
+                    weights_list.append(self.weights[j][i])
+                avg_weight.append(sum(weights_list) / sum(self.partition_sizes))
+            # for ensemble version ###############
+
+            # avg_weight = sum(self.weights) / sum(self.partition_sizes) # uncomment for normal version
             self.weights = []
 
             self.partition_sizes = []
@@ -181,19 +197,18 @@ class Server:
 
 
     def send_model(self, client_socket):
-
         if self.training_rounds == self.training_cycles:
             self.stop_flag = True
 
         if self.num_timestamps == self.iteration_number:
             self.all_timestamps_finished = True
 
+
         weights = np.array(self.GLOBAL_WEIGHTS)
         if self.iteration_number != 0:
             data = {"STOP_FLAG": self.stop_flag, "WEIGHTS": weights, "ITERATION_FLAG": self.all_timestamps_finished}
         else:
-            data = {"STOP_FLAG": self.stop_flag, "WEIGHTS": weights, "ITERATION_FLAG": self.all_timestamps_finished,
-                    "NUM_TIMESTAMPS": self.num_timestamps}
+            data = {"STOP_FLAG": self.stop_flag, "WEIGHTS": weights, "ITERATION_FLAG": self.all_timestamps_finished, "NUM_TIMESTAMPS": self.num_timestamps}
 
         data = pickle.dumps(data)
         data = bytes(f"{len(data):<{self.HEADER_LENGTH}}", 'utf-8') + data
@@ -311,7 +326,7 @@ if __name__ == "__main__":
     edges = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_edges.csv')
     nodes = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_nodes.csv', index_col=0)
 
-    from models.supervised import Model
+    from models.graphsage_ensemble import Model
 
     model = Model(nodes, edges)
     model.initialize()
@@ -332,5 +347,12 @@ if __name__ == "__main__":
     end = timer()
 
     elapsed_time = end - start
+
+    logging.info(
+        "______________________________________________________________________________________________________ Final Values ______________________________________________________________________________________________________")
+    logging.info(
+        "##########################################################################################################################################################################################################################")
+
+
     logging.info('Distributed training done!')
     logging.info('Training report : Total elapsed time %s seconds, graph ID %s, number of clients %s, training rounds %s, rounds %s, number of timestamps %s', round(elapsed_time, 0), GRAPH_ID, NUM_CLIENTS, TRAINING_ROUNDS, ROUNDS, NUM_TIMESTAMPS)

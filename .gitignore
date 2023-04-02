@@ -1,15 +1,15 @@
 # Files
-distributed-incremental-ensemble-graphsage/data/*
-distributed-incremental-ensemble-graphsage/weights/
-distributed-incremental-ensemble-graphsage/local_weights/
-distributed-incremental-ensemble-graphsage/global_weights/
-distributed-incremental-ensemble-graphsage/logs/
+distributed-online-ensemble/data/*
+distributed-online-ensemble/weights/
+distributed-online-ensemble/local_weights/
+distributed-online-ensemble/global_weights/
+distributed-online-ensemble/logs/
 
-distributed-incremental-graphsage/data/*
-distributed-incremental-graphsage/weights/
-distributed-incremental-graphsage/local_weights/
-distributed-incremental-graphsage/global_weights/
-distributed-incremental-graphsage/logs/
+distributed-online-graphsage/data/*
+distributed-online-graphsage/weights/
+distributed-online-graphsage/local_weights/
+distributed-online-graphsage/global_weights/
+distributed-online-graphsage/logs/
 
 distributed-pre-trained-graphsage/data/*
 distributed-pre-trained-graphsage/models/tgn/data/
@@ -17,29 +17,35 @@ distributed-pre-trained-graphsage/local_weights/
 distributed-pre-trained-graphsage/global_weights/
 distributed-pre-trained-graphsage/logs/
 
+distributed-retrained-ensemble/data/*
+distributed-retrained-ensemble/weights/
+distributed-retrained-ensemble/local_weights/
+distributed-retrained-ensemble/global_weights/
+distributed-retrained-ensemble/logs/
+
 distributed-retrained-graphsage/data/*
 distributed-retrained-graphsage/weights/
 distributed-retrained-graphsage/local_weights/
 distributed-retrained-graphsage/global_weights/
 distributed-retrained-graphsage/logs/
 
-distributed-retrained-incremental-graphsage/data/*
-distributed-retrained-incremental-graphsage/weights/
-distributed-retrained-incremental-graphsage/local_weights/
-distributed-retrained-incremental-graphsage/global_weights/
-distributed-retrained-incremental-graphsage/logs/
+distributed-retrained-sliding-window-graphsage/data/*
+distributed-retrained-sliding-window-graphsage/weights/
+distributed-retrained-sliding-window-graphsage/local_weights/
+distributed-retrained-sliding-window-graphsage/global_weights/
+distributed-retrained-sliding-window-graphsage/logs/
 
-single-node-incremental-ensemble-graphsage/data/*
-single-node-incremental-ensemble-graphsage/weights/
-single-node-incremental-ensemble-graphsage/local_weights/
-single-node-incremental-ensemble-graphsage/global_weights/
-single-node-incremental-ensemble-graphsage/logs/
+single-node-online-ensemble/data/*
+single-node-online-ensemble/weights/
+single-node-online-ensemble/local_weights/
+single-node-online-ensemble/global_weights/
+single-node-online-ensemble/logs/
 
-single-node-incremental-graphsage/data/*
-single-node-incremental-graphsage/weights/
-single-node-incremental-graphsage/local_weights/
-single-node-incremental-graphsage/global_weights/
-single-node-incremental-graphsage/logs/
+single-node-online-graphsage/data/*
+single-node-online-graphsage/weights/
+single-node-online-graphsage/local_weights/
+single-node-online-graphsage/global_weights/
+single-node-online-graphsage/logs/
 
 single-node-pre-trained-graphsage/data/*
 single-node-pre-trained-graphsage/models/tgn/data/
@@ -53,11 +59,11 @@ single-node-retrained-graphsage/local_weights/
 single-node-retrained-graphsage/global_weights/
 single-node-retrained-graphsage/logs/
 
-single-node-retrained-incremental-graphsage/data/*
-single-node-retrained-incremental-graphsage/weights/
-single-node-retrained-incremental-graphsage/local_weights/
-single-node-retrained-incremental-graphsage/global_weights/
-single-node-retrained-incremental-graphsage/logs/
+single-node-retrained-sliding-window-graphsage/data/*
+single-node-retrained-sliding-window-graphsage/weights/
+single-node-retrained-sliding-window-graphsage/local_weights/
+single-node-retrained-sliding-window-graphsage/global_weights/
+single-node-retrained-sliding-window-graphsage/logs/
 
 tgn-based-model/data/*
 tgn-based-model/models/tgn/data/

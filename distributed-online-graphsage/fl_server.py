@@ -28,7 +28,7 @@ parser.add_argument('--graph_id', type=int, default=1, help='Graph ID')
 parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
 
 ######## Frequently configured #######
-parser.add_argument('--dataset_name', type=str, default='facebook', help='Dataset name')
+parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
 parser.add_argument('--partition_size', type=int, default=2, help='Partition size')
 parser.add_argument('--num_clients', type=int, default=2, help='Number of clients')
 parser.add_argument('--partition_algorithm', type=str, default='hash', help='Partition algorithm')
@@ -146,33 +146,13 @@ class Server:
         # Global model
         self.GLOBAL_WEIGHTS = MODEL.get_weights()
 
-        # Only for ensemble version
-        self.ensemble_models = MODEL.n_estimators
-
     def update_model(self, new_weights, num_examples):
         self.partition_sizes.append(num_examples)
-        # self.weights.append(num_examples * new_weights)
-
-        # for ensemble version ###############
-        weights_list = []
-        for i in range(self.ensemble_models):
-            weights_list.append(num_examples * new_weights[i])
-
-        self.weights.append(weights_list)
-        # for ensemble version ###############
+        self.weights.append(num_examples * new_weights)
 
         # if len(self.weights) == self.MAX_CONN:
         if (len(self.weights) % self.MAX_CONN) == 0 and len(self.weights) != 0:
-            # for ensemble version ###############
-            avg_weight = []
-            for i in range(self.ensemble_models):
-                weights_list = []
-                for j in range(0, NUM_CLIENTS):
-                    weights_list.append(self.weights[j][i])
-                avg_weight.append(sum(weights_list) / sum(self.partition_sizes))
-            # for ensemble version ###############
-
-            # avg_weight = sum(self.weights) / sum(self.partition_sizes) # uncomment for normal version
+            avg_weight = sum(self.weights) / sum(self.partition_sizes)
             self.weights = []
 
             self.partition_sizes = []
@@ -197,6 +177,7 @@ class Server:
 
 
     def send_model(self, client_socket):
+
         if self.training_rounds == self.training_cycles:
             self.stop_flag = True
 
@@ -326,7 +307,7 @@ if __name__ == "__main__":
     edges = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_edges.csv')
     nodes = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_nodes.csv', index_col=0)
 
-    from models.graphsage_ensemble import Model
+    from models.supervised import Model
 
     model = Model(nodes, edges)
     model.initialize()
@@ -347,5 +328,10 @@ if __name__ == "__main__":
     end = timer()
 
     elapsed_time = end - start
+    logging.info(
+        "______________________________________________________________________________________________________ Final Values ______________________________________________________________________________________________________")
+    logging.info(
+        "##########################################################################################################################################################################################################################")
+
     logging.info('Distributed training done!')
     logging.info('Training report : Total elapsed time %s seconds, graph ID %s, number of clients %s, training rounds %s, rounds %s, number of timestamps %s', round(elapsed_time, 0), GRAPH_ID, NUM_CLIENTS, TRAINING_ROUNDS, ROUNDS, NUM_TIMESTAMPS)

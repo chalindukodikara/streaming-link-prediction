@@ -25,10 +25,10 @@ parser.add_argument('--partition_size', type=int, default=1, help='Partition siz
 parser.add_argument('--graph_id', type=int, default=1, help='Graph ID')
 
 ######## Frequently configured #######
-parser.add_argument('--dataset_name', type=str, default='facebook', help='Dataset name')
+parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
 parser.add_argument('--partition_algorithm', type=str, default='hash', help='Partition algorithm')
 parser.add_argument('--training_epochs', type=int, default=40, help='Initial Training: number of epochs')
-parser.add_argument('--epochs', type=int, default=20, help='Streaming data training for batches: number of epochs')
+parser.add_argument('--epochs', type=int, default=40, help='Streaming data training for batches: number of epochs')
 
 try:
   args = parser.parse_args()
@@ -110,6 +110,7 @@ class Client:
         self.dataset_name = dataset_name
         self.GLOBAL_WEIGHTS = None
         self.all_test_metric_values = [[], [], [], [], [], []]
+        self.NUM_TIMESTAMPS = 0
 
 
     def train(self):
@@ -118,7 +119,6 @@ class Client:
     def run(self):
         while True:
             if self.iteration_number > 0:
-                self.MODEL.set_weights(self.GLOBAL_WEIGHTS)
                 if self.iteration_number == 1:
                     logging.info('################################## Next batch processing started: incremental learning is OFF ##################################')
 
@@ -197,7 +197,6 @@ class Client:
 
             # self.client_socket.close()
             if self.iteration_number <= NUM_TIMESTAMPS:
-                self.GLOBAL_WEIGHTS = self.MODEL.get_weights()
                 edges = pd.read_csv('data/' + self.dataset_name + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(self.iteration_number) + '_test_batch_edges.csv')
                 nodes = pd.read_csv('data/' + self.dataset_name + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(self.iteration_number) + '_test_batch_nodes.csv', index_col=0)
 
@@ -212,8 +211,18 @@ class Client:
                 gc.collect()
             else:
                 break
+        logging.info(
+            "______________________________________________________________________________________________________ Final Values ______________________________________________________________________________________________________")
+        logging.info(
+            "##########################################################################################################################################################################################################################")
+
         logging.info('Result report : Accuracy - %s (%s), Recall - %s (%s), AUC - %s (%s), F1 - %s (%s), Precision - %s (%s), Mean time for a batch - %s (%s) seconds', str(round(np.mean(self.all_test_metric_values[0]), 4)), str(round(np.std(self.all_test_metric_values[0]), 4)), str(round(np.mean(self.all_test_metric_values[1]), 4)), str(round(np.std(self.all_test_metric_values[1]), 4)), str(round(np.mean(self.all_test_metric_values[2]), 4)), str(round(np.std(self.all_test_metric_values[2]), 4)), str(round(np.mean(self.all_test_metric_values[3]), 4)), str(round(np.std(self.all_test_metric_values[3]), 4)), str(round(np.mean(self.all_test_metric_values[4]), 4)), str(round(np.std(self.all_test_metric_values[4]), 4)), str(round(np.mean(self.all_test_metric_values[5]), 2)), str(round(np.std(self.all_test_metric_values[5]), 2)))
         logging.info('Result report : Accuracy 99th - 90th (%s, %s), Recall 99th - 90th (%s, %s), AUC 99th - 90th (%s, %s), F1 99th - 90th (%s, %s), Precision 99th - 90th (%s, %s), Mean time for a batch - %s (%s) seconds - 99th - 90th (%s, %s)', str(round(np.percentile(self.all_test_metric_values[0], 99), 4)), str(round(np.percentile(self.all_test_metric_values[0], 90), 4)), str(round(np.percentile(self.all_test_metric_values[1], 99), 4)), str(round(np.percentile(self.all_test_metric_values[1], 90), 4)), str(round(np.percentile(self.all_test_metric_values[2], 99), 4)), str(round(np.percentile(self.all_test_metric_values[2], 90), 4)), str(round(np.percentile(self.all_test_metric_values[3], 99), 4)), str(round(np.percentile(self.all_test_metric_values[3], 90), 4)), str(round(np.percentile(self.all_test_metric_values[4], 99), 4)), str(round(np.percentile(self.all_test_metric_values[4], 90), 4)), str(round(np.mean(self.all_test_metric_values[5]), 4)), str(round(np.std(self.all_test_metric_values[5]), 4)), str(round(np.percentile(self.all_test_metric_values[5], 99), 4)), str(round(np.percentile(self.all_test_metric_values[5], 90), 4)))
+        logging.info(
+            "______________________________________________________________________________________________________ Final Values ______________________________________________________________________________________________________")
+        logging.info(
+            "##########################################################################################################################################################################################################################")
+
         logging.info(str(self.all_test_metric_values))
 
 if __name__ == "__main__":

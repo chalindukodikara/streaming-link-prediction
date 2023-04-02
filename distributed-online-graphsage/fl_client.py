@@ -22,13 +22,13 @@ parser.add_argument('--ip', type=str, default='localhost', help='IP')
 parser.add_argument('--port', type=int, default=5000, help='PORT')
 
 ######## Frequently configured #######
-parser.add_argument('--dataset_name', type=str, default='facebook', help='Dataset name')
+parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
 parser.add_argument('--graph_id', type=int, default=1, help='Graph ID')
 parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
 parser.add_argument('--partition_size', type=int, default=2, help='Partition size')
 parser.add_argument('--partition_algorithm', type=str, default='hash', help='Partition algorithm')
-parser.add_argument('--training_epochs', type=int, default=3, help='Initial Training: number of epochs')
-parser.add_argument('--epochs', type=int, default=3, help='Streaming data training for batches: number of epochs')
+parser.add_argument('--training_epochs', type=int, default=6, help='Initial Training: number of epochs')
+parser.add_argument('--epochs', type=int, default=6, help='Streaming data training for batches: number of epochs')
 
 try:
   args = parser.parse_args()
@@ -212,10 +212,10 @@ class Client:
 
                         logging.info(
                             'Initially trained model: Training set : loss - %s, accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s, training time - %s seconds',
-                            round(eval[0][0], 4), round(eval[0][1], 4), round(eval[0][2], 4), round(eval[0][3], 4), f1_train, round(eval[0][4], 4), round(training_start_time - training_end_time, 0))
+                            round(eval[0][0], 2), round(eval[0][1], 4), round(eval[0][2], 4), round(eval[0][3], 4), f1_train, round(eval[0][4], 4), round(training_start_time - training_end_time, 0))
                         logging.info(
                             'Initially trained model: Testing set : loss - %s, accuracy - %s, recall - %s, AUC - %s, F1 - %s, precision - %s',
-                            round(eval[1][0], 4), round(eval[1][1], 4), round(eval[1][2], 4), round(eval[1][3], 4), f1_test, round(eval[1][4], 4))
+                            round(eval[1][0], 2), round(eval[1][1], 4), round(eval[1][2], 4), round(eval[1][3], 4), f1_test, round(eval[1][4], 4))
 
                     else:
                         logging.info('Batch number %s model fetched from the server', self.iteration_number)
@@ -264,14 +264,12 @@ class Client:
                         logging.info('------------------------- Batch %s training: round %s -------------------------', self.iteration_number, self.rounds)
 
                     hist = self.train()
-                    losses = []
-                    for i in range(self.MODEL.n_estimators):
-                        losses.append(hist[1][i].history['loss'])
+
                     if self.iteration_number == 0:
-                        logging.info('------------------------- Training round %s, loss: %s -------------------------', self.rounds, str(round(np.mean(losses), 4)))
+                        logging.info('------------------------- Training round %s, loss: %s -------------------------', self.rounds, str(round(np.mean(hist[1].history['loss']), 4)))
                         logging.info('------------------------- Training, round %s: Sent local model to the server -------------------------', self.rounds)
                     else:
-                        logging.info('------------------------- Batch round %s, loss: %s -------------------------', self.rounds, str(round(np.mean(losses), 4)))
+                        logging.info('------------------------- Batch round %s, loss: %s -------------------------', self.rounds, str(round(np.mean(hist[1].history['loss']), 4)))
                         logging.info('------------------------- Batch %s, round %s: Sent local model to the server -------------------------', self.iteration_number, self.rounds)
 
                     self.send_model()
@@ -294,8 +292,20 @@ class Client:
                 del nodes
                 del edges
                 gc.collect()
+
+        logging.info(
+            "______________________________________________________________________________________________________ Final Values ______________________________________________________________________________________________________")
+        logging.info(
+            "##########################################################################################################################################################################################################################")
+
         logging.info('Result report : Accuracy - %s (%s), Recall - %s (%s), AUC - %s (%s), F1 - %s (%s), Precision - %s (%s)', str(round(np.mean(self.all_test_metric_values[0]), 4)), str(round(np.std(self.all_test_metric_values[0]), 4)), str(round(np.mean(self.all_test_metric_values[1]), 4)), str(round(np.std(self.all_test_metric_values[1]), 4)), str(round(np.mean(self.all_test_metric_values[2]), 4)), str(round(np.std(self.all_test_metric_values[2]), 4)), str(round(np.mean(self.all_test_metric_values[3]), 4)), str(round(np.std(self.all_test_metric_values[3]), 4)), str(round(np.mean(self.all_test_metric_values[4]), 4)), str(round(np.std(self.all_test_metric_values[4]), 4)))
         logging.info('Result report : Accuracy 99th - 90th (%s, %s), Recall 99th - 90th (%s, %s), AUC 99th - 90th (%s, %s), F1 99th - 90th (%s, %s), Precision 99th - 90th (%s, %s), Mean time for a batch - %s (%s) seconds - 99th - 90th (%s, %s)', str(round(np.percentile(self.all_test_metric_values[0], 99), 4)), str(round(np.percentile(self.all_test_metric_values[0], 90), 4)), str(round(np.percentile(self.all_test_metric_values[1], 99), 4)), str(round(np.percentile(self.all_test_metric_values[1], 90), 4)), str(round(np.percentile(self.all_test_metric_values[2], 99), 4)), str(round(np.percentile(self.all_test_metric_values[2], 90), 4)), str(round(np.percentile(self.all_test_metric_values[3], 99), 4)), str(round(np.percentile(self.all_test_metric_values[3], 90), 4)), str(round(np.percentile(self.all_test_metric_values[4], 99), 4)), str(round(np.percentile(self.all_test_metric_values[4], 90), 4)), str(round(np.mean(self.all_test_metric_values[5]), 4)), str(round(np.std(self.all_test_metric_values[5]), 4)), str(round(np.percentile(self.all_test_metric_values[5], 99), 4)), str(round(np.percentile(self.all_test_metric_values[5], 90), 4)))
+        logging.info(
+            "______________________________________________________________________________________________________ Final Values ______________________________________________________________________________________________________")
+        logging.info(
+            "##########################################################################################################################################################################################################################")
+
+
         logging.info(str(self.all_test_metric_values))
 
 if __name__ == "__main__":
@@ -303,13 +313,15 @@ if __name__ == "__main__":
     if IP == 'localhost':
         IP = socket.gethostname()
 
+
     logging.warning('####################################### New Training Session: Client %s #######################################', PARTITION_ID)
     logging.info('Client started, graph name %s, graph ID %s, partition ID %s, training epochs %s, epochs %s', DATASET_NAME, GRAPH_ID, PARTITION_ID, TRAINING_EPOCHS, EPOCHS)
+
 
     edges = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_edges.csv')
     nodes = pd.read_csv('data/' + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(0) + '_training_batch_nodes.csv', index_col=0)
 
-    from models.graphsage_ensemble import Model
+    from models.supervised import Model
 
     logging.info('Model initialized for training')
     model = Model(nodes, edges)
