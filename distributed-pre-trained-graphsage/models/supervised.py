@@ -47,7 +47,7 @@ class Model:
         self.train_flow = None
         self.test_flow = None
 
-    def initialize(self,**hyper_params):
+    def initialize(self, test_edges, **hyper_params):
 
         if(not "batch_size" in hyper_params.keys()):
             batch_size = 40
@@ -64,14 +64,29 @@ class Model:
 
         graph = sg.StellarGraph(nodes=self.nodes, edges=self.edges)
 
+        if test_edges != 0:
+            graph_test = sg.StellarGraph(nodes=self.nodes, edges=test_edges)
+            edge_splitter_test = EdgeSplitter(graph_test)
+            self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
+                p=0.1, method="global", keep_connected=False, seed=2023
+            )
+            edge_splitter_train = EdgeSplitter(graph)
+
+        else:
+            # Test split
+            edge_splitter_test = EdgeSplitter(graph)
+            self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
+                p=0.1, method="global", keep_connected=False, seed=2023
+            )
+            edge_splitter_train = EdgeSplitter(self.graph_test)
+
         # Test split
-        edge_splitter_test = EdgeSplitter(graph)
-        self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
-            p=0.1, method="global", keep_connected=False, seed=2023
-        )
+        # edge_splitter_test = EdgeSplitter(graph)
+        # self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
+        #     p=0.1, method="global", keep_connected=False, seed=2023
+        # )
 
         # Train split
-        edge_splitter_train = EdgeSplitter(self.graph_test)
         self.graph_train, edge_ids_train, edge_labels_train = edge_splitter_train.train_test_split(
             p=0.1, method="global", keep_connected=False, seed=2023
         )

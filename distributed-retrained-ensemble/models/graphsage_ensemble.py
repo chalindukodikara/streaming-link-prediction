@@ -58,7 +58,7 @@ class Model:
 
         self.n_estimators = 2
 
-    def initialize(self,**hyper_params):
+    def initialize(self, test_edges, **hyper_params):
 
         if(not "batch_size" in hyper_params.keys()):
             batch_size = 40
@@ -78,14 +78,23 @@ class Model:
 
         graph = sg.StellarGraph(nodes=self.nodes, edges=self.edges)
 
-        # Test split
-        edge_splitter_test = EdgeSplitter(graph)
-        self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
-            p=0.1, method="global", keep_connected=False, seed=2023
-        )
+        if test_edges != 0:
+            graph_test = sg.StellarGraph(nodes=self.nodes, edges=test_edges)
+            edge_splitter_test = EdgeSplitter(graph_test)
+            self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
+                p=0.1, method="global", keep_connected=False, seed=2023
+            )
+            edge_splitter_val = EdgeSplitter(graph)
+
+        else:
+            # Test split
+            edge_splitter_test = EdgeSplitter(graph)
+            self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
+                p=0.1, method="global", keep_connected=False, seed=2023
+            )
+            edge_splitter_val = EdgeSplitter(self.graph_test)
 
         # Define an edge splitter on the reduced graph G_test:
-        edge_splitter_val = EdgeSplitter(self.graph_test)
 
         # Randomly sample a fraction p=0.1 of all positive links, and same number of negative links, from G_test, and obtain the
         # reduced graph G_train with the sampled links removed:

@@ -286,10 +286,12 @@ class Client:
             if self.iteration_number <= self.NUM_TIMESTAMPS:
                 edges = pd.read_csv('data/' + self.dataset_name + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(self.iteration_number) + '_test_batch_edges.csv')
                 nodes = pd.read_csv('data/' + self.dataset_name + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(self.iteration_number) + '_test_batch_nodes.csv', index_col=0)
-
+                edges_test = pd.read_csv(
+                    'data/' + self.dataset_name + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + '/' + str(
+                        self.iteration_number) + '_test_batch_edges_test.csv')
                 logging.info('Batch %s initialized ', str(self.iteration_number))
                 self.MODEL = Model(nodes, edges)
-                num_train_ex, num_test_ex = self.MODEL.initialize()
+                num_train_ex, num_test_ex = self.MODEL.initialize(test_edges=edges_test)
 
                 self.graph_params = (num_train_ex, num_test_ex)
 
@@ -328,7 +330,7 @@ if __name__ == "__main__":
 
     logging.info('Model initialized for training')
     model = Model(nodes, edges)
-    num_train_ex, num_test_ex = model.initialize()
+    num_train_ex, num_test_ex = model.initialize(test_edges=0)
 
     graph_params = (num_train_ex, num_test_ex)
 

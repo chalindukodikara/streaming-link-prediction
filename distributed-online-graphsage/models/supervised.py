@@ -62,16 +62,27 @@ class Model:
         if(not "lr" in hyper_params.keys()):
             lr = 1e-2
 
-        graph = sg.StellarGraph(nodes=self.nodes, edges=self.edges)
+        # Get future edges for testing
+        test_edges = self.edges.iloc[int(self.edges.shape[0] * 0.9):]
 
-        # Test split
-        edge_splitter_test = EdgeSplitter(graph)
+        self.edges = self.edges.iloc[:int(self.edges.shape[0] * 0.9)]
+
+        graph_test = sg.StellarGraph(nodes=self.nodes, edges=test_edges)
+        edge_splitter_test = EdgeSplitter(graph_test)
         self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
             p=0.1, method="global", keep_connected=False, seed=2023
         )
 
+        graph = sg.StellarGraph(nodes=self.nodes, edges=self.edges)
+
+        # Test split
+        # edge_splitter_test = EdgeSplitter(graph)
+        # self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
+        #     p=0.1, method="global", keep_connected=False, seed=2023
+        # )
+
         # Train split
-        edge_splitter_train = EdgeSplitter(self.graph_test)
+        edge_splitter_train = EdgeSplitter(graph)
         self.graph_train, edge_ids_train, edge_labels_train = edge_splitter_train.train_test_split(
             p=0.1, method="global", keep_connected=False, seed=2023
         )

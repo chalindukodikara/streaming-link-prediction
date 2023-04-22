@@ -27,8 +27,8 @@ parser.add_argument('--graph_id', type=int, default=1, help='Graph ID')
 parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
 parser.add_argument('--partition_size', type=int, default=2, help='Partition size')
 parser.add_argument('--partition_algorithm', type=str, default='hash', help='Partition algorithm')
-parser.add_argument('--training_epochs', type=int, default=6, help='Initial Training: number of epochs')
-parser.add_argument('--epochs', type=int, default=6, help='Streaming data training for batches: number of epochs')
+parser.add_argument('--training_epochs', type=int, default=3, help='Initial Training: number of epochs')
+parser.add_argument('--epochs', type=int, default=3, help='Streaming data training for batches: number of epochs')
 
 try:
   args = parser.parse_args()

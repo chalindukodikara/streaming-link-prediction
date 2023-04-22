@@ -30,10 +30,10 @@ parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
 ######## Frequently configured #######
 parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
 parser.add_argument('--partition_size', type=int, default=2, help='Partition size')
-parser.add_argument('--num_clients', type=int, default=2, help='Number of clients')
+parser.add_argument('--num_clients', type=int, default=1, help='Number of clients')
 parser.add_argument('--partition_algorithm', type=str, default='hash', help='Partition algorithm')
-parser.add_argument('--training_rounds', type=int, default=6, help='Initial Training: number of rounds')
-parser.add_argument('--rounds', type=int, default=3, help='Streaming data testing for batches: number of rounds')
+parser.add_argument('--training_rounds', type=int, default=2, help='Initial Training: number of rounds')
+parser.add_argument('--rounds', type=int, default=2, help='Streaming data testing for batches: number of rounds')
 
 
 try:

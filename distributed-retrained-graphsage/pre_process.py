@@ -56,12 +56,132 @@ TRAINING_BATCH_SIZE = args.training_batch_size
 TESTING_BATCH_SIZE = args.testing_batch_size
 ######## Our parameters ################
 
+def create_wikipedia(data_edges, data_nodes, training_batch_size, testing_batch_size, initial_timestamp=0, last_timestamp=2678373): # In days: 1 , 10
+    testing_batch_size = testing_batch_size * 3600 * 24  # convert into seconds and then miliseconds
+    training_batch_size = training_batch_size * 3600 * 24
+    current_timestamp = initial_timestamp
+    batch_number = 0
+    while current_timestamp <= (last_timestamp - testing_batch_size):
+        if current_timestamp != initial_timestamp:  # filter training batch
+            data_edges_temp = data_edges.loc[data_edges['timestamp'] <= (current_timestamp)].loc[data_edges['timestamp'] >= 0]
+            data_edges_temp_new_batch = data_edges.loc[data_edges['timestamp'] <= (current_timestamp + testing_batch_size)].loc[data_edges['timestamp'] > (current_timestamp)]
+            data_edges_temp_new_batch_test = data_edges_temp_new_batch.iloc[int(data_edges_temp_new_batch.shape[0] * 90):]
+            data_edges_temp_new_batch = data_edges_temp_new_batch.iloc[:int(data_edges_temp_new_batch.shape[0] * 90)]
+            data_edges_temp = pd.concat([data_edges_temp, data_edges_temp_new_batch])
+            current_timestamp += testing_batch_size
+            logging.info('Test batch {} created'.format(batch_number))
+        else:  # filter each test batch
+            data_edges_temp = data_edges.loc[data_edges['timestamp'] < current_timestamp + training_batch_size].loc[data_edges['timestamp'] >= current_timestamp]
+            current_timestamp += training_batch_size - 1
+            logging.info('Training batch created')
+
+        if data_edges_temp.empty:
+            logging.info('Batch %s: is empty', batch_number)
+
+        # get node list of each batch considering edge set, all sources and targets are added to the node list
+        nodes_list = []
+        for j in range(2):
+            nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
+
+        # filter unique nodes
+        nodes_set = set(nodes_list)
+
+        # get nodes dataframe considering unique nodes
+        data_nodes_temp = data_nodes[data_nodes[data_nodes.columns[0]].isin(nodes_set)]
+
+        # delete unwanted variables
+        del nodes_list
+        del nodes_set
+        gc.collect()
+
+        # drop timestamp column
+        data_edges_temp = data_edges_temp.drop(columns=["timestamp"])
+
+        # save
+        if batch_number == 0:
+            data_edges_temp.to_csv("data/" + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(
+                PARTITION_ID) + "/" + "0_training_batch_edges.csv", index=False)
+            data_nodes_temp.to_csv("data/" + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(
+                PARTITION_ID) + "/" + "0_training_batch_nodes.csv", index=False)
+        else:
+            data_edges_temp.to_csv(
+                "data/" + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + "/" + str(
+                    batch_number) + "_test_batch_edges.csv", index=False)
+            data_nodes_temp.to_csv(
+                "data/" + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + "/" + str(
+                    batch_number) + "_test_batch_nodes.csv", index=False)
+            data_edges_temp_new_batch_test.to_csv(
+                "data/" + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + "/" + str(
+                    batch_number) + "_test_batch_edges_test.csv", index=False)
+        batch_number += 1
+def create_youtube(data_edges, data_nodes, training_batch_size, testing_batch_size, initial_timestamp=1165708800, last_timestamp=1176422400): # In days: 1 , 1
+    testing_batch_size = testing_batch_size * 3600 * 24  # convert into seconds
+    training_batch_size = training_batch_size * 3600 * 24  # convert into seconds
+    current_timestamp = initial_timestamp
+    batch_number = 0
+    while current_timestamp <= (last_timestamp - testing_batch_size):
+        if current_timestamp != initial_timestamp:  # filter training batch
+            data_edges_temp = data_edges.loc[data_edges['timestamp'] <= (current_timestamp)].loc[data_edges['timestamp'] >= 0]
+            data_edges_temp_new_batch = data_edges.loc[data_edges['timestamp'] <= (current_timestamp + testing_batch_size)].loc[data_edges['timestamp'] > (current_timestamp)]
+            data_edges_temp_new_batch_test = data_edges_temp_new_batch.iloc[int(data_edges_temp_new_batch.shape[0] * 90):]
+            data_edges_temp_new_batch = data_edges_temp_new_batch.iloc[:int(data_edges_temp_new_batch.shape[0] * 90)]
+            data_edges_temp = pd.concat([data_edges_temp, data_edges_temp_new_batch])
+            current_timestamp += testing_batch_size
+            logging.info('Test batch {} created'.format(batch_number))
+        else:  # filter each test batch
+            data_edges_temp = data_edges.loc[data_edges['timestamp'] < current_timestamp + training_batch_size].loc[data_edges['timestamp'] >= current_timestamp]
+            current_timestamp += training_batch_size - 1
+            logging.info('Training batch created')
+
+        if data_edges_temp.empty:
+            logging.info('Batch %s: is empty', batch_number)
+
+        # get node list of each batch considering edge set, all sources and targets are added to the node list
+        nodes_list = []
+        for j in range(2):
+            nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
+
+        # filter unique nodes
+        nodes_set = set(nodes_list)
+
+        # get nodes dataframe considering unique nodes
+        data_nodes_temp = data_nodes[data_nodes[data_nodes.columns[0]].isin(nodes_set)]
+
+        # delete unwanted variables
+        del nodes_list
+        del nodes_set
+        gc.collect()
+
+        # drop timestamp column
+        data_edges_temp = data_edges_temp.drop(columns=["timestamp"])
+
+        # save
+        if batch_number == 0:
+            data_edges_temp.to_csv("data/" + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(
+                PARTITION_ID) + "/" + "0_training_batch_edges.csv", index=False)
+            data_nodes_temp.to_csv("data/" + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(
+                PARTITION_ID) + "/" + "0_training_batch_nodes.csv", index=False)
+        else:
+            data_edges_temp.to_csv(
+                "data/" + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + "/" + str(
+                    batch_number) + "_test_batch_edges.csv", index=False)
+            data_nodes_temp.to_csv(
+                "data/" + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + "/" + str(
+                    batch_number) + "_test_batch_nodes.csv", index=False)
+            data_edges_temp_new_batch_test.to_csv(
+                "data/" + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + "/" + str(
+                    batch_number) + "_test_batch_edges_test.csv", index=False)
+        batch_number += 1
 def create_flights(data_edges, data_nodes, training_batch_size, testing_batch_size, initial_timestamp=0, last_timestamp=121): # In days
     current_timestamp = initial_timestamp
     batch_number = 0
     while current_timestamp <= (last_timestamp - testing_batch_size):
         if current_timestamp != initial_timestamp:  # filter training batch
-            data_edges_temp = data_edges.loc[data_edges['timestamp'] <= (current_timestamp + testing_batch_size)].loc[data_edges['timestamp'] >= 0]
+            data_edges_temp = data_edges.loc[data_edges['timestamp'] <= (current_timestamp)].loc[data_edges['timestamp'] >= 0]
+            data_edges_temp_new_batch = data_edges.loc[data_edges['timestamp'] <= (current_timestamp + testing_batch_size)].loc[data_edges['timestamp'] > (current_timestamp)]
+            data_edges_temp_new_batch_test = data_edges_temp_new_batch.iloc[int(data_edges_temp_new_batch.shape[0] * 90):]
+            data_edges_temp_new_batch = data_edges_temp_new_batch.iloc[:int(data_edges_temp_new_batch.shape[0] * 90)]
+            data_edges_temp = pd.concat([data_edges_temp, data_edges_temp_new_batch])
             current_timestamp += testing_batch_size
             logging.info('Test batch {} created'.format(batch_number))
         else:  # filter each test batch
@@ -104,15 +224,22 @@ def create_flights(data_edges, data_nodes, training_batch_size, testing_batch_si
             data_nodes_temp.to_csv(
                 "data/" + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + "/" + str(
                     batch_number) + "_test_batch_nodes.csv", index=False)
+            data_edges_temp_new_batch_test.to_csv(
+                "data/" + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + "/" + str(
+                    batch_number) + "_test_batch_edges_test.csv", index=False)
         batch_number += 1
 
-def create_facebook(data_edges, data_nodes, training_batch_size, testing_batch_size, initial_timestamp=1157454929, last_timestamp=1232231923): # In hours: testing batch size = 2 hours
-    testing_batch_size = testing_batch_size * 3600 * 1000 # convert into seconds and then miliseconds
+def create_facebook(data_edges, data_nodes, training_batch_size, testing_batch_size, initial_timestamp=1157454929, last_timestamp=1232231923): # In days: testing batch size = 30 days
+    testing_batch_size = testing_batch_size * 3600 * 24 # convert into seconds and then miliseconds
     current_timestamp = 0
     batch_number = 0
     while current_timestamp <= (last_timestamp - testing_batch_size):
         if current_timestamp != 0:  # filter training batch
-            data_edges_temp = data_edges.loc[data_edges['timestamp'] <= (current_timestamp + testing_batch_size)].loc[data_edges['timestamp'] >= 0]
+            data_edges_temp = data_edges.loc[data_edges['timestamp'] <= (current_timestamp)].loc[data_edges['timestamp'] >= 0]
+            data_edges_temp_new_batch = data_edges.loc[data_edges['timestamp'] <= (current_timestamp + testing_batch_size)].loc[data_edges['timestamp'] > (current_timestamp)]
+            data_edges_temp_new_batch_test = data_edges_temp_new_batch.iloc[int(data_edges_temp_new_batch.shape[0] * 90):]
+            data_edges_temp_new_batch = data_edges_temp_new_batch.iloc[:int(data_edges_temp_new_batch.shape[0] * 90)]
+            data_edges_temp = pd.concat([data_edges_temp, data_edges_temp_new_batch])
             current_timestamp += testing_batch_size
             logging.info('Test batch {} created'.format(batch_number))
         else:  # filter each test batch
@@ -156,13 +283,23 @@ def create_facebook(data_edges, data_nodes, training_batch_size, testing_batch_s
             data_nodes_temp.to_csv(
                 "data/" + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + "/" + str(
                     batch_number) + "_test_batch_nodes.csv", index=False)
+
+            data_edges_temp_new_batch_test.to_csv(
+                "data/" + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + "/" + str(
+                    batch_number) + "_test_batch_edges_test.csv", index=False)
+
         batch_number += 1
+
 def create_dblp(data_edges, data_nodes, training_batch_size, testing_batch_size, initial_timestamp=1956, last_timestamp=2022): # In years: training batch size = 30, testing batch size = 2
     current_timestamp = initial_timestamp
     batch_number = 0
     while current_timestamp <= (last_timestamp - testing_batch_size):
         if current_timestamp != initial_timestamp:  # filter training batch
-            data_edges_temp = data_edges.loc[data_edges['timestamp'] <= (current_timestamp + testing_batch_size)].loc[data_edges['timestamp'] >= 0]
+            data_edges_temp = data_edges.loc[data_edges['timestamp'] <= (current_timestamp)].loc[data_edges['timestamp'] >= 0]
+            data_edges_temp_new_batch = data_edges.loc[data_edges['timestamp'] <= (current_timestamp + testing_batch_size)].loc[data_edges['timestamp'] > (current_timestamp)]
+            data_edges_temp_new_batch_test = data_edges_temp_new_batch.iloc[int(data_edges_temp_new_batch.shape[0]*90):]
+            data_edges_temp_new_batch = data_edges_temp_new_batch.iloc[:int(data_edges_temp_new_batch.shape[0] * 90)]
+            data_edges_temp = pd.concat([data_edges_temp, data_edges_temp_new_batch])
             current_timestamp += testing_batch_size
             logging.info('Test batch {} created'.format(batch_number))
         else:  # filter each test batch
@@ -206,6 +343,11 @@ def create_dblp(data_edges, data_nodes, training_batch_size, testing_batch_size,
             data_nodes_temp.to_csv(
                 "data/" + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + "/" + str(
                     batch_number) + "_test_batch_nodes.csv", index=False)
+
+            data_edges_temp_new_batch_test.to_csv(
+                "data/" + DATASET_NAME + '_' + str(PARTITION_SIZE) + '_' + str(PARTITION_ID) + "/" + str(
+                    batch_number) + "_test_batch_edges_test.csv", index=False)
+
         batch_number += 1
 
 def main(dataset_name, data_edges, data_nodes, initial_timestamp, last_timestamp, training_batch_size = 10, testing_batch_size = 2):

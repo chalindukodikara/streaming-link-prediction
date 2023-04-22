@@ -76,16 +76,27 @@ class Model:
         self.n_estimators = 2  # Number of models in the ensemble
         n_predictions = 6  # Number of predictions per query point per model
 
-        graph = sg.StellarGraph(nodes=self.nodes, edges=self.edges)
+        # Get future edges for testing
+        test_edges = self.edges.iloc[int(self.edges.shape[0] * 0.9):]
 
-        # Test split
-        edge_splitter_test = EdgeSplitter(graph)
+        self.edges = self.edges.iloc[:int(self.edges.shape[0] * 0.9)]
+
+        graph_test = sg.StellarGraph(nodes=self.nodes, edges=test_edges)
+        edge_splitter_test = EdgeSplitter(graph_test)
         self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
             p=0.1, method="global", keep_connected=False, seed=2023
         )
+        ###################################
+
+        graph = sg.StellarGraph(nodes=self.nodes, edges=self.edges)
+        # Test split
+        # edge_splitter_test = EdgeSplitter(graph)
+        # self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
+        #     p=0.1, method="global", keep_connected=False, seed=2023
+        # )
 
         # Define an edge splitter on the reduced graph G_test:
-        edge_splitter_val = EdgeSplitter(self.graph_test)
+        edge_splitter_val = EdgeSplitter(graph)
 
         # Randomly sample a fraction p=0.1 of all positive links, and same number of negative links, from G_test, and obtain the
         # reduced graph G_train with the sampled links removed:
