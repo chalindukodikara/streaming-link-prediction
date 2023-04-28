@@ -30,10 +30,10 @@ parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
 ######## Frequently configured #######
 parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
 parser.add_argument('--partition_size', type=int, default=2, help='Partition size')
-parser.add_argument('--num_clients', type=int, default=1, help='Number of clients')
+parser.add_argument('--num_clients', type=int, default=2, help='Number of clients')
 parser.add_argument('--partition_algorithm', type=str, default='hash', help='Partition algorithm')
-parser.add_argument('--training_rounds', type=int, default=2, help='Initial Training: number of rounds')
-parser.add_argument('--rounds', type=int, default=2, help='Streaming data testing for batches: number of rounds')
+parser.add_argument('--training_rounds', type=int, default=6, help='Initial Training: number of rounds')
+parser.add_argument('--rounds', type=int, default=3, help='Streaming data testing for batches: number of rounds')
 
 
 try:
@@ -295,6 +295,137 @@ class Server:
             clients_connected = 0
             # while clients_connected != self.MAX_CONN:
 
+        num_results = 0
+
+        accuracy_list = []
+        accuracy_std_list = []
+        accuracy_99th_list = []
+        accuracy_90th_list = []
+
+        recall_list = []
+        recall_std_list = []
+        recall_99th_list = []
+        recall_90th_list = []
+
+        auc_list = []
+        auc_std_list = []
+        auc_99th_list = []
+        auc_90th_list = []
+
+        f1_list = []
+        f1_std_list = []
+        f1_99th_list = []
+        f1_90th_list = []
+
+        precision_list = []
+        precision_std_list = []
+        precision_99th_list = []
+        precision_90th_list = []
+
+        mean_time_list = []
+        mean_time_std_list = []
+        mean_time_99th_list = []
+        mean_time_90th_list = []
+
+        total_time_list = []
+
+        while num_results != int(NUM_CLIENTS):
+            read_sockets, write_sockets, exception_sockets = select.select(self.sockets_list, [], self.sockets_list)
+
+            for notified_socket in read_sockets:
+
+                message = self.receive(notified_socket)
+
+                if message is False:
+                    self.sockets_list.remove(notified_socket)
+                    del self.clients[notified_socket]
+                    continue
+                else:
+                    accuracy, accuracy_std, accuracy_99th, accuracy_90th = message['ACCURACY'], message['ACCURACY_STD'], message['ACCURACY_99TH'], message['ACCURACY_90TH']
+                    recall, recall_std, recall_99th, recall_90th = message['RECALL'], message['RECALL_STD'], message['RECALL_99TH'], message['RECALL_90TH']
+                    auc, auc_std, auc_99th, auc_90th = message['AUC'], message['AUC_STD'], message['AUC_99TH'], message['AUC_90TH']
+                    f1, f1_std, f1_99th, f1_90th = message['F1'], message['F1_STD'], message['F1_99TH'], message['F1_90TH']
+                    precision, precision_std, precision_99th, precision_90th = message['PRECISION'], message['PRECISION_STD'], message['PRECISION_99TH'], message['PRECISION_90TH']
+                    mean_time, mean_time_std, mean_time_99th, mean_time_90th = message['MEAN_TIME'], message['MEAN_TIME_STD'], message['MEAN_TIME_99TH'], message['MEAN_TIME_90TH']
+                    total_time = message['TOTAL_TIME']
+
+                    accuracy_list.append(float(accuracy))
+                    accuracy_std_list.append(float(accuracy_std))
+                    accuracy_99th_list.append(float(accuracy_99th))
+                    accuracy_90th_list.append(float(accuracy_90th))
+
+                    recall_list.append(float(recall))
+                    recall_std_list.append(float(recall_std))
+                    recall_99th_list.append(float(recall_99th))
+                    recall_90th_list.append(float(recall_90th))
+
+                    auc_list.append(float(auc))
+                    auc_std_list.append(float(auc_std))
+                    auc_99th_list.append(float(auc_99th))
+                    auc_90th_list.append(float(auc_90th))
+
+                    f1_list.append(float(f1))
+                    f1_std_list.append(float(f1_std))
+                    f1_99th_list.append(float(f1_99th))
+                    f1_90th_list.append(float(f1_90th))
+
+                    precision_list.append(float(precision))
+                    precision_std_list.append(float(precision_std))
+                    precision_99th_list.append(float(precision_99th))
+                    precision_90th_list.append(float(precision_90th))
+
+                    mean_time_list.append(float(mean_time))
+                    mean_time_std_list.append(float(mean_time_std))
+                    mean_time_99th_list.append(float(mean_time_99th))
+                    mean_time_90th_list.append(float(mean_time_90th))
+
+                    total_time_list.append(float(total_time))
+
+                    self.client_ids[notified_socket] = client_id
+
+                    num_results += 1
+
+            for notified_socket in exception_sockets:
+                self.sockets_list.remove(notified_socket)
+                del self.clients[notified_socket]
+
+        logging.info(
+            "______________________________________________________________________________________________________ Final Mean Values of all Clients ______________________________________________________________________________________________________")
+        logging.info(
+            "##########################################################################################################################################################################################################################")
+
+        logging.info(
+            'Result report : Accuracy - %s (%s), Recall - %s (%s), AUC - %s (%s), F1 - %s (%s), Precision - %s (%s), Mean time for a batch - %s (%s) seconds, Total Time - %s (%s)',
+            str(round(np.mean(accuracy_list), 4)), str(round(np.mean(accuracy_std_list), 4)),
+            str(round(np.mean(recall_list), 4)), str(round(np.mean(recall_std_list), 4)),
+            str(round(np.mean(auc_list), 4)), str(round(np.mean(auc_std_list), 4)),
+            str(round(np.mean(f1_list), 4)), str(round(np.mean(f1_std_list), 4)),
+            str(round(np.mean(precision_list), 4)), str(round(np.mean(precision_std_list), 4)),
+            str(round(np.mean(mean_time_list), 4)), str(round(np.mean(mean_time_std_list), 4)),
+            str(round(np.mean(total_time_list), 4)), str(round(np.std(total_time_list), 4))
+        )
+        logging.info(
+            'Result report : Accuracy 99th - 90th (%s, %s), Recall 99th - 90th (%s, %s), AUC 99th - 90th (%s, %s), F1 99th - 90th (%s, %s), Precision 99th - 90th (%s, %s), Mean time for a batch 99th - 90th (%s, %s)',
+            str(round(np.mean(accuracy_99th_list), 4)), str(round(np.mean(accuracy_90th_list), 4)),
+            str(round(np.mean(recall_99th_list), 4)), str(round(np.mean(recall_90th_list), 4)),
+            str(round(np.mean(auc_99th_list), 4)), str(round(np.mean(auc_90th_list), 4)),
+            str(round(np.mean(f1_99th_list), 4)), str(round(np.mean(f1_90th_list), 4)),
+            str(round(np.mean(precision_99th_list), 4)), str(round(np.mean(precision_90th_list), 4)),
+            str(round(np.mean(mean_time_99th_list), 4)), str(round(np.mean(mean_time_90th_list), 4))
+        )
+        logging.info(
+            "______________________________________________________________________________________________________ Final Mean Values of all Clients ______________________________________________________________________________________________________")
+        logging.info(
+            "##########################################################################################################################################################################################################################")
+
+        logging.info('Total time list: ' + str(total_time_list))
+        logging.info('Accuracy list: ' + str(accuracy_list))
+        logging.info('Recall list: ' + str(recall_list))
+        logging.info('AUC list: ' + str(auc_list))
+        logging.info('F1 list: ' + str(f1_list))
+        logging.info('Precision list: ' + str(precision_list))
+
+
 
 if __name__ == "__main__":
 
@@ -335,3 +466,5 @@ if __name__ == "__main__":
 
     logging.info('Distributed training done!')
     logging.info('Training report : Total elapsed time %s seconds, graph ID %s, number of clients %s, training rounds %s, rounds %s, number of timestamps %s', round(elapsed_time, 0), GRAPH_ID, NUM_CLIENTS, TRAINING_ROUNDS, ROUNDS, NUM_TIMESTAMPS)
+
+

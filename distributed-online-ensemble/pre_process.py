@@ -36,11 +36,11 @@ logging.basicConfig(
 )
 ######## Our parameters ################
 parser = argparse.ArgumentParser('Preprocessing')
-parser.add_argument('--dataset_name', type=str, default='facebook', help='Dataset name')
-parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
+parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
+parser.add_argument('--partition_id', type=int, default=1, help='Partition ID')
 parser.add_argument('--partition_size', type=int, default=2, help='Partition size')
 parser.add_argument('--training_batch_size', type=int, default=10, help='Training batch size: can be days, hours, weeks, years')
-parser.add_argument('--testing_batch_size', type=int, default=30, help='Testing batch size: can be days, hours, weeks, years')
+parser.add_argument('--testing_batch_size', type=int, default=1, help='Testing batch size: can be days, hours, weeks, years')
 
 
 try:

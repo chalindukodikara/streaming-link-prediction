@@ -36,11 +36,11 @@ logging.basicConfig(
 )
 ######## Our parameters ################
 parser = argparse.ArgumentParser('Preprocessing')
-parser.add_argument('--dataset_name', type=str, default='flights', help='Dataset name')
-parser.add_argument('--partition_id', type=int, default=7, help='Partition ID')
-parser.add_argument('--partition_size', type=int, default=8, help='Partition size')
-parser.add_argument('--training_batch_size', type=int, default=20, help='Training batch size: can be days, hours, weeks, years')
-parser.add_argument('--testing_batch_size', type=int, default=2, help='Testing batch size: can be days, hours, weeks, years')
+parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
+parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
+parser.add_argument('--partition_size', type=int, default=2, help='Partition size')
+parser.add_argument('--training_batch_size', type=int, default=10, help='Training batch size: can be days, hours, weeks, years')
+parser.add_argument('--testing_batch_size', type=int, default=1, help='Testing batch size: can be days, hours, weeks, years')
 
 
 try:
@@ -327,7 +327,11 @@ def main(dataset_name, data_edges, data_nodes, initial_timestamp, last_timestamp
     elif DATASET_NAME == 'flights':
         create_flights(data_edges, data_nodes, training_batch_size, testing_batch_size)
 
+    elif DATASET_NAME == 'youtube':
+        create_youtube(data_edges, data_nodes, training_batch_size, testing_batch_size)
 
+    elif DATASET_NAME == 'wikipedia':
+        create_wikipedia(data_edges, data_nodes, training_batch_size, testing_batch_size)
 
 if __name__ == "__main__":
     # read edge list

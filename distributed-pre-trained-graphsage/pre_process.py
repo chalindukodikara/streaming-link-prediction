@@ -327,6 +327,11 @@ def main(dataset_name, data_edges, data_nodes, initial_timestamp, last_timestamp
     elif DATASET_NAME == 'flights':
         create_flights(data_edges, data_nodes, training_batch_size, testing_batch_size)
 
+    elif DATASET_NAME == 'youtube':
+        create_youtube(data_edges, data_nodes, training_batch_size, testing_batch_size)
+
+    elif DATASET_NAME == 'wikipedia':
+        create_wikipedia(data_edges, data_nodes, training_batch_size, testing_batch_size)
 
 
 if __name__ == "__main__":

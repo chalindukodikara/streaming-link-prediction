@@ -58,7 +58,7 @@ class Model:
 
         self.n_estimators = 2
 
-    def initialize(self,**hyper_params):
+    def initialize(self, **hyper_params):
 
         if(not "batch_size" in hyper_params.keys()):
             batch_size = 40
@@ -105,7 +105,7 @@ class Model:
         )
 
         # Train split
-        edge_splitter_train = EdgeSplitter(self.graph_test)
+        edge_splitter_train = EdgeSplitter(graph)
         self.graph_train, self.edge_ids_train, self.edge_labels_train = edge_splitter_train.train_test_split(
             p=0.1, method="global", keep_connected=False, seed=2023
         )

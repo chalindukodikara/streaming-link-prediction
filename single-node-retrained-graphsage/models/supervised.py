@@ -86,7 +86,6 @@ class Model:
         )
 
         # Train split
-        edge_splitter_train = EdgeSplitter(self.graph_test)
         self.graph_train, edge_ids_train, edge_labels_train = edge_splitter_train.train_test_split(
             p=0.1, method="global", keep_connected=False, seed = 2023
         )

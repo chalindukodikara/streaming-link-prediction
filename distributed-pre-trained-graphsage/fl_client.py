@@ -27,8 +27,8 @@ parser.add_argument('--graph_id', type=int, default=1, help='Graph ID')
 parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
 parser.add_argument('--partition_size', type=int, default=2, help='Partition size')
 parser.add_argument('--partition_algorithm', type=str, default='hash', help='Partition algorithm')
-parser.add_argument('--training_epochs', type=int, default=6, help='Initial Training: number of epochs')
-parser.add_argument('--epochs', type=int, default=6, help='Streaming data training for batches: number of epochs')
+parser.add_argument('--training_epochs', type=int, default=3, help='Initial Training: number of epochs')
+parser.add_argument('--epochs', type=int, default=3, help='Streaming data training for batches: number of epochs')
 
 try:
   args = parser.parse_args()
@@ -172,6 +172,7 @@ class Client:
         return self.MODEL.fit(epochs=self.epochs)
 
     def run(self):
+        start_time = timer()
         while self.iteration_number == 0:
             while not self.STOP_FLAG:
                 if self.iteration_number > 0 and self.rounds == 0:
@@ -312,6 +313,37 @@ class Client:
 
 
         logging.info(str(self.all_test_metric_values))
+
+        data = {"ACCURACY": str(round(np.mean(self.all_test_metric_values[0]), 4)),
+                "ACCURACY_STD": str(round(np.std(self.all_test_metric_values[0]), 4)),
+                "ACCURACY_99TH": str(round(np.percentile(self.all_test_metric_values[0], 99), 4)),
+                "ACCURACY_90TH": str(round(np.percentile(self.all_test_metric_values[0], 90), 4)),
+                "RECALL": str(round(np.mean(self.all_test_metric_values[1]), 4)),
+                "RECALL_STD": str(round(np.std(self.all_test_metric_values[1]), 4)),
+                "RECALL_99TH": str(round(np.percentile(self.all_test_metric_values[1], 99), 4)),
+                "RECALL_90TH": str(round(np.percentile(self.all_test_metric_values[1], 90), 4)),
+                "AUC": str(round(np.mean(self.all_test_metric_values[2]), 4)),
+                "AUC_STD": str(round(np.std(self.all_test_metric_values[2]), 4)),
+                "AUC_99TH": str(round(np.percentile(self.all_test_metric_values[2], 99), 4)),
+                "AUC_90TH": str(round(np.percentile(self.all_test_metric_values[2], 90), 4)),
+                "F1": str(round(np.mean(self.all_test_metric_values[3]), 4)),
+                "F1_STD": str(round(np.std(self.all_test_metric_values[3]), 4)),
+                "F1_99TH": str(round(np.percentile(self.all_test_metric_values[3], 99), 4)),
+                "F1_90TH": str(round(np.percentile(self.all_test_metric_values[3], 90), 4)),
+                "PRECISION": str(round(np.mean(self.all_test_metric_values[4]), 4)),
+                "PRECISION_STD": str(round(np.std(self.all_test_metric_values[4]), 4)),
+                "PRECISION_99TH": str(round(np.percentile(self.all_test_metric_values[4], 99), 4)),
+                "PRECISION_90TH": str(round(np.percentile(self.all_test_metric_values[4], 90), 4)),
+                "MEAN_TIME": str(round(np.mean(self.all_test_metric_values[5]), 4)),
+                "MEAN_TIME_STD": str(round(np.std(self.all_test_metric_values[5]), 4)),
+                "MEAN_TIME_99TH": str(round(np.percentile(self.all_test_metric_values[5], 99), 4)),
+                "MEAN_TIME_90TH": str(round(np.percentile(self.all_test_metric_values[5], 90), 4)),
+                "TOTAL_TIME": str(round(timer() - start_time, 2))}
+
+        data = pickle.dumps(data)
+        data = bytes(f"{len(data):<{self.HEADER_LENGTH}}", 'utf-8') + data
+        self.client_socket.sendall(data)
+
 
 if __name__ == "__main__":
 

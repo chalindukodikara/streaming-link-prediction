@@ -85,6 +85,8 @@ class Model:
                 p=0.1, method="global", keep_connected=False, seed=2023
             )
             edge_splitter_val = EdgeSplitter(graph)
+            edge_splitter_train = EdgeSplitter(graph)
+
 
         else:
             # Test split
@@ -93,6 +95,7 @@ class Model:
                 p=0.1, method="global", keep_connected=False, seed=2023
             )
             edge_splitter_val = EdgeSplitter(self.graph_test)
+            edge_splitter_train = EdgeSplitter(self.graph_test)
 
         # Define an edge splitter on the reduced graph G_test:
 
@@ -103,7 +106,6 @@ class Model:
         )
 
         # Train split
-        edge_splitter_train = EdgeSplitter(self.graph_test)
         self.graph_train, self.edge_ids_train, self.edge_labels_train = edge_splitter_train.train_test_split(
             p=0.1, method="global", keep_connected=False, seed=2023
         )
