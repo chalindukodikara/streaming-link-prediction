@@ -361,7 +361,7 @@ if __name__ == "__main__":
 
     logging.info('Model initialized for training')
     model = Model(nodes, edges)
-    num_train_ex, num_test_ex = model.initialize(test_edges=0)
+    num_train_ex, num_test_ex = model.initialize(test_edges=pd.DataFrame())
 
     graph_params = (num_train_ex, num_test_ex)
 

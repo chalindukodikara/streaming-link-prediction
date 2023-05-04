@@ -485,7 +485,7 @@ if __name__ == "__main__":
     from models.graphsage_ensemble import Model
 
     model = Model(nodes, edges)
-    model.initialize()
+    model.initialize(test_edges=pd.DataFrame())
 
     server = Server(model, training_rounds=TRAINING_ROUNDS, rounds=ROUNDS, weights_path=WEIGHTS_PATH, graph_id=GRAPH_ID,
                     MAX_CONN=NUM_CLIENTS, IP=IP, PORT=PORT, iteration_number=0, transfer_learning=True,

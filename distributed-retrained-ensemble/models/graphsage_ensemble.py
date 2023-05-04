@@ -78,7 +78,7 @@ class Model:
 
         graph = sg.StellarGraph(nodes=self.nodes, edges=self.edges)
 
-        if test_edges != 0:
+        if not test_edges.empty:
             graph_test = sg.StellarGraph(nodes=self.nodes, edges=test_edges)
             edge_splitter_test = EdgeSplitter(graph_test)
             self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
