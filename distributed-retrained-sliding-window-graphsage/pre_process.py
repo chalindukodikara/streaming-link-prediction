@@ -66,8 +66,8 @@ def create_wikipedia(data_edges, data_nodes, training_batch_size, testing_batch_
         if current_timestamp != initial_timestamp:  # filter training batch
             data_edges_temp = data_edges.loc[data_edges['timestamp'] <= (current_timestamp)].loc[data_edges['timestamp'] > (starting_timestamp + testing_batch_size)]
             data_edges_temp_new_batch = data_edges.loc[data_edges['timestamp'] <= (current_timestamp + testing_batch_size)].loc[data_edges['timestamp'] > (current_timestamp)]
-            data_edges_temp_new_batch_test = data_edges_temp_new_batch.iloc[int(data_edges_temp_new_batch.shape[0] * 90):]
-            data_edges_temp_new_batch = data_edges_temp_new_batch.iloc[:int(data_edges_temp_new_batch.shape[0] * 90)]
+            data_edges_temp_new_batch_test = data_edges_temp_new_batch.iloc[int(data_edges_temp_new_batch.shape[0] * 0.9):]
+            data_edges_temp_new_batch = data_edges_temp_new_batch.iloc[:int(data_edges_temp_new_batch.shape[0] * 0.9)]
             data_edges_temp = pd.concat([data_edges_temp, data_edges_temp_new_batch])
             current_timestamp += testing_batch_size
             starting_timestamp += testing_batch_size
@@ -126,8 +126,8 @@ def create_youtube(data_edges, data_nodes, training_batch_size, testing_batch_si
         if current_timestamp != initial_timestamp:  # filter training batch
             data_edges_temp = data_edges.loc[data_edges['timestamp'] <= (current_timestamp)].loc[data_edges['timestamp'] > (starting_timestamp + testing_batch_size)]
             data_edges_temp_new_batch = data_edges.loc[data_edges['timestamp'] <= (current_timestamp + testing_batch_size)].loc[data_edges['timestamp'] > (current_timestamp)]
-            data_edges_temp_new_batch_test = data_edges_temp_new_batch.iloc[int(data_edges_temp_new_batch.shape[0] * 90):]
-            data_edges_temp_new_batch = data_edges_temp_new_batch.iloc[:int(data_edges_temp_new_batch.shape[0] * 90)]
+            data_edges_temp_new_batch_test = data_edges_temp_new_batch.iloc[int(data_edges_temp_new_batch.shape[0] * 0.9):]
+            data_edges_temp_new_batch = data_edges_temp_new_batch.iloc[:int(data_edges_temp_new_batch.shape[0] * 0.9)]
             data_edges_temp = pd.concat([data_edges_temp, data_edges_temp_new_batch])
             current_timestamp += testing_batch_size
             starting_timestamp += testing_batch_size
@@ -185,8 +185,8 @@ def create_flights(data_edges, data_nodes, training_batch_size, testing_batch_si
         if current_timestamp != initial_timestamp:  # filter training batch
             data_edges_temp = data_edges.loc[data_edges['timestamp'] <= (current_timestamp)].loc[data_edges['timestamp'] > (starting_timestamp + testing_batch_size)]
             data_edges_temp_new_batch = data_edges.loc[data_edges['timestamp'] <= (current_timestamp + testing_batch_size)].loc[data_edges['timestamp'] > (current_timestamp)]
-            data_edges_temp_new_batch_test = data_edges_temp_new_batch.iloc[int(data_edges_temp_new_batch.shape[0] * 90):]
-            data_edges_temp_new_batch = data_edges_temp_new_batch.iloc[:int(data_edges_temp_new_batch.shape[0] * 90)]
+            data_edges_temp_new_batch_test = data_edges_temp_new_batch.iloc[int(data_edges_temp_new_batch.shape[0] * 0.9):]
+            data_edges_temp_new_batch = data_edges_temp_new_batch.iloc[:int(data_edges_temp_new_batch.shape[0] * 0.9)]
             data_edges_temp = pd.concat([data_edges_temp, data_edges_temp_new_batch])
             current_timestamp += testing_batch_size
             starting_timestamp += testing_batch_size
@@ -245,8 +245,8 @@ def create_facebook(data_edges, data_nodes, training_batch_size, testing_batch_s
         if current_timestamp != 0:  # filter training batch
             data_edges_temp = data_edges.loc[data_edges['timestamp'] <= (current_timestamp)].loc[data_edges['timestamp'] > (starting_timestamp + testing_batch_size)]
             data_edges_temp_new_batch = data_edges.loc[data_edges['timestamp'] <= (current_timestamp + testing_batch_size)].loc[data_edges['timestamp'] > (current_timestamp)]
-            data_edges_temp_new_batch_test = data_edges_temp_new_batch.iloc[int(data_edges_temp_new_batch.shape[0] * 90):]
-            data_edges_temp_new_batch = data_edges_temp_new_batch.iloc[:int(data_edges_temp_new_batch.shape[0] * 90)]
+            data_edges_temp_new_batch_test = data_edges_temp_new_batch.iloc[int(data_edges_temp_new_batch.shape[0] * 0.9):]
+            data_edges_temp_new_batch = data_edges_temp_new_batch.iloc[:int(data_edges_temp_new_batch.shape[0] * 0.9)]
             data_edges_temp = pd.concat([data_edges_temp, data_edges_temp_new_batch])
             current_timestamp += testing_batch_size
             starting_timestamp += testing_batch_size
@@ -304,8 +304,8 @@ def create_dblp(data_edges, data_nodes, training_batch_size, testing_batch_size,
         if current_timestamp != initial_timestamp:  # filter training batch
             data_edges_temp = data_edges.loc[data_edges['timestamp'] <= (current_timestamp)].loc[data_edges['timestamp'] > (starting_timestamp + testing_batch_size)]
             data_edges_temp_new_batch = data_edges.loc[data_edges['timestamp'] <= (current_timestamp + testing_batch_size)].loc[data_edges['timestamp'] > (current_timestamp)]
-            data_edges_temp_new_batch_test = data_edges_temp_new_batch.iloc[int(data_edges_temp_new_batch.shape[0] * 90):]
-            data_edges_temp_new_batch = data_edges_temp_new_batch.iloc[:int(data_edges_temp_new_batch.shape[0] * 90)]
+            data_edges_temp_new_batch_test = data_edges_temp_new_batch.iloc[int(data_edges_temp_new_batch.shape[0] * 0.9):]
+            data_edges_temp_new_batch = data_edges_temp_new_batch.iloc[:int(data_edges_temp_new_batch.shape[0] * 0.9)]
             data_edges_temp = pd.concat([data_edges_temp, data_edges_temp_new_batch])
             current_timestamp += testing_batch_size
             starting_timestamp += testing_batch_size

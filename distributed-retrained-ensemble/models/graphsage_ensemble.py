@@ -76,26 +76,34 @@ class Model:
         self.n_estimators = 2  # Number of models in the ensemble
         n_predictions = 6  # Number of predictions per query point per model
 
-        graph = sg.StellarGraph(nodes=self.nodes, edges=self.edges)
-
         if not test_edges.empty:
-            graph_test = sg.StellarGraph(nodes=self.nodes, edges=test_edges)
-            edge_splitter_test = EdgeSplitter(graph_test)
+            graph = sg.StellarGraph(nodes=self.nodes, edges=self.edges)
+            test_graph = sg.StellarGraph(nodes=self.nodes, edges=test_edges)
+
+            edge_splitter_test = EdgeSplitter(test_graph)
+
             self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
                 p=0.1, method="global", keep_connected=False, seed=2023
             )
             edge_splitter_val = EdgeSplitter(graph)
             edge_splitter_train = EdgeSplitter(graph)
 
-
         else:
             # Test split
-            edge_splitter_test = EdgeSplitter(graph)
+            test_edges = self.edges.iloc[int(self.edges.shape[0] * 0.9):]
+            test_graph = sg.StellarGraph(nodes=self.nodes, edges=test_edges)
+
+            edge_splitter_test = EdgeSplitter(test_graph)
+
             self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
                 p=0.1, method="global", keep_connected=False, seed=2023
             )
-            edge_splitter_val = EdgeSplitter(self.graph_test)
-            edge_splitter_train = EdgeSplitter(self.graph_test)
+
+            self.edges = self.edges.iloc[:int(self.edges.shape[0] * 0.9)]
+            graph = sg.StellarGraph(nodes=self.nodes, edges=self.edges)
+
+            edge_splitter_val = EdgeSplitter(graph)
+            edge_splitter_train = EdgeSplitter(graph)
 
         # Define an edge splitter on the reduced graph G_test:
 
@@ -157,14 +165,12 @@ class Model:
             weights.append(self.model.models[i].get_weights())
         return weights
 
-
-
     def fit(self, epochs = 20):
         history = self.model.fit(generator=self.train_gen, train_data=self.edge_ids_train,
                                  train_targets=self.edge_labels_train, epochs=epochs, validation_data=self.val_flow,
                                  verbose=1, use_early_stopping=True,
                                  early_stopping_monitor="val_acc")  # Enable early stopping
-        return self.get_weights(),history
+        return self.get_weights(), history
     
     def evaluate(self):
         train_metrics_mean, train_metrics_std = self.model.evaluate(self.train_flow, verbose=1)

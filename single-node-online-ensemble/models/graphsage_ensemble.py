@@ -81,8 +81,8 @@ class Model:
 
         self.edges = self.edges.iloc[:int(self.edges.shape[0] * 0.9)]
 
-        graph_test = sg.StellarGraph(nodes=self.nodes, edges=test_edges)
-        edge_splitter_test = EdgeSplitter(graph_test)
+        test_graph = sg.StellarGraph(nodes=self.nodes, edges=test_edges)
+        edge_splitter_test = EdgeSplitter(test_graph)
         self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
             p=0.1, method="global", keep_connected=False, seed=2023
         )
