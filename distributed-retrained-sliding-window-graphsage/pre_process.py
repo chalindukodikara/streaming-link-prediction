@@ -72,18 +72,25 @@ def create_wikipedia(data_edges, data_nodes, training_batch_size, testing_batch_
             current_timestamp += testing_batch_size
             starting_timestamp += testing_batch_size
             logging.info('Test batch {} created'.format(batch_number))
+            nodes_list = []
+            for j in range(2):
+                nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
+
+            for j in range(2):
+                nodes_list = nodes_list + data_edges_temp_new_batch_test[
+                    data_edges_temp_new_batch_test.columns[j]].tolist()
         else:  # filter each test batch
             data_edges_temp = data_edges.loc[data_edges['timestamp'] < current_timestamp + training_batch_size].loc[data_edges['timestamp'] >= current_timestamp]
             current_timestamp += training_batch_size - 1
             logging.info('Training batch created')
+            nodes_list = []
+            for j in range(2):
+                nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
 
         if data_edges_temp.empty:
             logging.info('Batch %s: is empty', batch_number)
 
         # get node list of each batch considering edge set, all sources and targets are added to the node list
-        nodes_list = []
-        for j in range(2):
-            nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
 
         # filter unique nodes
         nodes_set = set(nodes_list)
@@ -132,18 +139,25 @@ def create_youtube(data_edges, data_nodes, training_batch_size, testing_batch_si
             current_timestamp += testing_batch_size
             starting_timestamp += testing_batch_size
             logging.info('Test batch {} created'.format(batch_number))
+            nodes_list = []
+            for j in range(2):
+                nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
+
+            for j in range(2):
+                nodes_list = nodes_list + data_edges_temp_new_batch_test[
+                    data_edges_temp_new_batch_test.columns[j]].tolist()
         else:  # filter each test batch
             data_edges_temp = data_edges.loc[data_edges['timestamp'] < current_timestamp + training_batch_size].loc[data_edges['timestamp'] >= current_timestamp]
             current_timestamp += training_batch_size - 1
             logging.info('Training batch created')
+            nodes_list = []
+            for j in range(2):
+                nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
 
         if data_edges_temp.empty:
             logging.info('Batch %s: is empty', batch_number)
 
         # get node list of each batch considering edge set, all sources and targets are added to the node list
-        nodes_list = []
-        for j in range(2):
-            nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
 
         # filter unique nodes
         nodes_set = set(nodes_list)
@@ -191,18 +205,26 @@ def create_flights(data_edges, data_nodes, training_batch_size, testing_batch_si
             current_timestamp += testing_batch_size
             starting_timestamp += testing_batch_size
             logging.info('Test batch {} created'.format(batch_number))
+            nodes_list = []
+            for j in range(2):
+                nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
+
+            for j in range(2):
+                nodes_list = nodes_list + data_edges_temp_new_batch_test[
+                    data_edges_temp_new_batch_test.columns[j]].tolist()
+
         else:  # filter each test batch
             data_edges_temp = data_edges.loc[data_edges['timestamp'] < current_timestamp + training_batch_size].loc[data_edges['timestamp'] >= current_timestamp]
             current_timestamp += training_batch_size - 1
             logging.info('Training batch created')
+            nodes_list = []
+            for j in range(2):
+                nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
 
         if data_edges_temp.empty:
             logging.info('Batch %s: is empty', batch_number)
 
         # get node list of each batch considering edge set, all sources and targets are added to the node list
-        nodes_list = []
-        for j in range(2):
-            nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
 
         # filter unique nodes
         nodes_set = set(nodes_list)
@@ -251,19 +273,27 @@ def create_facebook(data_edges, data_nodes, training_batch_size, testing_batch_s
             current_timestamp += testing_batch_size
             starting_timestamp += testing_batch_size
             logging.info('Test batch {} created'.format(batch_number))
+            nodes_list = []
+            for j in range(2):
+                nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
+
+            for j in range(2):
+                nodes_list = nodes_list + data_edges_temp_new_batch_test[
+                    data_edges_temp_new_batch_test.columns[j]].tolist()
+
         else:  # filter each test batch
             data_edges_temp = data_edges.loc[data_edges['timestamp'] == current_timestamp]
             current_timestamp += initial_timestamp
             logging.info('Training batch created')
+            nodes_list = []
+            for j in range(2):
+                nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
 
         if data_edges_temp.empty:
             logging.info('Batch %s: is empty', batch_number)
 
 
         # get node list of each batch considering edge set, all sources and targets are added to the node list
-        nodes_list = []
-        for j in range(2):
-            nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
 
         # filter unique nodes
         nodes_set = set(nodes_list)
@@ -310,19 +340,26 @@ def create_dblp(data_edges, data_nodes, training_batch_size, testing_batch_size,
             current_timestamp += testing_batch_size
             starting_timestamp += testing_batch_size
             logging.info('Test batch {} created'.format(batch_number))
+            nodes_list = []
+            for j in range(2):
+                nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
+
+            for j in range(2):
+                nodes_list = nodes_list + data_edges_temp_new_batch_test[
+                    data_edges_temp_new_batch_test.columns[j]].tolist()
         else:  # filter each test batch
             data_edges_temp = data_edges.loc[data_edges['timestamp'] < current_timestamp + training_batch_size].loc[data_edges['timestamp'] >= current_timestamp]
             current_timestamp += training_batch_size - 1
             logging.info('Training batch created')
+            nodes_list = []
+            for j in range(2):
+                nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
 
         if data_edges_temp.empty:
             logging.info('Batch %s: is empty', batch_number)
 
 
         # get node list of each batch considering edge set, all sources and targets are added to the node list
-        nodes_list = []
-        for j in range(2):
-            nodes_list = nodes_list + data_edges_temp[data_edges_temp.columns[j]].tolist()
 
         # filter unique nodes
         nodes_set = set(nodes_list)
