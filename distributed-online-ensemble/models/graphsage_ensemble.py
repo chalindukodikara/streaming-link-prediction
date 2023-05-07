@@ -76,38 +76,56 @@ class Model:
         self.n_estimators = 2  # Number of models in the ensemble
         n_predictions = 6  # Number of predictions per query point per model
 
-        # Get future edges for testing
-        test_edges = self.edges.iloc[int(self.edges.shape[0] * 0.9):]
-
-        self.edges = self.edges.iloc[:int(self.edges.shape[0] * 0.9)]
-
-        test_graph = sg.StellarGraph(nodes=self.nodes, edges=test_edges)
-        edge_splitter_test = EdgeSplitter(test_graph)
-        self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
-            p=0.1, method="global", keep_connected=False, seed=2023
-        )
-        ###################################
+        test_edges = self.edges.iloc[int(self.edges.shape[0] * 0.6):]
+        if 'weight' in test_edges.columns:
+            test_edges = test_edges.drop(['weight'], axis=1)
+        # self.edges = self.edges.iloc[:int(self.edges.shape[0] * 0.9)]
 
         graph = sg.StellarGraph(nodes=self.nodes, edges=self.edges)
+
         # Test split
-        # edge_splitter_test = EdgeSplitter(graph)
-        # self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
-        #     p=0.1, method="global", keep_connected=False, seed=2023
-        # )
+        edge_splitter_test = EdgeSplitter(graph)
+        self.graph_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
+            p=0.3, method="global", keep_connected=False, seed=2023
+        )
+
+        # for i in range(edge_ids_test.shape[0]):
+        #     if edge_labels_test[i] == 0:
+        #         edge_ids_test = edge_ids_test[:i]
+        #         edge_labels_test = edge_labels_test[:i]
+        #         break
+
+        indices = []
+        for i in range(edge_ids_test.shape[0]):
+            if not ((int(edge_ids_test[i][0]) in test_edges['source'].values) and (
+                    int(edge_ids_test[i][1]) in test_edges['target'].values)):
+                indices.append(i)
+
+        edge_ids_test = np.delete(edge_ids_test, indices, axis=0)
+        edge_labels_test = np.delete(edge_labels_test, indices)
+
+        # Train split
+        edge_splitter_train = EdgeSplitter(self.graph_test)
+        self.graph_train, edge_ids_train, edge_labels_train = edge_splitter_train.train_test_split(
+            p=0.3, method="global", keep_connected=False, seed=2023
+        )
+
+        indices = []
+        for i in range(edge_ids_train.shape[0]):
+            if ((int(edge_ids_train[i][0]) in test_edges['source'].values) and (
+                    int(edge_ids_train[i][1]) in test_edges['target'].values)):
+                indices.append(i)
+
+        self.edge_ids_train = np.delete(edge_ids_train, indices, axis=0)
+        self.edge_labels_train = np.delete(edge_labels_train, indices)
 
         # Define an edge splitter on the reduced graph G_test:
-        edge_splitter_val = EdgeSplitter(graph)
+        edge_splitter_val = EdgeSplitter(self.graph_test)
 
         # Randomly sample a fraction p=0.1 of all positive links, and same number of negative links, from G_test, and obtain the
         # reduced graph G_train with the sampled links removed:
         self.graph_val, edge_ids_val, edge_labels_val = edge_splitter_val.train_test_split(
-            p=0.1, method="global", keep_connected=False, seed=100
-        )
-
-        # Train split
-        edge_splitter_train = EdgeSplitter(graph)
-        self.graph_train, self.edge_ids_train, self.edge_labels_train = edge_splitter_train.train_test_split(
-            p=0.1, method="global", keep_connected=False, seed=2023
+            p=0.3, method="global", keep_connected=False, seed=2023
         )
 
         # Train iterators
