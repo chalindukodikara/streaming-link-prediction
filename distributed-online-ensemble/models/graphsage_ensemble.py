@@ -128,11 +128,20 @@ class Model:
             p=0.3, method="global", keep_connected=False, seed=2023
         )
 
+        indices = []
+        for i in range(edge_ids_val.shape[0]):
+            if ((int(edge_ids_val[i][0]) in test_edges['source'].values) and (
+                    int(edge_ids_val[i][1]) in test_edges['target'].values)):
+                indices.append(i)
+
+        edge_ids_val = np.delete(edge_ids_val, indices, axis=0)
+        edge_labels_val = np.delete(edge_labels_val, indices)
+
         # Train iterators
         self.train_gen = GraphSAGELinkGenerator(self.graph_train, batch_size, num_samples, weighted=False, seed=42)
         self.train_flow = self.train_gen.flow(self.edge_ids_train, self.edge_labels_train, shuffle=True)
 
-        self.val_flow = GraphSAGELinkGenerator(self.graph_val, batch_size, num_samples).flow(
+        self.val_flow = GraphSAGELinkGenerator(self.graph_val, batch_size, num_samples, seed=42).flow(
             edge_ids_val, edge_labels_val
         )
 

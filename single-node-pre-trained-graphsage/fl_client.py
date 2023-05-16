@@ -26,8 +26,8 @@ parser.add_argument('--partition_size', type=int, default=1, help='Partition siz
 parser.add_argument('--graph_id', type=int, default=1, help='Graph ID')
 
 ######## Frequently configured #######
-parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
-parser.add_argument('--partition_algorithm', type=str, default='hash', help='Partition algorithm')
+parser.add_argument('--dataset_name', type=str, default='facebook', help='Dataset name')
+parser.add_argument('--partition_algorithm', type=str, default='fennel', help='Partition algorithm')
 parser.add_argument('--training_epochs', type=int, default=12, help='Initial Training: number of epochs')
 parser.add_argument('--epochs', type=int, default=6, help='Streaming data training for batches: number of epochs')
 

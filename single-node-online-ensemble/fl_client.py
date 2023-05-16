@@ -25,7 +25,7 @@ parser.add_argument('--partition_id', type=int, default=0, help='Partition ID')
 parser.add_argument('--partition_size', type=int, default=1, help='Partition size')
 
 ######## Frequently configured #######
-parser.add_argument('--dataset_name', type=str, default='facebook', help='Dataset name')
+parser.add_argument('--dataset_name', type=str, default='wikipedia', help='Dataset name')
 parser.add_argument('--partition_algorithm', type=str, default='hash', help='Partition algorithm')
 parser.add_argument('--training_epochs', type=int, default=12, help='Initial Training: number of epochs')
 parser.add_argument('--epochs', type=int, default=6, help='Streaming data training for batches: number of epochs')
@@ -107,17 +107,6 @@ class Client:
         self.dataset_name = dataset_name
         self.GLOBAL_WEIGHTS = None
         self.all_test_metric_values = [[], [], [], [], [], []]
-
-        connected = False
-        while not connected:
-            try:
-                self.client_socket.connect((IP, PORT))
-            except ConnectionRefusedError:
-                time.sleep(5)
-            else:
-                logging.info('Connected to the server')
-                connected = True
-
 
     def train(self):
         return self.MODEL.fit(epochs=self.epochs)

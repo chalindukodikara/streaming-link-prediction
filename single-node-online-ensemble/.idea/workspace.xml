@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4c45e32-327b-4d4f-b045-671c7d003670" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../distributed-online-ensemble/models/graphsage_ensemble.py" beforeDir="false" afterPath="$PROJECT_DIR$/../distributed-online-ensemble/models/graphsage_ensemble.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distributed-online-ensemble/pre_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/../distributed-online-ensemble/pre_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distributed-online-graphsage/pre_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/../distributed-online-graphsage/pre_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distributed-pre-trained-graphsage/pre_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/../distributed-pre-trained-graphsage/pre_process.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fl_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/fl_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/graphsage_ensemble.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/graphsage_ensemble.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/pre_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../single-node-online-graphsage/pre_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/../single-node-online-graphsage/pre_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../single-node-pre-trained-graphsage/pre_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/../single-node-pre-trained-graphsage/pre_process.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +35,59 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/chalindu/ubuntu/software/streaming-link-prediction-models/single-node-online-ensemble"
+    "last_opened_file_path": "/home/chalindu/ubuntu/software/streaming-link-prediction-models/single-node-pre-trained-graphsage"
   }
 }]]></component>
+  <component name="RunManager" selected="Python.fl_client">
+    <configuration name="fl_client" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="single-node-incremental-ensemble-graphsage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="fl_client.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pre_process" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="single-node-incremental-ensemble-graphsage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="pre_process.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.pre_process" />
+      <item itemvalue="Python.fl_client" />
+    </list>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -42,10 +101,31 @@
       <workItem from="1680252148321" duration="23000" />
       <workItem from="1680252917947" duration="36000" />
       <workItem from="1683365578895" duration="662000" />
+      <workItem from="1684076314279" duration="1242000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fl_client.py</url>
+          <line>114</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fl_client.py</url>
+          <line>284</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/single_node_online_ensemble$pre_process.coverage" NAME="pre_process Coverage Results" MODIFIED="1684076507782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
+    <SUITE FILE_PATH="coverage/single_node_online_ensemble$fl_client.coverage" NAME="fl_client Coverage Results" MODIFIED="1684077574981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
   </component>
 </project>
